@@ -3,6 +3,15 @@ module.exports = {
     title: `Pandas Eating Lots`
   },
   plugins: [
+    `gatsby-remark-copy-linked-files`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        maxWidth: 1080
+      }
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
