@@ -1,4 +1,6 @@
 module.exports = {
+  //REMOVE THIS IF CUSTOM DOMAIN IS OBTAINED
+  pathPrefix: "/portfolio",
   siteMetadata: {
     title: `Pandas Eating Lots`
   },

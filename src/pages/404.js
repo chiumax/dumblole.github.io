@@ -1,13 +1,11 @@
 import React from "react";
-import { graphql } from "gatsby";
+
 import Layout from "../components/layout";
 
 export default () => (
   <Layout>
-    <h1>UH OH BANANA O'S!</h1>
-    <p>
-      We're the only site running on your computer dedicated to showing the best photos and videos
-      of pandas eating lots of food.
-    </p>
+    <h1>404</h1>
+    <h1>Who's There?</h1>
+    <p>Looks like you stumbled upon my secret page! Let's guide you back.</p>
   </Layout>
 );

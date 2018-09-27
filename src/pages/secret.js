@@ -8,7 +8,7 @@ export default ({ data }) => {
     <Layout>
       <div>
         <h1>My Site's Files</h1>
-        <p>You shouldn't be here but here you are!</p>
+        <p>Did you look in source?</p>
         <table>
           <thead>
             <tr>
