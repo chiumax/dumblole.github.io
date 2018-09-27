@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Pandas Eating Lots`
+    title: `dumblole`
   },
   plugins: [
+    `gatsby-plugin-offline`,
     `gatsby-remark-copy-linked-files`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -16,10 +17,17 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 590
+              maxWidth: 1080
             }
           }
         ]
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`
       }
     },
     {
@@ -36,13 +44,12 @@ module.exports = {
         path: `${__dirname}/src/pages/blogs`
       }
     },
-    `gatsby-plugin-catch-links`,
-    `gatsby-plugin-emotion`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`
-      }
-    }
+    `gatsby-plugin-catch-links`
+    // {
+    //   resolve: `gatsby-plugin-typography`,
+    //   options: {
+    //     pathToConfigModule: `src/utils/typography`
+    //   }
+    // }
   ]
 };
