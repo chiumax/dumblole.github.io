@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 export default () => {
   return (
     <Layout>
-      <h1>a</h1>
+      <h1>aaaa</h1>
     </Layout>
   );
 };
