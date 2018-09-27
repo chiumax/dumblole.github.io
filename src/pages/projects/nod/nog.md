@@ -1,6 +1,9 @@
 ---
 title: "asdfasdf Pasdfasdf EasdfasdfSweets"
-date: "2017-08-10"
+tagline: "Pandas"
+coverimage: "./1.png"
+startdate: "2017-08-10"
+enddate: "2017-09-10"
 path: "project/NOG"
 type: "project"
 ---

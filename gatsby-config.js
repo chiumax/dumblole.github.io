@@ -7,9 +7,19 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-remark-images`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        maxWidth: 1080
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 590
+            }
+          }
+        ]
       }
     },
     {
@@ -26,7 +36,6 @@ module.exports = {
         path: `${__dirname}/src/pages/blogs`
       }
     },
-    `gatsby-transformer-remark`,
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-emotion`,
     {
