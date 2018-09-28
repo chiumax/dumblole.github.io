@@ -1,5 +1,7 @@
 import React from "react";
 import { StaticQuery, Link, graphql } from "gatsby";
+import "normalize.css";
+import "../styles/styles.scss";
 
 //import { rhythm } from "../utils/typography";
 
@@ -15,29 +17,16 @@ export default ({ children }) => (
       }
     `}
     render={data => (
-      <div
-      // className={css`
-      //   margin: 0 auto;
-      //   max-width: 700px;
-      //   padding: ${rhythm(2)};
-      //   padding-top: ${rhythm(1.5)};
-      // `}
-      >
-        <Link to={`/`}>
-          <h3
-          // className={css`
-          //   margin-bottom: ${rhythm(2)};
-          //   display: inline-block;
-          //   font-style: normal;
-          // `}
-          >
-            {data.site.siteMetadata.title}
-          </h3>
-        </Link>
-        <Link to={`/project/`}>Projects</Link>
-        <Link to={`/blog/`}>Blogs</Link>
+      <div>
+        <div className="header">
+          <Link to={`/`} className="header__title">
+            <h1>{data.site.siteMetadata.title}</h1>
+          </Link>
+          <Link to={`/project/`}>Projects</Link>
+          <Link to={`/blog/`}>Blogs</Link>
 
-        <Link to={`/about/`}>About</Link>
+          <Link to={`/about/`}>About</Link>
+        </div>
         {children}
       </div>
     )}

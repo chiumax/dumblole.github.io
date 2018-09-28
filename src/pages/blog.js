@@ -13,11 +13,7 @@ export default ({ data }) => {
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link to={node.fields.slug}>
-              <h3
-              // className={css`
-              //   margin-bottom: ${rhythm(1 / 4)};
-              // `}
-              >
+              <h3>
                 {node.frontmatter.title} <span>— {node.frontmatter.date}</span>
               </h3>
               <p>
