@@ -1,10 +1,10 @@
 ---
-title: "Blog Two"
+title: "Blog Four"
 tagline: "Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog "
-coverimage: "./1.png"
+image: "./d.jpg"
 date: "2017-08-10"
-path: "blog/panda"
+path: "blog/blogFour"
 type: "blog"
 ---
 
-Pandasaasdfasdfsaasdf
+_Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog_

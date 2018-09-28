@@ -1,4 +1,5 @@
 import React from "react";
+import Img from "gatsby-image";
 //import { rhythm } from "../utils/typography";
 import Layout from "../components/layout";
 import { Link, graphql } from "gatsby";
@@ -8,16 +9,21 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <h1>Amazing Pandas Eating Things</h1>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link to={node.fields.slug}>
-              <h3>
-                {node.frontmatter.title} <span>— {node.frontmatter.date}</span>
-              </h3>
-              <p>
-                {/*
+        <div className="wrap">
+          <h1>Blog</h1>
+          <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <div key={node.id} className="tile">
+              <Link to={node.fields.slug}>
+                {/* <img src="https://images.unsplash.com/photo-1458668383970-8ddd3927deed?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1004&q=80" /> */}
+                <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
+                <div className="text">
+                  <h2 className="animate-text">
+                    {node.frontmatter.title} <span>— {node.frontmatter.date}</span>
+                  </h2>
+                  <p className="animate-text">
+                    {/*
             Basically what that huge chunk of code does
             is:
             1. Check if the tagline length is > 105
@@ -38,18 +44,20 @@ export default ({ data }) => {
             NOTE. This may not work with super super super long words
             Have not tried and don't see why anyone would do this.
             */}
-                {node.excerpt.length > 105
-                  ? node.excerpt.indexOf(" ", 105) === -1
-                    ? node.excerpt
-                    : /^[a-z]+$/i.test(node.excerpt[node.excerpt.indexOf(" ", 105) - 1])
-                      ? node.excerpt.substring(0, node.excerpt.indexOf(" ", 105)) + "..."
-                      : node.excerpt.substring(0, node.excerpt.indexOf(" ", 105))
-                  : node.excerpt}
-              </p>
-              {/* {console.log(node.excerpt[node.excerpt.indexOf(" ", 105)])} */}
-            </Link>
-          </div>
-        ))}
+                    {node.excerpt.length > 105
+                      ? node.excerpt.indexOf(" ", 105) === -1
+                        ? node.excerpt
+                        : /^[a-z]+$/i.test(node.excerpt[node.excerpt.indexOf(" ", 105) - 1])
+                          ? node.excerpt.substring(0, node.excerpt.indexOf(" ", 105)) + "..."
+                          : node.excerpt.substring(0, node.excerpt.indexOf(" ", 105))
+                      : node.excerpt}
+                  </p>
+                  {/* {console.log(node. excerpt[node.excerpt.indexOf(" ", 105)])} */}
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </Layout>
   );
@@ -68,7 +76,15 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1000) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
+
           fields {
             slug
           }

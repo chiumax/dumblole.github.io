@@ -1,11 +1,11 @@
 ---
-title: "Project One"
+title: "Project Four"
 tagline: "Project Project Project Project Project Project Project Project Project Project Project Project Project Project Project Project "
-coverimage: "./1.png"
+
 startdate: "2017-08-10"
 enddate: "2017-09-10"
-path: "project/NOG"
+path: "project/projectFour"
 type: "project"
 ---
 
-s
+_Project Project Project Project Project Project Project Project Project Project Project Project Project Project Project Project_

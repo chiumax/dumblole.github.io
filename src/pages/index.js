@@ -25,7 +25,7 @@ export const ImageQuery = graphql`
     imageTwo: file(relativePath: { eq: "abc.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1080) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid
         }
       }
     }

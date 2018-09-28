@@ -1,13 +1,10 @@
 ---
 title: "Blog Two"
 tagline: "Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog "
-coverimage: "./1.png"
+image: "./a.jpg"
 date: "2017-08-10"
 path: "blog/blogTwo"
 type: "blog"
 ---
 
-Pandas are really sweet.
-
-Here's a video of a panda eating sweetsaaa.
-![aaaaaaas](./abc.jpg)
+_Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog_
