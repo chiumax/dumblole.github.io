@@ -6,3 +6,4 @@ todo
 - [ ] Add a footer
 - [ ] work with SASS
 - [ ] Cover photos
+- [ ] Special thanks page
