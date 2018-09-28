@@ -9,15 +9,17 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
+        <h1>Blog</h1>
+        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         <div className="wrap">
-          <h1>Blog</h1>
-          <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <div key={node.id} className="tile">
               <Link to={node.fields.slug}>
-                {/* <img src="https://images.unsplash.com/photo-1458668383970-8ddd3927deed?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1004&q=80" /> */}
-                <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
+                {/* <img
+                  src="https://i.pinimg.com/originals/1a/18/cd/1a18cd94cfa03c4abe7dacc2a476861b.jpg"
+                  className="img"
+                /> */}
+
                 <div className="text">
                   <h2 className="animate-text">
                     {node.frontmatter.title} <span>— {node.frontmatter.date}</span>
@@ -53,8 +55,16 @@ export default ({ data }) => {
                       : node.excerpt}
                   </p>
                   {/* {console.log(node. excerpt[node.excerpt.indexOf(" ", 105)])} */}
+                  <div className="dots">
+                    <span />
+                    <span />
+                    <span />
+                    <span />
+                    <span />
+                  </div>
                 </div>
               </Link>
+              <Img fluid={node.frontmatter.image.childImageSharp.fluid} className="img" />
             </div>
           ))}
         </div>

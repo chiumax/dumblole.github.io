@@ -14,3 +14,9 @@ body {
   overflow-x: hidden;
   overflow-y: visible;
 }
+
+.content-container {
+  margin: 0 auto;
+  max-width: 120rem;
+  padding: 0 $xs-size;
+}

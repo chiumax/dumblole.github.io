@@ -27,7 +27,7 @@ export default ({ children }) => (
 
           <Link to={`/about/`}>About</Link>
         </div>
-        {children}
+        <div className="content-container">{children}</div>
       </div>
     )}
   />
