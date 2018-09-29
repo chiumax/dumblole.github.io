@@ -2,7 +2,7 @@
 title: "Blog Four"
 tagline: "Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog "
 image: "./unnamed.png"
-date: "2017-08-10"
+date: "2017-08-11"
 path: "blog/blogFour"
 type: "blog"
 ---
