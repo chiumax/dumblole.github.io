@@ -13,7 +13,15 @@ export default ({ data }) => {
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         <div className="wrap">
           {data.allMarkdownRemark.edges.map(({ node }) => (
-            <div key={node.id} className="tile" ontouchstart="">
+            <div
+              key={node.id}
+              className="tile"
+              onClick={e => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log("YYEET");
+              }}
+            >
               <Link to={node.fields.slug}>
                 {/* <img
                   src="https://i.pinimg.com/originals/1a/18/cd/1a18cd94cfa03c4abe7dacc2a476861b.jpg"
