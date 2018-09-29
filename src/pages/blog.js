@@ -11,16 +11,22 @@ export default ({ data }) => {
       <div>
         <h1>Blog</h1>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+        <h5>
+          <i>
+            To see previews on touch screen, swipe <b>slowly</b> across the screen horizontally.
+            Otherwise, just hover over with your mouse.
+          </i>
+        </h5>
         <div className="wrap">
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <div
               key={node.id}
-              className="tile"
-              onClick={e => {
-                e.preventDefault();
-                e.stopPropagation();
-                console.log("YYEET");
-              }}
+              className="tile tile-blog"
+              // onClick={e => {
+              //   e.preventDefault();
+              //   e.stopPropagation();
+              //   console.log("YYEET");
+              // }}
             >
               <Link to={node.fields.slug}>
                 {/* <img
@@ -93,10 +99,10 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM DD, YYYY")
             image {
               childImageSharp {
-                fluid(maxWidth: 1000) {
+                fluid(maxWidth: 1920) {
                   ...GatsbyImageSharpFluid
                 }
               }

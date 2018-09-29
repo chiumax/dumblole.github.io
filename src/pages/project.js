@@ -1,4 +1,5 @@
 import React from "react";
+import Img from "gatsby-image";
 // import { rhythm } from "../utils/typography";
 import Layout from "../components/layout";
 import { Link, graphql } from "gatsby";
@@ -10,14 +11,22 @@ export default ({ data }) => {
       <div>
         <h1>Project</h1>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link to={node.fields.slug}>
-              <h3>
-                {node.frontmatter.title} <span>— {node.frontmatter.date}</span>
-              </h3>
-              <p>
-                {/*
+        <h5>
+          <i>
+            To see previews on touch screen, swipe <b>slowly</b> across the screen horizontally.
+            Otherwise, just hover over with your mouse.
+          </i>
+        </h5>
+        <div className="wrap">
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <div key={node.id} className="tile tile-project">
+              <Link to={node.fields.slug}>
+                <div className="text">
+                  <h2 className="animate-text">
+                    {node.frontmatter.title} <span>— {node.frontmatter.date}</span>
+                  </h2>
+                  <p className="animate-text">
+                    {/*
             Basically what that huge chunk of code does
             is:
             1. Check if the tagline length is > 105
@@ -38,18 +47,28 @@ export default ({ data }) => {
             NOTE. This may not work with super super super long words
             Have not tried and don't see why anyone would do this.
             */}
-                {node.excerpt.length > 105
-                  ? node.excerpt.indexOf(" ", 105) === -1
-                    ? node.excerpt
-                    : /^[a-z]+$/i.test(node.excerpt[node.excerpt.indexOf(" ", 105) - 1])
-                      ? node.excerpt.substring(0, node.excerpt.indexOf(" ", 105)) + "..."
-                      : node.excerpt.substring(0, node.excerpt.indexOf(" ", 105))
-                  : node.excerpt}
-              </p>
-              {/* {console.log(node.excerpt[node.excerpt.indexOf(" ", 105)])} */}
-            </Link>
-          </div>
-        ))}
+                    {node.excerpt.length > 105
+                      ? node.excerpt.indexOf(" ", 105) === -1
+                        ? node.excerpt
+                        : /^[a-z]+$/i.test(node.excerpt[node.excerpt.indexOf(" ", 105) - 1])
+                          ? node.excerpt.substring(0, node.excerpt.indexOf(" ", 105)) + "..."
+                          : node.excerpt.substring(0, node.excerpt.indexOf(" ", 105))
+                      : node.excerpt}
+                  </p>
+                  <div className="dots">
+                    <span />
+                    <span />
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                  {/* {console.log(node.excerpt[node.excerpt.indexOf(" ", 105)])} */}
+                </div>
+              </Link>
+              <Img fluid={node.frontmatter.image.childImageSharp.fluid} className="img" />
+            </div>
+          ))}
+        </div>
       </div>
     </Layout>
   );
@@ -59,7 +78,7 @@ export const query = graphql`
   query {
     allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "project" } } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___startdate], order: DESC }
     ) {
       totalCount
       edges {
@@ -68,6 +87,13 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1920) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           fields {
             slug

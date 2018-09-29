@@ -17,7 +17,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   align-content: stretch;
   max-width: 85vw;
@@ -38,6 +38,16 @@ body {
   color: white;
   font-family: "Roboto";
 }
+
+.tile-blog {
+  width: 50rem;
+  height: 38rem;
+}
+.tile-project {
+  width: 100rem;
+  height: 38rem;
+}
+
 .tile .img {
   height: 100%;
   width: 100%;
