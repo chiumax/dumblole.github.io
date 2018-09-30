@@ -13,8 +13,8 @@ export default ({ data }) => {
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         <h5>
           <i>
-            To see previews on touch screen, swipe <b>slowly</b> across the screen horizontally.
-            Otherwise, just hover over with your mouse.
+            To see previews on touch screen, swipe across the screen and hold down. Otherwise, just
+            hover over with your mouse.
           </i>
         </h5>
         <div className="wrap">
