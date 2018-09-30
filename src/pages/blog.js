@@ -32,12 +32,12 @@ export default class BlogList extends React.Component {
     return (
       <Layout>
         <div>
-          <h1>Blog</h1>
+          <h1>Blogs</h1>
           <h4>{this.state.data.allMarkdownRemark.totalCount} Posts</h4>
           <h5>
             <i>
-              To see previews on touch screen, swipe across the screen and hold down. Otherwise,
-              just hover over with your mouse.
+              To see previews on touch screen, just swipe across the screen. Otherwise, just hover
+              over with your mouse.
             </i>
           </h5>
           <div className="wrap">

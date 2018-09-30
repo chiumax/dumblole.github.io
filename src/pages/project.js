@@ -1,32 +1,67 @@
 import React from "react";
 import Img from "gatsby-image";
-// import { rhythm } from "../utils/typography";
+//import { rhythm } from "../utils/typography";
 import Layout from "../components/layout";
 import { Link, graphql } from "gatsby";
 
-export default ({ data }) => {
+export default class BlogList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      classNameVar: "tile tile-project",
+      data: props.data,
+      selected: null
+    };
+  }
   //   console.log(data);
-  return (
-    <Layout>
-      <div>
-        <h1>Project</h1>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        <h5>
-          <i>
-            To see previews on touch screen, swipe across the screen and hold down. Otherwise, just
-            hover over with your mouse.
-          </i>
-        </h5>
-        <div className="wrap">
-          {data.allMarkdownRemark.edges.map(({ node }) => (
-            <div key={node.id} className="tile tile-project">
-              <Link to={node.fields.slug}>
-                <div className="text">
-                  <h2 className="animate-text">
-                    {node.frontmatter.title} <span>— {node.frontmatter.date}</span>
-                  </h2>
-                  <p className="animate-text">
-                    {/*
+  swipeTrigger = id => {
+    console.log(id);
+    this.setState(() => ({
+      selected: id
+    }));
+    console.log(this.selected);
+  };
+  swipeEnd = () => {
+    console.log(this.selected);
+    this.setState(() => ({
+      selected: null
+    }));
+    console.log(this.selected);
+  };
+  render() {
+    return (
+      <Layout>
+        <div>
+          <h1>Projects</h1>
+          <h4>{this.state.data.allMarkdownRemark.totalCount} Posts</h4>
+          <h5>
+            <i>
+              To see previews on touch screen, just swipe across the screen. Otherwise, just hover
+              over with your mouse.
+            </i>
+          </h5>
+          <div className="wrap">
+            {this.state.data.allMarkdownRemark.edges.map(({ node }) => (
+              <div
+                key={node.id}
+                className={
+                  node.id === this.state.selected ? "tile tile-project yeet" : "tile tile-project"
+                }
+                onTouchStart={touchStartEvent => this.swipeTrigger(node.id)}
+                //onTouchEnd={() => this.swipeEnd()}
+                // onClick={e => {
+                //   e.preventDefault();
+                //   e.stopPropagation();
+                //   console.log("YYEET");
+                // }}
+              >
+                <Link to={node.fields.slug}>
+                  <div className="text">
+                    <h2 className="animate-text">
+                      {node.frontmatter.title} <span>— {node.frontmatter.startdate}</span>
+                    </h2>
+                    <p className="animate-text">
+                      {/*
             Basically what that huge chunk of code does
             is:
             1. Check if the tagline length is > 105
@@ -47,32 +82,33 @@ export default ({ data }) => {
             NOTE. This may not work with super super super long words
             Have not tried and don't see why anyone would do this.
             */}
-                    {node.excerpt.length > 105
-                      ? node.excerpt.indexOf(" ", 105) === -1
-                        ? node.excerpt
-                        : /^[a-z]+$/i.test(node.excerpt[node.excerpt.indexOf(" ", 105) - 1])
-                          ? node.excerpt.substring(0, node.excerpt.indexOf(" ", 105)) + "..."
-                          : node.excerpt.substring(0, node.excerpt.indexOf(" ", 105))
-                      : node.excerpt}
-                  </p>
-                  <div className="dots">
-                    <span />
-                    <span />
-                    <span />
-                    <span />
-                    <span />
+                      {node.excerpt.length > 105
+                        ? node.excerpt.indexOf(" ", 105) === -1
+                          ? node.excerpt
+                          : /^[a-z]+$/i.test(node.excerpt[node.excerpt.indexOf(" ", 105) - 1])
+                            ? node.excerpt.substring(0, node.excerpt.indexOf(" ", 105)) + "..."
+                            : node.excerpt.substring(0, node.excerpt.indexOf(" ", 105))
+                        : node.excerpt}
+                    </p>
+                    {/* {console.log(node. excerpt[node.excerpt.indexOf(" ", 105)])} */}
+                    <div className="dots">
+                      <span />
+                      <span />
+                      <span />
+                      <span />
+                      <span />
+                    </div>
                   </div>
-                  {/* {console.log(node.excerpt[node.excerpt.indexOf(" ", 105)])} */}
-                </div>
-              </Link>
-              <Img fluid={node.frontmatter.image.childImageSharp.fluid} className="img" />
-            </div>
-          ))}
+                </Link>
+                <Img fluid={node.frontmatter.image.childImageSharp.fluid} className="img" />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </Layout>
-  );
-};
+      </Layout>
+    );
+  }
+}
 
 export const query = graphql`
   query {
@@ -86,7 +122,7 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
+            startdate(formatString: "MMMM DD, YYYY")
             image {
               childImageSharp {
                 fluid(maxWidth: 1920) {
