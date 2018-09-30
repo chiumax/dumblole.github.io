@@ -5,7 +5,14 @@ import Layout from "../components/layout";
 import { Link, graphql } from "gatsby";
 
 export default ({ data }) => {
+  let classNameVar = "tile tile-blog";
   //   console.log(data);
+  const swipeTrigger = () => {
+    classNameVar = "tile tile-blog";
+  };
+  const swipeEnd = () => {
+    classNameVar = "tile tile-blog yeet";
+  };
   return (
     <Layout>
       <div>
@@ -21,7 +28,9 @@ export default ({ data }) => {
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <div
               key={node.id}
-              className="tile tile-blog"
+              className={classNameVar}
+              onTouchMove={swipeTrigger()}
+              onTouchEnd={swipeEnd()}
               // onClick={e => {
               //   e.preventDefault();
               //   e.stopPropagation();
