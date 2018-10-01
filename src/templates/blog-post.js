@@ -3,7 +3,6 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 // import Typography from "typography";
 // import fairyGatesTheme from "typography-theme-fairy-gates";
-import "../styles/components/_blog-project-post.scss";
 // const typography = new Typography(fairyGatesTheme);
 
 export default ({ data }) => {
