@@ -35,3 +35,4 @@ Sit deserunt cillum ea sint. Eu non do exercitation laborum dolore aute irure ci
 | Company Type | Total Company Revenue | Member Dues |
 | :----------: | :-------------------: | :---------: |
 | asdfasdf     | asdfasdf              | asdfasdf    |
+| wee          | woo                   | wonk        |
