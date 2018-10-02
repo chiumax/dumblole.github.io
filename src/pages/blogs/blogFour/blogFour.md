@@ -5,6 +5,9 @@ image: "./unnamed.png"
 date: "2017-08-11"
 path: "blog/blogFour"
 type: "blog"
+tags:
+  - "Handwriting"
+  - "Learning to write"
 ---
 
 _Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog_

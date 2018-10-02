@@ -6,6 +6,9 @@ startdate: "2017-08-10"
 enddate: "2017-09-10"
 path: "project/projectThree"
 type: "project"
+tags:
+  - "Handwriting"
+  - "Learning to write"
 ---
 
 _Project Project Project Project Project Project Project Project Project Project Project Project Project Project Project Project_

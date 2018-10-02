@@ -1,10 +1,20 @@
-@import "compass/css3";
+//@import "compass/css3";
 * {
+  overflow: visible;
   box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
+}
+// ::selection {
+//   text-shadow: 2px 2px #1c78a0, 1px 1px #1c78a0, 3px 3px #1c78a0, 4px 4px #1c78a0, 5px 5px #1c78a0;
+//   color: white;
+// }
+::selection {
+  background: #1c78a0;
+  // background: #1c78a0; // background: #1c78a0;
+  color: white;
 }
 
 body {
@@ -21,18 +31,4 @@ body {
   //max-width: 120rem;
   max-width: 75vw;
   padding: 0 $xs-size;
-}
-
-@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0, 0, 0, 0.4)) {
-  text-shadow: $x $y $blur $color;
-}
-::-moz-selection {
-  @include text-shadow(50, 2, 5, rgba(0, 0, 0, 0.4)); //background: #1c78a0;
-  color: white;
-}
-::selection {
-  @include text-shadow(50, 2, 5, rgba(0, 0, 0, 0.4)); //background: #1c78a0;
-
-  background: #1c78a0;
-  color: white;
 }
