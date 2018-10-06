@@ -16,8 +16,8 @@ export default ({ data }) => {
               <th>Spent Time</th>
             </tr>
             <tr>
-              <td>{post.frontmatter.startdate}</td>
-              <td>{post.frontmatter.enddate}</td>
+              <td>{moment(post.frontmatter.startdate, "YYYY-MM-DD").format("MMM D, YYYY")}</td>
+              <td>{moment(post.frontmatter.enddate, "YYYY-MM-DD").format("MMM D, YYYY")}</td>
               <td>
                 {moment(post.frontmatter.enddate, "YYYY-MM-DD").diff(
                   moment(post.frontmatter.startdate, "YYYY-MM-DD"),
@@ -28,7 +28,7 @@ export default ({ data }) => {
           </tbody>
         </table>
 
-        <div dangerouslySetInnerHTML={{ __html: post.html }} className={"blog"} />
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <p>SLOT</p>
       </div>
     </Layout>

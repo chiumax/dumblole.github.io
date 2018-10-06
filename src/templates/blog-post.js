@@ -9,9 +9,10 @@ export default ({ data }) => {
   const post = data.markdownRemark;
   return (
     <Layout>
-      <div>
+      <div className="blog">
         <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} className="blog" />
+        <p>{post.frontmatter.date}</p>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
   );
@@ -23,6 +24,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date(formatString: "MMMM DD, YYYY")
       }
     }
   }
