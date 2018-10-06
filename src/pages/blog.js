@@ -5,14 +5,18 @@ import Layout from "../components/layout";
 import { Link, graphql } from "gatsby";
 
 export default class BlogList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      classNameVar: "tile tile-blog",
-      data: props.data,
-      selected: null
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     classNameVar: "tile tile-blog",
+  //     data: props.data,
+  //     selected: null
+  //   };
+  // }
+  state = {
+    classNameVar: "tile tile-blog",
+    selected: null
+  };
   //   console.log(data);
   swipeTrigger = id => {
     console.log(id);
@@ -33,7 +37,7 @@ export default class BlogList extends React.Component {
       <Layout>
         <div>
           <h1>Blogs</h1>
-          <h4>{this.state.data.allMarkdownRemark.totalCount} Posts</h4>
+          <h4>{this.props.data.allMarkdownRemark.totalCount} Posts</h4>
           <h5>
             <i>
               To see previews on touch screen, just swipe across the screen. Otherwise, just hover
@@ -41,7 +45,7 @@ export default class BlogList extends React.Component {
             </i>
           </h5>
           <div className="wrap">
-            {this.state.data.allMarkdownRemark.edges.map(({ node }) => (
+            {this.props.data.allMarkdownRemark.edges.map(({ node }) => (
               <div
                 key={node.id}
                 className={
