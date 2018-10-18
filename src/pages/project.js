@@ -2,7 +2,7 @@ import React from "react";
 import Img from "gatsby-image";
 //import { rhythm } from "../utils/typography";
 import Layout from "../components/layout";
-import { Link, graphql } from "gatsby";
+import { Link, graphql, navigate } from "gatsby";
 
 export default class BlogList extends React.Component {
   // constructor(props) {
