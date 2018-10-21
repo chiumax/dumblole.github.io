@@ -4,7 +4,6 @@ import { Link } from "gatsby";
 
 export default class Card extends React.Component {
   state = {
-    classNameVar: "tile tile-blog",
     selected: null,
     fullScreen: false,
     focused: null,
@@ -33,7 +32,9 @@ export default class Card extends React.Component {
       <div
         key={this.props.node.id}
         className={
-          this.props.node.id === this.state.selected ? "tile tile-blog yeet" : "tile tile-blog"
+          this.props.node.id === this.state.selected
+            ? `tile tile-${this.props.type} yeet`
+            : `tile tile-${this.props.type}`
         }
         onClick={() =>
           this.setState({
