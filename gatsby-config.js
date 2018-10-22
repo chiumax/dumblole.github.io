@@ -35,14 +35,14 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "projects",
-        path: `${__dirname}/src/pages/projects`
+        path: `${__dirname}/src/pages/project`
       }
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "blogs",
-        path: `${__dirname}/src/pages/blogs`
+        path: `${__dirname}/src/pages/blog`
       }
     },
     `gatsby-plugin-catch-links`

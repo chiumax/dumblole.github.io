@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import moment from "moment";
 export default ({ data }) => {
@@ -7,6 +7,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div className={"blog"}>
+          <Link to={`/project/`}> All Projects</Link>
         <h1>{post.frontmatter.title}</h1>
         <table>
           <tbody>

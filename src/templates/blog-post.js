@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import Layout from "../components/layout";
 // import Typography from "typography";
@@ -10,6 +10,7 @@ export default ({ data }) => {
   const post = data.markdownRemark;
   return (
     <div className="blog">
+    <Link to={`/blog/`}> All Blogs </Link>
       <h1>{post.frontmatter.title}</h1>
       <p>{post.frontmatter.date}</p>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
