@@ -6,15 +6,21 @@ const slash = require("slash");
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
-    let slug = createFilePath({ node, getNode, basePath: `blogs` });
+    // let slug = createFilePath({ node, getNode, basePath: `blogs` });
+    // console.log(slug, "NOOO");
     const parent = getNode(_.get(node, "parent"));
     slug = slash(node.frontmatter.path);
-    //console.log(node);
     createNodeField({
       node,
       name: `slug`,
       value: slug
     });
+    if (!!node.frontmatter.tags) {
+      const tagSlugs = node.frontmatter.tags.map(tag => {
+        return `/${node.frontmatter.type}/tags/${_.kebabCase(tag)}/`;
+      });
+      createNodeField({ node, name: "tagSlugs", value: tagSlugs });
+    }
     // if (node.frontmatter.type === "blog") {
     //   createNodeField({
     //     node,
@@ -38,6 +44,7 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     const projectPost = path.resolve("./src/templates/project-post.js");
     const blogPost = path.resolve("./src/templates/blog-post.js");
+    const tagTemplate = path.resolve("./src/templates/project-tag-list.js");
 
     graphql(`
       {
@@ -46,6 +53,8 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               frontmatter {
                 type
+                path
+                tags
               }
               fields {
                 slug
@@ -56,7 +65,7 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(result => {
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        console.log(node.fields.slug, node.frontmatter.type);
+        //console.log(node.fields.slug, node.frontmatter.path);
         createPage({
           path: node.fields.slug,
           component: path.resolve(`./src/templates/${node.frontmatter.type}-post.js`),
@@ -65,6 +74,22 @@ exports.createPages = ({ graphql, actions }) => {
             // in page queries as GraphQL variables.
             slug: node.fields.slug
           }
+        });
+
+        let tags = [];
+        if (!!node.frontmatter.tags) {
+          tags = tags.concat(node.frontmatter.tags);
+        }
+        console.log("tag", tags);
+        tags = _.uniq(tags);
+        tags.forEach(tag => {
+          const tagPath = `/${node.frontmatter.type}/tags/${_.kebabCase(tag)}/`;
+          console.log(tag, _.kebabCase(tag));
+          createPage({
+            path: tagPath,
+            component: tagTemplate,
+            context: { tag: tag, type: node.frontmatter.type }
+          });
         });
       });
       resolve();
