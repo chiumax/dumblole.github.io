@@ -6,8 +6,7 @@ date: "2017-08-10"
 path: "blog/blogOne"
 type: "blog"
 tags:
-  - "Handwriting"
-  - "Learning to write"
+  - "Beet"
 ---
 
 _Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog_

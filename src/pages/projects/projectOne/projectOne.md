@@ -8,7 +8,7 @@ path: "project/projectOne"
 type: "project"
 tags:
   - "Handwriting"
-  - "Learning to write"
+  - "Learning to Write"
 ---
 
 _Project Project Project Project Project Project Project Project Project Project Project Project Project Project Project Project_

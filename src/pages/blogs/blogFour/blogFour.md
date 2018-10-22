@@ -3,11 +3,10 @@ title: "Blog Four"
 tagline: "Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog "
 image: "./unnamed.png"
 date: "2017-08-11"
-path: "blog/blogFour"
+path: "blog/blogFourrrrrrrrrrrrr"
 type: "blog"
 tags:
-  - "Handwriting"
-  - "Learning to write"
+  - "Beet"
 ---
 
 _Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog Blog_

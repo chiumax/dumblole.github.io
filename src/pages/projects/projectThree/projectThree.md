@@ -7,8 +7,8 @@ enddate: "2017-09-10"
 path: "project/projectThree"
 type: "project"
 tags:
-  - "Handwriting"
-  - "Learning to write"
+  - "Beet"
+  - "Learning to Write"
 ---
 
 _Project Project Project Project Project Project Project Project Project Project Project Project Project Project Project Project_
