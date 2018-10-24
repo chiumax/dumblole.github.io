@@ -1,31 +1,30 @@
-
-html,body {
+html,
+body {
   background-color: $background-grey;
   overflow-x: hidden;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: $background-grey;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
+  //   height: 100%;
+  //   margin: 0;
+  //   padding: 0;
+  //   background-color: $background-grey;
+  //   display: flex;
+  //   align-items: center;
+  //   flex-direction: column;
+  //   justify-content: space-between;
+  //   vertical-align: middle;
+  //flex-grow: 1;
 }
-  
-  
-.title-home {
-  
-  height: 100%;
-}
+
 .home-back {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
   margin: 0;
   padding: 0;
   background-color: $background-grey;
-  height: 100%;
+  padding: 15% 0;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
+  //   vertical-align: middle;
 }

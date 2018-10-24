@@ -8,7 +8,9 @@ import "../styles/styles.scss";
 export default ({ data }) => {
   return (
     <div className=" home-back">
-      <h1 className="title-home">aaaa</h1>
+      <h1 className="title-home">
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      </h1>
       <h1 className="title-home">Thanks for stopping by!</h1>
     </div>
   );
