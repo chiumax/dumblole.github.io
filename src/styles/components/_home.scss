@@ -11,7 +11,7 @@ body {
   //   flex-direction: column;
   //   justify-content: space-between;
   //   vertical-align: middle;
-  //flex-grow: 1;
+  //   flex-grow: 1;
 }
 
 .home-back {
@@ -27,4 +27,14 @@ body {
   align-items: center;
   flex-direction: column;
   //   vertical-align: middle;
+}
+h1 {
+	white-space: nowrap;
+  	overflow: hidden;
+}
+.desc-wrap {
+	color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: stretch;
 }
