@@ -29,12 +29,17 @@ body {
   //   vertical-align: middle;
 }
 h1 {
-	white-space: nowrap;
-  	overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .desc-wrap {
-	color: white;
-	display: flex;
-	flex-direction: row;
-	justify-content: stretch;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  white-space: nowrap;
+}
+
+.lorem {
+  color: $lorem-grey;
 }
