@@ -20,26 +20,26 @@ body {
   justify-content: space-around;
   height: 100vh;
   margin: 0;
-  padding: 0;
   background-color: $background-grey;
   padding: 15% 0;
   display: flex;
   align-items: center;
   flex-direction: column;
-  //   vertical-align: middle;
 }
-h1 {
-  white-space: nowrap;
-  overflow: hidden;
-}
+
 .desc-wrap {
   color: white;
   display: flex;
   flex-direction: row;
   justify-content: stretch;
   white-space: nowrap;
+  height: 0.7em;
 }
 
 .lorem {
   color: $lorem-grey;
+}
+
+.title-home{
+	color:white;
 }
