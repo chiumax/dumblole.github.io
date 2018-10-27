@@ -1,7 +1,6 @@
 html,
 body {
   background-color: $background-grey;
-  overflow-x: hidden;
   //   height: 100%;
   //   margin: 0;
   //   padding: 0;
@@ -18,13 +17,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 100vh;
-  margin: 0;
   background-color: $background-grey;
-  padding: 15% 0;
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow-x: hidden;
 }
 
 .desc-wrap {
@@ -33,13 +32,19 @@ body {
   flex-direction: row;
   justify-content: stretch;
   white-space: nowrap;
-  height: 0.7em;
+  padding-left: 17em;
+  line-height: 0;
+  font-size: 1rem;
 }
 
 .lorem {
   color: $lorem-grey;
 }
-
-.title-home{
-	color:white;
+.lorem-pad {
+  @media (min-width: $desktop-breakpoint) {
+    display: none;
+  }
+}
+.title-home {
+  color: white;
 }
