@@ -1,9 +1,8 @@
 import React from "react";
-import Img from "gatsby-image";
 import Card from "../components/card";
 //import { rhythm } from "../utils/typography";
 import Layout from "../components/layout";
-import { Link, graphql, navigate } from "gatsby";
+import { Link, graphql } from "gatsby";
 
 export default class BlogList extends React.Component {
   // constructor(props) {
