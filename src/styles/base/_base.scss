@@ -1,12 +1,25 @@
 //@import "compass/css3";
 * {
-  overflow: visible;
   box-sizing: border-box;
 }
-
-html {
-  font-size: 62.5%;
+body {
+  background-color: lighten(black, 5%);
 }
+// @mixin clearfix($currheight, $page-height) {
+//   @if ($currheight >= $page-height) {
+//     height: 100vh;
+//   } @else {
+//     height: 100%;
+//   }
+// }
+.body2 {
+  color: $dark-grey;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: $m-size;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
 // ::selection {
 //   text-shadow: 2px 2px #1c78a0, 1px 1px #1c78a0, 3px 3px #1c78a0, 4px 4px #1c78a0, 5px 5px #1c78a0;
 //   color: white;
@@ -17,18 +30,12 @@ html {
   color: white;
 }
 
-body {
-  color: $dark-grey;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: $m-size;
-  line-height: 1.6;
-  overflow-x: hidden;
-  overflow-y: visible;
-}
-
 .content-container {
   margin: 0 auto;
   //max-width: 120rem;
   max-width: 75vw;
   padding: 0 $xs-size;
+  flex-grow: 1;
+  bottom: 0;
+  height: 100;
 }

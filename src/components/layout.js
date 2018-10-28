@@ -17,18 +17,20 @@ export default ({ children }) => (
       }
     `}
     render={data => (
-      <div>
-        <div className="header">
-          <Link to={`/`} className="header__title">
-            <h1>{data.site.siteMetadata.title}</h1>
-          </Link>
-          <Link to={`/project/`}>Projects</Link>
+      <body className="body2">
+        <div className="color">
+          <div className="header header__content">
+            <Link to={`/`} className="header__title underline--magical link">
+              <h1>{data.site.siteMetadata.title}</h1>
+            </Link>
+            {/* <Link to={`/project/`}>Projects</Link>
           <Link to={`/blog/`}>Blogs</Link>
           <Link to={`/skills/`}>Skills</Link>
-          <Link to={`/about/`}>About</Link>
+          <Link to={`/about/`}>About</Link> */}
+          </div>
+          <div className="content-container color">{children}</div>
         </div>
-        <div className="content-container">{children}</div>
-      </div>
+      </body>
     )}
   />
 );

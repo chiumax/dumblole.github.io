@@ -1,29 +1,29 @@
-html,
-body {
-  background-color: $background-grey;
-  //   height: 100%;
-  //   margin: 0;
-  //   padding: 0;
-  //   background-color: $background-grey;
-  //   display: flex;
-  //   align-items: center;
-  //   flex-direction: column;
-  //   justify-content: space-between;
-  //   vertical-align: middle;
-  //   flex-grow: 1;
+html {
+  font-size: 62.5%;
 }
-
+.no-scroll {
+  overflow: hidden;
+  background-color: black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: $m-size;
+  line-height: 1.6;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
 .home-back {
   display: flex;
-  align-items: center;
   justify-content: space-around;
-  background-color: $background-grey;
-  display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 0;
+  padding-top: $s-size;
   padding-bottom: 0;
-  overflow-x: hidden;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently*/
 }
 
 .desc-wrap {
@@ -32,19 +32,39 @@ body {
   flex-direction: row;
   justify-content: stretch;
   white-space: nowrap;
-  padding-left: 17em;
   line-height: 0;
-  font-size: 1rem;
+  font-size: 1.05rem;
+  color: $background-grey;
+  @media (max-width: $desktop-breakpoint) {
+    line-height: 3vh;
+  }
 }
 
-.lorem {
-  color: $lorem-grey;
+.text {
+  color: white;
 }
-.lorem-pad {
-  @media (min-width: $desktop-breakpoint) {
+
+.lorem-rem {
+  @media (max-width: $desktop-breakpoint) {
     display: none;
   }
 }
-.title-home {
+
+.underline--magical {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.4vh;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in, color 0.25s ease-in;
+  -webkit-transition: background-size 0.25s ease-in, color 0.25s ease-in;
+  -ms-transition: background-size 0.25s ease-in, color 0.25s ease-in;
+  &:hover {
+    background-size: 100% 88%;
+    color: black;
+  }
+}
+
+.link {
+  text-decoration: none;
   color: white;
 }

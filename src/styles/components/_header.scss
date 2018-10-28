@@ -1,8 +1,9 @@
-header {
-  color: yellow !important;
-}
 .header {
-  background: $dark-red;
+  background: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .header__title {
@@ -14,14 +15,19 @@ header {
 }
 
 .header__content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: $s-size 0;
+  font-size: $m-size;
+  line-height: 1.6;
+  height: 9.7vh;
+  padding: 0;
+  margin: 0;
 }
 
 .header__sticky {
   position: sticky;
   top: 0;
   z-index: 9999;
+}
+
+.color {
+  width: 100vw;
 }
