@@ -53,37 +53,37 @@ export default class Card extends React.Component {
               {/*
               Basically what that huge chunk of code does
               is:
-              1. Check if the tagline length is > 105
+              1. Check if the tagline length is > 505
               2. If not, just print the whole tagline
               3. If it is, check if there is a space after
-              the index 105 and is not -1. If there isn't 
+              the index 505 and is not -1. If there isn't 
               then it'll return -1.
-              4. If there is no space after 105, (which returns
+              4. If there is no space after 505, (which returns
               -1) then print the whole tagline
               5. If not, then check if the last character of the tagline 
               has punctuation.
-              6. If it does, it prints the (first 105 characters + however
+              6. If it does, it prints the (first 505 characters + however
               many more till the next space) of the string
-              7. If it doesn't it prints the first 105 characters + however
+              7. If it doesn't it prints the first 505 characters + however
               many more till the next space) of the string + '...'
               8. This is because  'banana...' looks better than
               'bannana!...'
               NOTE. This may not work with super super super long words
               Have not tried and don't see why anyone would do this.
               */}
-              {this.props.node.excerpt.length > 105
-                ? this.props.node.excerpt.indexOf(" ", 105) === -1
+              {this.props.node.excerpt.length > 505
+                ? this.props.node.excerpt.indexOf(" ", 505) === -1
                   ? this.props.node.excerpt
                   : /^[a-z]+$/i.test(
-                      this.props.node.excerpt[this.props.node.excerpt.indexOf(" ", 105) - 1]
+                      this.props.node.excerpt[this.props.node.excerpt.indexOf(" ", 505) - 1]
                     )
                     ? this.props.node.excerpt.substring(
                         0,
-                        this.props.node.excerpt.indexOf(" ", 105)
+                        this.props.node.excerpt.indexOf(" ", 505)
                       ) + "..."
                     : this.props.node.excerpt.substring(
                         0,
-                        this.props.node.excerpt.indexOf(" ", 105)
+                        this.props.node.excerpt.indexOf(" ", 505)
                       )
                 : this.props.node.excerpt}
             </p>
