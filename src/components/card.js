@@ -30,15 +30,14 @@ export default class Card extends React.Component {
   render() {
     return (
       <div key={this.props.node.id} className={"tile"}>
-        <Link to={this.props.node.fields.slug}>
-          <div>
-            <Img fluid={this.props.node.frontmatter.image.childImageSharp.fluid} />
+            <Img fluid={this.props.node.frontmatter.image.childImageSharp.fluid} className={"img"}/>
+            <Link to={this.props.node.fields.slug}>
             <div>
               <h1>
                 {this.props.node.frontmatter.title}
                 <span>— {this.props.node.frontmatter.date}</span>
               </h1>
-              <div>{this.props.node.tags.map(tag => {})}</div>
+            <div>{this.props.node.frontmatter.tags.map(tag => (<p key={this.props.node.frontmatter.title+tag}>yote</p>))}</div>
               <p>
                 {this.props.node.excerpt.length > 505
                   ? this.props.node.excerpt.indexOf(" ", 505) === -1
@@ -57,8 +56,7 @@ export default class Card extends React.Component {
                   : this.props.node.excerpt}
               </p>
             </div>
-          </div>
-        </Link>
+            </Link>
       </div>
     );
   }

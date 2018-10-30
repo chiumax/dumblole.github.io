@@ -53,7 +53,7 @@ export default class BlogList extends React.Component {
           <Link to={`/blog/tags`}> All tags -></Link>
           <div className="wrap">
             {this.props.data.allMarkdownRemark.edges.map(({ node }) => (
-              <Card node={node} type={"blog"} />
+              <Card node={node} type={"blog"} key={node.id}/>
             ))}
           </div>
         </div>

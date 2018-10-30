@@ -8,8 +8,16 @@
 .tile {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   align-items: center;
+  width:100%;
+}
+
+.img{
+	width: 100%;
+	border-radius: 15px;
+	padding-right: 1rem;
 }
 // .wrap {
 //   //   list-style: none;

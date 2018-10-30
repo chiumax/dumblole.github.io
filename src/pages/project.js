@@ -4,7 +4,7 @@ import Card from "../components/card";
 import Layout from "../components/layout";
 import { Link, graphql } from "gatsby";
 
-export default class BlogList extends React.Component {
+export default class ProjectList extends React.Component {
   // constructor(props) {
   //   super(props);
   //   this.state = {
@@ -47,7 +47,7 @@ export default class BlogList extends React.Component {
           <Link to={`/blog/tags`}> All tags -></Link>
           <div className="wrap">
             {this.props.data.allMarkdownRemark.edges.map(({ node }) => (
-              <Card node={node} type="project" />
+              <Card node={node} type="project" key={node.id}/>
             ))}
           </div>
         </div>
@@ -68,6 +68,7 @@ export const query = graphql`
           id
           frontmatter {
             title
+            tags
             startdate(formatString: "MMMM DD, YYYY")
             image {
               childImageSharp {
