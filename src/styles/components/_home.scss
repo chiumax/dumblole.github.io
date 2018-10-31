@@ -10,8 +10,12 @@ html {
   height: 100vh;
   padding: 0;
   margin: 0;
+  @media (max-height:750px  ){
+  overflow-y: scroll;
+  }
 }
 .home-back {
+background-color: black;
   display: flex;
   justify-content: space-around;
   align-items: center;

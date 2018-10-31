@@ -12,12 +12,26 @@
   justify-content: space-between;
   align-items: center;
   width:100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
-.img{
+.imgWrap{
 	width: 100%;
-	border-radius: 15px;
 	padding-right: 1rem;
+}
+.descWrap{
+	width: 100%;
+	padding-left: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-content: flex-start;
+	align-items: flex-start;
+	justify-content:flex-start;
+	align-self: flex-start;
+}
+.img{
+	border-radius: 15px;
 }
 // .wrap {
 //   //   list-style: none;

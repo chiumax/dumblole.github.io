@@ -4,13 +4,12 @@ import Layout from "../components/layout";
 import Card from "../components/card";
 import { graphql } from "gatsby";
 
-export default class BlogList extends React.Component {
+export default class TagList extends React.Component {
   // constructor(props) {
   //   super(props);
   //   this.state = {
   //     classNameVar: "tile tile-blog",
   //     data: props.data,
-  //     selected: null
   //   };
   // }
   state = {
@@ -52,7 +51,7 @@ export default class BlogList extends React.Component {
           </h5>
           <div className="wrap">
             {this.props.data.allMarkdownRemark.edges.map(({ node }) => (
-              <Card node={node} type="project" />
+              <Card node={node} type="project" key={node.id}/>
             ))}
           </div>
         </div>
@@ -72,6 +71,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
+            tags
             title
             startdate(formatString: "MMMM DD, YYYY")
             image {
