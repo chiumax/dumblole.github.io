@@ -7,18 +7,24 @@
 
 .tile {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   width:100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  @media (min-width: $deskt op-breakpoint) {
+    flex-direction: row;
+  }
 }
 
 .imgWrap{
 	width: 100%;
 	padding-right: 1rem;
+}
+.descHead{
+	margin-top: 0;
 }
 .descWrap{
 	width: 100%;

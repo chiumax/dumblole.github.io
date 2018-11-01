@@ -70,6 +70,7 @@ export const query = graphql`
             title
             tags
             startdate(formatString: "MMMM DD, YYYY")
+            enddate(formatString: "MMMM DD, YYYY")
             image {
               childImageSharp {
                 fluid(maxWidth: 1920) {

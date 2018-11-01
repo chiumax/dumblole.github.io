@@ -40,11 +40,11 @@ export default class Card extends React.Component {
         </div>
         <div className={"descWrap"}>
             <div>
-              <h1>
+              <h1 className={"descHead"}>
               <Link to={this.props.node.fields.slug}>
                 {this.props.node.frontmatter.title}
                 </Link>
-                <span>— {this.props.node.frontmatter.startdate} </span>
+                <span>— {this.props.node.frontmatter.startdate}{this.props.node.frontmatter.date} </span>
               </h1>
               <div>
                 {this.props.node.frontmatter.tags.map(tag => (
