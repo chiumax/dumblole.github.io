@@ -11,33 +11,33 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  width:100%;
+  width: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  @media (min-width: $deskt op-breakpoint) {
+  @media (min-width: $desktop-breakpoint) {
     flex-direction: row;
   }
 }
 
-.imgWrap{
-	width: 100%;
-	padding-right: 1rem;
+.imgWrap {
+  width: 100%;
+  padding-right: 1rem;
 }
-.descHead{
-	margin-top: 0;
+.descHead {
+  margin-top: 0;
 }
-.descWrap{
-	width: 100%;
-	padding-left: 1rem;
-	display: flex;
-	flex-direction: column;
-	align-content: flex-start;
-	align-items: flex-start;
-	justify-content:flex-start;
-	align-self: flex-start;
+.descWrap {
+  width: 100%;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: flex-start;
 }
-.img{
-	border-radius: 15px;
+.img {
+  border-radius: 15px;
 }
 // .wrap {
 //   //   list-style: none;

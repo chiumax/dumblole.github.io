@@ -11,12 +11,12 @@ html {
   padding: 0;
   margin: 0;
   overflow-y: scroll;
-  @media (min-height:750px  ){
-  overflow-y: hidden;
+  @media (min-height: 750px) {
+    overflow-y: hidden;
   }
 }
 .home-back {
-background-color: black;
+  background-color: black;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -50,9 +50,8 @@ background-color: black;
 }
 
 .lorem-rem {
-display: none;
-  @media (min-width: $desktop-breakpoint) {
-    display: initial;
+  @media (max-width: $desktop-breakpoint) {
+    display: none;
   }
 }
 
