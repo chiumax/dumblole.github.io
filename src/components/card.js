@@ -39,19 +39,20 @@ export default class Card extends React.Component {
           </Link>
         </div>
         <div className={"descWrap"}>
-            <div>
               <h1 className={"descHead"}>
               <Link to={this.props.node.fields.slug}>
                 {this.props.node.frontmatter.title}
                 </Link>
                 <span>— {this.props.node.frontmatter.startdate}{this.props.node.frontmatter.date} </span>
               </h1>
-              <div>
+              <div className={"tagWrap"}>
                 {this.props.node.frontmatter.tags.map(tag => (
-                  <p key={this.props.node.frontmatter.title + tag}>yote</p>
+                  <div className={"tagCard"}>
+                  <p key={this.props.node.frontmatter.title + tag} className={"tagList"}>{tag}</p>
+                  </div>
                 ))}
               </div>
-              <p>
+              <p className={"description"}>
                 {this.props.node.excerpt.length > 505
                   ? this.props.node.excerpt.indexOf(" ", 505) === -1
                     ? this.props.node.excerpt
@@ -70,7 +71,6 @@ export default class Card extends React.Component {
                         )
                   : this.props.node.excerpt}
               </p>
-            </div>
         </div>
       </div>
     );
