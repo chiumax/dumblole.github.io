@@ -72,6 +72,7 @@ export const query = graphql`
           id
           frontmatter {
             tags
+            type
             title
             startdate(formatString: "MMMM DD, YYYY")
             date(formatString: "MMMM DD, YYYY")

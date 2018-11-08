@@ -2,6 +2,8 @@ import React from "react";
 import Img from "gatsby-image";
 import { Link } from "gatsby";
 
+const _=require("lodash");
+
 export default class Card extends React.Component {
   state = {
     selected: null,
@@ -48,11 +50,13 @@ export default class Card extends React.Component {
           </h1>
           <div className={"tagWrap"}>
             {this.props.node.frontmatter.tags.map(tag => (
+              <Link to={`/${this.props.node.frontmatter.type}/tags/${_.kebabCase(tag)}`} className={'link'}>
               <div className={"tagCard"}>
                 <p key={this.props.node.frontmatter.title + tag} className={"tagList"}>
                   {tag}
                 </p>
               </div>
+              </Link>
             ))}
           </div>
           <p className={"description"}>

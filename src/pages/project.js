@@ -69,6 +69,7 @@ export const query = graphql`
           frontmatter {
             title
             tags
+            type
             startdate(formatString: "MMMM DD, YYYY")
             enddate(formatString: "MMMM DD, YYYY")
             image {
