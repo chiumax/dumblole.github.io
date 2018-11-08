@@ -19,11 +19,30 @@
   }
 }
 .tagCard {
-	background-color: tan;
-	border-radius: 5px;
-	margin-right:1rem;
+  background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  border-radius: 5px;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  transition: background 0.25s ease-in, color 0.25s ease-in;
+  -webkit-transition: background 0.25s ease-in, color 0.25s ease-in;
+  -ms-transition: background 0.25s ease-in, color 0.25s ease-in;
+  $:hover {
+  }
 }
 
+.tag--magical {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.4vh;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in, color 0.25s ease-in;
+  -webkit-transition: background-size 0.25s ease-in, color 0.25s ease-in;
+  -ms-transition: background-size 0.25s ease-in, color 0.25s ease-in;
+  &:hover {
+    background-size: 100% 88%;
+    color: black;
+  }
+}
 .imgWrap {
   width: 100%;
   padding-right: 1rem;
@@ -33,21 +52,21 @@
   margin-bottom: 0;
 }
 .tagWrap {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 .tagList {
-	padding: 0 1rem 0 1rem;
-	margin-top: 0;
-	margin-bottom: 0;
-
+  padding: 0 1rem 0 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-.description{
-	margin-bottom: 0;
-	margin-top: 0;
+.description {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 .descWrap {
   width: 100%;

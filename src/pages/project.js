@@ -47,7 +47,7 @@ export default class ProjectList extends React.Component {
           <Link to={`/project/tags`}> All tags -></Link>
           <div className="wrap">
             {this.props.data.allMarkdownRemark.edges.map(({ node }) => (
-              <Card node={node} type="project" key={node.id}/>
+              <Card node={node} type="project" key={node.id} />
             ))}
           </div>
         </div>
