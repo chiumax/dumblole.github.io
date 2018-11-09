@@ -18,22 +18,33 @@
     flex-direction: row;
   }
 }
-//https://matthewmagnani.com/projects
 //https://uigradients.com/#Frost
 //
 .tagCard {
 text-decoration: none;
 background: linear-gradient(120deg, #cb2d3e 0%, #ef473a 100%);
-  //background: linear-gradient(120deg, #f85032
- //0%,  #e73827 100%);
- color:darken(white,20%);
+  //background: linear-gradient(120deg, #f85032 0%,  #e73827 100%);
+ color:darken(white, 15%);
  font-weight: bold;
   border-radius: 5px;
   margin-right: 1rem;
   margin-top: 0.5rem;
 
 }
-
+.tag--magical {
+  background: linear-gradient(120deg, #f85032 0%,  #e73827 100%);
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position: 0% 100%;
+  transition: background-size 0.25s ease-in, color 0.25s ease-in;
+  -webkit-transition: background-size 0.25s ease-in, color 0.25s ease-in;
+  -ms-transition: background-size 0.25s ease-in, color 0.25s ease-in;
+  &:hover {
+    background-size: 100% 100%;
+    color: white;
+  }
+}
 //#19A2E6
 //#0E5A81
 .imgWrap {

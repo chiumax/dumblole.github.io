@@ -42,19 +42,22 @@ export default class Card extends React.Component {
         </div>
         <div className={"descWrap"}>
           <h1 className={"descHead"}>
-            <Link to={this.props.node.fields.slug}>{this.props.node.frontmatter.title}</Link>
+            <Link to={this.props.node.fields.slug} className={"link underline--magical"}>{this.props.node.frontmatter.title}</Link>
             <span>
-              — {this.props.node.frontmatter.startdate}
+               {" "}— {this.props.node.frontmatter.startdate}{console.log(this.props.node.frontmatter.startdate, this.props.node.frontmatter.date)}
               {this.props.node.frontmatter.date}{" "}
             </span>
           </h1>
           <div className={"tagWrap"}>
             {this.props.node.frontmatter.tags.map(tag => (
               <Link to={`/${this.props.node.frontmatter.type}/tags/${_.kebabCase(tag)}`} className={'link'}>
+              
               <div className={"tagCard"}>
+              <div className={"tag--magical"}>
                 <p key={this.props.node.frontmatter.title + tag} className={"tagList"}>
                   {tag}
                 </p>
+              </div>
               </div>
               </Link>
             ))}
