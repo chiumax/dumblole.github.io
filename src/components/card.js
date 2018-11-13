@@ -63,17 +63,17 @@ export default class Card extends React.Component {
             ))}
           </div>
           <p className={"description"}>
-            {this.props.node.excerpt.length > 505
-              ? this.props.node.excerpt.indexOf(" ", 505) === -1
+            {this.props.node.excerpt.length > 300
+              ? this.props.node.excerpt.indexOf(" ", 300) === -1
                 ? this.props.node.excerpt
                 : /^[a-z]+$/i.test(
-                    this.props.node.excerpt[this.props.node.excerpt.indexOf(" ", 505) - 1]
+                    this.props.node.excerpt[this.props.node.excerpt.indexOf(" ", 300) - 1]
                   )
                   ? this.props.node.excerpt.substring(
                       0,
-                      this.props.node.excerpt.indexOf(" ", 505)
+                      this.props.node.excerpt.indexOf(" ", 300)
                     ) + "..."
-                  : this.props.node.excerpt.substring(0, this.props.node.excerpt.indexOf(" ", 505))
+                  : this.props.node.excerpt.substring(0, this.props.node.excerpt.indexOf(" ", 300))
               : this.props.node.excerpt}
           </p>
         </div>
