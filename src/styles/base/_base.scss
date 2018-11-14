@@ -3,7 +3,8 @@
   box-sizing: border-box;
 }
 body {
-  background-color: lighten(black, 5%);
+  background-color: black;
+  //background-color: lighten(black, 5%);
 }
 // @mixin clearfix($currheight, $page-height) {
 //   @if ($currheight >= $page-height) {

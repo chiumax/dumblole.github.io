@@ -1,8 +1,11 @@
 html {
   font-size: 62.5%;
 }
-.no-scroll {
-  overflow: hidden;
+.homeWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: black;
   font-family: Helvetica, Arial, sans-serif;
   font-size: $m-size;
@@ -30,7 +33,14 @@ html {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently*/
 }
-
+.homeButt{
+  width: 10rem;
+  height: 4rem;
+  color: white;
+  border-color: white;
+  
+  background: transparent;
+}
 .desc-wrap {
   color: white;
   display: flex;

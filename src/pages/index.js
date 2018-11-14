@@ -45,82 +45,14 @@ export default class Home extends React.Component {
       "Nam enim dui, rutrum vel bibendum sed, rhoncus ac purus. Duis consectetur, ligula in consectetur finibus, arcu leo varius felis, at suscipit quam quam non tortor. Ut cursus libero ultricies varius ullamcorper. Donec eros nibh, eleifend sit amet mauris vitae, pellentesque rutrum risus. Duis pretium ultricies egestas. Nullam ac ultrices nunc, eu euismod purus. Morbi vestibulum tristique dolor, et sagittis massa. Phasellus in nisl quis nulla tristique euismod non ut sem. In hac habitasse platea dictumst. Proin ultricies ut justo vel interdum. Aliquam ut vehicula orci, at pharetra nulla. Suspendisse mollis dapibus mattis. Pellentesque vel magna ut turpis rhoncus porta.Nunc elementum urna pretium, cursus lorem et, tincidunt arcu. Aliquam laoreet magna ut ligula maximus ultricies. Donec maximus aliquet eros, sit amet accumsan metus vestibulum vitae. Nunc ultricies nisi nisl, a iaculis libero dictum eu. Nullam luctus luctus eros posuere volutpat. Phasellus bibendum, erat vulputate dictum sed."
     ];
     return (
-      <body className="no-scroll">
-        <div className="header">
-          <h1 className="text underline--magical">dumblole</h1>
-        </div>
-        <div className=" home-back">
-          {intro.map(intro => {
-            addPad = !!Math.round(Math.random());
-            console.log(addPad);
-            return (
-              <div key={intro}>
-                <div className="desc-wrap lorem-rem">
-                  <h1>{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
-                  <h1>{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
-                </div>
-                <div className="desc-wrap">
-                  <h1 className="lorem-rem">{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
-                  <h1 className="lorem-rem">
-                    {console.log(addPad)}
-                    {addPad && shortLorem[Math.floor(Math.random() * shortLorem.length)]}
-                  </h1>
-                  <h1 className="text">
-                    &nbsp;
-                    {intro}
-                    &nbsp;
-                  </h1>
-                  <h1 className="lorem-rem">
-                    {!addPad && shortLorem[Math.floor(Math.random() * shortLorem.length)]}
-                  </h1>
-                  <h1 className="lorem-rem">{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
-                </div>
-                <div className="desc-wrap lorem-rem">
-                  <h1>{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
-                  <h1>{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
-                </div>
-              </div>
-            );
-          })}
-          {introLink.map(({ link, name }) => {
-            addPad = !!Math.floor(Math.random);
-            return (
-              <div key={link}>
-                <div className="desc-wrap lorem-rem">
-                  <h1>{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
-                  <h1>{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
-                </div>
-                <div className="desc-wrap">
-                  <h1 className="lorem-rem">
-                    {lorem[Math.floor(Math.random() * lorem.length)]}
-                    {addPad && shortLorem[Math.floor(Math.random() * shortLorem.length)]}
-                  </h1>
-                  <h1 className="text">
-                    &nbsp;
-                    <Link to={link} className="link underline--magical">
-                      {name}
-                    </Link>
-                    &nbsp;
-                  </h1>
-                  <h1 className="lorem-rem">
-                    {lorem[Math.floor(Math.random() * lorem.length)]}
-                    {addPad && shortLorem[Math.floor(Math.random() * shortLorem.length)]}
-                  </h1>
-                </div>
-                <div className="desc-wrap lorem-rem">
-                  <h1>{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
-                  <h1>{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
-                </div>
-              </div>
-            );
-          })}
-          {lorem.map(line => (
-            <div className="desc-wrap lorem-rem" key={line}>
-              <h1>{line}</h1>
-            </div>
-          ))}
-        </div>
-      </body>
+      <div className="homeWrap">
+      <div className="header">
+      <h1 className="text underline--magical">dumblole</h1>
+      </div>
+      <button className="homeButt">
+      home
+      </button>
+      </div>
     );
   }
 }
@@ -143,3 +75,81 @@ export default class Home extends React.Component {
 //     }
 //   }
 // `;
+
+
+// <body className="no-scroll">
+//         <div className="header">
+//           <h1 className="text underline--magical">dumblole</h1>
+//         </div>
+//         <div className=" home-back">
+//           {intro.map(intro => {
+//             addPad = !!Math.round(Math.random());
+//             console.log(addPad);
+//             return (
+//               <div key={intro}>
+//                 <div className="desc-wrap lorem-rem">
+//                   <h1>{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
+//                   <h1>{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
+//                 </div>
+//                 <div className="desc-wrap">
+//                   <h1 className="lorem-rem">{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
+//                   <h1 className="lorem-rem">
+//                     {console.log(addPad)}
+//                     {addPad && shortLorem[Math.floor(Math.random() * shortLorem.length)]}
+//                   </h1>
+//                   <h1 className="text">
+//                     &nbsp;
+//                     {intro}
+//                     &nbsp;
+//                   </h1>
+//                   <h1 className="lorem-rem">
+//                     {!addPad && shortLorem[Math.floor(Math.random() * shortLorem.length)]}
+//                   </h1>
+//                   <h1 className="lorem-rem">{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
+//                 </div>
+//                 <div className="desc-wrap lorem-rem">
+//                   <h1>{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
+//                   <h1>{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
+//                 </div>
+//               </div>
+//             );
+//           })}
+//           {introLink.map(({ link, name }) => {
+//             addPad = !!Math.floor(Math.random);
+//             return (
+//               <div key={link}>
+//                 <div className="desc-wrap lorem-rem">
+//                   <h1>{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
+//                   <h1>{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
+//                 </div>
+//                 <div className="desc-wrap">
+//                   <h1 className="lorem-rem">
+//                     {lorem[Math.floor(Math.random() * lorem.length)]}
+//                     {addPad && shortLorem[Math.floor(Math.random() * shortLorem.length)]}
+//                   </h1>
+//                   <h1 className="text">
+//                     &nbsp;
+//                     <Link to={link} className="link underline--magical">
+//                       {name}
+//                     </Link>
+//                     &nbsp;
+//                   </h1>
+//                   <h1 className="lorem-rem">
+//                     {lorem[Math.floor(Math.random() * lorem.length)]}
+//                     {addPad && shortLorem[Math.floor(Math.random() * shortLorem.length)]}
+//                   </h1>
+//                 </div>
+//                 <div className="desc-wrap lorem-rem">
+//                   <h1>{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
+//                   <h1>{lorem[Math.floor(Math.random() * lorem.length)]}</h1>
+//                 </div>
+//               </div>
+//             );
+//           })}
+//           {lorem.map(line => (
+//             <div className="desc-wrap lorem-rem" key={line}>
+//               <h1>{line}</h1>
+//             </div>
+//           ))}
+//         </div>
+//       </body>
