@@ -31,6 +31,7 @@
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-flip-toolkit": "^5.0.1",
+    "react-tilt": "^0.1.4",
     "react-typography": "^0.16.13",
     "sharp": "^0.20.8",
     "slash": "^2.0.0",
