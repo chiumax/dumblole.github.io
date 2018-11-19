@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import "normalize.css";
 import "../styles/styles.scss";
-import Tilt from 'react-tilt';
+import Tilt from "react-tilt";
 
 export default class Home extends React.Component {
   render() {
@@ -46,36 +46,31 @@ export default class Home extends React.Component {
       "Nam enim dui, rutrum vel bibendum sed, rhoncus ac purus. Duis consectetur, ligula in consectetur finibus, arcu leo varius felis, at suscipit quam quam non tortor. Ut cursus libero ultricies varius ullamcorper. Donec eros nibh, eleifend sit amet mauris vitae, pellentesque rutrum risus. Duis pretium ultricies egestas. Nullam ac ultrices nunc, eu euismod purus. Morbi vestibulum tristique dolor, et sagittis massa. Phasellus in nisl quis nulla tristique euismod non ut sem. In hac habitasse platea dictumst. Proin ultricies ut justo vel interdum. Aliquam ut vehicula orci, at pharetra nulla. Suspendisse mollis dapibus mattis. Pellentesque vel magna ut turpis rhoncus porta.Nunc elementum urna pretium, cursus lorem et, tincidunt arcu. Aliquam laoreet magna ut ligula maximus ultricies. Donec maximus aliquet eros, sit amet accumsan metus vestibulum vitae. Nunc ultricies nisi nisl, a iaculis libero dictum eu. Nullam luctus luctus eros posuere volutpat. Phasellus bibendum, erat vulputate dictum sed."
     ];
     return (
-      
-     <Tilt className="Tilt hometilt" options={{
-  reverse:        false,  // reverse the tilt direction
-  max:            80,     // max tilt rotation (degrees)
-  perspective:    10000,   // Transform perspective, the lower the more extreme the tilt gets.
-  scale:          1,      // 2 = 200%, 1.5 = 150%, etc..
-  speed:          1000,    // Speed of the enter/exit transition
-  transition:     true,   // Set a transition on enter/exit.
-  axis:           null,   // What axis should be disabled. Can be X or Y.
-  reset:          false,    // If the tilt effect has to be reset on exit.
-  easing:         "cubic-bezier(.03,.98,.52,.99)"    // Easing on enter/exit.
-}}>
-
-      <div className="homeWrap Tilt-inner">
-
-      <div className="header">
-      <h1 className="text underline--magical">dumblole</h1>
-      </div>
-      
-      <Link className="homeButt link" to={"/about"}>
-      home
-      </Link>
-     
-      </div>
-    
-       </Tilt>
-
-       
-
-       
+      <Tilt
+        className="Tilt hometilt"
+        options={{
+          reverse: true, // reverse the tilt direction
+          max: 80, // max tilt rotation (degrees)
+          perspective: 10000, // Transform perspective, the lower the more extreme the tilt gets.
+          scale: 1, // 2 = 200%, 1.5 = 150%, etc..
+          speed: 1000, // Speed of the enter/exit transition
+          transition: true, // Set a transition on enter/exit.
+          axis: null, // What axis should be disabled. Can be X or Y.
+          reset: false, // If the tilt effect has to be reset on exit.
+          easing: "cubic-bezier(.03,.98,.52,.99)" // Easing on enter/exit.
+        }}
+      >
+        <div className="homeWrap Tilt-inner">
+          <div className="header">
+            <h1 className="text underline--magical">dumblole</h1>
+          </div>
+          {introLink.map(link => (
+            <Link className="homeButt link hvr-outline-out" to={"/about"}>
+              <div className="Homebutton">home</div>
+            </Link>
+          ))}
+        </div>
+      </Tilt>
     );
   }
 }
@@ -98,7 +93,6 @@ export default class Home extends React.Component {
 //     }
 //   }
 // `;
-
 
 // <body className="no-scroll">
 //         <div className="header">

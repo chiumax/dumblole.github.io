@@ -1,10 +1,18 @@
+// @import url("https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans");
 //@import "compass/css3";
+@font-face {
+  font-family: "Blogger";
+  src: url("../fonts/BloggerSans.eot"),
+    /* IE6-IE8 */ url("../fonts/BloggerSans.woff") format("woff"),
+    /* Pretty Modern Browsers */ url("../fonts/BloggerSans.ttf") format("truetype"); /* Safari, Android, iOS */
+}
 * {
   box-sizing: border-box;
 }
 body {
   background-color: black;
-  overflow:hidden;
+  overflow: hidden;
+
   //background-color: lighten(black, 5%);
 }
 // @mixin clearfix($currheight, $page-height) {
