@@ -17,7 +17,7 @@ export default ({ children }) => (
       }
     `}
     render={data => (
-      <body className="body2">
+      <div className="body2">
         <div className="color">
           <div className="header header__content">
             <Link to={`/`} className="header__title underline--magical link">
@@ -30,7 +30,7 @@ export default ({ children }) => (
           </div>
           <div className="content-container color">{children}</div>
         </div>
-      </body>
+      </div>
     )}
   />
 );

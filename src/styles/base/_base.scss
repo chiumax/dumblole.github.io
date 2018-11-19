@@ -24,10 +24,13 @@ body {
 // }
 .body2 {
   color: $dark-grey;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Blogger", Helvetica, Arial, sans-serif;
   font-size: $m-size;
   line-height: 1.6;
   overflow-x: hidden;
+  height: 100vh;
+  overflow-y: scroll;
+
 }
 
 // ::selection {
