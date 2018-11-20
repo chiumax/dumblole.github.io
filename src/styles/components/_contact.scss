@@ -1,0 +1,20 @@
+.contactWrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	background-color: white;
+}
+.contactDivWrap {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.contactReveal {
+	width: 5px;
+	height: 100%;
+}
+.contact {
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+}

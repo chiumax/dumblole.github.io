@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import "normalize.css";
 import "../styles/styles.scss";
 import Tilt from "react-tilt";
+import Contact from "../components/contact";
 
 export default class Home extends React.Component {
   render() {
@@ -30,18 +31,19 @@ export default class Home extends React.Component {
           easing: "cubic-bezier(.03,.98,.52,.99)" // Easing on enter/exit.
         }}
       >
-        <div className="homeWrap Tilt-inner">
+        <div className="homeWrap Tilt-inner noselect">
           <div className="header">
-            <h1 className="text underline--magical">dumblole</h1>
+            <h1 className="text blurFilter">dumblole</h1>
           </div>
           <div className = {"linkWrapper"}>
           {introLink.map(link => (
-            <Link className="homeButt link hvr-outline-out" to={link.link}>
+            <Link className="homeButt hvr-outline-out blurFilter" to={link.link}>
               <div className="Homebutton">{link.name}</div>
             </Link>
           ))}
           </div>
         </div>
+        <Contact/>
       </Tilt>
     );
   }

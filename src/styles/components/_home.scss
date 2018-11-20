@@ -40,17 +40,33 @@ html {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently*/
 }
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
 .homeButt {
+text-decoration: none;
+font-weight: bold;
   width: 10rem;
   padding: 1rem 0;
   margin: 0 1rem;
-  transition: background 0.25s ease, color 0.25s ease;
+  transition: background 0.25s linear, color 0.25s ease;
+
   &:hover {
+  
   background: white;
   color: black;
   //background: transparent;
   //color: white;
   }
+
+  font-size: 1.5rem;
+  color: white;
   // border-style: solid;
   // border-width: 5px;
   // color: white;
@@ -60,7 +76,19 @@ html {
   color: white;
   background: transparent;
 }
-
+.blurFilter{
+   //transition: filter 0.25s ease, -webkit-filter 0.25s ease;
+  //-webkit-filter: blur(2px);
+    //  filter: blur(2px);
+      &:hover {
+  -webkit-filter: blur(0px);
+      filter: blur(0px);
+  ////background: white;
+  ////color: black;
+  //background: transparent;
+  //color: white;
+  }
+}
 .hometilt {
   height: 100%;
   width: 100%;
@@ -85,6 +113,8 @@ html {
 
 .text {
   color: white;
+  font-weight: 900;
+  font-size: 5rem;
 }
 
 .lorem-rem {
@@ -109,7 +139,7 @@ html {
 
 .link {
   text-decoration: none;
-  //color: white;
+  color: white;
 }
 .hvr-outline-out {
   text-align: center;
