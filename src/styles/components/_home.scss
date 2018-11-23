@@ -2,11 +2,10 @@ html {
   font-size: 62.5%;
 }
 .linkWrapper {
-  display: flex; 
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
 }
 .homeWrap {
   display: flex;
@@ -14,7 +13,6 @@ html {
   justify-content: center;
   align-items: center;
   //background-color: black;
-  font-family: "Blogger", sans-serif;
   font-size: $m-size;
   line-height: 1.6;
   height: 100vh;
@@ -42,27 +40,26 @@ html {
 }
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }
 .homeButt {
-text-decoration: none;
-font-weight: bold;
+  text-decoration: none;
+  font-weight: bold;
   width: 10rem;
   padding: 1rem 0;
   margin: 0 1rem;
   transition: background 0.25s linear, color 0.25s ease;
 
   &:hover {
-  
-  background: white;
-  color: black;
-  //background: transparent;
-  //color: white;
+    background: white;
+    color: black;
+    //background: transparent;
+    //color: white;
   }
 
   font-size: 1.5rem;
@@ -76,17 +73,17 @@ font-weight: bold;
   color: white;
   background: transparent;
 }
-.blurFilter{
-   //transition: filter 0.25s ease, -webkit-filter 0.25s ease;
+.blurFilter {
+  //transition: filter 0.25s ease, -webkit-filter 0.25s ease;
   //-webkit-filter: blur(2px);
-    //  filter: blur(2px);
-      &:hover {
-  -webkit-filter: blur(0px);
-      filter: blur(0px);
-  ////background: white;
-  ////color: black;
-  //background: transparent;
-  //color: white;
+  //  filter: blur(2px);
+  &:hover {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    ////background: white;
+    ////color: black;
+    //background: transparent;
+    //color: white;
   }
 }
 .hometilt {
@@ -137,6 +134,23 @@ font-weight: bold;
   }
 }
 
+.underline--magical-not {
+  color: black;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.4vh;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in, color 0.25s ease-in;
+  -webkit-transition: background-size 0.25s ease-in, color 0.25s ease-in;
+  -ms-transition: background-size 0.25s ease-in, color 0.25s ease-in;
+  &:hover {
+    background-size: 100% 88%;
+  }
+}
+.link-not {
+  text-decoration: none;
+  color: black;
+}
 .link {
   text-decoration: none;
   color: white;

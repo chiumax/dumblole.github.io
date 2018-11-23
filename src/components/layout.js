@@ -28,7 +28,9 @@ export default ({ children }) => (
           <Link to={`/skills/`}>Skills</Link>
           <Link to={`/about/`}>About</Link> */}
           </div>
-          <div className="content-container color">{children}</div>
+          <div className={"wrapEvery"}>
+            <div className="content-container color">{children}</div>
+          </div>
         </div>
       </div>
     )}

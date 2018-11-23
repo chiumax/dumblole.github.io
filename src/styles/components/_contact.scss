@@ -1,20 +1,28 @@
 .contactWrap {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: white;
 }
 .contactDivWrap {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .contactReveal {
-	width: 5px;
-	height: 100%;
+  margin-left: 1rem;
+  width: 5px;
+  height: 10px;
+  background-color: white;
 }
 .contact {
-	position: absolute;
-	left: 10px;
-	bottom: 10px;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 9999;
+}
+.ContactImg {
+  height: 200px;
+  width: 200px;
+  background: white;
 }

@@ -1,8 +1,16 @@
 import React from "react";
+import twitter from "../images/twitter-brands.svg";
+import envelope from "../images/envelope.svg";
 
 export default () => {
-	return(
-		<div class>
-		<div className="contactWrap">TWOOTTER</div></div>
-		)
-}
+  return (
+    <div className="contact">
+      <div className="contactDivWrap">
+        <div className="contactWrap">
+          <i src={twitter} alt="twitter" className={"ContactImg"} />
+        </div>
+        <div className="contactReveal" />
+      </div>
+    </div>
+  );
+};

@@ -14,25 +14,26 @@
   width: 100%;
   padding-top: 2rem;
   padding-bottom: 1rem;
-  @media (min-width: $desktop-breakpoint) {
+  @media (min-width: 1010px) {
     flex-direction: row;
   }
 }
 //https://uigradients.com/#Frost
 //
 .tagCard {
-text-decoration: none;
-background: linear-gradient(120deg, #cb2d3e 0%, #ef473a 100%);
+  text-decoration: none;
+  background: linear-gradient(120deg, #f85032 0%, #e73827 100%);
   //background: linear-gradient(120deg, #f85032 0%,  #e73827 100%);
- color:darken(white, 15%);
- font-weight: bold;
+
+  color: white;
+  font-weight: bold;
   border-radius: 5px;
   margin-right: 1rem;
   margin-top: 0.5rem;
-
 }
 .tag--magical {
-  background: linear-gradient(120deg, #f85032 0%,  #e73827 100%);
+  background: linear-gradient(120deg, #cb2d3e 0%, #ef473a 100%);
+
   border-radius: 5px;
   background-repeat: no-repeat;
   background-size: 0% 100%;
@@ -42,21 +43,23 @@ background: linear-gradient(120deg, #cb2d3e 0%, #ef473a 100%);
   -ms-transition: background-size 0.25s ease-in, color 0.25s ease-in;
   &:hover {
     background-size: 100% 100%;
-    color: white;
+    color: darken(white, 5%);
   }
 }
 //#19A2E6
 //#0E5A81
 .imgWrap {
+  border-radius: 15px;
   width: 100%;
-  padding-right: 1rem;
+  margin-right: 1rem;
+  background: transparent;
 }
 .descHead {
   margin-top: 0;
   margin-bottom: 0;
 }
 .tagWrap {
-  text-decoration:none;
+  text-decoration: none;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -65,7 +68,6 @@ background: linear-gradient(120deg, #cb2d3e 0%, #ef473a 100%);
   flex-wrap: wrap;
 }
 .tagList {
-
   text-decoration: none;
   padding: 0 1rem 0 1rem;
   margin-top: 0;
@@ -84,9 +86,37 @@ background: linear-gradient(120deg, #cb2d3e 0%, #ef473a 100%);
   align-items: flex-start;
   justify-content: flex-start;
   align-self: flex-start;
+  font-size: $font-size-large;
 }
 .img {
+  height: 100%;
+  width: 100%;
   border-radius: 15px;
+  box-shadow: 0px 7px 10px 3px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+  margin-bottom: 1rem;
+  &:hover {
+    box-shadow: 0px 8px 16px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.hvr-float {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-float:hover,
+.hvr-float:focus,
+.hvr-float:active {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
 }
 // .wrap {
 //   //   list-style: none;
