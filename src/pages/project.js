@@ -18,24 +18,11 @@ export default class ProjectList extends React.Component {
     classNameVar: "tile tile-project",
     selected: null
   };
-  swipeTrigger = id => {
-    console.log(id);
-    this.setState(() => ({
-      selected: id
-    }));
-    console.log(this.selected);
-  };
-  swipeEnd = () => {
-    console.log(this.selected);
-    this.setState(() => ({
-      selected: null
-    }));
-    console.log(this.selected);
-  };
+
   render() {
     return (
       <Layout>
-        <div>
+        <div className={"content-container"}>
           <h1>Projects</h1>
           <h4>{this.props.data.allMarkdownRemark.totalCount} Posts</h4>
           <h5>

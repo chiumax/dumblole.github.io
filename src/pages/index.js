@@ -25,7 +25,11 @@ export default class Home extends React.Component {
             </div>
             <div className={"linkWrapper"}>
               {introLink.map(link => (
-                <Link className="homeButt hvr-outline-out blurFilter" to={link.link}>
+                <Link
+                  className="homeButt hvr-outline-out blurFilter"
+                  to={link.link}
+                  key={link.link}
+                >
                   <div className="Homebutton">{link.name}</div>
                 </Link>
               ))}

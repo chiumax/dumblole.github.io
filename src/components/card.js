@@ -15,20 +15,7 @@ export default class Card extends React.Component {
     backgroundColor: "blue"
   };
   //   console.log(data);
-  swipeTrigger = id => {
-    console.log(id);
-    this.setState(() => ({
-      selected: id
-    }));
-    console.log(this.selected);
-  };
-  swipeEnd = () => {
-    console.log(this.selected);
-    this.setState(() => ({
-      selected: null
-    }));
-    console.log(this.selected);
-  };
+
   render() {
     return (
       <div key={this.props.node.id + this.props.node.frontmatter.title} className={"tile"}>
