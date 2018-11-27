@@ -8,7 +8,7 @@ export default ({ type, pic }) => {
     case "myself":
       return (
         <div>
-          <h1>YEET</h1>
+          <div className={"aboutTitle"}>ME</div>
           <Img fluid={pic.b} />
         </div>
       );
