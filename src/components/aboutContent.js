@@ -2,10 +2,16 @@ import React from "react";
 
 import Img from "gatsby-image";
 
-export default ({ type, data }) => {
+export default ({ type, pic }) => {
+  console.log(pic, "hiasdhifhasif");
   switch (type) {
     case "myself":
-      return <h1>YEET</h1>;
+      return (
+        <div>
+          <h1>YEET</h1>
+          <Img fluid={pic.b} />
+        </div>
+      );
     case "coding":
       return <h1>YOTE</h1>;
     case "gaming":
@@ -16,17 +22,3 @@ export default ({ type, data }) => {
       return null;
   }
 };
-
-export const query = graphql`
-  query {
-    file(relativePath: { eq: "blog/avatars/kyle-mathews.jpeg" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fixed(width: 125, height: 125) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`;

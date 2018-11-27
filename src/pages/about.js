@@ -16,7 +16,7 @@ export default class About extends React.Component {
     classfour: "",
     listState: "list__ul"
   };
-  
+
   selectChoice = type => {
     let classtype = "class" + type;
     if (this.state.current === "click me") {
@@ -41,19 +41,17 @@ export default class About extends React.Component {
   };
   mapPic = () => {
     const obj = {};
-    for(let i=0; i<this.props.data.allFile.edges.length; i++){
-    
-    obj[this.props.data.allFile.edges[i].name]=this.props.data.allFile.edges[i].childImageSharp.fluid;
-  }
-  console.log(obj);
-  return(<Content type={this.state.current} pic={obj}/>)
-  }
+    const data = this.props.data.allFile.edges;
+    for (let i = 0; i < data.length; i++) {
+      obj[data[i].node.name] = data[i].node.childImageSharp.fluid;
+    }
+    console.log(obj);
+    return <Content type={this.state.current} pic={obj} />;
+  };
 
   render() {
-    
     return (
       <Layout>
-        
         <div className={"aboutWrap"}>
           <div> Hey there! I'm dumblole but you can also call me Max.</div>
           <div>
@@ -120,11 +118,11 @@ export const query = graphql`
           children {
             id
           }
-           childImageSharp {
-                fluid(maxWidth: 1920) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+          childImageSharp {
+            fluid(maxWidth: 1920, maxHeight: 1080) {
+              ...GatsbyImageSharpFluid
+            }
+          }
           relativePath
         }
       }
