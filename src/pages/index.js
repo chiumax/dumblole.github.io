@@ -20,8 +20,8 @@ export default class Home extends React.Component {
         <Contact />
         <div className="hometilt">
           <div className="homeWrap Tilt-inner noselect">
-            <div className="header">
-              <h1 className="text blurFilter">dumblole</h1>
+            <div className="header ">
+              <h1 className="text blurFilter hvr-outline-out">dumblole</h1>
             </div>
             <div className={"linkWrapper"}>
               {introLink.map(link => (
