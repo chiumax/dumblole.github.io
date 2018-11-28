@@ -53,7 +53,7 @@ export default class About extends React.Component {
     return (
       <Layout>
         <div className={"aboutWrap"}>
-          <div> Hey there! I'm dumblole but you can also call me Max.</div>
+          <div>Hey there! I'm dumblole but you can also call me Max.</div>
           <div>
             This is a page about me and I love{" "}
             <div className="list">
