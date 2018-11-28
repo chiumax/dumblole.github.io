@@ -13,11 +13,23 @@ export default ({ type, pic }) => {
         </div>
       );
     case "coding":
-      return <h1>YOTE</h1>;
+      return (
+        <div>
+          <div className={"aboutTitle"}>CODING</div>
+        </div>
+      );
     case "gaming":
-      return <h1>YEART</h1>;
+      return (
+        <div>
+          <div className={"aboutTitle"}>GAMING</div>
+        </div>
+      );
     case "editing":
-      return <h1>YERT</h1>;
+      return (
+        <div>
+          <div className={"aboutTitle"}>EDITING</div>
+        </div>
+      );
     default:
       return null;
   }
