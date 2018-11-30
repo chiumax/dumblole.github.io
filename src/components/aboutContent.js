@@ -1,6 +1,6 @@
 import React from "react";
-
 import Img from "gatsby-image";
+const Javascript = require("../icons/javascript.svg");
 
 export default ({ type, pic }) => {
   console.log(pic, "hiasdhifhasif");
@@ -30,6 +30,7 @@ export default ({ type, pic }) => {
     case "coding":
       return (
         <div>
+        <Javascript/>
           <div className={"aboutTitle"}>CODING</div>
           <div>
             My journey in programming had a pretty rough start. Although I was lucky enough to land
