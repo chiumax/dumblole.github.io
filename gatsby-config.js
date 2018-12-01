@@ -32,13 +32,13 @@ module.exports = {
       }
     },
     {
-    resolve: 'gatsby-plugin-react-svg',
-    options: {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
         rule: {
           include: `${__dirname}/src/icons`
         }
-    }
-},
+      }
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
