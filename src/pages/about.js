@@ -126,8 +126,11 @@ export default class About extends React.Component {
       obj[data[i].node.name] = data[i].node.childImageSharp.fluid;
     }
     console.log(obj);
-    return <Content type={this.state.current} pic={obj} />;
+    return <Content type={this.state.current} pic={obj} codeOnFocus={this.state.codeOnFocus} codeContent={codeContent} choose={this.choose} />;
   };
+  choose = (select) => {
+    this.setState((prev) => ({codeOnFocus: prev.codeOnFocus==select? null: select}))
+  }
 
   render() {
     return (

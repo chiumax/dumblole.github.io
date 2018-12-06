@@ -1,5 +1,4 @@
 import React from "react";
 
 export default () => (
-	<div>
-	</div>)
+	Object.keys(this.props.codeContent).map((key)=> (this.props.codeOnFocus==key?(<div onClick={() => {this.props.choose(key)}}>RETARD</div>):(<div>LEGOO</div>))))
