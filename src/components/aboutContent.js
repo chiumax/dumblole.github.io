@@ -56,8 +56,7 @@ export default ({ type, pic }) => {
             deep learning. If not, maybe I could work for Elon Musk, spearhead the way into
             interplanetary travel.
           </div>
- 
-          
+          {!!this.props.codeOnFocus ? (Object.keys(this.props.codeContent).map((key)=> (!!this.props.))) : <div>AUTISM TIME</div>}
           I'm working on a couple projects right now. You can see my finished ones over at the
           Projects page.
         </div>
