@@ -2,8 +2,9 @@ import React from "react";
 import Img from "gatsby-image";
 import Javascript from "../icons/javascript.svg";
 import HideIcon from "./Hideicon";
+import ShowIcon from "./Showicon";
 
-export default ({ type, pic, codeOnFocus, codeContent,choose }) => {
+export default ({ type, pic, codeOnFocus, codeContent, choose }) => {
   console.log(pic, "hiasdhifhasif");
   switch (type) {
     case "myself":
@@ -57,31 +58,11 @@ export default ({ type, pic, codeOnFocus, codeContent,choose }) => {
             deep learning. If not, maybe I could work for Elon Musk, spearhead the way into
             interplanetary travel.
           </div>
-       {
-  !!this.props.codeOnFocus ? (
-    Object.keys(this.props.codeContent).map(key => (
-      (this.props.codeOnFocus === key) ? (
-        <div
-          onClick={() => {
-            this.props.choose(key);
-          }}
-        >
-          RETARD
-        </div>
-      ) : (
-        <div>LEGOO</div>
-      )
-    ))
-  ) : (
-    <HideIcon
-      choose={this.props.choose}
-      codeOnFocus={this.props.codeOnFocus}
-      codeContent={this.props.codeContent}
-    />
-  )
-}
-
-
+          {!!codeOnFocus ? (
+            <ShowIcon choose={choose} codeOnFocus={codeOnFocus} codeContent={codeContent} />
+          ) : (
+            <HideIcon choose={choose} codeOnFocus={codeOnFocus} codeContent={codeContent} />
+          )}
           I'm working on a couple projects right now. You can see my finished ones over at the
           Projects page.
         </div>
