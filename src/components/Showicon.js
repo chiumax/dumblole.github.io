@@ -8,7 +8,9 @@ export default ({ choose, codeOnFocus, codeContent }) =>
           choose(key);
         }}
       >
-        what
+      {codeContent[key].icon}
+      <div>{codeContent[key].content}</div>
+    
       </div>
     ) : (
       <div>we</div>

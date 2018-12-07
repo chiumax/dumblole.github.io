@@ -6,7 +6,7 @@ import Content from "../components/aboutContent";
 import Javascript from "../icons/javascript.svg";
 import Java from "../icons/java.svg";
 import NodeJS from "../icons/node.svg";
-import ReactJS from "../icons/react.svg";
+import Rhet from "../icons/react.svg";
 import Sass from "../icons/sass.svg";
 import Python from "../icons/python.svg";
 
@@ -23,7 +23,7 @@ learned other languages and other programming things, I hope to return to python
 soon to work in Artificial Intelligence.`,
     color: "black",
     border: "black",
-    name: Python
+    name: "Python"
   },
   1: {
     icon: <Sass className={"icon"} />,
@@ -33,10 +33,10 @@ hard to master. Everything you see on my website is the result of SCSS/CSS styli
 Evidently, I still have ways to go.`,
     color: "black",
     border: "black",
-    name: Sass
+    name: "Sass"
   },
   2: {
-    icon: <ReactJS className={"icon"} />,
+    icon: <Rhet className={"icon"} />,
     content: `Learning Javscript was difficult for me because I really didn't know where to start.
 ReactJS was something that I kept hearing over and over when learning Javascript.
 Although I haven't worked with Angular or Vue yet, I've enjoyed my time working with
@@ -44,7 +44,7 @@ React. A big part of learning react was also learning HTML, CSS, webpack, babel,
 working with multiple files.`,
     color: "black",
     border: "black",
-    name: React
+    name: "React"
   },
   3: {
     icon: <NodeJS className={"icon"} />,
@@ -64,7 +64,7 @@ guess its something different. My first OOP. I have found that the whole bracket
 defining variables deal to be pretty similar to Javascript.`,
     color: "black",
     border: "black",
-    name: Java
+    name: "Java"
   },
   5: {
     icon: <Javascript className={"icon"} />,
@@ -77,7 +77,7 @@ really like it. It's a really flexible language and that may be a good thing or 
 thing.`,
     color: "black",
     border: "black",
-    name: Javascript
+    name: "Javascript"
   }
 };
 const editContent = {};
@@ -94,7 +94,7 @@ export default class About extends React.Component {
     classthree: "",
     classfour: "",
     listState: "list__ul",
-    codeOnFocus: false
+    codeOnFocus: false 
   };
 
   selectChoice = type => {

@@ -58,11 +58,13 @@ export default ({ type, pic, codeOnFocus, codeContent, choose }) => {
             deep learning. If not, maybe I could work for Elon Musk, spearhead the way into
             interplanetary travel.
           </div>
+          <div>
           {!!codeOnFocus ? (
             <ShowIcon choose={choose} codeOnFocus={codeOnFocus} codeContent={codeContent} />
           ) : (
             <HideIcon choose={choose} codeOnFocus={codeOnFocus} codeContent={codeContent} />
           )}
+          </div>
           I'm working on a couple projects right now. You can see my finished ones over at the
           Projects page.
         </div>
