@@ -77,7 +77,6 @@
 select {
   display: inline;
   border: 0;
-  width: auto;
   margin-left: 1rem;
   outline: none;
   -webkit-appearance: none;
@@ -112,7 +111,51 @@ select {
 .blockChoice {
   display: none;
 }
-.icon{
-  height:100px;
-  width: 100px;
+.icon {
+  height: 7vw;
+  width: 7vw;
+  margin: 1rem 8vw;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.icon:hover,
+.icon:focus,
+.icon:active {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+  cursor: pointer;
+}
+
+.iconWrap {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 5rem;
+}
+.singleIcon {
+  margin: 2vw 0;
+}
+.skillWrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 0;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #fc00ff, #00dbde);
+}
+.skillText {
+  font-size: 5rem;
+  color: white;
 }

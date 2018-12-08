@@ -1,4 +1,5 @@
 import React from "react";
+import { Flipper, Flipped } from "react-flip-toolkit";
 import Img from "gatsby-image";
 import Javascript from "../icons/javascript.svg";
 import HideIcon from "./Hideicon";
@@ -33,7 +34,9 @@ export default ({ type, pic, codeOnFocus, codeContent, choose }) => {
       return (
         <div>
           <Javascript className={"icon"} />
-          <div className={"aboutTitle"}>CODING</div>
+          <div className={"aboutTitle"}>
+            {"< "}CODING{" />"}
+          </div>
           <div>
             My journey in programming had a pretty rough start. Although I was lucky enough to land
             a computer science class early on in middle school, I didn't feel like the teachers who
@@ -58,12 +61,18 @@ export default ({ type, pic, codeOnFocus, codeContent, choose }) => {
             deep learning. If not, maybe I could work for Elon Musk, spearhead the way into
             interplanetary travel.
           </div>
-          <div>
-          {!!codeOnFocus ? (
-            <ShowIcon choose={choose} codeOnFocus={codeOnFocus} codeContent={codeContent} />
-          ) : (
-            <HideIcon choose={choose} codeOnFocus={codeOnFocus} codeContent={codeContent} />
-          )}
+          <div className={"skillWrap"}>
+            <div className={"skillText"}>
+              {!!codeOnFocus ? codeContent[codeOnFocus].name : "< SKILLS />"}
+            </div>
+            <div className={"underline"} />
+            <div className={"iconWrap"}>
+              {!!codeOnFocus ? (
+                <ShowIcon choose={choose} codeOnFocus={codeOnFocus} codeContent={codeContent} />
+              ) : (
+                <HideIcon choose={choose} codeOnFocus={codeOnFocus} codeContent={codeContent} />
+              )}
+            </div>
           </div>
           I'm working on a couple projects right now. You can see my finished ones over at the
           Projects page.

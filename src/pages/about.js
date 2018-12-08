@@ -6,9 +6,11 @@ import Content from "../components/aboutContent";
 import Javascript from "../icons/javascript.svg";
 import Java from "../icons/java.svg";
 import NodeJS from "../icons/node.svg";
-import Rhet from "../icons/react.svg";
 import Sass from "../icons/sass.svg";
 import Python from "../icons/python.svg";
+import ReactIcon from "../icons/preact.svg";
+import CSS3 from "../icons/css3.svg";
+import HTML5 from "../icons/html5.svg";
 
 const codeContent = {
   0: {
@@ -36,7 +38,7 @@ Evidently, I still have ways to go.`,
     name: "Sass"
   },
   2: {
-    icon: <Rhet className={"icon"} />,
+    icon: <ReactIcon className={"icon"} />,
     content: `Learning Javscript was difficult for me because I really didn't know where to start.
 ReactJS was something that I kept hearing over and over when learning Javascript.
 Although I haven't worked with Angular or Vue yet, I've enjoyed my time working with
@@ -53,7 +55,7 @@ modules and that it's helpful. I put it here to make me look good... Does it mak
 look good?`,
     color: "black",
     border: "black",
-    name: Node
+    name: "Node"
   },
   4: {
     icon: <Java className={"icon"} />,
@@ -78,6 +80,32 @@ thing.`,
     color: "black",
     border: "black",
     name: "Javascript"
+  },
+  6: {
+    icon: <HTML5 className={"icon"} />,
+    content: `I started to learn this language in the summer at the end of 9th grade (high school
+whooo). Along with Javascript came about a bunch of other terms: Angular, React, Vue,
+object destructuring, computed property names. Self-learning this was a PAIN in the
+ass. I started to learn javascript because I wanted to build myself a website (this
+website!). From what I've heard, people either really like JS or hate it. I happen to
+really like it. It's a really flexible language and that may be a good thing or a bad
+thing.`,
+    color: "black",
+    border: "black",
+    name: "HTML"
+  },
+  7: {
+    icon: <CSS3 className={"icon"} />,
+    content: `I started to learn this language in the summer at the end of 9th grade (high school
+whooo). Along with Javascript came about a bunch of other terms: Angular, React, Vue,
+object destructuring, computed property names. Self-learning this was a PAIN in the
+ass. I started to learn javascript because I wanted to build myself a website (this
+website!). From what I've heard, people either really like JS or hate it. I happen to
+really like it. It's a really flexible language and that may be a good thing or a bad
+thing.`,
+    color: "black",
+    border: "black",
+    name: "CSS"
   }
 };
 const editContent = {};
@@ -94,7 +122,7 @@ export default class About extends React.Component {
     classthree: "",
     classfour: "",
     listState: "list__ul",
-    codeOnFocus: false 
+    codeOnFocus: false
   };
 
   selectChoice = type => {
@@ -126,11 +154,19 @@ export default class About extends React.Component {
       obj[data[i].node.name] = data[i].node.childImageSharp.fluid;
     }
     console.log(obj);
-    return <Content type={this.state.current} pic={obj} codeOnFocus={this.state.codeOnFocus} codeContent={codeContent} choose={this.choose} />;
+    return (
+      <Content
+        type={this.state.current}
+        pic={obj}
+        codeOnFocus={this.state.codeOnFocus}
+        codeContent={codeContent}
+        choose={this.choose}
+      />
+    );
   };
-  choose = (select) => {
-    this.setState((prev) => ({codeOnFocus: prev.codeOnFocus==select? null: select}))
-  }
+  choose = select => {
+    this.setState(prev => ({ codeOnFocus: prev.codeOnFocus == select ? null : select }));
+  };
 
   render() {
     return (
