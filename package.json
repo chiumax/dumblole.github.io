@@ -29,7 +29,7 @@
     "normalize.css": "^8.0.0",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
-    "react-flip-toolkit": "^6.3.0",
+    "react-pose": "^4.0.4",
     "react-tilt": "^0.1.4",
     "sharp": "^0.20.8",
     "slash": "^2.0.0"

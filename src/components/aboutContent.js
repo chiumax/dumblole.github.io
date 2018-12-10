@@ -1,10 +1,17 @@
 import React from "react";
-import { Flipper, Flipped } from "react-flip-toolkit";
+import posed from "react-pose";
+import { tween } from "popmotion";
 import Img from "gatsby-image";
 import Javascript from "../icons/javascript.svg";
-import HideIcon from "./Hideicon";
-import ShowIcon from "./Showicon";
 
+const IconWrap = posed.div({
+  stay: { opacity: 1 },
+  gone: { opacity: 0 }
+});
+const IconShow = posed.div({
+  stay: { scale: 1 },
+  gone: { scale: 0 }
+});
 export default ({ type, pic, codeOnFocus, codeContent, choose }) => {
   console.log(pic, "hiasdhifhasif");
   switch (type) {
@@ -65,13 +72,30 @@ export default ({ type, pic, codeOnFocus, codeContent, choose }) => {
             <div className={"skillText"}>
               {!!codeOnFocus ? codeContent[codeOnFocus].name : "< SKILLS />"}
             </div>
-            <div className={"underline"} />
+
             <div className={"iconWrap"}>
-              {!!codeOnFocus ? (
-                <ShowIcon choose={choose} codeOnFocus={codeOnFocus} codeContent={codeContent} />
-              ) : (
-                <HideIcon choose={choose} codeOnFocus={codeOnFocus} codeContent={codeContent} />
-              )}
+              {Object.keys(codeContent).map(key => (
+                <IconWrap
+                  key={key}
+                  pose={(codeOnFocus == key && !!codeOnFocus) || !codeOnFocus ? "stay" : "gone"}
+                  className={"singleIcon"}
+                  onClick={() => {
+                    choose(key);
+                  }}
+                >
+                  {console.log(codeOnFocus, codeOnFocus == key || !codeOnFocus, codeOnFocus == key)}
+                  <IconWrap pose={codeOnFocus != key ? "stay" : "gone"}>
+                    <div>{codeContent[key].icon}</div>
+                    <div>{codeContent[key].name}</div>
+                  </IconWrap>
+                  {/* <div>
+                    <IconShow pose={codeOnFocus == key ? "stay" : "gone"}>
+                      {codeContent[key].icon}
+                      <div>{codeContent[key].content}</div>
+                    </IconShow>
+                  </div> */}
+                </IconWrap>
+              ))}
             </div>
           </div>
           I'm working on a couple projects right now. You can see my finished ones over at the

@@ -122,7 +122,7 @@ export default class About extends React.Component {
     classthree: "",
     classfour: "",
     listState: "list__ul",
-    codeOnFocus: false
+    codeOnFocus: null
   };
 
   selectChoice = type => {
