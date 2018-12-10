@@ -5,12 +5,12 @@ import Img from "gatsby-image";
 import Javascript from "../icons/javascript.svg";
 
 const IconWrap = posed.div({
-  stay: { opacity: 1 },
-  gone: { opacity: 0 }
-});
-const IconShow = posed.div({
   stay: { scale: 1 },
   gone: { scale: 0 }
+});
+const IconShow = posed.div({
+  stay: { scale: 0 },
+  gone: { scale: 1 }
 });
 export default ({ type, pic, codeOnFocus, codeContent, choose }) => {
   console.log(pic, "hiasdhifhasif");
@@ -77,23 +77,22 @@ export default ({ type, pic, codeOnFocus, codeContent, choose }) => {
               {Object.keys(codeContent).map(key => (
                 <IconWrap
                   key={key}
-                  pose={(codeOnFocus == key && !!codeOnFocus) || !codeOnFocus ? "stay" : "gone"}
+                  pose={(codeOnFocus == key ) || !codeOnFocus ? "stay" : "gone"}
                   className={"singleIcon"}
                   onClick={() => {
                     choose(key);
                   }}
                 >
                   {console.log(codeOnFocus, codeOnFocus == key || !codeOnFocus, codeOnFocus == key)}
-                  <IconWrap pose={codeOnFocus != key ? "stay" : "gone"}>
+                  <IconWrap  pose={codeOnFocus != key || !codeOnFocus ? "stay" : "gone"}>
                     <div>{codeContent[key].icon}</div>
                     <div>{codeContent[key].name}</div>
                   </IconWrap>
-                  {/* <div>
-                    <IconShow pose={codeOnFocus == key ? "stay" : "gone"}>
+                    <IconShow style={codeOnFocus !=key ? {display:"none"}: {display:"block"}} pose={codeOnFocus != key  ? "stay" : "gone"}>
+                    {console.log(codeOnFocus==key,"show")}
                       {codeContent[key].icon}
                       <div>{codeContent[key].content}</div>
                     </IconShow>
-                  </div> */}
                 </IconWrap>
               ))}
             </div>
