@@ -149,7 +149,7 @@ select {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
   padding: 4rem 0;
   height: 100vh;
@@ -159,7 +159,7 @@ select {
   font-size: 5rem;
   color: white;
 }
-.iconDesc{
-  position:absolute;
-  z-index:99;
+.iconDesc {
+  position: absolute;
+  z-index: 99;
 }

@@ -77,22 +77,28 @@ export default ({ type, pic, codeOnFocus, codeContent, choose }) => {
               {Object.keys(codeContent).map(key => (
                 <IconWrap
                   key={key}
-                  pose={(codeOnFocus == key ) || !codeOnFocus ? "stay" : "gone"}
+                  style={
+                    codeOnFocus == key || !codeOnFocus ? { display: "block" } : { display: "none" }
+                  }
+                  pose={codeOnFocus == key || !codeOnFocus ? "stay" : "gone"}
                   className={"singleIcon"}
                   onClick={() => {
                     choose(key);
                   }}
                 >
                   {console.log(codeOnFocus, codeOnFocus == key || !codeOnFocus, codeOnFocus == key)}
-                  <IconWrap  pose={codeOnFocus != key || !codeOnFocus ? "stay" : "gone"}>
+                  <IconWrap pose={codeOnFocus != key || !codeOnFocus ? "stay" : "gone"}>
                     <div>{codeContent[key].icon}</div>
                     <div>{codeContent[key].name}</div>
                   </IconWrap>
-                    <IconShow style={codeOnFocus !=key ? {display:"none"}: {display:"block"}} pose={codeOnFocus != key  ? "stay" : "gone"}>
-                    {console.log(codeOnFocus==key,"show")}
-                      {codeContent[key].icon}
-                      <div>{codeContent[key].content}</div>
-                    </IconShow>
+                  <IconShow
+                    style={codeOnFocus != key ? { display: "none" } : { display: "block" }}
+                    pose={codeOnFocus != key ? "stay" : "gone"}
+                  >
+                    {console.log(codeOnFocus == key, "show")}
+                    {codeContent[key].icon}
+                    <div>{codeContent[key].content}</div>
+                  </IconShow>
                 </IconWrap>
               ))}
             </div>
