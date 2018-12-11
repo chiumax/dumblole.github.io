@@ -17,7 +17,7 @@ export default class Home extends React.Component {
     ];
     return (
       <div>
-        <Contact />
+        
         <div className="hometilt">
           <div className="homeWrap Tilt-inner noselect">
             <div className="header ">

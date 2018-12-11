@@ -48,6 +48,7 @@ export default ({ type, pic, codeOnFocus, codeContent, choose }) => {
           <div className={"aboutTitle"}>
             {"< "}CODING{" />"}
           </div>
+          <div className="wrapEveryAbout wrapEvery">
           <div>
             My journey in programming had a pretty rough start. Although I was lucky enough to land
             a computer science class early on in middle school, I didn't feel like the teachers who
@@ -71,6 +72,7 @@ export default ({ type, pic, codeOnFocus, codeContent, choose }) => {
             In the future I hope I can pursue a career in artificial learning. More specifically,
             deep learning. If not, maybe I could work for Elon Musk, spearhead the way into
             interplanetary travel.
+          </div>
           </div>
           <div className={"skillWrap"}>
             <div className={"skillText"}>

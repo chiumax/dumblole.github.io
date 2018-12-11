@@ -12,7 +12,7 @@
 .aboutTitle {
   text-align: center;
   margin: 5rem 0;
-  font-size: 4rem;
+  font-size: 5rem;
 
   padding: 0;
 }
@@ -112,8 +112,8 @@ select {
   display: none;
 }
 .icon {
-  height: 7vw;
-  width: 7vw;
+  height: 6vw;
+  width: 6vw;
   margin: 1rem 8vw;
   display: inline-block;
   vertical-align: middle;
@@ -150,4 +150,10 @@ select {
 .iconDesc {
   position: absolute;
   z-index: 99;
+}
+.wrapEveryAbout{
+ font-size: 2rem; 
+ div {
+ margin-bottom: 1.5rem;
+ }
 }
