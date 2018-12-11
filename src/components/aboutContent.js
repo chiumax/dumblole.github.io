@@ -12,6 +12,11 @@ const IconShow = posed.div({
   stay: { scale: 0 },
   gone: { scale: 1 }
 });
+const IconHover = posed.div({
+  hoverable: true,
+  init: { scale: 1 },
+  hover: { scale: 1.2 }
+});
 export default ({ type, pic, codeOnFocus, codeContent, choose }) => {
   console.log(pic, "hiasdhifhasif");
   switch (type) {
@@ -32,7 +37,7 @@ export default ({ type, pic, codeOnFocus, codeContent, choose }) => {
           <div>
             Whenever I work on something relatively big, it can usually be found under my Projects
             page. Want to know what I think about various topics? Either contact me or go snoop
-            around in my Blogs page!
+            around in my Blogs page! See you around.
           </div>
           <Img fluid={pic.b} />
         </div>
@@ -40,7 +45,6 @@ export default ({ type, pic, codeOnFocus, codeContent, choose }) => {
     case "coding":
       return (
         <div>
-          <Javascript className={"icon"} />
           <div className={"aboutTitle"}>
             {"< "}CODING{" />"}
           </div>
@@ -88,15 +92,14 @@ export default ({ type, pic, codeOnFocus, codeContent, choose }) => {
                 >
                   {console.log(codeOnFocus, codeOnFocus == key || !codeOnFocus, codeOnFocus == key)}
                   <IconWrap pose={codeOnFocus != key || !codeOnFocus ? "stay" : "gone"}>
-                    <div>{codeContent[key].icon}</div>
+                    <IconHover>{codeContent[key].icon}</IconHover>
                     <div>{codeContent[key].name}</div>
                   </IconWrap>
                   <IconShow
                     style={codeOnFocus != key ? { display: "none" } : { display: "block" }}
                     pose={codeOnFocus != key ? "stay" : "gone"}
                   >
-                    {console.log(codeOnFocus == key, "show")}
-                    {codeContent[key].icon}
+                    <IconHover>{codeContent[key].icon}</IconHover>
                     <div>{codeContent[key].content}</div>
                   </IconShow>
                 </IconWrap>

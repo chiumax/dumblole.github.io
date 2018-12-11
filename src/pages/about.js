@@ -62,7 +62,7 @@ look good?`,
     content: `I'm learning Java this year (10th grade) in school. My teacher there is a fucking
 legend. I really wish I had him as a teacher earlier. Though I don't find Java as
 riveting. I haven't really found a use case where I would need to know Java, but I
-guess its something different. My first OOP. I have found that the whole brackets and
+guess it's something different. My first OOP. I have found that the whole brackets and
 defining variables deal to be pretty similar to Javascript.`,
     color: "black",
     border: "black",
@@ -83,26 +83,14 @@ thing.`,
   },
   6: {
     icon: <HTML5 className={"icon"} />,
-    content: `I started to learn this language in the summer at the end of 9th grade (high school
-whooo). Along with Javascript came about a bunch of other terms: Angular, React, Vue,
-object destructuring, computed property names. Self-learning this was a PAIN in the
-ass. I started to learn javascript because I wanted to build myself a website (this
-website!). From what I've heard, people either really like JS or hate it. I happen to
-really like it. It's a really flexible language and that may be a good thing or a bad
-thing.`,
+    content: `I don't think HTML is a language but employers don't know the difference, so here it is... I know HTML! Hire me! heh...`,
     color: "black",
     border: "black",
     name: "HTML"
   },
   7: {
     icon: <CSS3 className={"icon"} />,
-    content: `I started to learn this language in the summer at the end of 9th grade (high school
-whooo). Along with Javascript came about a bunch of other terms: Angular, React, Vue,
-object destructuring, computed property names. Self-learning this was a PAIN in the
-ass. I started to learn javascript because I wanted to build myself a website (this
-website!). From what I've heard, people either really like JS or hate it. I happen to
-really like it. It's a really flexible language and that may be a good thing or a bad
-thing.`,
+    content: `Yes, I know SCSS and I know CSS too. Amazing, right?`,
     color: "black",
     border: "black",
     name: "CSS"
