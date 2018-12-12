@@ -1,18 +1,24 @@
 // Colors
-$dark-grey: #333333;
-$grey: #666666;
-$light-grey: #f7f7f7;
-$light-red: #e74c3c;
-$verylight-red: #fc8275;
-$dark-red: #82172b;
-$verydark-red: #82172b;
-$background-grey: #212121;
-$lorem-grey: lighten($background-grey, 5%);
-$dark: #555;
-$color--primary: hsla(269, 100%, 50%, 1);
+$background-grey: #222222;
+$subtitle-grey: #484647;
+$white-text: #fafafa;
+
+// // Colors
+// $dark-grey: #333333;
+// $grey: #666666;
+// $light-grey: #f7f7f7;
+// $light-red: #e74c3c;
+// $verylight-red: #fc8275;
+// $dark-red: #82172b;
+// $verydark-red: #82172b;
+// $background-grey: #212121;
+// $lorem-grey: lighten($background-grey, 5%);
+// $dark: #555;
+// $color--primary: hsla(269, 100%, 50%, 1);
 // Font Sizes
 $font-size-large: 1.8rem;
 $font-size-small: 1.4rem;
+$font-size-header: 3rem;
 // Spacing
 $xs-size: 0.6rem;
 $s-size: 1.2rem;

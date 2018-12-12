@@ -1,95 +1,108 @@
 // @import url("https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans");
 //@import "compass/css3";
+// 	#484647
+// 	#222222
+// #fafafa
 @font-face {
   font-family: "Blogger";
   src: url("../fonts/BloggerSans.eot"),
     /* IE6-IE8 */ url("../fonts/BloggerSans.woff") format("woff"),
     /* Pretty Modern Browsers */ url("../fonts/BloggerSans.ttf") format("truetype"); /* Safari, Android, iOS */
 }
+@font-face {
+  font-family: "BrandonGrotesque";
+  src: url("../fonts/brandonGrotesqueBlack.woff");
+}
+@font-face {
+  font-family: "BrandonGrotesqueItalic";
+  src: url("../fonts/brandonGrotesqueBoldItalic.woff");
+}
 * {
   box-sizing: border-box;
 }
 body {
-  background-color: black;
-  font-family: "Helvectica", "Roboto", "Blogger", sans-serif;
+  background-color: $background-grey;
+  font-family: "BrandonGrotesque", "Blogger", sans-serif;
   overflow: hidden;
   overflow-x: hidden;
-
-  //background-color: lighten(black, 5%);
+  color: $white-text;
 }
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+html {
+  font-size: 62.5%;
 }
-::-webkit-scrollbar-button {
-  width: 0px;
-  height: 0px;
-}
-::-webkit-scrollbar-thumb {
-  background: #c0c0c0;
-  border: 0px none #7c99fa;
-  border-radius: 50px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #d8d8d8;
-}
-::-webkit-scrollbar-thumb:active {
-  background: #8d8d8d;
-}
-::-webkit-scrollbar-track {
-  background: #666666;
-  border: 0px none #ea0006;
-  border-radius: 23px;
-}
-::-webkit-scrollbar-track:hover {
-  background: #666666;
-}
-::-webkit-scrollbar-track:active {
-  background: #666666;
-}
-::-webkit-scrollbar-corner {
-  background: transparent;
-}
-
-// @mixin clearfix($currheight, $page-height) {
-//   @if ($currheight >= $page-height) {
-//     height: 100vh;
-//   } @else {
-//     height: 100%;
-//   }
+// ::-webkit-scrollbar {
+//   width: 8px;
+//   height: 8px;
 // }
-.body2 {
-  color: $dark-grey;
-  font-family: "Roboto", "Blogger", Helvetica, Arial, sans-serif;
-  font-size: $m-size;
-  line-height: 1.6;
-  overflow-x: hidden;
-  height: 100vh;
-  overflow-y: scroll;
-}
-.wrapEvery {
-  margin-left: 2vw;
-  margin-right: 2vw;
-  margin-bottom: 2vh;
-  border-radius: 5px;
-  background-color: white;
-}
+// ::-webkit-scrollbar-button {
+//   width: 0px;
+//   height: 0px;
+// }
+// ::-webkit-scrollbar-thumb {
+//   background: #c0c0c0;
+//   border: 0px none #7c99fa;
+//   border-radius: 50px;
+// }
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #d8d8d8;
+// }
+// ::-webkit-scrollbar-thumb:active {
+//   background: #8d8d8d;
+// }
+// ::-webkit-scrollbar-track {
+//   background: #666666;
+//   border: 0px none #ea0006;
+//   border-radius: 23px;
+// }
+// ::-webkit-scrollbar-track:hover {
+//   background: #666666;
+// }
+// ::-webkit-scrollbar-track:active {
+//   background: #666666;
+// }
+// ::-webkit-scrollbar-corner {
+//   background: transparent;
+// }
+
+// // @mixin clearfix($currheight, $page-height) {
+// //   @if ($currheight >= $page-height) {
+// //     height: 100vh;
+// //   } @else {
+// //     height: 100%;
+// //   }
+// // }
+// .body2 {
+//   color: $dark-grey;
+//   font-family: "Roboto", "Blogger", Helvetica, Arial, sans-serif;
+//   font-size: $m-size;
+//   line-height: 1.6;
+//   overflow-x: hidden;
+//   height: 100vh;
+//   overflow-y: scroll;
+// }
+// .wrapEvery {
+//   margin-left: 2vw;
+//   margin-right: 2vw;
+//   margin-bottom: 2vh;
+//   border-radius: 5px;
+//   background-color: white;
+// }
+// // ::selection {
+// //   text-shadow: 2px 2px #1c78a0, 1px 1px #1c78a0, 3px 3px #1c78a0, 4px 4px #1c78a0, 5px 5px #1c78a0;
+// //   color: white;
+// // }
 // ::selection {
-//   text-shadow: 2px 2px #1c78a0, 1px 1px #1c78a0, 3px 3px #1c78a0, 4px 4px #1c78a0, 5px 5px #1c78a0;
+//   background: #1c78a0;
+//   // background: #1c78a0; // background: #1c78a0;
 //   color: white;
 // }
-::selection {
-  background: #1c78a0;
-  // background: #1c78a0; // background: #1c78a0;
-  color: white;
-}
 
-.content-container {
-  margin: 0 auto;
-  //max-width: 120rem;
-  max-width: 90vw;
-  padding: 0 $xs-size;
-  flex-grow: 1;
-  bottom: 0;
-  height: 100;
-}
+// .content-container {
+//   margin: 0 auto;
+//   //max-width: 120rem;
+//   max-width: 90vw;
+//   padding: 0 $xs-size;
+//   flex-grow: 1;
+//   bottom: 0;
+//   height: 100;
+// }

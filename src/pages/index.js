@@ -16,25 +16,14 @@ export default class Home extends React.Component {
       { link: "/contact/", name: "contact" }
     ];
     return (
-      <div>
-        
-        <div className="hometilt">
-          <div className="homeWrap Tilt-inner noselect">
-            <div className="header ">
-              <h1 className="text blurFilter">dumblole</h1>
-            </div>
-            <div className={"linkWrapper"}>
-              {introLink.map(link => (
-                <Link
-                  className="homeButt hvr-outline-out blurFilter"
-                  to={link.link}
-                  key={link.link}
-                >
-                  <div className="Homebutton">{link.name}</div>
-                </Link>
-              ))}
-            </div>
-          </div>
+      <div className="homeWrap">
+        <div className="homeTitle">DUMBLOLE</div>
+        <div className="homeNavWrap">
+          {introLink.map(link => (
+            <Link className="link hvr-outline-out homeNavButton" to={link.link} key={link.link}>
+              {link.name}
+            </Link>
+          ))}
         </div>
       </div>
     );
