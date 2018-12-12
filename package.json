@@ -9,31 +9,31 @@
     "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "dependencies": {
-    "gatsby": "^2.0.11",
-    "gatsby-image": "^2.0.10",
-    "gatsby-plugin-catch-links": "^2.0.3",
-    "gatsby-plugin-offline": "^2.0.5",
+    "gatsby": "^2.0.66",
+    "gatsby-image": "^2.0.24",
+    "gatsby-plugin-catch-links": "^2.0.9",
+    "gatsby-plugin-offline": "^2.0.19",
     "gatsby-plugin-react-svg": "^2.0.0",
-    "gatsby-plugin-sass": "^2.0.1",
+    "gatsby-plugin-sass": "^2.0.7",
     "gatsby-plugin-sharp": "^2.0.15",
-    "gatsby-remark-copy-linked-files": "^2.0.5",
-    "gatsby-remark-images": "^2.0.3",
-    "gatsby-source-filesystem": "^2.0.1",
-    "gatsby-transformer-remark": "^2.1.4",
-    "gatsby-transformer-sharp": "^2.1.2",
+    "gatsby-remark-copy-linked-files": "^2.0.7",
+    "gatsby-remark-images": "^2.0.6",
+    "gatsby-source-filesystem": "^2.0.12",
+    "gatsby-transformer-remark": "^2.1.15",
+    "gatsby-transformer-sharp": "^2.1.9",
     "lodash": "^4.17.11",
     "moment": "^2.22.2",
-    "node-sass": "^4.9.3",
-    "normalize.css": "^8.0.0",
+    "node-sass": "^4.11.0",
+    "normalize.css": "^8.0.1",
     "particles.js": "^2.0.0",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "react-pose": "^4.0.4",
     "react-tilt": "^0.1.4",
     "sharp": "^0.20.8",
     "slash": "^2.0.0"
   },
   "devDependencies": {
-    "gh-pages": "^2.0.0"
+    "gh-pages": "^2.0.1"
   }
 }
