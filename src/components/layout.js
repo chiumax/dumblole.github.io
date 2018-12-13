@@ -17,19 +17,32 @@ export default ({ children }) => (
       }
     `}
     render={data => (
-      <div className="body2">
-        <div className="color">
-          <div className="header header__content">
-            <Link to={`/`} className="header__title underline--magical link">
-              <h1>{data.site.siteMetadata.title}</h1>
-            </Link>
-            {/* <Link to={`/project/`}>Projects</Link>
-          <Link to={`/blog/`}>Blogs</Link>
-          <Link to={`/skills/`}>Skills</Link>
-          <Link to={`/about/`}>About</Link> */}
+      <div className="">
+        <div className="">
+          <div className="headerLinkWrap">
+            <div>
+              <Link className="linke" to={`/`}>
+                DUMBLOLE
+              </Link>
+            </div>
+
+            <div>
+              <Link className="link" to={`/project/`}>
+                Projects
+              </Link>
+              <Link className="link" to={`/blog/`}>
+                Blogs
+              </Link>
+              <Link className="link" to={`/skills/`}>
+                Skills
+              </Link>
+              <Link className="link" to={`/about/`}>
+                About
+              </Link>
+            </div>
           </div>
-          <div className={"wrapEvery"}>
-            <div className=" color">{children}</div>
+          <div className={""}>
+            <div className=" ">{children}</div>
           </div>
         </div>
       </div>

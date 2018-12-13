@@ -1,3 +1,24 @@
+.headerLinkWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  div {
+    margin: 3rem 4rem;
+
+    .link {
+      text-decoration: none;
+      font-size: $font-size-header;
+      margin: 0 2rem;
+      color: $white-text;
+    }
+    .linke {
+      text-decoration: none;
+      font-size: $font-size-header;
+      color: $white-text;
+    }
+  }
+}
 // .header {
 //   background: black;
 //   display: flex;
