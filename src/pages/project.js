@@ -23,14 +23,7 @@ export default class ProjectList extends React.Component {
     return (
       <Layout>
         <div className={"content-container"}>
-          <h1>Projects</h1>
           <h4>{this.props.data.allMarkdownRemark.totalCount} Posts</h4>
-          <h5>
-            <i>
-              To see previews on touch screen, just swipe across the screen. Otherwise, just hover
-              over with your mouse.
-            </i>
-          </h5>
           <Link to={`/project/tags`}> All tags -></Link>
           <div className="wrap">
             {this.props.data.allMarkdownRemark.edges.map(({ node }) => (

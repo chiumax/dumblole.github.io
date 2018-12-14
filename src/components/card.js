@@ -15,7 +15,9 @@ export default class Card extends React.Component {
     backgroundColor: "blue"
   };
   //   console.log(data);
-
+  displayCard = () => {
+    
+  }
   render() {
     return (
       <div key={this.props.node.id + this.props.node.frontmatter.title} className={"tile"}>
