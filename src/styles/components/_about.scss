@@ -111,49 +111,70 @@
 // .blockChoice {
 //   display: none;
 // }
-// .icon {
-//   height: 6vw;
-//   width: 6vw;
-//   margin: 1rem 8vw;
-//   display: inline-block;
-//   vertical-align: middle;
-//   cursor: pointer;
-// }
+.icon {
+  height: 6vw;
+  width: 6vw;
+  margin: 1rem 8vw;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
 
-// .iconWrap {
-//   text-align: center;
-//   display: flex;
-//   flex-direction: row;
-//   flex-wrap: wrap;
-//   justify-content: center;
-//   margin: 0 5rem;
-//   color: white;
-//   font-size: 3rem;
-// }
-// .singleIcon {
-//   margin: 2vw 0;
-// }
-// .skillWrap {
-//   display: flex;
-//   align-items: center;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   text-align: center;
-//   padding: 4rem 0;
-//   height: 100vh;
-//   background-image: linear-gradient(to bottom right, #fc00ff, #00dbde);
-// }
-// .skillText {
-//   font-size: 5rem;
-//   color: white;
-// }
-// .iconDesc {
-//   position: absolute;
-//   z-index: 99;
-// }
-// .wrapEveryAbout{
-//  font-size: 2rem;
-//  div {
-//  margin-bottom: 1.5rem;
-//  }
-// }
+.iconWrap {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  margin: 0 5rem;
+  color: white;
+  font-size: 3rem;
+}
+.singleIcon {
+display:flex;
+flex-direction: column;
+justify-content: flex-start;
+  
+}
+.skillWrap {
+  display: flex;
+  align-items: space-around;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 4rem 0;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, $third-color, $secondary-color);
+ // background-image: linear-gradient(to bottom right, #fc00ff, #00dbde);
+}
+.skillText {
+  font-size: 5rem;
+  color: white;
+}
+.iconDesc {
+  position: absolute;
+  z-index: 99;
+}
+.wrapEveryAbout{
+ font-size: 2rem;
+ div {
+ margin-bottom: 1.5rem;
+ }
+}
+.testImage{
+	-webkit-filter: grayscale(20%) hue-rotate(90deg); /* Safari 6.0 - 9.0 */
+  filter: grayscale(20%) hue-rotate(300deg);
+
+}
+.aboutParticle{
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	width:100vw;
+	height:100vh;
+	bottom:0;
+	z-index:-1;
+}

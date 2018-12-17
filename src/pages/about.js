@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Content from "../components/aboutContent";
+import Particles from 'react-particles-js';
 
 import Javascript from "../icons/javascript.svg";
 import Java from "../icons/java.svg";
@@ -51,7 +52,7 @@ working with multiple files.`,
   3: {
     icon: <NodeJS className={"icon"} />,
     content: `I don't think I do much with NodeJS. I just know that it lets me install and use
-modules and that it's helpful. I put it here to make me look good... Does it make me
+packages and that it's helpful. I put it here to make me look good... Does it make me
 look good?`,
     color: "black",
     border: "black",
@@ -159,56 +160,12 @@ export default class About extends React.Component {
   render() {
     return (
       <Layout>
-        <div className={"aboutWrap"}>
+       <Particles className="aboutParticle"/>
+        <div className={"aboutwrap"}>
           <div>Hey there! I'm dumblole but you can also call me Max.</div>
           <div>
-            This is a page about me and I love{" "}
-            <div className="list">
-              <span
-                className="placeholder"
-                onClick={() => {
-                  this.focus();
-                }}
-              >
-                {this.state.current}
-              </span>
-              <ul className={this.state.listState}>
-                <li
-                  onClick={() => {
-                    this.selectChoice("one");
-                  }}
-                  className={this.state.classone}
-                >
-                  <a href="">{this.state.one}</a>
-                </li>
-                <li
-                  onClick={() => {
-                    this.selectChoice("two");
-                  }}
-                  className={this.state.classtwo}
-                >
-                  <a href="">{this.state.two}</a>
-                </li>
-                <li
-                  onClick={() => {
-                    this.selectChoice("three");
-                  }}
-                  className={this.state.classthree}
-                >
-                  <a href="">{this.state.three}</a>
-                </li>
-                <li
-                  onClick={() => {
-                    this.selectChoice("four");
-                  }}
-                  className={this.state.classfour}
-                >
-                  <a href="">{this.state.four}</a>
-                </li>
-              </ul>
+            This is a page about me and I love <span><a>autism</a></span>
             </div>
-            .
-          </div>
         </div>
         {this.mapPic()}
       </Layout>
@@ -236,3 +193,49 @@ export const query = graphql`
     }
   }
 `;
+// <div className="list">
+//               <span
+//                 className="placeholder"
+//                 onClick={() => {
+//                   this.focus();
+//                 }}
+//               >
+//                 {this.state.current}
+//               </span>
+//               <ul className={this.state.listState}>
+//                 <li
+//                   onClick={() => {
+//                     this.selectChoice("one");
+//                   }}
+//                   className={this.state.classone}
+//                 >
+//                   <a href="">{this.state.one}</a>
+//                 </li>
+//                 <li
+//                   onClick={() => {
+//                     this.selectChoice("two");
+//                   }}
+//                   className={this.state.classtwo}
+//                 >
+//                   <a href="">{this.state.two}</a>
+//                 </li>
+//                 <li
+//                   onClick={() => {
+//                     this.selectChoice("three");
+//                   }}
+//                   className={this.state.classthree}
+//                 >
+//                   <a href="">{this.state.three}</a>
+//                 </li>
+//                 <li
+//                   onClick={() => {
+//                     this.selectChoice("four");
+//                   }}
+//                   className={this.state.classfour}
+//                 >
+//                   <a href="">{this.state.four}</a>
+//                 </li>
+//               </ul>
+//             </div>
+//             .
+//           </div>
