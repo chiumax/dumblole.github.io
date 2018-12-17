@@ -17,7 +17,7 @@ export default ({ children }) => (
       }
     `}
     render={data => (
-      <div className="">
+      <div className="scrollWrap">
         <div className="">
           <div className="headerLinkWrap">
             {/* <div>

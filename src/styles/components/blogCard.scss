@@ -1,0 +1,56 @@
+.blogCardWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  font-family: "BrandonGrotesqueItalic", "Blogger", sans-serif;
+}
+.blogCard {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  align-items: flex-start;
+  text-align: center;
+}
+.onHoverBlog {
+  position: relative;
+  z-index: -1;
+  transform: translateY(-7rem);
+  font-size: 4rem;
+  color: $third-color;
+  opacity: 0;
+  transition: 0.5s all ease;
+}
+.blogTitleWrap {
+  margin: 1rem 0;
+  text-decoration: none;
+  transition: 0.5s all ease;
+  &:hover {
+    transform: rotateZ(360deg);
+    opacity: 0;
+  }
+  &:hover + .onHoverBlog {
+    transform: translateY(-7rem);
+    opacity: 100;
+  }
+  div {
+    font-size: 4rem;
+    text-align: left;
+    color: $third-color;
+  }
+  div + div {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-family: "OpenSans", sans-serif;
+
+    color: $subtitle-grey;
+  }
+}
+.blogDesc {
+  text-align: left;
+  font-size: 1.5rem;
+  color: $white-text;
+
+  font-family: "OpenSans", sans-serif;
+}

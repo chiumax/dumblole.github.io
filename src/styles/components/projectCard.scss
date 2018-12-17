@@ -1,0 +1,51 @@
+.projectCard {
+  font-family: "BrandonGrotesqueItalic", "Blogger", sans-serif;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.projectCardImage {
+  height: 40rem;
+  width: 110rem;
+  margin: 7rem 0;
+  filter: blur(4px) hue-rotate(90deg);
+  -webkit-filter: blur(4px) hue-rotate(90deg);
+
+  transition: 0.5s all ease;
+  &:hover {
+    filter: blur(0px) hue-rotate(0deg) drop-shadow(16px 16px 20px $third-color);
+    -webkit-filter: blur(0px) hue-rotate(0deg) drop-shadow(16px 16px 20px $third-color);
+  }
+  &:hover + .projectTitle {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+  }
+}
+
+.projectTitle {
+  position: relative;
+  z-index: 99;
+  color: $white-text;
+  font-size: 6rem;
+  transform: translateY(-50rem);
+
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  background: $secondary-color;
+  transition: 0.5s all ease;
+  &:hover {
+    transform: translateY(-50rem) rotateX(360deg) rotate(-30deg);
+  }
+}
+.projectCardWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cardGradient {
+  background: red;
+  padding: 0;
+  margin: 0;
+}

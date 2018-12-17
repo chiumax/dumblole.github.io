@@ -41,19 +41,12 @@ export default class BlogList extends React.Component {
   render() {
     return (
       <Layout>
-        <div>
-          <h1>Blogs</h1>
+        <div className="content-container">
           <h4>{this.props.data.allMarkdownRemark.totalCount} Posts</h4>
-          <h5>
-            <i>
-              To see previews on touch screen, just swipe across the screen. Otherwise, just hover
-              over with your mouse.
-            </i>
-          </h5>
           <Link to={`/blog/tags`}> All tags -></Link>
-          <div className="wrap">
+          <div className="blogCardWrap">
             {this.props.data.allMarkdownRemark.edges.map(({ node }) => (
-              <Card node={node} type={"blog"} key={node.id}/>
+              <Card node={node} type={"blog"} key={node.id} />
             ))}
           </div>
         </div>
@@ -89,12 +82,13 @@ export const query = graphql`
           fields {
             slug
           }
-          excerpt(pruneLength: 600)
+          html
         }
       }
     }
   }
 `;
+//excerpt(pruneLength: 600)
 // {node.excerpt.length > 105
 //   ? node.excerpt.substring(
 //       0,

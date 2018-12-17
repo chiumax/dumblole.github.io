@@ -1,9 +1,14 @@
+.scrollWrap {
+  overflow-y: auto;
+  height: 100vh;
+}
 .headerLinkWrap {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-top: 3rem;
+  margin-bottom: 3rem;
   div {
     margin: 3rem 4rem;
 
@@ -20,12 +25,6 @@
     }
   }
 }
-// === Variables =====
-$perspective: 60rem;
-$font-size: 8.25rem;
-$split-position: 49%;
-$split-thickness: 8px;
-$split-color: #ff2c75;
 
 // === Settings =====
 
@@ -63,7 +62,7 @@ $split-color: #ff2c75;
     height: $split-thickness;
     border-radius: $split-thickness;
     margin-top: -($split-thickness / 1.52);
-    background: $split-color;
+    background: $split-line;
     transform: scale(0) translateX(-80px) rotate(-45deg);
     transition: transform 0.7s cubic-bezier(0.16, 1.08, 0.38, 0.98);
     z-index: 1;
@@ -105,22 +104,7 @@ $split-color: #ff2c75;
 
 // === Where the fun stuff happens =====
 .Menu-list-item:hover,
-.Menu-list-item:active {
-  .Mask {
-    color: #fff;
-  }
-  .Laks {
-    position: absolute;
-    top: 0;
-    transform: translateY(-30px) translateX(-130px) rotate(-45deg);
-  }
-  .Mask + .Mask {
-    transform: translateX(40px) translateY(-40px) rotate(-45deg);
-  }
-  &::before {
-    transform: scale(1) translateX(-30px) rotate(-45deg);
-  }
-}
+.Menu-list-item:active,
 .ActiveMenu {
   .Mask {
     color: #fff;
@@ -131,12 +115,13 @@ $split-color: #ff2c75;
     transform: translateY(-30px) translateX(-130px) rotate(-45deg);
   }
   .Mask + .Mask {
-    transform: translateX(40px) translateY(-40px) rotate(-45deg);
+    transform: translateX(45px) translateY(-40px) rotate(-45deg);
   }
   &::before {
     transform: scale(1) translateX(-30px) rotate(-45deg);
   }
 }
+
 // .header {
 //   background: black;
 //   display: flex;

@@ -10,6 +10,12 @@
     /* Pretty Modern Browsers */ url("../fonts/BloggerSans.ttf") format("truetype"); /* Safari, Android, iOS */
 }
 @font-face {
+  font-family: "OpenSans";
+  src: 
+    /* IE6-IE8 */ url("../fonts/openSans.woff"),
+    /* Pretty Modern Browsers */ url("../fonts/openSans.woff2");
+}
+@font-face {
   font-family: "BrandonGrotesque";
   src: url("../fonts/brandonGrotesqueBlack.woff");
 }
@@ -39,7 +45,6 @@ html {
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  overflow-y: scroll;
 }
 // ::-webkit-scrollbar {
 //   width: 8px;
