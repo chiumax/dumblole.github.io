@@ -2,7 +2,6 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Content from "../components/aboutContent";
-import Particles from 'react-particles-js';
 
 import Javascript from "../icons/javascript.svg";
 import Java from "../icons/java.svg";
@@ -84,7 +83,7 @@ thing.`,
   },
   6: {
     icon: <HTML5 className={"icon"} />,
-    content: `I don't think HTML is a language but employers don't know the difference, so here it is... I know HTML! Hire me! heh...`,
+    content: `I don't think HTML is a language but some employers don't know the difference, so here it is... I know HTML! Hire me! heh...`,
     color: "black",
     border: "black",
     name: "HTML"
@@ -160,12 +159,14 @@ export default class About extends React.Component {
   render() {
     return (
       <Layout>
-       <Particles className="aboutParticle"/>
         <div className={"aboutwrap"}>
           <div>Hey there! I'm dumblole but you can also call me Max.</div>
           <div>
-            This is a page about me and I love <span><a>autism</a></span>
-            </div>
+            This is a page about me and I love{" "}
+            <span>
+              <a>autism</a>
+            </span>
+          </div>
         </div>
         {this.mapPic()}
       </Layout>
