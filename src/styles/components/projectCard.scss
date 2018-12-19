@@ -29,14 +29,17 @@
   z-index: 99;
   color: $white-text;
   font-size: 6rem;
-  transform: translateY(-50rem);
+  transform: translateY(-50rem) rotateX(360deg) rotate(0deg);
+  -webkit-transform: translateY(-50rem) rotateX(360deg) rotate(0deg);
 
   filter: blur(0px);
   -webkit-filter: blur(0px);
   background: $secondary-color;
   transition: 0.5s all ease;
+  transition-property: transform, filter;
   &:hover {
-    transform: translateY(-50rem) rotateX(360deg) rotate(-30deg);
+    transform: translateY(-50rem) rotateX(0deg) rotate(-30deg);
+    -webkit-transform: translateY(-50rem) rotateX(0deg) rotate(-30deg);
   }
 }
 .projectCardWrap {
