@@ -29,7 +29,7 @@
 body {
   background-color: $background-grey;
   font-family: "BrandonGrotesque", "Blogger", sans-serif;
-  overflow: hidden;
+  overflow-y: auto;
   overflow-x: hidden;
   color: $white-text;
 }
