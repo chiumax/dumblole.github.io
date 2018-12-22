@@ -6,8 +6,41 @@ import Particles from "react-particles-js";
 
 //import { rhythm } from "../utils/typography";
 
-export default ({ children }) => (
-  <StaticQuery
+const linkList = {
+  0:{link: "Home",linkPath: "/"},
+  1:{link: "About",linkPath: "/about"},
+  2:{link: "Work",linkPath: "/project"},
+  3:{link: "Blog",linkPath: "/blog"},
+  4:{link: "Contact",linkPath: "/contact"}
+}
+
+
+
+
+export default class Layout extends React.Component {
+  renderLinks = () => {
+     let data = [];
+    for (let i=0; i<Object.keys(linkList).length; i++) {
+     
+  data.push(<Link
+    key={linkList[i].link}
+              class="Menu-list-item"
+              activeClassName="ActiveMenu Menu-list-item"
+              data-offset="20"
+              to={linkList[i].linkPath}
+            >
+              {linkList[i].link}
+              <span class="Mask Laks">
+                <span>{linkList[i].link}</span>
+              </span>
+              <span class="Mask">
+                <span>{linkList[i].link}</span>
+              </span>
+            </Link>)
+}
+return data;
+  }
+render() {return(<StaticQuery
     query={graphql`
       query {
         site {
@@ -28,81 +61,7 @@ export default ({ children }) => (
               </Link>
             </div> */}
 
-            <Link
-              class="Menu-list-item"
-              activeClassName="ActiveMenu Menu-list-item"
-              data-offset="20"
-              to={`/`}
-            >
-              Home
-              <span class="Mask Laks">
-                <span>Home</span>
-              </span>
-              <span class="Mask">
-                <span>Home</span>
-              </span>
-            </Link>
-            <Link
-              class="Menu-list-item"
-              div
-              activeClassName="ActiveMenu Menu-list-item"
-              data-offset="16"
-              to={`/about/`}
-            >
-              About
-              <span class="Mask Laks">
-                <span>About</span>
-              </span>
-              <span class="Mask">
-                <span>About</span>
-              </span>
-            </Link>
-            <Link
-              class="Menu-list-item"
-              div
-              activeClassName="ActiveMenu Menu-list-item"
-              data-offset="12"
-              to={`/project/`}
-            >
-              Work
-              <span class="Mask Laks">
-                <span>Work</span>
-              </span>
-              <span class="Mask">
-                <span>Work</span>
-              </span>
-            </Link>
-            <Link
-              class="Menu-list-item"
-              div
-              activeClassName="ActiveMenu Menu-list-item"
-              data-offset="12"
-              to={`/blog/`}
-            >
-              Words
-              <span class="Mask Laks">
-                <span>Words</span>
-              </span>
-              <span class="Mask">
-                <span>Words</span>
-              </span>
-            </Link>
-
-            <Link
-              class="Menu-list-item"
-              div
-              activeClassName="ActiveMenu Menu-list-item"
-              data-offset="8"
-              to={`/contact/`}
-            >
-              Contact
-              <span class="Mask Laks">
-                <span>Contact</span>
-              </span>
-              <span class="Mask">
-                <span>Contact</span>
-              </span>
-            </Link>
+            {this.renderLinks()}
 
             {/* <Link className="link" to={`/project/`}>
                 Projects
@@ -118,10 +77,11 @@ export default ({ children }) => (
               </Link> */}
           </div>
           <div className={""}>
-            <div className=" ">{children}</div>
+            <div className=" ">{this.props.children}</div>
           </div>
         </div>
       </div>
     )}
-  />
-);
+  />)
+  }
+}
