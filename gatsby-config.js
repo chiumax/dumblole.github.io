@@ -3,7 +3,7 @@ module.exports = {
     title: `dumblole`
   },
   plugins: [
-    `gatsby-plugin-offline`,
+    `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-sass`,
     `gatsby-remark-copy-linked-files`,
     `gatsby-transformer-sharp`,

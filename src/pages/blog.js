@@ -3,6 +3,7 @@ import React from "react";
 import Layout from "../components/layout";
 import Card from "../components/card";
 import { Link, graphql } from "gatsby";
+import axios from "axios";
 
 export default class BlogList extends React.Component {
   // constructor(props) {

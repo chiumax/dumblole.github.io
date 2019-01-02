@@ -26,7 +26,7 @@ export default class Card extends React.Component {
               fluid={this.props.node.frontmatter.image.childImageSharp.fluid}
               className={"projectCardImage"}
             />
-
+            {/* <div className={"projectColorFilter"} /> */}
             <div className={"projectTitle"}>{this.props.node.frontmatter.title}</div>
           </Link>
         );

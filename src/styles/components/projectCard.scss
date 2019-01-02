@@ -5,32 +5,65 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
-.projectCardImage {
   height: 40rem;
   width: 110rem;
-  margin: 7rem 0;
-  filter: blur(4px) hue-rotate(90deg);
-  -webkit-filter: blur(4px) hue-rotate(90deg);
+  position: relative;
+  margin: 7rem auto;
+  // &:first-child {
+  //   filter: blur(4px);
+  //   -webkit-filter: blur(4px);
+
+  //   transition: 0.5s all ease;
+  // }
+  // &:hover {
+  //   &:first-child {
+  //     filter: blur(0px) drop-shadow(16px 16px 20px $third-color);
+  //     -webkit-filter: blur(0px) drop-shadow(16px 16px 20px $third-color);
+  //   }
+  // }
+}
+.projectCardImage {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
 
   transition: 0.5s all ease;
+
+  &::before {
+    content: "";
+    width: 100%;
+    left: 0;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.4;
+    background: $secondary-color;
+    transition: 0.5s all ease;
+  }
   &:hover {
-    filter: blur(0px) hue-rotate(0deg) drop-shadow(16px 16px 20px $third-color);
-    -webkit-filter: blur(0px) hue-rotate(0deg) drop-shadow(16px 16px 20px $third-color);
+    filter: blur(0px) drop-shadow(0px 16px 20px $third-color);
+    -webkit-filter: blur(0px) drop-shadow(0px 16px 20px $third-color);
+
+    &::before {
+      background: transparent;
+    }
   }
   &:hover + .projectTitle {
     filter: blur(4px);
     -webkit-filter: blur(4px);
   }
 }
-
 .projectTitle {
-  position: relative;
-  z-index: 99;
+  z-index: 2;
+  position: absolute;
   color: $white-text;
   font-size: 6rem;
-  transform: translateY(-50rem) rotateX(360deg) rotate(0deg);
-  -webkit-transform: translateY(-50rem) rotateX(360deg) rotate(0deg);
+  transform: translateY(-3rem) rotateX(360deg) rotate(0deg);
+  -webkit-transform: translateY(-3rem) rotateX(360deg) rotate(0deg);
 
   filter: blur(0px);
   -webkit-filter: blur(0px);
@@ -38,15 +71,81 @@
   transition: 0.5s all ease;
   transition-property: transform, filter;
   &:hover {
-    transform: translateY(-50rem) rotateX(0deg) rotate(-30deg);
-    -webkit-transform: translateY(-50rem) rotateX(0deg) rotate(-30deg);
+    transform: translateY(-3rem) rotateX(0deg) rotate(-30deg);
+    -webkit-transform: translateY(-3rem) rotateX(0deg) rotate(-30deg);
   }
 }
-.projectCardWrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.projectColorFilter {
+  position: absolute;
+  z-index: 3;
+  background: $secondary-color;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  transition: 0.5s all ease;
+  &:hover {
+    opacity: 0;
+  }
 }
+
+// .projectCard {
+//   font-family: "BrandonGrotesqueItalic", "Blogger", sans-serif;
+//   text-decoration: none;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   text-align: center;
+// }
+// .projectCardImage {
+
+//   margin: 7rem 0;
+//   filter: blur(4px) hue-rotate(90deg);
+//   -webkit-filter: blur(4px) hue-rotate(90deg);
+
+//   transition: 0.5s all ease;
+//   &:hover {
+//     filter: blur(0px) hue-rotate(0deg) drop-shadow(16px 16px 20px $third-color);
+//     -webkit-filter: blur(0px) hue-rotate(0deg) drop-shadow(16px 16px 20px $third-color);
+//   }
+//   &:hover + .projectTitle {
+//     filter: blur(4px);
+//     -webkit-filter: blur(4px);
+//   }
+// }
+
+// .projectTitle {
+//   position: relative;
+//   z-index: 99;
+//   color: $white-text;
+//   font-size: 6rem;
+//   transform: translateY(-50rem) rotateX(360deg) rotate(0deg);
+//   -webkit-transform: translateY(-50rem) rotateX(360deg) rotate(0deg);
+
+//   filter: blur(0px);
+//   -webkit-filter: blur(0px);
+//   background: $secondary-color;
+//   transition: 0.5s all ease;
+//   transition-property: transform, filter;
+//   &:hover {
+//     transform: translateY(-50rem) rotateX(0deg) rotate(-30deg);
+//     -webkit-transform: translateY(-50rem) rotateX(0deg) rotate(-30deg);
+//   }
+// }
+// .projectColorFilter {
+//   background: $secondary-color;
+//   height: 100%;
+//   width: 100%;
+//   position: relative;
+//   z-index: 99999;
+// }
+
+// .projectCardWrap {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
 .cardGradient {
   background: red;
   padding: 0;

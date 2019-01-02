@@ -1,5 +1,9 @@
-
 .headerLinkWrap {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -69,6 +73,7 @@
 // === Top/bottom mask =====
 .Mask {
   display: block;
+  background: green;
   position: absolute;
   overflow: hidden;
   color: $split-color;
