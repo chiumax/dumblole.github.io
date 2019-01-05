@@ -19,8 +19,27 @@ export default class BlogList extends React.Component {
     selected: null,
     fullScreen: false,
     focused: null,
-    image: null
+    image: null,
+    stories: null
   };
+  componentDidMount() {
+    axios
+      .get(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@KonradDaWo`)
+      .then(response => {
+        let data = response.data.items.map(item => {
+          console.log(item);
+          return (
+            <div>
+              <div>item.title</div>
+            </div>
+          );
+        });
+        this.setState(() => ({ stories: data }));
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
   imgStyle = {
     backgroundColor: "blue"
   };
@@ -45,11 +64,11 @@ export default class BlogList extends React.Component {
         <div className="content-container">
           <h4>{this.props.data.allMarkdownRemark.totalCount} Posts</h4>
           <Link to={`/blog/tags`}> All tags -></Link>
-          <div className="blogCardWrap">
+          {/* <div className="blogCardWrap">
             {this.props.data.allMarkdownRemark.edges.map(({ node }) => (
               <Card node={node} type={"blog"} key={node.id} />
             ))}
-          </div>
+          </div> */}
         </div>
       </Layout>
     );

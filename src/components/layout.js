@@ -21,16 +21,16 @@ export default class Layout extends React.Component {
       data.push(
         <Link
           key={linkList[i].link}
-          class="Menu-list-item"
+          className="Menu-list-item"
           activeClassName="ActiveMenu Menu-list-item"
           data-offset="20"
           to={linkList[i].linkPath}
         >
           {linkList[i].link}
-          <span class="Mask Laks">
+          <span className="Mask Laks">
             <span>{linkList[i].link}</span>
           </span>
-          <span class="Mask">
+          <span className="Mask">
             <span>{linkList[i].link}</span>
           </span>
         </Link>
