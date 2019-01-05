@@ -26,11 +26,11 @@ export default class BlogList extends React.Component {
     axios
       .get(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@KonradDaWo`)
       .then(response => {
-        let data = response.data.items.map(item => {
-          console.log(item);
+        let data = response.data.items.map(node => {
+          
           return (
-            <div>
-              <div>item.title</div>
+            <div className="blogCardWrap">
+            <Card node={node} type={"blog"} key={node.id} />
             </div>
           );
         });
@@ -64,6 +64,7 @@ export default class BlogList extends React.Component {
         <div className="content-container">
           <h4>{this.props.data.allMarkdownRemark.totalCount} Posts</h4>
           <Link to={`/blog/tags`}> All tags -></Link>
+          {this.state.stories}
           {/* <div className="blogCardWrap">
             {this.props.data.allMarkdownRemark.edges.map(({ node }) => (
               <Card node={node} type={"blog"} key={node.id} />

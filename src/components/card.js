@@ -33,11 +33,13 @@ export default class Card extends React.Component {
       case "blog":
         return (
           <div className="blogCard">
-            <Link to={this.props.node.fields.slug} className="blogTitleWrap">
-              <div>{this.props.node.frontmatter.title}</div>
-              <div>{this.props.node.frontmatter.date}</div>
-              <div>{readingTime(this.props.node.html).text}</div>
+          {console.log(this.props.node)}
+          <Link to={this.props.node.link} className="blogTitleWrap">
+              <div>{this.props.node.title}</div>
+              <div>{this.props.node.pubDate}</div>
+              <div>{readingTime(this.props.node.description).text}</div>
             </Link>
+           
             <div className="onHoverBlog">READ ME!</div>
           </div>
         );
@@ -47,11 +49,12 @@ export default class Card extends React.Component {
   };
   render() {
     return (
-      <div key={this.props.node.id + this.props.node.frontmatter.title}>{this.displayCard()}</div>
+
+      <div key={() => (!!this.props.node.frontmatter.title?this.props.node.id + this.props.node.frontmatter.title:this.props.node.title+this.props.node.pubDate)}>{this.displayCard()}</div>
     );
   }
 }
-{
+//{
   /* <div className={""}>
           <Link to={this.props.node.fields.slug}>
             <Img fluid={this.props.node.frontmatter.image.childImageSharp.fluid} className={""} />
@@ -98,4 +101,9 @@ export default class Card extends React.Component {
               : this.props.node.excerpt}
           </p>
         </div> */
-}
+ //}
+//  <Link to={this.props.node.fields.slug} className="blogTitleWrap">
+//               <div>{this.props.node.frontmatter.title}</div>
+//               <div>{this.props.node.frontmatter.date}</div>
+//               <div>{readingTime(this.props.node.html).text}</div>
+//             </Link>
