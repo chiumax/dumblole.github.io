@@ -27,10 +27,9 @@ export default class BlogList extends React.Component {
       .get(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@KonradDaWo`)
       .then(response => {
         let data = response.data.items.map(node => {
-          
           return (
             <div className="blogCardWrap">
-            <Card node={node} type={"blog"} key={node.id} />
+              <Card node={node} type={"blog"} key={node.id} />
             </div>
           );
         });
@@ -70,6 +69,7 @@ export default class BlogList extends React.Component {
               <Card node={node} type={"blog"} key={node.id} />
             ))}
           </div> */}
+          <div>Read More</div>
         </div>
       </Layout>
     );

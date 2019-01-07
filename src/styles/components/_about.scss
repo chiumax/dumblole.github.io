@@ -1,3 +1,95 @@
+.aboutContainer {
+  & > div {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+.introWork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+}
+.columnWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  & > div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.icon {
+  height: 6vw;
+  width: 6vw;
+  margin: 1rem 8vw;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.iconWrap {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  margin: 0 5rem;
+  color: white;
+  font-size: 3rem;
+}
+.showIconWrap {
+  display: flex;
+  flex-direction: column;
+}
+.singleIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.skillWrap {
+  display: flex;
+  align-items: space-around;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 4rem 0;
+  background-image: linear-gradient(to bottom right, $third-color, $secondary-color);
+  // background-image: linear-gradient(to bottom right, #fc00ff, #00dbde);
+}
+.skillText {
+  font-size: 5rem;
+  color: white;
+}
+.iconDesc {
+  position: absolute;
+  z-index: 99;
+}
+.wrapEveryAbout {
+  font-size: 2rem;
+  div {
+    margin-bottom: 1.5rem;
+  }
+}
+.testImage {
+  -webkit-filter: grayscale(20%) hue-rotate(90deg); /* Safari 6.0 - 9.0 */
+  filter: grayscale(20%) hue-rotate(300deg);
+}
+.aboutParticle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  z-index: -1;
+}
+
 // .aboutWrap {
 //   display: flex;
 //   flex-direction: column;
@@ -111,73 +203,3 @@
 // .blockChoice {
 //   display: none;
 // }
-.icon {
-  height: 6vw;
-  width: 6vw;
-  margin: 1rem 8vw;
-  display: inline-block;
-  vertical-align: middle;
-  cursor: pointer;
-}
-
-.iconWrap {
-  text-align: center;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: space-around;
-  margin: 0 5rem;
-  color: white;
-  font-size: 3rem;
-}
-.showIconWrap {
-  display: flex;
-  flex-direction: column;
-}
-.singleIcon {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.skillWrap {
-  display: flex;
-  align-items: space-around;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-align: center;
-  padding: 4rem 0;
-  height: 100vh;
-  background-image: linear-gradient(to bottom right, $third-color, $secondary-color);
-  // background-image: linear-gradient(to bottom right, #fc00ff, #00dbde);
-}
-.skillText {
-  font-size: 5rem;
-  color: white;
-}
-.iconDesc {
-  position: absolute;
-  z-index: 99;
-}
-.wrapEveryAbout {
-  font-size: 2rem;
-  div {
-    margin-bottom: 1.5rem;
-  }
-}
-.testImage {
-  -webkit-filter: grayscale(20%) hue-rotate(90deg); /* Safari 6.0 - 9.0 */
-  filter: grayscale(20%) hue-rotate(300deg);
-}
-.aboutParticle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100vw;
-  height: 100vh;
-  bottom: 0;
-  z-index: -1;
-}

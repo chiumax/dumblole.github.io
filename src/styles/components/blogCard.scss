@@ -26,14 +26,12 @@
   margin: 1rem 0;
   text-decoration: none;
   transition: 0.5s all ease;
-  &:hover {
-    transform: rotateZ(360deg);
-    opacity: 0;
-  }
-  &:hover + .onHoverBlog {
-    transform: translateY(-7rem);
-    opacity: 100;
-  }
+  // &:hover {
+  //   opacity: 0;
+  // }
+  // &:hover + .onHoverBlog {
+  //   opacity: 100;
+  // }
   div {
     font-size: 4rem;
     text-align: left;
@@ -43,6 +41,27 @@
     margin-top: 1rem;
     font-size: 1.5rem;
     font-family: "OpenSans", sans-serif;
+    a {
+      font-family: "OpenSans", sans-serif;
+      font-size: 1.7rem;
+      text-decoration: none;
+      color: $secondary-color;
+      position: relative;
+      font-weight: bold;
+      &:hover {
+        &::after {
+          content: "\f35d";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          font-size: 0.8rem;
+          position: absolute;
+          top: -2px;
+        }
+      }
+      &::after {
+        content: "";
+      }
+    }
 
     color: $subtitle-grey;
   }

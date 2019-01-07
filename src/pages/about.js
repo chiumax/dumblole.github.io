@@ -12,6 +12,15 @@ import ReactIcon from "../icons/preact.svg";
 import CSS3 from "../icons/css3.svg";
 import HTML5 from "../icons/html5.svg";
 
+import GamePad from "../icons/gamepad.svg";
+import CodeIcon from "../icons/code.svg";
+import TvIcon from "../icons/tv.svg";
+
+const SVGcontent = {
+  GamePad: <GamePad />,
+  CodeIcon: <CodeIcon />,
+  TvIcon: <TvIcon />
+};
 const codeContent = {
   0: {
     icon: <Python className={"icon"} />,
@@ -148,6 +157,7 @@ export default class About extends React.Component {
         pic={obj}
         codeOnFocus={this.state.codeOnFocus}
         codeContent={codeContent}
+        SVGcontent={SVGcontent}
         choose={this.choose}
       />
     );
@@ -157,20 +167,7 @@ export default class About extends React.Component {
   };
 
   render() {
-    return (
-      <Layout>
-        <div className={"aboutwrap"}>
-          <div>Hey there! I'm dumblole but you can also call me Max.</div>
-          <div>
-            This is a page about me and I love{" "}
-            <span>
-              <a>autism</a>
-            </span>
-          </div>
-        </div>
-        {this.mapPic()}
-      </Layout>
-    );
+    return <Layout>{this.mapPic()}</Layout>;
   }
 }
 
