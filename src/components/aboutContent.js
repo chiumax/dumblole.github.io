@@ -17,7 +17,7 @@ const IconHover = posed.div({
   init: { scale: 1 },
   hover: { scale: 1.2 }
 });
-export default ({ type, pic, codeOnFocus, codeContent, choose }) => {
+export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => {
   console.log(pic, "hiasdhifhasif");
   return (
     <div className={"aboutContainer"}>
@@ -31,16 +31,25 @@ export default ({ type, pic, codeOnFocus, codeContent, choose }) => {
         </div>
       </div>
       <div className={"introWork"}>
-        <div>What I do</div>
+        <div className={"aboutHeader"}>What I do</div>
         <div className={"columnWrap"}>
           <div>
             <div>Code</div>
+            <div>{SVGcontent.CodeIcon}</div>
+            <div>I code professionally and for fun</div>
+            <div>More</div>
           </div>
           <div>
             <div>Game</div>
+            <div>{SVGcontent.GamePad}</div>
+            <div>When I'm not coding or editing, I'm probably gaming</div>
+            <div>More</div>
           </div>
           <div>
             <div>Edit</div>
+            <div>{SVGcontent.TvIcon}</div>
+            <div>I edit montages and stuff for other people</div>
+            <div>More</div>
           </div>
         </div>
       </div>
