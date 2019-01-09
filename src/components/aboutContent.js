@@ -66,8 +66,8 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
         </div>
         {/* <Img fluid={pic.b} className={"testImage"} /> */}
       </div>
-      <div>
-        <div className={"aboutTitle"}>
+      <div className={"codeAboutWrap"}>
+        <div className={"aboutHeader"}>
           {"< "}CODING{" />"}
         </div>
         <div className="wrapEveryAbout wrapEvery">
@@ -137,7 +137,7 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
           ))}
         </div>
       </div>
-      <div>
+      <div className={"gameAboutWrap"}>
         <div className={"aboutTitle"}>GAMING</div>
         <div>
           Ever since I started to program on my own time, I've come to really appreciate the
@@ -176,7 +176,7 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
           </div>
         </div>
       </div>
-      <div>
+      <div className={"editAboutWrap"}>
         <div className={"aboutTitle"}>EDITING</div>
         <div>
           The first video edit I ever made was for an 8th grade week-long field trip to Boston. It

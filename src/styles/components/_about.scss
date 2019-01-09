@@ -2,6 +2,7 @@
   & > div {
     height: 100vh;
     width: 100vw;
+    text-align: center;
   }
 }
 .introWork {
@@ -12,7 +13,6 @@
 }
 .aboutHeader {
   font-family: "BrandonGrotesque", sans-serif;
-
   font-size: 10rem;
 }
 
@@ -42,6 +42,7 @@
     div:last-child {
       border-radius: 6px;
       padding: 1rem 2rem;
+
       &:hover {
         cursor: pointer;
       }
@@ -50,6 +51,7 @@
     // border-left-color: lighten($secondary-color, 10%);
     // border-top-color: lighten($secondary-color, 10%);
     &:before {
+      transition: filter .2s ease-out;
       content: "";
       position: absolute;
       height: 100%;
@@ -60,11 +62,19 @@
   }
 }
 .pinkIcon {
+
   div:last-child {
     background: $secondary-color;
     &:hover {
       background: darken($secondary-color, 20%);
     }
+  }
+  &:hover{
+  &:before{
+
+  filter:drop-shadow(0px 0px 30px $secondary-color);
+  -webkit-filter:drop-shadow(0px 0px 30px $secondary-color);
+  }
   }
   &:before {
     background: linear-gradient(
@@ -81,6 +91,11 @@
       background: darken($fourth-color, 20%);
     }
   }
+  &:hover{
+  &:before{
+  filter:drop-shadow(0px 0px 30px $fourth-color);
+  -webkit-filter:drop-shadow(0px 0px 30px $fourth-color);}
+  }
   &:before {
     background: linear-gradient(
       to bottom right,
@@ -96,6 +111,11 @@
       background: darken($third-color, 20%);
     }
   }
+  &:hover{
+  &:before{
+  filter:drop-shadow(0px 0px 30px $third-color);
+  -webkit-filter:drop-shadow(0px 0px 30px $third-color);
+  }}
   &:before {
     background: linear-gradient(
       to bottom right,
@@ -116,7 +136,16 @@
   fill: $third-color;
   width: 100%;
 }
-
+.codeAboutWrap{
+//icon background none text background secondary
+	background-color: darken($secondary-color,10%);
+}
+.gameAboutWrap{
+	background-color: $fourth-color;
+}
+.editAboutWrap{
+	background-color: $third-color;
+}
 .icon {
   height: 6vw;
   width: 6vw;
