@@ -17,9 +17,9 @@ import CodeIcon from "../icons/code.svg";
 import TvIcon from "../icons/tv.svg";
 
 const SVGcontent = {
-  GamePad: <GamePad className={"skillIcon"} />,
-  CodeIcon: <CodeIcon className={"skillIcon"} />,
-  TvIcon: <TvIcon className={"skillIcon"} />
+  GamePad: <GamePad className={"greenIntIcon"} />,
+  CodeIcon: <CodeIcon className={"pinkIntIcon"} />,
+  TvIcon: <TvIcon className={"blueIntIcon"} />
 };
 const codeContent = {
   0: {

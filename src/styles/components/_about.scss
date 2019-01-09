@@ -11,9 +11,9 @@
   font-size: 2rem;
 }
 .aboutHeader {
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+  font-family: "BrandonGrotesque", sans-serif;
+
+  font-size: 10rem;
 }
 
 .columnWrap {
@@ -31,9 +31,21 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    font-size: 3rem;
     background: $background-grey;
     border: 1rem solid transparent;
-
+    margin: 0 5rem;
+    text-align: center;
+    div:first-child {
+      font-size: 5rem;
+    }
+    div:last-child {
+      border-radius: 6px;
+      padding: 1rem 2rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
     // border: 1rem solid darken($secondary-color, 10%);
     // border-left-color: lighten($secondary-color, 10%);
     // border-top-color: lighten($secondary-color, 10%);
@@ -44,18 +56,67 @@
       width: 100%;
       z-index: -1;
       padding: 2rem;
-      background: linear-gradient(
-        to bottom right,
-        darken($secondary-color, 10%),
-        lighten($secondary-color, 10%)
-      );
     }
   }
 }
-.skillIcon {
+.pinkIcon {
+  div:last-child {
+    background: $secondary-color;
+    &:hover {
+      background: darken($secondary-color, 20%);
+    }
+  }
+  &:before {
+    background: linear-gradient(
+      to bottom right,
+      darken($secondary-color, 10%),
+      lighten($secondary-color, 10%)
+    );
+  }
+}
+.greenIcon {
+  div:last-child {
+    background: $fourth-color;
+    &:hover {
+      background: darken($fourth-color, 20%);
+    }
+  }
+  &:before {
+    background: linear-gradient(
+      to bottom right,
+      darken($fourth-color, 10%),
+      lighten($fourth-color, 10%)
+    );
+  }
+}
+.blueIcon {
+  div:last-child {
+    background: $third-color;
+    &:hover {
+      background: darken($third-color, 20%);
+    }
+  }
+  &:before {
+    background: linear-gradient(
+      to bottom right,
+      darken($third-color, 10%),
+      lighten($third-color, 10%)
+    );
+  }
+}
+.greenIntIcon {
+  fill: $fourth-color;
+  width: 100%;
+}
+.pinkIntIcon {
   fill: $secondary-color;
   width: 100%;
 }
+.blueIntIcon {
+  fill: $third-color;
+  width: 100%;
+}
+
 .icon {
   height: 6vw;
   width: 6vw;

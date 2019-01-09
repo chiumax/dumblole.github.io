@@ -22,30 +22,24 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
   return (
     <div className={"aboutContainer"}>
       <div className={"aboutwrap"}>
-        <div>Hey there! I'm dumblole but you can also call me Max.</div>
-        <div>
-          This is a page about me and I love{" "}
-          <span>
-            <a>autism</a>
-          </span>
-        </div>
+        <div className="aboutHeader">dumblole</div>
       </div>
       <div className={"introWork"}>
-        <div className={"aboutHeader"}>What I do</div>
+        <div className={"aboutHeader"}>What I Do...</div>
         <div className={"columnWrap"}>
-          <div>
+          <div className={"pinkIcon"}>
             <div>Code</div>
             <div>{SVGcontent.CodeIcon}</div>
             <div>I code professionally and for fun</div>
             <div>More</div>
           </div>
-          <div>
+          <div className={"greenIcon"}>
             <div>Game</div>
             <div>{SVGcontent.GamePad}</div>
             <div>When I'm not coding or editing, I'm probably gaming</div>
             <div>More</div>
           </div>
-          <div>
+          <div className={"blueIcon"}>
             <div>Edit</div>
             <div>{SVGcontent.TvIcon}</div>
             <div>I edit montages and stuff for other people</div>
