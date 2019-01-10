@@ -201,8 +201,8 @@ export const query = graphql`
 //                 {this.state.current}
 //               </span>
 //               <ul className={this.state.listState}>
-//                 <li
-//                   onClick={() => {
+                // <li
+                //   onClick={() => {
 //                     this.selectChoice("one");
 //                   }}
 //                   className={this.state.classone}

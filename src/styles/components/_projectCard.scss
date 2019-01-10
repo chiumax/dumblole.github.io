@@ -8,6 +8,22 @@
   height: 40rem;
   width: 110rem;
   position: relative;
+  &:before{
+  content: "";
+  transition: opacity 0.5s ease-out;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  box-shadow:0px 0px 32px $secondary-color;
+  opacity:0;
+  }
+  &:hover{
+  &:before{
+  opacity: 1;
+  box-shadow: 0px 0px 80px $secondary-color;
+  }
+  
+  }
   margin: 7rem auto;
   // &:first-child {
   //   filter: blur(4px);
@@ -29,11 +45,11 @@
   top: 0;
   left: 0;
   filter: blur(4px);
-  -webkit-filter: blur(4px);
+  //-webkit-filter: blur(4px);
 
   transition: 0.5s all ease;
 
-  &::before {
+  &:before {
     content: "";
     width: 100%;
     left: 0;
@@ -42,19 +58,20 @@
     z-index: 1;
     opacity: 0.4;
     background: $secondary-color;
-    transition: 0.5s all ease;
+    transition: all 0.5s ease;
   }
-  &:hover {
-    filter: blur(0px) drop-shadow(0px 16px 20px $third-color);
-    -webkit-filter: blur(0px) drop-shadow(0px 16px 20px $third-color);
 
-    &::before {
+  &:hover {
+    filter: blur(0px) ;
+    //-webkit-filter: blur(0px); 
+
+    &:before {
       background: transparent;
     }
   }
   &:hover + .projectTitle {
     filter: blur(4px);
-    -webkit-filter: blur(4px);
+    //-webkit-filter: blur(4px);
   }
 }
 .projectTitle {
@@ -63,32 +80,31 @@
   color: $white-text;
   font-size: 6rem;
   transform: translateY(-3rem) rotateX(360deg) rotate(0deg);
-  -webkit-transform: translateY(-3rem) rotateX(360deg) rotate(0deg);
+  //-webkit-transform: translateY(-3rem) rotateX(360deg) rotate(0deg);
 
   filter: blur(0px);
   -webkit-filter: blur(0px);
   background: $secondary-color;
-  transition: 0.5s all ease;
-  transition-property: transform, filter;
+  transition: all 0.5s ease;
   &:hover {
     transform: translateY(-3rem) rotateX(0deg) rotate(-30deg);
-    -webkit-transform: translateY(-3rem) rotateX(0deg) rotate(-30deg);
+    //-webkit-transform: translateY(-3rem) rotateX(0deg) rotate(-30deg);
   }
 }
-.projectColorFilter {
-  position: absolute;
-  z-index: 3;
-  background: $secondary-color;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0.3;
-  transition: 0.5s all ease;
-  &:hover {
-    opacity: 0;
-  }
-}
+//.projectColorFilter {
+//  position: absolute;
+//  z-index: 3;
+//  background: $secondary-color;
+//  height: 100%;
+//  width: 100%;
+//  top: 0;
+//  left: 0;
+//  opacity: 0.3;
+//  transition: 0.5s all ease;
+//  &:hover {
+//    opacity: 0;
+//  }
+//}
 
 // .projectCard {
 //   font-family: "BrandonGrotesqueItalic", "Blogger", sans-serif;
@@ -146,8 +162,8 @@
 //   flex-direction: column;
 //   align-items: center;
 // }
-.cardGradient {
-  background: red;
-  padding: 0;
-  margin: 0;
-}
+//.cardGradient {
+//  background: red;
+//  padding: 0;
+//  margin: 0;
+//}

@@ -18,6 +18,19 @@
   align-items: center;
   font-size: 2rem;
 }
+
+//Delete this maybe
+.glow {
+position: relative;
+	&:before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: opacity 0.2s ease-out;
+	opacity: 0;
+	}
+}
 .aboutHeader {
   font-family: "BrandonGrotesque", sans-serif;
   font-size: 10rem;
@@ -47,19 +60,44 @@
       font-size: 5rem;
     }
     div:last-child {
-      border-radius: 6px;
+    position: relative;
+      //border-radius: 6px;
       padding: 1rem 2rem;
-
+      &:after{
+      content: '';
+	position: absolute;
+	top:0;
+	left: 0rem;
+	width: 100%;
+	height: 100%;
+	transition: opacity .2s ease-out;
+	opacity: 0;
+	background: black;
+      }
       &:hover {
         cursor: pointer;
+       &:after{
+        background:black;
+        opacity: 0.25;
+        }
       }
     }
     // border: 1rem solid darken($secondary-color, 10%);
     // border-left-color: lighten($secondary-color, 10%);
     // border-top-color: lighten($secondary-color, 10%);
     &:before {
-      transition: filter 0.2s ease-out;
+      
       content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      padding: 2rem;
+    }
+    &:after {
+    transition: opacity 0.2s ease-out;
+    opacity:0;
+    content: "";
       position: absolute;
       height: 100%;
       width: 100%;
@@ -71,14 +109,15 @@
 .pinkIcon {
   div:last-child {
     background: $secondary-color;
-    &:hover {
-      background: darken($secondary-color, 20%);
-    }
+  }
+  &:after {
+  box-shadow: 0px 0px 40px $secondary-color;
   }
   &:hover {
-    &:before {
-      filter: drop-shadow(0px 0px 30px $secondary-color);
-      -webkit-filter: drop-shadow(0px 0px 30px $secondary-color);
+    &:after {
+    opacity:1;
+      box-shadow: 0px 0px 40px $secondary-color;
+      
     }
   }
   &:before {
@@ -92,14 +131,15 @@
 .greenIcon {
   div:last-child {
     background: $fourth-color;
-    &:hover {
-      background: darken($fourth-color, 20%);
-    }
+  }
+  &:after {
+  box-shadow: 0px 0px 40px $fourth-color;
   }
   &:hover {
-    &:before {
-      filter: drop-shadow(0px 0px 30px $fourth-color);
-      -webkit-filter: drop-shadow(0px 0px 30px $fourth-color);
+   &:after {
+    opacity:1;
+      box-shadow: 0px 0px 40px $fourth-color;
+      
     }
   }
   &:before {
@@ -113,14 +153,15 @@
 .blueIcon {
   div:last-child {
     background: $third-color;
-    &:hover {
-      background: darken($third-color, 20%);
-    }
+  }
+  &:after {
+  box-shadow: 0px 0px 40px $third-color;
   }
   &:hover {
-    &:before {
-      filter: drop-shadow(0px 0px 30px $third-color);
-      -webkit-filter: drop-shadow(0px 0px 30px $third-color);
+    &:after {
+    opacity:1;
+      box-shadow: 0px 0px 40px $third-color;
+      
     }
   }
   &:before {
