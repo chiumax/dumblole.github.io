@@ -5,6 +5,13 @@
     text-align: center;
   }
 }
+//Box shadow and opacity
+//Box shadow and opacity
+//Box shadow and opacity
+//Box shadow and opacity
+//Box shadow and opacity
+//Box shadow and opacity
+
 .introWork {
   display: flex;
   flex-direction: column;
@@ -51,7 +58,7 @@
     // border-left-color: lighten($secondary-color, 10%);
     // border-top-color: lighten($secondary-color, 10%);
     &:before {
-      transition: filter .2s ease-out;
+      transition: filter 0.2s ease-out;
       content: "";
       position: absolute;
       height: 100%;
@@ -62,19 +69,17 @@
   }
 }
 .pinkIcon {
-
   div:last-child {
     background: $secondary-color;
     &:hover {
       background: darken($secondary-color, 20%);
     }
   }
-  &:hover{
-  &:before{
-
-  filter:drop-shadow(0px 0px 30px $secondary-color);
-  -webkit-filter:drop-shadow(0px 0px 30px $secondary-color);
-  }
+  &:hover {
+    &:before {
+      filter: drop-shadow(0px 0px 30px $secondary-color);
+      -webkit-filter: drop-shadow(0px 0px 30px $secondary-color);
+    }
   }
   &:before {
     background: linear-gradient(
@@ -91,10 +96,11 @@
       background: darken($fourth-color, 20%);
     }
   }
-  &:hover{
-  &:before{
-  filter:drop-shadow(0px 0px 30px $fourth-color);
-  -webkit-filter:drop-shadow(0px 0px 30px $fourth-color);}
+  &:hover {
+    &:before {
+      filter: drop-shadow(0px 0px 30px $fourth-color);
+      -webkit-filter: drop-shadow(0px 0px 30px $fourth-color);
+    }
   }
   &:before {
     background: linear-gradient(
@@ -111,11 +117,12 @@
       background: darken($third-color, 20%);
     }
   }
-  &:hover{
-  &:before{
-  filter:drop-shadow(0px 0px 30px $third-color);
-  -webkit-filter:drop-shadow(0px 0px 30px $third-color);
-  }}
+  &:hover {
+    &:before {
+      filter: drop-shadow(0px 0px 30px $third-color);
+      -webkit-filter: drop-shadow(0px 0px 30px $third-color);
+    }
+  }
   &:before {
     background: linear-gradient(
       to bottom right,
@@ -136,15 +143,15 @@
   fill: $third-color;
   width: 100%;
 }
-.codeAboutWrap{
-//icon background none text background secondary
-	background-color: darken($secondary-color,10%);
+.codeAboutWrap {
+  //icon background none text background secondary
+  background-color: darken($secondary-color, 10%);
 }
-.gameAboutWrap{
-	background-color: $fourth-color;
+.gameAboutWrap {
+  background-color: $fourth-color;
 }
-.editAboutWrap{
-	background-color: $third-color;
+.editAboutWrap {
+  background-color: $third-color;
 }
 .icon {
   height: 6vw;
