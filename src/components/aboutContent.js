@@ -65,6 +65,7 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
           in my Blogs page! See you around.
         </div>
         {/* <Img fluid={pic.b} className={"testImage"} /> */}
+        <Img fluid={pic.me}/>
       </div>
       <div className={"codeAboutWrap"}>
         <div className={"aboutHeader"}>
