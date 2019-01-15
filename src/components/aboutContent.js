@@ -2,7 +2,6 @@ import React from "react";
 import posed from "react-pose";
 import { tween } from "popmotion";
 import Img from "gatsby-image";
-import Javascript from "../icons/javascript.svg";
 
 const IconWrap = posed.div({
   stay: { scale: 1 },
@@ -49,23 +48,27 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
       </div>
       <div>
         <div className={"aboutTitle"}>ME</div>
-        <div>
-          Where I come from doesn't matter. It's the time we have now that matters. But if you
-          really want to know...My name is Max (dumblole) and I'm currently a sophmore {"(15)"} in
-          the Science, Math, and Computer Science program (SMCS) at Poolesville High School.
-          Anyways, welcome to my website! It's my pride and joy.
+        <div className={"meAboutWrap"}>
+          <div>
+            <div>
+              Where I come from doesn't matter. It's the time we have now that matters. But if you
+              really want to know...My name is Max (dumblole) and I'm currently a sophmore {"(15)"}{" "}
+              in the Science, Math, and Computer Science program (SMCS) at Poolesville High School.
+              Anyways, welcome to my website! It's my pride and joy.
+            </div>
+            <div>
+              I really love programming, gaming, video editing, and my fair share of rap. Feel free
+              to find out more about me via the method you got here!
+            </div>
+            <div>
+              Whenever I work on something relatively big, it can usually be found under my Projects
+              page. Want to know what I think about various topics? Either contact me or go snoop
+              around in my Blogs page! See you around.
+            </div>
+          </div>
+          {/* <Img fluid={pic.b} className={"testImage"} /> */}
+          <Img fluid={pic.me} />
         </div>
-        <div>
-          I really love programming, gaming, video editing, and my fair share of rap. Feel free to
-          find out more about me via the method you got here!
-        </div>
-        <div>
-          Whenever I work on something relatively big, it can usually be found under my Projects
-          page. Want to know what I think about various topics? Either contact me or go snoop around
-          in my Blogs page! See you around.
-        </div>
-        {/* <Img fluid={pic.b} className={"testImage"} /> */}
-        <Img fluid={pic.me}/>
       </div>
       <div className={"codeAboutWrap"}>
         <div className={"aboutHeader"}>
@@ -193,7 +196,9 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
           <div>
             I used Premiere Pro for some of my first edits. It's good software and it's also very
             easy to use and learn. I'm very comfortable with Premiere Pro but I still have to learn
-            good color correcting.
+            good color correcting. I never would have thought that computer science could be related
+            to video editing. I mean I learned expressions relatively recently and it made a whole
+            lot of sense to me
           </div>
           <div>
             It took a really long time to settle into After Effects because of the many tools and

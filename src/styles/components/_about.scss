@@ -21,15 +21,15 @@
 
 //Delete this maybe
 .glow {
-position: relative;
-	&:before{
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	transition: opacity 0.2s ease-out;
-	opacity: 0;
-	}
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+  }
 }
 .aboutHeader {
   font-family: "BrandonGrotesque", sans-serif;
@@ -60,25 +60,25 @@ position: relative;
       font-size: 5rem;
     }
     div:last-child {
-    position: relative;
+      position: relative;
       //border-radius: 6px;
       padding: 1rem 2rem;
-      &:after{
-      content: '';
-	position: absolute;
-	top:0;
-	left: 0rem;
-	width: 100%;
-	height: 100%;
-	transition: opacity .2s ease-out;
-	opacity: 0;
-	background: black;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0rem;
+        width: 100%;
+        height: 100%;
+        transition: opacity 0.2s ease-out;
+        opacity: 0;
+        background: black;
       }
       &:hover {
         cursor: pointer;
-       &:after{
-        background:black;
-        opacity: 0.25;
+        &:after {
+          background: black;
+          opacity: 0.25;
         }
       }
     }
@@ -86,7 +86,6 @@ position: relative;
     // border-left-color: lighten($secondary-color, 10%);
     // border-top-color: lighten($secondary-color, 10%);
     &:before {
-      
       content: "";
       position: absolute;
       height: 100%;
@@ -95,9 +94,9 @@ position: relative;
       padding: 2rem;
     }
     &:after {
-    transition: opacity 0.2s ease-out;
-    opacity:0;
-    content: "";
+      transition: opacity 0.2s ease-out;
+      opacity: 0;
+      content: "";
       position: absolute;
       height: 100%;
       width: 100%;
@@ -111,13 +110,12 @@ position: relative;
     background: $secondary-color;
   }
   &:after {
-  box-shadow: 0px 0px 40px $secondary-color;
+    box-shadow: 0px 0px 40px $secondary-color;
   }
   &:hover {
     &:after {
-    opacity:1;
+      opacity: 1;
       box-shadow: 0px 0px 40px $secondary-color;
-      
     }
   }
   &:before {
@@ -133,13 +131,12 @@ position: relative;
     background: $fourth-color;
   }
   &:after {
-  box-shadow: 0px 0px 40px $fourth-color;
+    box-shadow: 0px 0px 40px $fourth-color;
   }
   &:hover {
-   &:after {
-    opacity:1;
+    &:after {
+      opacity: 1;
       box-shadow: 0px 0px 40px $fourth-color;
-      
     }
   }
   &:before {
@@ -155,13 +152,12 @@ position: relative;
     background: $third-color;
   }
   &:after {
-  box-shadow: 0px 0px 40px $third-color;
+    box-shadow: 0px 0px 40px $third-color;
   }
   &:hover {
     &:after {
-    opacity:1;
+      opacity: 1;
       box-shadow: 0px 0px 40px $third-color;
-      
     }
   }
   &:before {
@@ -183,6 +179,9 @@ position: relative;
 .blueIntIcon {
   fill: $third-color;
   width: 100%;
+}
+.meAboutWrap {
+  flex-direction: row;
 }
 .codeAboutWrap {
   //icon background none text background secondary
