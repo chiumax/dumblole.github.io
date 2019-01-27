@@ -49,25 +49,33 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
       <div>
         <div className={"aboutTitle"}>ME</div>
         <div className={"meAboutWrap"}>
-          <div>
-            <div>
-              Where I come from doesn't matter. It's the time we have now that matters. But if you
-              really want to know...My name is Max (dumblole) and I'm currently a sophmore {"(15)"}{" "}
-              in the Science, Math, and Computer Science program (SMCS) at Poolesville High School.
-              Anyways, welcome to my website! It's my pride and joy.
-            </div>
-            <div>
-              I really love programming, gaming, video editing, and my fair share of rap. Feel free
-              to find out more about me via the method you got here!
-            </div>
-            <div>
-              Whenever I work on something relatively big, it can usually be found under my Projects
-              page. Want to know what I think about various topics? Either contact me or go snoop
-              around in my Blogs page! See you around.
+          <div className={"aboutMeLeft"}>
+            <div>Me -</div>
+            <div className={"aboutMeImage"}>
+              <Img fluid={pic.me} />
             </div>
           </div>
+          <div>
+            <div className={"aboutMeText"}>
+              <div>
+                Where I come from doesn't matter. It's the time we have now that matters. But if you
+                really want to know...My name is Max (dumblole) and I'm currently a sophmore{" "}
+                {"(15)"} in the Science, Math, and Computer Science program (SMCS) at Poolesville
+                High School. Anyways, welcome to my website! It's my pride and joy.
+              </div>
+              <div>
+                I really love programming, gaming, video editing, and my fair share of rap. Feel
+                free to find out more about me via the method you got here!
+              </div>
+              <div>
+                Whenever I work on something relatively big, it can usually be found under my
+                Projects page. Want to know what I think about various topics? Either contact me or
+                go snoop around in my Blogs page! See you around.
+              </div>
+            </div>
+          </div>
+
           {/* <Img fluid={pic.b} className={"testImage"} /> */}
-          <Img fluid={pic.me} />
         </div>
       </div>
       <div className={"codeAboutWrap"}>

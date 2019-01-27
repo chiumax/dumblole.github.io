@@ -181,7 +181,42 @@
   width: 100%;
 }
 .meAboutWrap {
+  display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  height: 100%;
+  & > div {
+    width: 50%;
+  }
+}
+.aboutMeLeft {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.aboutMeImage {
+  position: relative;
+  width: 50%;
+  &:before {
+    position: absolute;
+    content: "⌟";
+    font-size: 10rem;
+    bottom: -30px;
+    right: -30px;
+  }
+  &:after {
+    position: absolute;
+    content: "⌜";
+    font-size: 10rem;
+
+    top: -30px;
+    left: -30px;
+  }
+}
+.aboutMeText {
+  //k
 }
 .codeAboutWrap {
   //icon background none text background secondary

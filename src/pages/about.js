@@ -181,7 +181,7 @@ export const query = graphql`
             id
           }
           childImageSharp {
-            fluid(maxWidth: 1920, maxHeight: 1080) {
+            fluid(maxWidth: 8000, maxHeight: 8000) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -201,8 +201,8 @@ export const query = graphql`
 //                 {this.state.current}
 //               </span>
 //               <ul className={this.state.listState}>
-                // <li
-                //   onClick={() => {
+// <li
+//   onClick={() => {
 //                     this.selectChoice("one");
 //                   }}
 //                   className={this.state.classone}
