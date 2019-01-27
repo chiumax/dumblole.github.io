@@ -193,7 +193,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 .aboutMeImage {
@@ -202,18 +202,20 @@
   &:before {
     position: absolute;
     content: "⌟";
-    font-size: 10rem;
-    bottom: -30px;
-    right: -30px;
+    font-size: 15rem;
+    bottom: -80px;
+    right: -50px;
   }
   &:after {
     position: absolute;
     content: "⌜";
-    font-size: 10rem;
-
-    top: -30px;
-    left: -30px;
+    font-size: 15rem;
+    top: -80px;
+    left: -60px;
   }
+}
+.aboutTitle {
+  font-size: 10rem;
 }
 .aboutMeText {
   //k

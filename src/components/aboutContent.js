@@ -47,10 +47,9 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
         </div>
       </div>
       <div>
-        <div className={"aboutTitle"}>ME</div>
         <div className={"meAboutWrap"}>
           <div className={"aboutMeLeft"}>
-            <div>Me -</div>
+            <div className={"aboutTitle"}>ME</div>
             <div className={"aboutMeImage"}>
               <Img fluid={pic.me} />
             </div>
