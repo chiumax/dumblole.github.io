@@ -2,6 +2,7 @@ import React from "react";
 import posed from "react-pose";
 import { tween } from "popmotion";
 import Img from "gatsby-image";
+import cover from "../images/image/abc.jpg";
 
 const IconWrap = posed.div({
   stay: { scale: 1 },
@@ -21,7 +22,11 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
   return (
     <div className={"aboutContainer"}>
       <div className={"aboutwrap"}>
-        <div className="aboutHeader">dumblole</div>
+        <div className={"temp"}>
+          <img src={cover} />
+        </div>
+
+        {/* <div className="aboutHeader">dumblole</div> */}
       </div>
       <div className={"introWork"}>
         <div className={"aboutHeader"}>What I Do...</div>
@@ -55,7 +60,7 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
             </div>
           </div>
           <div>
-            <div className={"aboutMeText"}>
+            <div className={"aboutMeText contentText"}>
               <div>
                 Where I come from doesn't matter. It's the time we have now that matters. But if you
                 really want to know...My name is Max (dumblole) and I'm currently a sophmore{" "}

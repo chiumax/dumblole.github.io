@@ -1,3 +1,13 @@
+.temp {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  // object-fit: cover;
+}
+.contentText {
+  text-align: center;
+  font-size: 2rem;
+}
 .aboutContainer {
   & > div {
     height: 100vh;
@@ -271,6 +281,7 @@
   background-image: linear-gradient(to bottom right, $third-color, $secondary-color);
   // background-image: linear-gradient(to bottom right, #fc00ff, #00dbde);
 }
+
 .skillText {
   font-size: 5rem;
   color: white;
