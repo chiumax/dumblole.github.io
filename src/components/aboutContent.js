@@ -159,7 +159,7 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
           Ever since I started to program on my own time, I've come to really appreciate the
           intricate mastery of the people that program games. A couple games I play.
         </div>
-        <div>
+        <div className={"contentText"}>
           <div>
             Minecraft. It's probably my second most played game. I remember in my younger days I
             used to play singleplayer a lot (I didn't have a lot of friends :C). Hours and hours on
@@ -181,7 +181,7 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
           </div>
         </div>
         <div>Games I would like to play</div>
-        <div>
+        <div className={"contentText"}>
           <div>
             Battlefield I or V. I understand the stigma behind women in Battlefield V, but it's
             still a game I want to play. It's a game I could really lose myself in. I really want to
@@ -204,7 +204,7 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
           music sync to strictly graphic animations and effects, the end result will always be
           unique.
         </div>
-        <div>
+        <div className={"contentText"}>
           <div>
             I used Premiere Pro for some of my first edits. It's good software and it's also very
             easy to use and learn. I'm very comfortable with Premiere Pro but I still have to learn
