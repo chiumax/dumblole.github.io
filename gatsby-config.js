@@ -5,7 +5,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-sass`,
-    `gatsby-remark-copy-linked-files`,
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -20,7 +20,8 @@ module.exports = {
               // base for generating different widths of each image.
               maxWidth: 1920
             }
-          }
+          },
+          `gatsby-remark-copy-linked-files`
         ]
       }
     },
@@ -46,13 +47,13 @@ module.exports = {
         path: `${__dirname}/src/pages/project`
       }
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "blogs",
-        path: `${__dirname}/src/pages/blog`
-      }
-    },
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     name: "blogs",
+    //     path: `${__dirname}/src/pages/blog`
+    //   }
+    // },
     `gatsby-plugin-catch-links`
     // {
     //   resolve: `gatsby-plugin-typography`,

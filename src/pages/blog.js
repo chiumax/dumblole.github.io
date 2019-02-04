@@ -28,8 +28,8 @@ export default class BlogList extends React.Component {
       .then(response => {
         let data = response.data.items.map(node => {
           return (
-            <div className="blogCardWrap">
-              <Card node={node} type={"blog"} key={node.id} />
+            <div className="blogCardWrap" key={node.id}>
+              <Card node={node} type={"blog"} />
             </div>
           );
         });
@@ -61,8 +61,8 @@ export default class BlogList extends React.Component {
     return (
       <Layout>
         <div className="content-container">
-          <h4>{this.props.data.allMarkdownRemark.totalCount} Posts</h4>
-          <Link to={`/blog/tags`}> All tags -></Link>
+          {/* <h4>{this.props.data.allMarkdownRemark.totalCount} Posts</h4> */}
+          {/* <Link to={`/blog/tags`}> All tags -></Link> */}
           {this.state.stories}
           {/* <div className="blogCardWrap">
             {this.props.data.allMarkdownRemark.edges.map(({ node }) => (
@@ -76,39 +76,39 @@ export default class BlogList extends React.Component {
   }
 }
 
-export const query = graphql`
-  query {
-    allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "blog" } } }
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            type
-            date(formatString: "MMMM DD, YYYY")
-            tags
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1920) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
+// export const query = graphql`
+//   query {
+//     allMarkdownRemark(
+//       filter: { frontmatter: { type: { eq: "blog" } } }
+//       sort: { fields: [frontmatter___date], order: DESC }
+//     ) {
+//       totalCount
+//       edges {
+//         node {
+//           id
+//           frontmatter {
+//             title
+//             type
+//             date(formatString: "MMMM DD, YYYY")
+//             tags
+//             image {
+//               childImageSharp {
+//                 fluid(maxWidth: 1920) {
+//                   ...GatsbyImageSharpFluid
+//                 }
+//               }
+//             }
+//           }
 
-          fields {
-            slug
-          }
-          html
-        }
-      }
-    }
-  }
-`;
+//           fields {
+//             slug
+//           }
+//           html
+//         }
+//       }
+//     }
+//   }
+// `;
 //excerpt(pruneLength: 600)
 // {node.excerpt.length > 105
 //   ? node.excerpt.substring(

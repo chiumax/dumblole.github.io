@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import "normalize.css";
 import "../styles/styles.scss";
 import Contact from "../components/contact";
 

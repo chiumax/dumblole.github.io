@@ -1,8 +1,7 @@
 import React from "react";
 import { StaticQuery, Link, graphql } from "gatsby";
-import "normalize.css";
 import "../styles/styles.scss";
-import Particles from "react-particles-js";
+//import Particles from "react-particles-js";
 
 //import { rhythm } from "../utils/typography";
 

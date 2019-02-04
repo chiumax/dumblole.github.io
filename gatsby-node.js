@@ -15,6 +15,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: `slug`,
       value: slug
     });
+    console.log("TCL: exports.onCreateNode -> node", node);
     if (!!node.frontmatter.tags) {
       const tagSlugs = node.frontmatter.tags.map(tag => {
         return `/${node.frontmatter.type}/tags/${_.kebabCase(tag)}/`;
@@ -43,7 +44,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return new Promise((resolve, reject) => {
     const projectPost = path.resolve("./src/templates/project-post.js");
-    const blogPost = path.resolve("./src/templates/blog-post.js");
+    //const blogPost = path.resolve("./src/templates/blog-post.js");
     const tagTemplate = path.resolve("./src/templates/project-tag-list.js");
 
     graphql(`

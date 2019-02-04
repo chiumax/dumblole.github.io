@@ -51,7 +51,7 @@ export default class TagList extends React.Component {
           </h5>
           <div className="wrap">
             {this.props.data.allMarkdownRemark.edges.map(({ node }) => (
-              <Card node={node} type="project" key={node.id}/>
+              <Card node={node} type="project" key={node.id} />
             ))}
           </div>
         </div>
@@ -75,7 +75,7 @@ export const query = graphql`
             type
             title
             startdate(formatString: "MMMM DD, YYYY")
-            date(formatString: "MMMM DD, YYYY")
+            enddate(formatString: "MMMM DD, YYYY")
             image {
               childImageSharp {
                 fluid(maxWidth: 1920) {
