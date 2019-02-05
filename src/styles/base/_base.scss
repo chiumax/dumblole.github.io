@@ -37,13 +37,11 @@ html {
   font-size: 62.5%;
 }
 .content-container {
-  margin: 0 auto;
   //max-width: 120rem;
+  margin: 0 auto;
   max-width: 90vw;
-  padding: 0 $xs-size;
-  flex-grow: 1;
+  min-width: 90vw;
   bottom: 0;
-  width: 100vw;
   height: 100vh;
 }
 // ::-webkit-scrollbar {

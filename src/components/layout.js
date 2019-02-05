@@ -52,29 +52,33 @@ export default class Layout extends React.Component {
         render={data => (
           <div className="scrollWrap">
             {/* <Particles className="aboutParticle" /> */}
-            <div className="">
-              <div className="headerLinkWrap">
-                {/* <div>
-              <Link className="linke" to={`/`}>
-                DUMBLOLE
-              </Link>
-            </div> */}
+            <div className="bodyWrap">
+              {/* <div className="headerLinkWrap">
+                 {this.renderLinks()}
+                
+              </div> */}
+              <div className={"headerLink"}>
+                <div>
+                  {" "}
+                  <Link className="linke" to={`/about/`}>
+                    DUMBLOLE
+                  </Link>
+                </div>
 
-                {this.renderLinks()}
-
-                {/* <Link className="link" to={`/project/`}>
-                Projects
-              </Link>
-              <Link className="link" to={`/blog/`}>
-                Blogs
-              </Link>
-              <Link className="link" to={`/skills/`}>
-                Skills
-              </Link>
-              <Link className="link" to={`/about/`}>
-                About
-              </Link> */}
+                <div>
+                  {" "}
+                  <Link className="link" to={`/project/`}>
+                    Projects
+                  </Link>
+                  <Link className="link" to={`/blog/`}>
+                    Blogs
+                  </Link>
+                  <Link className="link" to={`/contact/`}>
+                    Contact
+                  </Link>
+                </div>
               </div>
+
               <div className={""}>
                 <div className=" ">{this.props.children}</div>
               </div>

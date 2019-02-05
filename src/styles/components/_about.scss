@@ -1,315 +1,315 @@
-// .temp {
-//   width: 100vw;
-//   height: 100vh;
-//   overflow: hidden;
-//   // object-fit: cover;
-// }
-// .contentText {
-//   text-align: center;
-//   font-size: 2rem;
-// }
-// .aboutContainer {
-//   & > div {
-//     height: 100vh;
-//     width: 100vw;
-//     text-align: center;
-//   }
-// }
-// //Box shadow and opacity
-// //Box shadow and opacity
-// //Box shadow and opacity
-// //Box shadow and opacity
-// //Box shadow and opacity
-// //Box shadow and opacity
+.temp {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  // object-fit: cover;
+}
+.contentText {
+  text-align: center;
+  font-size: 2rem;
+}
+.aboutContainer {
+  & > div {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+  }
+}
+//Box shadow and opacity
+//Box shadow and opacity
+//Box shadow and opacity
+//Box shadow and opacity
+//Box shadow and opacity
+//Box shadow and opacity
 
-// .introWork {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   font-size: 2rem;
-// }
+.introWork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+}
 
-// //Delete this maybe
-// .glow {
-//   position: relative;
-//   &:before {
-//     content: "";
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//     transition: opacity 0.2s ease-out;
-//     opacity: 0;
-//   }
-// }
-// .aboutHeader {
-//   font-family: "BrandonGrotesque", sans-serif;
-//   font-size: 10rem;
-// }
+//Delete this maybe
+.glow {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+  }
+}
+.aboutHeader {
+  font-family: "BrandonGrotesque", sans-serif;
+  font-size: 10rem;
+}
 
-// .columnWrap {
-//   width: 100%;
-//   height: 90%;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-around;
+.columnWrap {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 
-//   & > div {
-//     position: relative;
-//     width: 30%;
-//     margin: 0 auto;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-around;
-//     align-items: center;
-//     font-size: 3rem;
-//     background: $background-grey;
-//     border: 1rem solid transparent;
-//     margin: 0 5rem;
-//     text-align: center;
-//     div:first-child {
-//       font-size: 5rem;
-//     }
-//     div:last-child {
-//       position: relative;
-//       //border-radius: 6px;
-//       padding: 1rem 2rem;
-//       &:after {
-//         content: "";
-//         position: absolute;
-//         top: 0;
-//         left: 0rem;
-//         width: 100%;
-//         height: 100%;
-//         transition: opacity 0.2s ease-out;
-//         opacity: 0;
-//         background: black;
-//       }
-//       &:hover {
-//         cursor: pointer;
-//         &:after {
-//           background: black;
-//           opacity: 0.25;
-//         }
-//       }
-//     }
-//     // border: 1rem solid darken($secondary-color, 10%);
-//     // border-left-color: lighten($secondary-color, 10%);
-//     // border-top-color: lighten($secondary-color, 10%);
-//     &:before {
-//       content: "";
-//       position: absolute;
-//       height: 100%;
-//       width: 100%;
-//       z-index: -1;
-//       padding: 2rem;
-//     }
-//     &:after {
-//       transition: opacity 0.2s ease-out;
-//       opacity: 0;
-//       content: "";
-//       position: absolute;
-//       height: 100%;
-//       width: 100%;
-//       z-index: -1;
-//       padding: 2rem;
-//     }
-//   }
-// }
-// .pinkIcon {
-//   div:last-child {
-//     background: $secondary-color;
-//   }
-//   &:after {
-//     box-shadow: 0px 0px 40px $secondary-color;
-//   }
-//   &:hover {
-//     &:after {
-//       opacity: 1;
-//       box-shadow: 0px 0px 40px $secondary-color;
-//     }
-//   }
-//   &:before {
-//     background: linear-gradient(
-//       to bottom right,
-//       darken($secondary-color, 10%),
-//       lighten($secondary-color, 10%)
-//     );
-//   }
-// }
-// .greenIcon {
-//   div:last-child {
-//     background: $fourth-color;
-//   }
-//   &:after {
-//     box-shadow: 0px 0px 40px $fourth-color;
-//   }
-//   &:hover {
-//     &:after {
-//       opacity: 1;
-//       box-shadow: 0px 0px 40px $fourth-color;
-//     }
-//   }
-//   &:before {
-//     background: linear-gradient(
-//       to bottom right,
-//       darken($fourth-color, 10%),
-//       lighten($fourth-color, 10%)
-//     );
-//   }
-// }
-// .blueIcon {
-//   div:last-child {
-//     background: $third-color;
-//   }
-//   &:after {
-//     box-shadow: 0px 0px 40px $third-color;
-//   }
-//   &:hover {
-//     &:after {
-//       opacity: 1;
-//       box-shadow: 0px 0px 40px $third-color;
-//     }
-//   }
-//   &:before {
-//     background: linear-gradient(
-//       to bottom right,
-//       darken($third-color, 10%),
-//       lighten($third-color, 10%)
-//     );
-//   }
-// }
-// .greenIntIcon {
-//   fill: $fourth-color;
-//   width: 100%;
-// }
-// .pinkIntIcon {
-//   fill: $secondary-color;
-//   width: 100%;
-// }
-// .blueIntIcon {
-//   fill: $third-color;
-//   width: 100%;
-// }
-// .meAboutWrap {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-around;
-//   height: 100%;
-//   & > div {
-//     width: 50%;
-//   }
-// }
-// .aboutMeLeft {
-//   height: 100%;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-// }
-// .aboutMeImage {
-//   position: relative;
-//   width: 50%;
-//   &:before {
-//     position: absolute;
-//     content: "⌟";
-//     font-size: 15rem;
-//     bottom: -80px;
-//     right: -50px;
-//   }
-//   &:after {
-//     position: absolute;
-//     content: "⌜";
-//     font-size: 15rem;
-//     top: -80px;
-//     left: -60px;
-//   }
-// }
-// .aboutTitle {
-//   font-size: 10rem;
-// }
-// .aboutMeText {
-//   //k
-// }
-// .codeAboutWrap {
-//   //icon background none text background secondary
-//   background-color: darken($secondary-color, 10%);
-// }
-// .gameAboutWrap {
-//   background-color: $fourth-color;
-// }
-// .editAboutWrap {
-//   background-color: $third-color;
-// }
-// .icon {
-//   height: 6vw;
-//   width: 6vw;
-//   margin: 1rem 8vw;
-//   display: inline-block;
-//   vertical-align: middle;
-//   cursor: pointer;
-// }
+  & > div {
+    position: relative;
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3rem;
+    background: $background-grey;
+    border: 1rem solid transparent;
+    margin: 0 5rem;
+    text-align: center;
+    div:first-child {
+      font-size: 5rem;
+    }
+    div:last-child {
+      position: relative;
+      //border-radius: 6px;
+      padding: 1rem 2rem;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0rem;
+        width: 100%;
+        height: 100%;
+        transition: opacity 0.2s ease-out;
+        opacity: 0;
+        background: black;
+      }
+      &:hover {
+        cursor: pointer;
+        &:after {
+          background: black;
+          opacity: 0.25;
+        }
+      }
+    }
+    // border: 1rem solid darken($secondary-color, 10%);
+    // border-left-color: lighten($secondary-color, 10%);
+    // border-top-color: lighten($secondary-color, 10%);
+    &:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      padding: 2rem;
+    }
+    &:after {
+      transition: opacity 0.2s ease-out;
+      opacity: 0;
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      padding: 2rem;
+    }
+  }
+}
+.pinkIcon {
+  div:last-child {
+    background: $secondary-color;
+  }
+  &:after {
+    box-shadow: 0px 0px 40px $secondary-color;
+  }
+  &:hover {
+    &:after {
+      opacity: 1;
+      box-shadow: 0px 0px 40px $secondary-color;
+    }
+  }
+  &:before {
+    background: linear-gradient(
+      to bottom right,
+      darken($secondary-color, 10%),
+      lighten($secondary-color, 10%)
+    );
+  }
+}
+.greenIcon {
+  div:last-child {
+    background: $fourth-color;
+  }
+  &:after {
+    box-shadow: 0px 0px 40px $fourth-color;
+  }
+  &:hover {
+    &:after {
+      opacity: 1;
+      box-shadow: 0px 0px 40px $fourth-color;
+    }
+  }
+  &:before {
+    background: linear-gradient(
+      to bottom right,
+      darken($fourth-color, 10%),
+      lighten($fourth-color, 10%)
+    );
+  }
+}
+.blueIcon {
+  div:last-child {
+    background: $third-color;
+  }
+  &:after {
+    box-shadow: 0px 0px 40px $third-color;
+  }
+  &:hover {
+    &:after {
+      opacity: 1;
+      box-shadow: 0px 0px 40px $third-color;
+    }
+  }
+  &:before {
+    background: linear-gradient(
+      to bottom right,
+      darken($third-color, 10%),
+      lighten($third-color, 10%)
+    );
+  }
+}
+.greenIntIcon {
+  fill: $fourth-color;
+  width: 100%;
+}
+.pinkIntIcon {
+  fill: $secondary-color;
+  width: 100%;
+}
+.blueIntIcon {
+  fill: $third-color;
+  width: 100%;
+}
+.meAboutWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100%;
+  & > div {
+    width: 50%;
+  }
+}
+.aboutMeLeft {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aboutMeImage {
+  position: relative;
+  width: 50%;
+  &:before {
+    position: absolute;
+    content: "⌟";
+    font-size: 15rem;
+    bottom: -80px;
+    right: -50px;
+  }
+  &:after {
+    position: absolute;
+    content: "⌜";
+    font-size: 15rem;
+    top: -80px;
+    left: -60px;
+  }
+}
+.aboutTitle {
+  font-size: 10rem;
+}
+.aboutMeText {
+  //k
+}
+.codeAboutWrap {
+  //icon background none text background secondary
+  background-color: darken($secondary-color, 10%);
+}
+.gameAboutWrap {
+  background-color: $fourth-color;
+}
+.editAboutWrap {
+  background-color: $third-color;
+}
+.icon {
+  height: 6vw;
+  width: 6vw;
+  margin: 1rem 8vw;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
 
-// .iconWrap {
-//   text-align: center;
-//   height: 100%;
-//   display: flex;
-//   flex-direction: row;
-//   flex-wrap: wrap;
-//   justify-content: space-around;
-//   align-content: space-around;
-//   margin: 0 5rem;
-//   color: white;
-//   font-size: 3rem;
-// }
-// .showIconWrap {
-//   display: flex;
-//   flex-direction: column;
-// }
-// .singleIcon {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-// }
-// .skillWrap {
-//   display: flex;
-//   align-items: space-around;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   text-align: center;
-//   padding: 4rem 0;
-//   background-image: linear-gradient(to bottom right, $third-color, $secondary-color);
-//   // background-image: linear-gradient(to bottom right, #fc00ff, #00dbde);
-// }
+.iconWrap {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  margin: 0 5rem;
+  color: white;
+  font-size: 3rem;
+}
+.showIconWrap {
+  display: flex;
+  flex-direction: column;
+}
+.singleIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.skillWrap {
+  display: flex;
+  align-items: space-around;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 4rem 0;
+  background-image: linear-gradient(to bottom right, $third-color, $secondary-color);
+  // background-image: linear-gradient(to bottom right, #fc00ff, #00dbde);
+}
 
-// .skillText {
-//   font-size: 5rem;
-//   color: white;
-// }
-// .iconDesc {
-//   position: absolute;
-//   z-index: 99;
-// }
-// .wrapEveryAbout {
-//   font-size: 2rem;
-//   div {
-//     margin-bottom: 1.5rem;
-//   }
-// }
-// .testImage {
-//   -webkit-filter: grayscale(20%) hue-rotate(90deg); /* Safari 6.0 - 9.0 */
-//   filter: grayscale(20%) hue-rotate(300deg);
-// }
-// .aboutParticle {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   bottom: 0;
-//   z-index: -1;
-// }
+.skillText {
+  font-size: 5rem;
+  color: white;
+}
+.iconDesc {
+  position: absolute;
+  z-index: 99;
+}
+.wrapEveryAbout {
+  font-size: 2rem;
+  div {
+    margin-bottom: 1.5rem;
+  }
+}
+.testImage {
+  -webkit-filter: grayscale(20%) hue-rotate(90deg); /* Safari 6.0 - 9.0 */
+  filter: grayscale(20%) hue-rotate(300deg);
+}
+.aboutParticle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  z-index: -1;
+}
 /////////////////////////////////////////////////
 // .aboutWrap {
 //   display: flex;

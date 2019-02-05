@@ -2,7 +2,7 @@ import React from "react";
 import posed from "react-pose";
 import { tween } from "popmotion";
 import Img from "gatsby-image";
-import cover from "../images/image/abc.jpg";
+import cover from "../images/image/landing.jpg";
 
 const IconWrap = posed.div({
   stay: { scale: 1 },
@@ -20,7 +20,7 @@ const IconHover = posed.div({
 export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => {
   return (
     <div className={"aboutContainer"}>
-    {/* HERO  */}
+      {/* HERO  */}
       <div className={"aboutwrap"}>
         <div className={"temp"}>
           <img src={cover} />
@@ -79,7 +79,6 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
               </div>
             </div>
           </div>
-
           {/* <Img fluid={pic.b} className={"testImage"} /> */}
         </div>
       </div>
@@ -117,7 +116,7 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
         I'm working on a couple projects right now. You can see my finished ones over at the
         Projects page.
       </div>
-      
+
       {/* GAMING  */}
       <div>
         <div>GAMING</div>
@@ -196,7 +195,8 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
     </div>
   );
 };
-{/* <div className={"skillWrap"}>
+{
+  /* <div className={"skillWrap"}>
         <div className={"skillText"}>
           {!!codeOnFocus ? codeContent[codeOnFocus].name : "< SKILLS />"}
         </div>
@@ -232,7 +232,8 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
             </IconWrap>
           ))}
         </div>
-       </div> */}
+       </div> */
+}
 // switch (type) {
 //   case "myself":
 //     return (
