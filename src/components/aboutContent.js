@@ -24,6 +24,10 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
       <div className={"aboutwrap"}>
         <div className={"temp"}>
           <img src={cover} />
+          <div className={"heroText"}>
+          <div>D U M B L O L E</div>
+          <div>Self-teaching the way of computers and visual effects all the while having fun on the way.</div>
+          </div>
         </div>
         {/* <div className="aboutHeader">dumblole</div> */}
       </div>
