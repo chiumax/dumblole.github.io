@@ -23,7 +23,7 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
       {/* HERO  */}
       <div className={"aboutwrap"}>
         <div className={"temp"}>
-          <img src={cover} />
+          <img src={cover} className={"heroImage"}/>
           <div className={"heroText"}>
           <div>D U M B L O L E</div>
           <div>Self-teaching the way of computers and visual effects all the while having fun on the way.</div>

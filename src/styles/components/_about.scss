@@ -1,17 +1,26 @@
 .heroText{
   position: absolute;
-  min-height: 100px;
-  top: 0;
-  bottom: 0;
-  left:0;
-  right:0;
+  text-align: left;
+  font-size: 3rem;
+  max-width: 45vw;
+  div{
+  margin: 1rem 0;
+  }
 }
 .temp {
+display: flex;
+justify-content: center;
+align-items: center;
 position:relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   // object-fit: cover;
+}
+.heroImage{
+width: 100vw;
+  height: 100vh;
+  
 }
 .contentText {
   text-align: center;
@@ -19,7 +28,6 @@ position:relative;
 }
 .aboutContainer {
   & > div {
-    height: 100vh;
     width: 100vw;
     text-align: center;
   }
@@ -36,6 +44,7 @@ position:relative;
   flex-direction: column;
   align-items: center;
   font-size: 2rem;
+  height: 75vh;
 }
 
 //Delete this maybe
@@ -52,12 +61,13 @@ position:relative;
 }
 .aboutHeader {
   font-family: "BrandonGrotesque", sans-serif;
-  font-size: 10rem;
+  font-size: 3rem;
+  margin: 3rem;
 }
 
 .columnWrap {
   width: 100%;
-  height: 90%;
+  height: 50%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -189,15 +199,15 @@ position:relative;
 }
 .greenIntIcon {
   fill: $fourth-color;
-  width: 100%;
+  width: 3rem;
 }
 .pinkIntIcon {
   fill: $secondary-color;
-  width: 100%;
+  width: 3rem;
 }
 .blueIntIcon {
   fill: $third-color;
-  width: 100%;
+  width: 3rem;
 }
 .meAboutWrap {
   display: flex;
