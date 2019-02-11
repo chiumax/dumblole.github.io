@@ -2,7 +2,7 @@ import React from "react";
 import posed from "react-pose";
 import { tween } from "popmotion";
 import Img from "gatsby-image";
-import cover from "../images/image/landing.jpg";
+import cover from "../images/image/land.jpg";
 
 const IconWrap = posed.div({
   stay: { scale: 1 },
@@ -23,17 +23,20 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
       {/* HERO  */}
       <div className={"aboutwrap"}>
         <div className={"temp"}>
-          <img src={cover} className={"heroImage"}/>
+          <img src={cover} className={"heroImage"} />
           <div className={"heroText"}>
-          <div>D U M B L O L E</div>
-          <div>Self-teaching the way of computers and visual effects all the while having fun on the way.</div>
+            <div>D U M B L O L E</div>
+            <div>
+              Self-teaching the way of computers and visual effects all the while having fun on the
+              way.
+            </div>
           </div>
         </div>
         {/* <div className="aboutHeader">dumblole</div> */}
       </div>
       {/* INTRO PANEL */}
       <div className={"introWork"}>
-        <div className={"aboutHeader"}>What I Do...</div>
+        <div className={"aboutHeader"}>I&nbsp;&nbsp;&nbsp;E N J O Y</div>
         <div className={"columnWrap"}>
           <div className={"pinkIcon"}>
             <div>Code</div>
@@ -57,14 +60,15 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
       </div>
       {/* ABOUT ME / PIC */}
       <div>
-        <div>
-          <div>
+        <div className={"meAboutWrap"}>
+          <div className={"aboutMeLeft"}>
             <div>ME</div>
-            <div>
+            <div className={"aboutMeImage"}>
+              {/* <GifPlayer gif={gameGif} autoplay={true} /> */}
               <Img fluid={pic.me} />
             </div>
           </div>
-          <div>
+          <div className={"descText"}>
             <div>
               <div>
                 Where I come from doesn't matter. It's the time we have now that matters. But if you
@@ -87,11 +91,12 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
         </div>
       </div>
       {/* CODING SECTION */}
-      <div>
+      <div className={"editAboutWrap"}>
         <div>
-          {"< "}CODING{" />"}
+          <div>C O D E</div>
         </div>
-        <div>
+
+        <div className={"descText"}>
           <div>
             My journey in programming had a pretty rough start. Although I was lucky enough to land
             a computer science class early on in middle school, I didn't feel like the teachers who
@@ -116,84 +121,95 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
             deep learning. If not, maybe I could work for Elon Musk, spearhead the way into
             interplanetary travel.
           </div>
+          I'm working on a couple projects right now. You can see my finished ones over at the
+          Projects page.
         </div>
-        I'm working on a couple projects right now. You can see my finished ones over at the
-        Projects page.
       </div>
 
       {/* GAMING  */}
-      <div>
-        <div>GAMING</div>
+      <div className={"gameAboutWrap"}>
         <div>
-          Ever since I started to program on my own time, I've come to really appreciate the
-          intricate mastery of the people that program games. A couple games I play.
+          <div>G A M E</div>
         </div>
-        <div>
+
+        <div className={"descText"}>
           <div>
-            Minecraft. It's probably my second most played game. I remember in my younger days I
-            used to play singleplayer a lot (I didn't have a lot of friends :C). Hours and hours on
-            end, exploring and building. Nowadays, I usually only play Minecraft with a couple of my
-            bros. We'd just hop on Hypixel or Mineplex and play some competitve team based games. To
-            me, it's not the game that makes the game fun; it's the teamwork, it's the banter with
-            your friends. That's what makes the game fun.
+            Ever since I started to program on my own time, I've come to really appreciate the
+            intricate mastery of the people that program games. A couple games I play.
           </div>
           <div>
-            Counter-Strike Global Offensive. Although less of my friends play this highly
-            competitive game, I'm pretty sure this is my most played game. My rank in this game is
-            silver... Yeah I know I suck but its a really fun game. It's also really fun to edit
-            clips and montages. Teamwork is really essential to success in this game and its what
-            makes the game fun for me.
+            <div>
+              Minecraft. It's probably my second most played game. I remember in my younger days I
+              used to play singleplayer a lot (I didn't have a lot of friends :C). Hours and hours
+              on end, exploring and building. Nowadays, I usually only play Minecraft with a couple
+              of my bros. We'd just hop on Hypixel or Mineplex and play some competitve team based
+              games. To me, it's not the game that makes the game fun; it's the teamwork, it's the
+              banter with your friends. That's what makes the game fun.
+            </div>
+            <div>
+              Counter-Strike Global Offensive. Although less of my friends play this highly
+              competitive game, I'm pretty sure this is my most played game. My rank in this game is
+              silver... Yeah I know I suck but its a really fun game. It's also really fun to edit
+              clips and montages. Teamwork is really essential to success in this game and its what
+              makes the game fun for me.
+            </div>
+            <div>
+              Clash of Clans. Yeah it is kinda a dead game but a bunch of my friends got back into
+              it after a few major updates. Most notably, the builder base update.
+            </div>
           </div>
+          <div>Games I would like to play</div>
           <div>
-            Clash of Clans. Yeah it is kinda a dead game but a bunch of my friends got back into it
-            after a few major updates. Most notably, the builder base update.
-          </div>
-        </div>
-        <div>Games I would like to play</div>
-        <div>
-          <div>
-            Battlefield I or V. I understand the stigma behind women in Battlefield V, but it's
-            still a game I want to play. It's a game I could really lose myself in. I really want to
-            play large scale fps games with some friends because although a couple players isn't
-            significant to the victory of the battles itself, it gives me a sense of friendship and
-            "brotherhood". It's not the significance of the whole game that matters, but the
-            significance of a couple people that really make me happy. Planetside 2 was such a game.{" "}
+            <div>
+              Battlefield I or V. I understand the stigma behind women in Battlefield V, but it's
+              still a game I want to play. It's a game I could really lose myself in. I really want
+              to play large scale fps games with some friends because although a couple players
+              isn't significant to the victory of the battles itself, it gives me a sense of
+              friendship and "brotherhood". It's not the significance of the whole game that
+              matters, but the significance of a couple people that really make me happy. Planetside
+              2 was such a game.{" "}
+            </div>
           </div>
         </div>
       </div>
       {/* EDITING */}
-      <div>
-        <div>EDITING</div>
+      <div className={"editAboutWrap"}>
         <div>
-          The first video edit I ever made was for an 8th grade week-long field trip to Boston. It
-          was the end of the year and kind of like a goodbye type of deal. I've learned a lot of
-          things since then.
+          <div>E D I T</div>
         </div>
-        <div>
-          Editing for me is really fun. You can take on an edit/montage many different ways. From
-          music sync to strictly graphic animations and effects, the end result will always be
-          unique.
-        </div>
-        <div>
+
+        <div className={"descText"}>
           <div>
-            I used Premiere Pro for some of my first edits. It's good software and it's also very
-            easy to use and learn. I'm very comfortable with Premiere Pro but I still have to learn
-            good color correcting. I never would have thought that computer science could be related
-            to video editing. I mean I learned expressions relatively recently and it made a whole
-            lot of sense to me
+            The first video edit I ever made was for an 8th grade week-long field trip to Boston. It
+            was the end of the year and kind of like a goodbye type of deal. I've learned a lot of
+            things since then.
           </div>
           <div>
-            It took a really long time to settle into After Effects because of the many tools and
-            effects that are available to you. Not everything works the same way in After Effects as
-            it does in Premiere Pro. Keybindings are different and the whole keyframing process in
-            After Effects is much more pleasant. I rarely use Premiere Pro unless if I'm doing
-            something really simple or if I have a really big project that I may have to piece
-            together (haven't gotten to that point yet).
+            Editing for me is really fun. You can take on an edit/montage many different ways. From
+            music sync to strictly graphic animations and effects, the end result will always be
+            unique.
           </div>
-        </div>
-        <div>
-          Check out some of the edits I made over at my Youtube channel. Or you can find some of the
-          more notable ones under my Projects section.
+          <div>
+            <div>
+              I used Premiere Pro for some of my first edits. It's good software and it's also very
+              easy to use and learn. I'm very comfortable with Premiere Pro but I still have to
+              learn good color correcting. I never would have thought that computer science could be
+              related to video editing. I mean I learned expressions relatively recently and it made
+              a whole lot of sense to me
+            </div>
+            <div>
+              It took a really long time to settle into After Effects because of the many tools and
+              effects that are available to you. Not everything works the same way in After Effects
+              as it does in Premiere Pro. Keybindings are different and the whole keyframing process
+              in After Effects is much more pleasant. I rarely use Premiere Pro unless if I'm doing
+              something really simple or if I have a really big project that I may have to piece
+              together (haven't gotten to that point yet).
+            </div>
+          </div>
+          <div>
+            Check out some of the edits I made over at my Youtube channel. Or you can find some of
+            the more notable ones under my Projects section.
+          </div>
         </div>
       </div>
     </div>

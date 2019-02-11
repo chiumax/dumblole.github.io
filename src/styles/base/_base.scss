@@ -10,11 +10,16 @@
     /* Pretty Modern Browsers */ url("../fonts/BloggerSans.ttf") format("truetype"); /* Safari, Android, iOS */
 }
 @font-face {
-  font-family: "OpenSans";
-  src: 
-    /* IE6-IE8 */ url("../fonts/openSans.woff"),
-    /* Pretty Modern Browsers */ url("../fonts/openSans.woff2");
+  font-family: "Montserrat";
+  src: url("../fonts/montserrat.eot"), /* IE6-IE8 */ url("../fonts/montserrat.woff") format("woff"),
+    /* Pretty Modern Browsers */ url("../fonts/montserrat.ttf") format("truetype"); /* Safari, Android, iOS */
 }
+@font-face {
+  font-family: "Assistant";
+  src: url("../fonts/assistant.eot"), /* IE6-IE8 */ url("../fonts/assistant.woff") format("woff"),
+    /* Pretty Modern Browsers */ url("../fonts/assistant.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
 @font-face {
   font-family: "BrandonGrotesque";
   src: url("../fonts/brandonGrotesqueBlack.woff");
@@ -27,14 +32,15 @@
   box-sizing: border-box;
 }
 body {
-  background-color: $background-grey;
+  background-color: $white-text;
   font-family: "BrandonGrotesque", "Blogger", sans-serif;
   overflow-y: auto;
   overflow-x: hidden;
-  color: $white-text;
+  color: $background-grey;
 }
 html {
   font-size: 62.5%;
+  line-height: 1.5;
 }
 .content-container {
   //max-width: 120rem;

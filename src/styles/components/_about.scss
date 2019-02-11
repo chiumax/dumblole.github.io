@@ -1,35 +1,51 @@
-.heroText{
+.heroText {
   position: absolute;
   text-align: left;
   font-size: 3rem;
   max-width: 45vw;
-  div{
-  margin: 1rem 0;
+  z-index: 4;
+  div {
+    margin: 1rem 0;
   }
 }
 .temp {
-display: flex;
-justify-content: center;
-align-items: center;
-position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    background-color: darken(white, 90%);
+    opacity: 0.5;
+  }
   // object-fit: cover;
 }
-.heroImage{
-width: 100vw;
+.heroImage {
+  object-fit: cover;
+  width: 100vw;
   height: 100vh;
-  
+  position: relative;
 }
 .contentText {
   text-align: center;
-  font-size: 2rem;
+  font-size: 20rem;
 }
 .aboutContainer {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
   & > div {
     width: 100vw;
     text-align: center;
+  }
+  & > div:not(:first-child) {
+    margin: 3rem 0;
   }
 }
 //Box shadow and opacity
@@ -43,6 +59,7 @@ width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   font-size: 2rem;
   height: 75vh;
 }
@@ -212,9 +229,11 @@ width: 100vw;
 .meAboutWrap {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   height: 100%;
   & > div {
+    margin: auto;
+    padding: 0 6rem;
     width: 50%;
   }
 }
@@ -250,14 +269,42 @@ width: 100vw;
   //k
 }
 .codeAboutWrap {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  height: 100%;
+  & > div {
+    margin: auto;
+    padding: 0 6rem;
+    width: 50%;
+  }
   //icon background none text background secondary
-  background-color: darken($secondary-color, 10%);
+  //background-color: darken($secondary-color, 10%);
 }
 .gameAboutWrap {
-  background-color: $fourth-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  & > div {
+    margin: auto;
+    padding: 0 6rem;
+    width: 50%;
+  }
+  //background-color: $fourth-color;
 }
 .editAboutWrap {
-  background-color: $third-color;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  height: 100%;
+  & > div {
+    margin: auto;
+    padding: 0 6rem;
+    width: 50%;
+  }
+
+  //background-color: $third-color;
 }
 .icon {
   height: 6vw;
