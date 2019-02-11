@@ -3,6 +3,11 @@ import posed from "react-pose";
 import { tween } from "popmotion";
 import Img from "gatsby-image";
 import cover from "../images/image/land.jpg";
+import game from "../images/game.webm";
+import code from "../images/code.webm";
+import edit from "../images/edit.webm";
+import ReactPlayer from "react-player";
+import { Parallax, Background } from "react-parallax";
 
 const IconWrap = posed.div({
   stay: { scale: 1 },
@@ -21,9 +26,12 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
   return (
     <div className={"aboutContainer"}>
       {/* HERO  */}
+
       <div className={"aboutwrap"}>
         <div className={"temp"}>
+          <div className={"imageWrap"} />
           <img src={cover} className={"heroImage"} />
+
           <div className={"heroText"}>
             <div>D U M B L O L E</div>
             <div>
@@ -35,6 +43,14 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
         {/* <div className="aboutHeader">dumblole</div> */}
       </div>
       {/* INTRO PANEL */}
+      {/* <Parallax strength={1000}>
+        <div style={{ height: "500px" }}>
+          <div>HTML inside the parallax</div>
+        </div>
+        <Background>
+          <img src={cover} className={"heroImage"} />
+        </Background>
+      </Parallax> */}
       <div className={"introWork"}>
         <div className={"aboutHeader"}>I&nbsp;&nbsp;&nbsp;E N J O Y</div>
         <div className={"columnWrap"}>
@@ -60,11 +76,10 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
       </div>
       {/* ABOUT ME / PIC */}
       <div>
+        <div className={"aboutHeader"}>ME</div>
         <div className={"meAboutWrap"}>
           <div className={"aboutMeLeft"}>
-            <div>ME</div>
             <div className={"aboutMeImage"}>
-              {/* <GifPlayer gif={gameGif} autoplay={true} /> */}
               <Img fluid={pic.me} />
             </div>
           </div>
@@ -91,9 +106,10 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
         </div>
       </div>
       {/* CODING SECTION */}
+      <div className={"aboutHeader"}>C O D E</div>
       <div className={"editAboutWrap"}>
         <div>
-          <div>C O D E</div>
+          <ReactPlayer url={code} playing loop className={"reactPlayer"} />
         </div>
 
         <div className={"descText"}>
@@ -127,9 +143,10 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
       </div>
 
       {/* GAMING  */}
+      <div className={"aboutHeader"}>G A M E</div>
       <div className={"gameAboutWrap"}>
         <div>
-          <div>G A M E</div>
+          <ReactPlayer url={game} playing loop className={"reactPlayer"} />
         </div>
 
         <div className={"descText"}>
@@ -173,9 +190,10 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
         </div>
       </div>
       {/* EDITING */}
+      <div className={"aboutHeader"}>E D I T</div>
       <div className={"editAboutWrap"}>
         <div>
-          <div>E D I T</div>
+          <ReactPlayer url={edit} playing loop className={"reactPlayer"} />
         </div>
 
         <div className={"descText"}>

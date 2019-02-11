@@ -16,22 +16,31 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  &:after {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    z-index: 3;
-    background-color: darken(white, 90%);
-    opacity: 0.5;
-  }
+  // &:after {
+  //   content: "";
+  //   position: absolute;
+  //   width: 100vw;
+  //   height: 100vh;
+  //   z-index: 3;
+  //   background-color: darken(white, 90%);
+  //   opacity: 0.5;
+  // }
   // object-fit: cover;
 }
 .heroImage {
   object-fit: cover;
   width: 100vw;
   height: 100vh;
-  position: relative;
+  z-index: -2;
+  position: fixed;
+}
+.imageWrap {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: darken(white, 90%);
+  opacity: 0.5;
 }
 .contentText {
   text-align: center;
@@ -46,6 +55,12 @@
   }
   & > div:not(:first-child) {
     margin: 3rem 0;
+  }
+}
+.descText {
+  text-align: left;
+  div {
+    margin: 2rem 0;
   }
 }
 //Box shadow and opacity
@@ -77,9 +92,21 @@
   }
 }
 .aboutHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "BrandonGrotesque", sans-serif;
   font-size: 3rem;
   margin: 3rem;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    height: 0.8rem;
+    width: 12.5rem;
+  }
 }
 
 .columnWrap {
@@ -251,15 +278,15 @@
     position: absolute;
     content: "⌟";
     font-size: 15rem;
-    bottom: -80px;
+    bottom: -90px;
     right: -50px;
   }
   &:after {
     position: absolute;
     content: "⌜";
     font-size: 15rem;
-    top: -80px;
-    left: -60px;
+    top: -90px;
+    left: -50px;
   }
 }
 .aboutTitle {
@@ -274,12 +301,33 @@
   justify-content: center;
   height: 100%;
   & > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: auto;
     padding: 0 6rem;
     width: 50%;
   }
   //icon background none text background secondary
   //background-color: darken($secondary-color, 10%);
+}
+.reactPlayer {
+  margin: auto;
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "⌟";
+    font-size: 15rem;
+    bottom: -90px;
+    right: -50px;
+  }
+  &:after {
+    position: absolute;
+    content: "⌜";
+    font-size: 15rem;
+    top: -90px;
+    left: -50px;
+  }
 }
 .gameAboutWrap {
   display: flex;
