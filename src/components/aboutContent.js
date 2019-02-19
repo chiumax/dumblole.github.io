@@ -1,11 +1,12 @@
 import React from "react";
 import posed from "react-pose";
+import { Flipper, Flipped } from "react-flip-toolkit";
 import { tween } from "popmotion";
 import Img from "gatsby-image";
 import cover from "../images/image/land.jpg";
-import game from "../images/game.webm";
-import code from "../images/code.webm";
-import edit from "../images/edit.webm";
+// import game from "../images/game.webm";
+// import code from "../images/code.webm";
+// import edit from "../images/edit.webm";
 import ReactPlayer from "react-player";
 import { Parallax, Background } from "react-parallax";
 
@@ -22,7 +23,18 @@ const IconHover = posed.div({
   init: { scale: 1 },
   hover: { scale: 1.2 }
 });
-export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => {
+export default ({
+  type,
+  pic,
+  codeOnFocus,
+  codeContent,
+  SVGcontent,
+  choose,
+  shuffle,
+  current,
+  clickExpand,
+  clickedElement
+}) => {
   return (
     <div className={"aboutContainer"}>
       {/* HERO  */}
@@ -62,24 +74,22 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
                 {"(15)"} in the Science, Math, and Computer Science program (SMCS) at Poolesville
                 High School. Anyways, welcome to my website! It's my pride and joy.
               </div>
-              <div>
-                I really love programming, gaming, video editing, and my fair share of rap. Feel
-                free to find out more about me via the method you got here!
-              </div>
+              <div>I really love programming, gaming, video editing, and my fair share of rap.</div>
               <div>
                 Whenever I work on something relatively big, it can usually be found under my
                 Projects page. Want to know what I think about various topics? Either contact me or
-                go snoop around in my Blogs page! See you around.
+                go snoop around in my Blogs page.
               </div>
+              <div>See you around.</div>
             </div>
           </div>
         </div>
         {/* <Img fluid={pic.b} className={"testImage"} /> */}
       </div>
 
-      <Parallax strength={100}>
+      <Parallax strength={500}>
         <div className={"parallaxWrap"}>
-          <div className={"aboutHeader"}>What I Do</div>
+          <div className={"aboutHeader aboutHeaderWhite"}>What I Do</div>
         </div>
         <Background>
           <div className={"imageWrap"} />
@@ -89,7 +99,7 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
 
       {/* CODING SECTION */}
       {/* <div className={"aboutHeader"}>I&nbsp;&nbsp;&nbsp;E N J O Y</div> */}
-      <div className={"introAboutContainer"}>
+      {/* <div className={"introAboutContainer"}>
         <div className={"introAboutWrap"}>
           <div>
             <div>Code</div>
@@ -110,12 +120,13 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
             <div>More</div>
           </div>
         </div>
-      </div>
-      <div className={"aboutHeader"}>C O D E</div>
+      </div> */}
+
       <div className={"codeAboutContainer"}>
+        <div className={"aboutHeader"}>C O D E</div>
         <div className={"editAboutWrap"}>
           <div>
-            <ReactPlayer url={code} playing loop className={"reactPlayer"} />
+            <ReactPlayer url={"https://youtu.be/r-l2UxxzhmU"} loop className={"reactPlayer"} />
           </div>
 
           <div className={"descText"}>
@@ -123,115 +134,148 @@ export default ({ type, pic, codeOnFocus, codeContent, SVGcontent, choose }) => 
               My journey in programming had a pretty rough start. Although I was lucky enough to
               land a computer science class early on in middle school, I didn't feel like the
               teachers who taught said subject were very good at teaching. Or maybe I'm just stupid.
-              Now that I am more invested in programming, I've come around to appreciating the
-              things around us a LOT more than I did when I didn't know how to program.
+              I've come around to appreciating the things around us a LOT more than I did when I
+              didn't know how to program.
             </div>
             <div>
-              When I started investing myself (spending my own time) into computer science, I
-              actually got into doing CTFs. Not only are CTFs fun competitions, they're also a great
-              way to learn a wide variety of things: Cybersecurity, Cryptography, Forensics, Reverse
-              Engineering, just to name a few.
-            </div>
-            <div>
-              I really enjoy coding because you can really take your own path when you go about
-              things. What I really meant was that for any given problem, there are seemingly
-              infinite ways to solve them. Now how you solve that problem is up to you. It's a very
-              long process but equally rewarding.
+              I enjoy coding because of the problem solving. Equally frustrating as it is rewarding.
+              It's kinda like cooking, you can make your own recipe or follow a cookbook but you
+              won't ever make a delicious dish first try.
             </div>
             <div>
               In the future I hope I can pursue a career in artificial learning. More specifically,
-              deep learning. If not, maybe I could work for Elon Musk, spearhead the way into
+              deep learning. Or maybe, I could work for Elon Musk, spearhead the way into
               interplanetary travel.
             </div>
-            I'm working on a couple projects right now. You can see my finished ones over at the
-            Projects page.
           </div>
         </div>
       </div>
 
       {/* GAMING  */}
-      <div className={"aboutHeader"}>G A M E</div>
+
       <div className={"gameAboutContainer"}>
+        <div className={"aboutHeader"}>G A M E</div>
         <div className={"gameAboutWrap"}>
           <div>
-            <ReactPlayer url={game} playing loop className={"reactPlayer"} />
+            <ReactPlayer url={"https://youtu.be/7LdMPg-EthY"} loop className={"reactPlayer"} />
           </div>
 
           <div className={"descText"}>
-            <div>
-              Ever since I started to program on my own time, I've come to really appreciate the
-              intricate mastery of the people that program games. A couple games I play.
-            </div>
+            <div>A couple games I play (not all):</div>
             <div>
               <div>
-                Minecraft. It's probably my second most played game. I remember in my younger days I
-                used to play singleplayer a lot (I didn't have a lot of friends :C). Hours and hours
-                on end, exploring and building. Nowadays, I usually only play Minecraft with a
-                couple of my bros. We'd just hop on Hypixel or Mineplex and play some competitve
-                team based games. To me, it's not the game that makes the game fun; it's the
-                teamwork, it's the banter with your friends. That's what makes the game fun.
+                <span className={"boldStyle"}>Minecraft.</span> It's probably my second most played
+                game. I remember in my younger days I used to play singleplayer a lot (I didn't have
+                a lot of friends :C). Hours and hours on end, exploring and building. Nowadays, I
+                usually only play Minecraft with a couple of my bros.
               </div>
               <div>
-                Counter-Strike Global Offensive. Although less of my friends play this highly
-                competitive game, I'm pretty sure this is my most played game. My rank in this game
-                is silver... Yeah I know I suck but its a really fun game. It's also really fun to
-                edit clips and montages. Teamwork is really essential to success in this game and
-                its what makes the game fun for me.
+                <span className={"boldStyle"}>Counter-Strike Global Offensive.</span> My rank in
+                this game is silver... Yeah I know I suck but its a really fun game. It's also
+                really fun to edit clips and montages.
               </div>
               <div>
-                Battlefield I. Got it on sale over Christmas and it's been a pleasure to play. It's
-                a game that I can lose myself in. I really want to play large scale fps games with
-                some friends because although a couple players isn't significant to the victory of
-                the battles itself, it gives me a sense of friendship and "brotherhood". It's not
-                the significance of the whole game that matters, but the significance of a couple
-                people that really make me happy. Planetside 2 was such a game.
+                <span className={"boldStyle"}>Battlefield I.</span> It's a game that I can lose
+                myself in. I really enjoy this game because of the feeling of large scale battles
+                that are super immersive. Planetside 2 was such a game.
+              </div>
+              <div>
+                To me, it's not the game that makes games fun; it's the teamwork, it's the banter
+                with your friends. That's what makes games fun.
               </div>
             </div>
           </div>
         </div>
       </div>
       {/* EDITING */}
-      <div className={"aboutHeader"}>E D I T</div>
+
       <div className={"editAboutContainer"}>
+        <div className={"aboutHeader"}>E D I T</div>
         <div className={"editAboutWrap"}>
           <div>
-            <ReactPlayer url={edit} playing loop className={"reactPlayer"} />
+            <ReactPlayer url={"https://youtu.be/mM6UmVbCdDI"} loop className={"reactPlayer"} />
           </div>
 
           <div className={"descText"}>
             <div>
               The first video edit I ever made was for an 8th grade week-long field trip to Boston.
-              It was the end of the year and kind of like a goodbye type of deal. I've learned a lot
-              of things since then.
+              Since then, I've come a long way.
             </div>
             <div>
-              Editing for me is really fun. You can take on an edit/montage many different ways.
-              From music sync to strictly graphic animations and effects, the end result will always
-              be unique.
+              From Windows Movie Maker to Adobe Premiere Pro and Adobe After Effects, editing has
+              been really fun.
             </div>
             <div>
               <div>
                 I used Premiere Pro for some of my first edits. It's good software and it's also
                 very easy to use and learn. I'm very comfortable with Premiere Pro but I still have
-                to learn good color correcting. I never would have thought that computer science
-                could be related to video editing. I mean I learned expressions relatively recently
-                and it made a whole lot of sense to me
+                to learn how to color correct.
               </div>
               <div>
                 It took a really long time to settle into After Effects because of the many tools
-                and effects that are available to you. Not everything works the same way in After
-                Effects as it does in Premiere Pro. Keybindings are different and the whole
-                keyframing process in After Effects is much more pleasant. I rarely use Premiere Pro
-                unless if I'm doing something really simple or if I have a really big project that I
-                may have to piece together (haven't gotten to that point yet).
+                and effects that are available. It's kinda cool to see that you can use Javascript
+                in After Effects.
               </div>
             </div>
-            <div>
-              Check out some of the edits I made over at my Youtube channel. Or you can find some of
-              the more notable ones under my Projects section.
-            </div>
+            <div>Check out some of the edits I made over at my Youtube channel.</div>
           </div>
         </div>
+      </div>
+      <Parallax strength={500}>
+        <div className={"parallaxWrap"}>
+          <div className={"aboutHeader aboutHeaderWhite"}>Skills</div>
+        </div>
+        <Background>
+          <div className={"imageWrap"} />
+          <Img fluid={pic.groupriver} className={"heroImage"} />
+        </Background>
+      </Parallax>
+      <div className={"skillAboutContainer"}>
+        <button
+          onClick={() => {
+            shuffle("");
+          }}
+        >
+          YEET THIS SHIT
+        </button>
+        <button
+          onClick={() => {
+            shuffle("code");
+          }}
+        >
+          YEET THIS SHIT
+        </button>
+        <button
+          onClick={() => {
+            shuffle("edit");
+          }}
+        >
+          YEET THIS SHIT
+        </button>
+        <Flipper spring={"gentle"} className={"skillAboutWrap"} flipKey={current}>
+          {codeContent.map(key => {
+            if (key.skillArea.includes(current) || current === "") {
+              return (
+                <Flipped key={key.name} flipId={key.name} onClick={() => clickExpand(key.name)}>
+                  <div className={"skillIcon"}>
+                    <div>{key.icon}</div>
+                    <div>{key.name}</div>
+                  </div>
+                </Flipped>
+              );
+            }
+            {
+              return (
+                <Flipped key={key.name} flipId={key.name}>
+                  <div className={"skillIcon skillGone"}>
+                    <div>{key.icon}</div>
+                    <div>{key.name}</div>
+                  </div>
+                </Flipped>
+              );
+            }
+          })}
+        </Flipper>
       </div>
     </div>
   );
