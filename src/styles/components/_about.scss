@@ -88,7 +88,6 @@
   flex-wrap: wrap;
 }
 .skillIcon {
-  background-color: yellow;
   margin: 3rem 0;
 }
 .skillGone {
@@ -96,6 +95,43 @@
   svg {
     cursor: default !important;
   }
+}
+.skillHere {
+  opacity: 1;
+}
+.skillHeader {
+  font-size: 10rem;
+}
+.skillBack {
+  position: fixed;
+  background-color: greenyellow;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.skillBackGone {
+  display: inline-block;
+  background-color: greenyellow;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+}
+.skillFullScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
 }
 .editAboutContainer {
   background-color: #f4f5f9;
@@ -385,7 +421,7 @@
 }
 .codeAboutWrap {
   display: flex;
-  flex-direction: row-reverse;
+
   justify-content: center;
   height: 100%;
   & > div {
@@ -394,7 +430,7 @@
     justify-content: center;
     margin: auto;
     padding: 0 6rem;
-    width: 50%;
+    width: 40%;
   }
   //icon background none text background secondary
   //background-color: darken($secondary-color, 10%);

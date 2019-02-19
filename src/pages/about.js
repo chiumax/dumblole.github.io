@@ -27,7 +27,7 @@ export default class About extends React.Component {
     two: "coding",
     three: "gaming",
     four: "editing",
-    current: "code",
+    current: "",
     classone: "",
     classtwo: "",
     classthree: "",
@@ -157,7 +157,7 @@ export default class About extends React.Component {
         skillArea: ["edit"]
       }
     ],
-    clickedElement: null
+    clickedElement: ""
   };
 
   selectChoice = type => {
@@ -200,7 +200,7 @@ export default class About extends React.Component {
         shuffle={this.shuffleList}
         current={this.state.current}
         clickExpand={this.clickExpand}
-        clickedElement={this.clickedElement}
+        clickedElement={this.state.clickedElement}
       />
     );
   };
