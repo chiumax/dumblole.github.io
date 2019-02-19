@@ -157,7 +157,8 @@ export default class About extends React.Component {
         skillArea: ["edit"]
       }
     ],
-    clickedElement: ""
+    clickedElement: "",
+    temp:""
   };
 
   selectChoice = type => {
@@ -201,12 +202,14 @@ export default class About extends React.Component {
         current={this.state.current}
         clickExpand={this.clickExpand}
         clickedElement={this.state.clickedElement}
+        temp={this.state.temp}
       />
     );
   };
   clickExpand = element => {
     this.setState(prev => ({
-      clickedElement: element
+      clickedElement: element,
+      temp: element===""?prev.clickedElement:""
     }));
   };
   shuffleList = select => {
@@ -218,7 +221,8 @@ export default class About extends React.Component {
         }
         return a.skillArea.includes(select) ? -1 : 1;
       }),
-      current: select
+      current: select,
+      temp: ""
     }));
   };
   choose = select => {

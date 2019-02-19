@@ -33,7 +33,8 @@ export default ({
   shuffle,
   current,
   clickExpand,
-  clickedElement
+  clickedElement,
+  temp
 }) => {
   return (
     <div className={"aboutContainer"}>
@@ -260,78 +261,60 @@ export default ({
             if (clickedElement === key.name) {
               {
                 return (
-                  <div className={"skillFullScreen"} onClick={() => clickExpand("")}>
+                  <div key={key.name} className={"skillFullScreen"} onClick={() => clickExpand("")}>
                     <Flipped flipId={`${key.name}-icon`}>
-                      <div>{key.icon}</div>
+                      <div className={"skillSVG"}>{key.icon}</div>
                     </Flipped>
-                    <Flipped flipId={`${key.name}-header`}>
+                    <Flipped flipId={`${key.name}-header`} scale translate>
                       <div className={"skillHeader"}>{key.name}</div>
+                    </Flipped>
+                    <Flipped flipId={`${key.name}-back`} spring={"noWobble"}>
+                    <div className={"skillBack"}/>
                     </Flipped>
                   </div>
                 );
-                /* return (
-                <div>
-                  <Flipped key={key.name} flipId={key.name} translate spring={"veryGentle"}>
-                    <div className={"skillIcon skillFullScreen"} onClick={() => clickExpand("")}>
-                      <Flipped inverseFlipId={key.name}>
-                        <div>
-                          <Flipped flipId={`${key.name}-text`}>
-                            <div>
-                              <div>{key.icon}</div>
-
-                              <div>{key.name}</div>
-                            </div>
-                          </Flipped>
-                        </div>
-                      </Flipped>
-                    </div>
-                  </Flipped>
-                  <Flipped flipId={`${key.name}-back`}>
-                    <div className={"skillBack"} />
-                  </Flipped>
-                </div>
-              ); */
+               
               }
+            }
+             if(temp===key.name){
+              return(
+              <div key={key.name} className={"skillIcon"} onClick={() => clickExpand(key.name)}>
+                  <Flipped flipId={`${key.name}-back`} spring={"noWobble"}>
+                    <div className={"skillBackGone"}/>
+                    </Flipped>
+                    <Flipped flipId={`${key.name}-icon`}>
+                      <div className={"skillTemp"}>{key.icon}</div>
+                    </Flipped>
+                    <Flipped flipId={`${key.name}-header`} scale translate >
+                      <div className={"skillTemp"}>{key.name}</div>
+                    </Flipped>
+                    
+                  </div>);
             }
             if (key.skillArea.includes(current) || current === "") {
               {
                 return (
-                  <div className={"skillIcon"} onClick={() => clickExpand(key.name)}>
+                  <div key={key.name} className={"skillIcon"} onClick={() => clickExpand(key.name)}>
+                  <Flipped flipId={`${key.name}-back`} spring={"noWobble"}>
+                    <div className={"skillBackGone"}/>
+                    </Flipped>
                     <Flipped flipId={`${key.name}-icon`}>
                       <div className={"skillHere"}>{key.icon}</div>
                     </Flipped>
-                    <Flipped flipId={`${key.name}-header`} translate>
+                    <Flipped flipId={`${key.name}-header`} translate scale>
                       <div className={"skillHere"}>{key.name}</div>
                     </Flipped>
+                    
                   </div>
                 );
-                /* return (
-                <div>
-                  <Flipped key={key.name} flipId={key.name}>
-                    <div className={"skillIcon"} onClick={() => clickExpand(key.name)}>
-                      <Flipped inverseFlipId={key.name} scale translate>
-                        <div>
-                          <Flipped flipId={`${key.name}-text`} translate>
-                            <div>
-                              <div>{key.icon}</div>
-                              <div>{key.name}</div>
-                            </div>
-                          </Flipped>
-                        </div>
-                      </Flipped>
-                    </div>
-                  </Flipped>
-                  <Flipped flipId={`${key.name}-back`}>
-                    <div className={"skillBackGone"} />
-                  </Flipped>
-                </div>
-              ); */
+                
               }
             }
+           
             {
               {
                 return (
-                  <div className={"skillIcon"}>
+                  <div key={key.name} className={"skillIcon"}>
                     <Flipped flipId={`${key.name}-icon`}>
                       <div className={"skillGone"}>{key.icon}</div>
                     </Flipped>
@@ -340,23 +323,7 @@ export default ({
                     </Flipped>
                   </div>
                 );
-                /* return (
-                <Flipped key={key.name} flipId={key.name}>
-                  <div className={"skillIcon skillGone"}>
-                    <Flipped inverseFlipId={key.name} scale translate>
-                      <div>
-                        <Flipped flipId={`${key.name}-text`}>
-                          <div>
-                            <div>{key.icon}</div>
-
-                            <div>{key.name}</div>
-                          </div>
-                        </Flipped>
-                      </div>
-                    </Flipped>
-                  </div>
-                </Flipped>
-              ); */
+              
               }
             }
           })}
