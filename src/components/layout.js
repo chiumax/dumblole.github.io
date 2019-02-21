@@ -11,8 +11,8 @@ export default class Layout extends React.Component {
   animateHeadIn = el => {
     anime({
       targets: `[${el}]`,
-      translateY: [200, 0],
-      opacity: [0, 1],
+      translateY: [0, -20],
+      background: "rgba(0,0,0,0.90)",
       duration: 1000,
       easing: "easeInOutSine",
       delay: anime.stagger(300)
@@ -21,14 +21,19 @@ export default class Layout extends React.Component {
   animateHeadOut = el => {
     anime({
       targets: `[${el}]`,
-      translateY: [200, 0],
-      opacity: [0, 1],
+      translateY: [-20, 0],
+      background: "rgba(0,0,0,0.0)",
       duration: 1000,
       easing: "easeInOutSine",
       delay: anime.stagger(300)
     });
   };
   render() {
+    let classNameVar = "";
+
+    if (this.props.location === undefined) {
+      classNameVar = "headerBlack";
+    }
     return (
       <StaticQuery
         query={graphql`
@@ -48,7 +53,7 @@ export default class Layout extends React.Component {
                  {this.renderLinks()}
                 
               </div> */}
-              <div className={"headerLink"}>
+              <div className={`headerLink ${classNameVar}`} data-head>
                 <div>
                   {" "}
                   <Link className="linke" to={`/`}>
@@ -70,17 +75,17 @@ export default class Layout extends React.Component {
                 </div>
               </div>
               <Waypoint
-                onEnter={() => {
-                  this.state.animateHeadIn("data-head");
-                }}
                 onLeave={() => {
-                  this.state.animateHeadOut("data-head");
+                  this.animateHeadIn("data-head");
+                }}
+                onEnter={() => {
+                  this.animateHeadOut("data-head");
                 }}
               />
-
               <div className={""}>
                 <div className=" ">{this.props.children}</div>
               </div>
+              <div>FOOTS</div>
             </div>
           </div>
         )}

@@ -32,8 +32,8 @@
   }
 }
 .headerLink {
-  position: absolute;
-  z-index: 999;
+  position: fixed;
+  z-index: 90;
   top: 0;
   left: 0;
   right: 0;
@@ -41,8 +41,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
   .link {
     text-decoration: none;
     font-size: $font-size-header;
@@ -56,7 +56,9 @@
     margin: 0 8rem;
   }
 }
-
+.headerBlack {
+  background: rgba(0, 0, 0, 0.9) !important;
+}
 // === Settings =====
 
 // === Menu <ul> =====

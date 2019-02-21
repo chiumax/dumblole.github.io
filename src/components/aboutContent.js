@@ -246,7 +246,7 @@ export default ({
         </Background>
       </Parallax>
       <div className={"skillAboutContainer"}>
-        <div className={"skillAboutButton"}>
+        <div className={"skillAboutButton"} data-to-animate data-icon>
           <button
             onClick={() => {
               shuffle("");
