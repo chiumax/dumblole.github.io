@@ -1,41 +1,32 @@
 import React from "react";
 import { StaticQuery, Link, graphql } from "gatsby";
 import "../styles/styles.scss";
+import anime from "animejs";
+import { Waypoint } from "react-waypoint";
 //import Particles from "react-particles-js";
 
 //import { rhythm } from "../utils/typography";
 
-const linkList = {
-  0: { link: "Home", linkPath: "/" },
-  1: { link: "About", linkPath: "/about" },
-  2: { link: "Work", linkPath: "/project" },
-  3: { link: "Blog", linkPath: "/blog" },
-  4: { link: "Contact", linkPath: "/contact" }
-};
-
 export default class Layout extends React.Component {
-  renderLinks = () => {
-    let data = [];
-    for (let i = 0; i < Object.keys(linkList).length; i++) {
-      data.push(
-        <Link
-          key={linkList[i].link}
-          className="Menu-list-item"
-          activeClassName="ActiveMenu Menu-list-item"
-          data-offset="20"
-          to={linkList[i].linkPath}
-        >
-          {linkList[i].link}
-          <span className="Mask Laks">
-            <span>{linkList[i].link}</span>
-          </span>
-          <span className="Mask">
-            <span>{linkList[i].link}</span>
-          </span>
-        </Link>
-      );
-    }
-    return data;
+  animateHeadIn = el => {
+    anime({
+      targets: `[${el}]`,
+      translateY: [200, 0],
+      opacity: [0, 1],
+      duration: 1000,
+      easing: "easeInOutSine",
+      delay: anime.stagger(300)
+    });
+  };
+  animateHeadOut = el => {
+    anime({
+      targets: `[${el}]`,
+      translateY: [200, 0],
+      opacity: [0, 1],
+      duration: 1000,
+      easing: "easeInOutSine",
+      delay: anime.stagger(300)
+    });
   };
   render() {
     return (
@@ -60,7 +51,7 @@ export default class Layout extends React.Component {
               <div className={"headerLink"}>
                 <div>
                   {" "}
-                  <Link className="linke" to={`/about/`}>
+                  <Link className="linke" to={`/`}>
                     DUMBLOLE
                   </Link>
                 </div>
@@ -78,6 +69,14 @@ export default class Layout extends React.Component {
                   </Link>
                 </div>
               </div>
+              <Waypoint
+                onEnter={() => {
+                  this.state.animateHeadIn("data-head");
+                }}
+                onLeave={() => {
+                  this.state.animateHeadOut("data-head");
+                }}
+              />
 
               <div className={""}>
                 <div className=" ">{this.props.children}</div>

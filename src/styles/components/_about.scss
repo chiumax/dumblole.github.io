@@ -1,72 +1,13 @@
-.heroText {
-  color: white;
-  position: absolute;
-  text-align: left;
-  font-size: 3rem;
-  max-width: 45vw;
-  z-index: 4;
-  div {
-    margin: 1rem 0;
-  }
-}
-.temp {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  // &:after {
-  //   content: "";
-  //   position: absolute;
-  //   width: 100vw;
-  //   height: 100vh;
-  //   z-index: 3;
-  //   background-color: darken(white, 90%);
-  //   opacity: 0.5;
-  // }
-  // object-fit: cover;
-}
-.heroImage {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  z-index: -2;
-  position: fixed;
-}
-.boldStyle {
-  font-weight: bold;
-  font-style: italic;
-}
-.imageWrap {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  background-color: darken(white, 90%);
-  opacity: 0.5;
-}
-.contentText {
-  text-align: center;
-  font-size: 20rem;
-}
-.parallaxWrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 32rem;
-}
 .aboutContainer {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   color: black;
+  div[data-to-animate] {
+    opacity: 0;
+  }
   & > div {
     width: 100vw;
     text-align: center;
-  }
-  & > div:not(:first-child) {
-    //background: red;
   }
   & > div[class$="Container"] > div {
     padding: 7rem 0 0rem 0;
@@ -77,150 +18,12 @@
     padding: 8rem 0 8rem 0;
   }
 }
-.skillAboutContainer {
-  background-color: #f4f5f9;
-  justify-content: center;
-}
-.skillAboutWrap {
-text-align:center;
-  display: flex;
-  justify-content: space-around;
-  align-items: space-between;
-  flex-wrap: wrap;
-}
-.skillIcon {
-position:relative;
-display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 3rem 0;
-  text-align:center;
-}
-.skillGone {
-  opacity: 0;
-  svg {
-    cursor: default !important;
-  }
-}
-.skillHere {
-text-align:center;
-  opacity: 1;
-  z-index:0;
-}
-.skillHeader {
-text-align:center;
-  font-size: 10rem;
-  z-index:2;
-}
-.skillTemp{
-  z-index:2;
 
-}
-.skillSVG{
-  z-index: 2;
-}
-.skillBack {
-  position: absolute;
-  background-color: greenyellow;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-.skillBackGone {  
-  background-color: greenyellow;
-  position: absolute;
-  background-color: greenyellow;
-  top:2rem;
-
-
-  z-index: 1;
-  width: 0%;
-  height: 0%;
-}
-
-.skillFullScreen {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 100;
-  text-align:center;
-
-}
-.editAboutContainer {
-  background-color: #f4f5f9;
-}
-.gameAboutContainer {
-  background-color: #f4f5f9;
-}
-.codeAboutContainer {
-  background-color: #f4f5f9;
-}
-.introAboutContainer {
-  background-color: darken(blue, 45%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.introAboutWrap {
-  color: white;
-  display: flex;
-  flex-grow: 1;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  min-height: 30rem;
-
-  div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-    width: 20rem;
-    min-height: 5rem;
-    margin: auto;
-  }
-}
+//SHARED
 .descText {
   text-align: left;
   div {
     margin: 2rem 0;
-  }
-}
-//Box shadow and opacity
-//Box shadow and opacity
-//Box shadow and opacity
-//Box shadow and opacity
-//Box shadow and opacity
-//Box shadow and opacity
-
-.introWork {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  font-size: 2rem;
-  height: 75vh;
-}
-
-//Delete this maybe
-.glow {
-  position: relative;
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.2s ease-out;
-    opacity: 0;
   }
 }
 .aboutHeader {
@@ -239,160 +42,10 @@ text-align:center;
     width: 12.5rem;
   }
 }
-.aboutHeaderWhite {
-  color: white;
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    background-color: white;
-    height: 0.4rem;
-    width: 12.5rem;
-  }
-}
-.columnWrap {
-  width: 100%;
-  height: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
-  & > div {
-    position: relative;
-    width: 30%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 3rem;
-    background: $background-grey;
-    border: 1rem solid transparent;
-    margin: 0 5rem;
-    text-align: center;
-    div:first-child {
-      font-size: 5rem;
-    }
-    div:last-child {
-      position: relative;
-      //border-radius: 6px;
-      padding: 1rem 2rem;
-      &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0rem;
-        width: 100%;
-        height: 100%;
-        transition: opacity 0.2s ease-out;
-        opacity: 0;
-        background: black;
-      }
-      &:hover {
-        cursor: pointer;
-        &:after {
-          background: black;
-          opacity: 0.25;
-        }
-      }
-    }
-    // border: 1rem solid darken($secondary-color, 10%);
-    // border-left-color: lighten($secondary-color, 10%);
-    // border-top-color: lighten($secondary-color, 10%);
-    &:before {
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      z-index: -1;
-      padding: 2rem;
-    }
-    &:after {
-      transition: opacity 0.2s ease-out;
-      opacity: 0;
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      z-index: -1;
-      padding: 2rem;
-    }
-  }
-}
-.pinkIcon {
-  div:last-child {
-    background: $secondary-color;
-  }
-  &:after {
-    box-shadow: 0px 0px 40px $secondary-color;
-  }
-  &:hover {
-    &:after {
-      opacity: 1;
-      box-shadow: 0px 0px 40px $secondary-color;
-    }
-  }
-  &:before {
-    background: linear-gradient(
-      to bottom right,
-      darken($secondary-color, 10%),
-      lighten($secondary-color, 10%)
-    );
-  }
-}
-.greenIcon {
-  div:last-child {
-    background: $fourth-color;
-  }
-  &:after {
-    box-shadow: 0px 0px 40px $fourth-color;
-  }
-  &:hover {
-    &:after {
-      opacity: 1;
-      box-shadow: 0px 0px 40px $fourth-color;
-    }
-  }
-  &:before {
-    background: linear-gradient(
-      to bottom right,
-      darken($fourth-color, 10%),
-      lighten($fourth-color, 10%)
-    );
-  }
-}
-.blueIcon {
-  div:last-child {
-    background: $third-color;
-  }
-  &:after {
-    box-shadow: 0px 0px 40px $third-color;
-  }
-  &:hover {
-    &:after {
-      opacity: 1;
-      box-shadow: 0px 0px 40px $third-color;
-    }
-  }
-  &:before {
-    background: linear-gradient(
-      to bottom right,
-      darken($third-color, 10%),
-      lighten($third-color, 10%)
-    );
-  }
-}
-.greenIntIcon {
-  fill: $fourth-color;
-  width: 3rem;
-}
-.pinkIntIcon {
-  fill: $secondary-color;
-  width: 3rem;
-}
-.blueIntIcon {
-  fill: $third-color;
-  width: 3rem;
+// ME
+.meAboutContainer {
+  background-color: #f4f5f9;
+  color: black;
 }
 .meAboutWrap {
   display: flex;
@@ -406,18 +59,14 @@ text-align:center;
     width: 50%;
   }
 }
-.meAboutContainer {
-  background-color: #f4f5f9;
-  color: black;
-}
-.aboutMeLeft {
+.meAboutLeft {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.aboutMeImage {
+.meAboutImage {
   position: relative;
   width: 50%;
   &:before {
@@ -435,27 +84,188 @@ text-align:center;
     left: -50px;
   }
 }
-.aboutTitle {
-  font-size: 10rem;
-}
-.aboutMeText {
-  //k
-}
-.codeAboutWrap {
+//
+.temp {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.imageWrap {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: darken(white, 90%);
+  opacity: 0.5;
+}
+.heroImage {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  position: fixed;
+}
+.heroText {
+  color: white;
+  position: absolute;
+  text-align: left;
+  font-size: 3rem;
+  max-width: 45vw;
+  z-index: 4;
+  div {
+    margin: 1rem 0;
+  }
+}
 
+.skillIcon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 3rem 0;
+  text-align: center;
+}
+.skillTempBackGone {
+  position: absolute;
+  background-color: white;
+  top: 4rem;
+  z-index: 3 !important;
+  width: 0%;
+  height: 0%;
+}
+.skillGone {
+  opacity: 0;
+  svg {
+    cursor: default !important;
+  }
+}
+.skillAboutWrap {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  flex-wrap: wrap;
+}
+
+.skillFullScreen {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  text-align: center;
+  & > div:not([class$="skillBack"]) {
+    font-size: 2rem;
+    padding: 2rem;
+    max-width: 75rem;
+    max-height: 90%;
+    z-index: 3;
+  }
+  div[data-fade-in] {
+    opacity: 0;
+  }
+}
+.parallaxWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32rem;
+}
+.skillHere {
+  text-align: center;
+  opacity: 1;
+  z-index: 0;
+}
+.skillBackGone {
+  position: absolute;
+  top: 4rem;
+  z-index: 1 !important;
+  width: 0%;
+  height: 0%;
+}
+.skillSVG {
+  z-index: 3;
+}
+.skillClose {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+}
+.skillTempBack {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 2 !important;
+}
+.skillTemp {
+  z-index: 3;
+}
+
+.skillHeader {
+  text-align: center;
+  font-size: 10rem !important;
+  z-index: 2;
+}
+.skillBack {
+  position: absolute;
+  background-color: #f4f5f9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1 !important;
+}
+
+.starAboutWrap {
+  opacity: 0;
+  display: flex;
+  z-index: 2;
+  justify-content: center;
+}
+.skillAboutContainer {
+  background-color: #f4f5f9;
+  justify-content: center;
+}
+
+.aboutHeaderWhite {
+  color: white;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    height: 0.4rem;
+    width: 12.5rem;
+  }
+}
+.editAboutWrap {
+  display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
   height: 100%;
   & > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin: auto;
     padding: 0 6rem;
-    width: 40%;
+    width: 50%;
   }
-  //icon background none text background secondary
-  //background-color: darken($secondary-color, 10%);
+}
+.editAboutContainer {
+  background-color: #f4f5f9;
+}
+.codeAboutContainer {
+  background-color: #f4f5f9;
 }
 .reactPlayer {
   margin: auto;
@@ -475,6 +285,14 @@ text-align:center;
     left: -50px;
   }
 }
+.gameAboutContainer {
+  background-color: #f4f5f9;
+}
+.boldStyle {
+  font-weight: bold;
+  font-style: italic;
+}
+
 .gameAboutWrap {
   display: flex;
   flex-direction: row;
@@ -485,201 +303,42 @@ text-align:center;
     padding: 0 6rem;
     width: 50%;
   }
-  //background-color: $fourth-color;
-}
-.editAboutWrap {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  height: 100%;
-  & > div {
-    margin: auto;
-    padding: 0 6rem;
-    width: 50%;
-  }
-
-  //background-color: $third-color;
 }
 .icon {
-  height: 6vw;
-  width: 6vw;
+  height: 12rem;
+  width: 12rem;
   margin: 1rem 8vw;
   display: inline-block;
   cursor: pointer;
 }
-
-.iconWrap {
-  text-align: center;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: space-around;
-  margin: 0 5rem;
-  color: white;
-  font-size: 3rem;
+.starAbout {
+  width: 5rem;
+  height: 5rem;
+  fill: #ffd700;
 }
-.showIconWrap {
-  display: flex;
-  flex-direction: column;
+.iconSmall {
+  width: 4rem;
+  height: 4rem;
 }
-.singleIcon {
+.skillAboutButton {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
-.skillWrap {
-  display: flex;
-  align-items: space-around;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-align: center;
-  padding: 4rem 0;
-  background-image: linear-gradient(to bottom right, $third-color, $secondary-color);
-  // background-image: linear-gradient(to bottom right, #fc00ff, #00dbde);
-}
-
-.skillText {
-  font-size: 5rem;
-  color: white;
-}
-.iconDesc {
-  position: absolute;
-  z-index: 99;
-}
-.wrapEveryAbout {
-  font-size: 2rem;
-  div {
-    margin-bottom: 1.5rem;
+  button {
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #000000;
+    margin: auto;
+    border-radius: 0.12em;
+    text-decoration: none;
+    font-weight: 300;
+    color: #000000;
+    text-align: center;
+    transition: all 0.2s;
+    min-width: 8rem;
+    min-height: 3rem;
+    cursor: pointer;
+  }
+  button:hover {
+    color: #ffffff;
+    background-color: #000000;
   }
 }
-.testImage {
-  -webkit-filter: grayscale(20%) hue-rotate(90deg); /* Safari 6.0 - 9.0 */
-  filter: grayscale(20%) hue-rotate(300deg);
-}
-.aboutParticle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100vw;
-  height: 100vh;
-  bottom: 0;
-  z-index: -1;
-}
-/////////////////////////////////////////////////
-// .aboutWrap {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   text-align: center;
-//   width: 100%;
-//   height: 50vh;
-//   font-size: 4vw;
-//   color: white;
-//   background: black;
-// }
-// .aboutTitle {
-//   text-align: center;
-//   margin: 5rem 0;
-//   font-size: 5rem;
-
-//   padding: 0;
-// }
-// .typo {
-//   font-weight: 700;
-//   color: #585858;
-//   text-decoration: none;
-//   option {
-//     font-size: 30px;
-//   }
-// }
-
-// .transition {
-//   transition: all 0.4s ease-in-out;
-// }
-
-// .list {
-//   display: inline-block;
-//   position: relative;
-//   //border: 1px solid red;
-//   margin-left: 6px;
-//   ul {
-//     text-align: left;
-//     position: absolute;
-//     padding: 0;
-//     top: 2vw;
-//     left: 0;
-//     display: none;
-//   }
-//   .active {
-//     display: block;
-//   }
-//   li {
-//     list-style: none;
-//   }
-//   a {
-//     @extend .typo;
-//     transition: all 0.4s;
-//     color: $color--primary;
-//     position: relative;
-//     &:after {
-//       position: absolute;
-//       content: "";
-//       height: 0.5rem;
-//       width: 0;
-//       left: 0;
-//       background: lighten($color--primary, 20%);
-//       bottom: 1rem;
-//       transition: all 0.4s ease-out;
-//     }
-//     &:hover {
-//       cursor: pointer;
-//       color: lighten($color--primary, 20%);
-//       &:after {
-//         width: 100%;
-//         bottom: -1rem;
-//       }
-//     }
-//   }
-// }
-
-// select {
-//   display: inline;
-//   border: 0;
-//   margin-left: 1rem;
-//   outline: none;
-//   -webkit-appearance: none;
-//   -moz-appearance: none;
-//   border-bottom: 2px solid $dark;
-//   color: $color--primary;
-//   transition: all 0.4s ease-in-out;
-
-//   &:hover {
-//     cursor: pointer;
-//   }
-
-//   option {
-//     border: 0;
-//     border-bottom: 1px solid $dark;
-//     padding: 1rem;
-
-//     -webkit-appearance: none;
-//     -moz-appearance: none;
-//   }
-// }
-
-// .placeholder {
-//   //position: fixed;
-//   transition: all 0.25s ease-in-out;
-//   border-bottom: 4px solid;
-//   cursor: pointer;
-//   &:hover {
-//     color: lighten($dark, 20%);
-//   }
-// }
-// .blockChoice {
-//   display: none;
-// }
