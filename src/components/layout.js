@@ -8,6 +8,9 @@ import { Waypoint } from "react-waypoint";
 //import { rhythm } from "../utils/typography";
 
 export default class Layout extends React.Component {
+  state = {
+    contacts: {}
+  };
   animateHeadIn = el => {
     anime({
       targets: `[${el}]`,
@@ -85,7 +88,9 @@ export default class Layout extends React.Component {
               <div className={""}>
                 <div className=" ">{this.props.children}</div>
               </div>
-              <div>FOOTS</div>
+              <div>
+                <div>a</div>
+              </div>
             </div>
           </div>
         )}
