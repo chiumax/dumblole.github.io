@@ -24,7 +24,7 @@ export default class Layout extends React.Component {
   animateHeadOut = el => {
     anime({
       targets: `[${el}]`,
-      translateY: [-20, 0],
+      translateY: [0],
       background: "rgba(0,0,0,0.0)",
       duration: 1000,
       easing: "easeInOutSine",
