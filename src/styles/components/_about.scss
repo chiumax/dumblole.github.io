@@ -11,7 +11,7 @@
   }
   & > div[class$="Container"] > div {
     padding: 7rem 0 0rem 0;
-    max-width: 75vw;
+    max-width: $container;
     margin: 0 auto;
   }
   & > div[class$="Container"] {
@@ -168,7 +168,7 @@
   & > div:not([class$="skillBack"]) {
     font-size: 2rem;
     padding: 2rem;
-    max-width: 75rem;
+    max-width: $container;
     max-height: 90%;
     z-index: 3;
   }

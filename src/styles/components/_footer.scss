@@ -1,0 +1,34 @@
+.footerContainer{
+	background: darken(grey,10%);
+	padding: 10rem;
+	justify-content: center;
+	align-items: center;
+}
+.footerWrap{
+	margin: auto;
+	max-width: $container;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.footerIconWrap{
+	border-radius: 90px;
+	background: white;
+}
+.footerIcon{
+	fill: black;
+	width: 4rem;
+	height: 4rem;
+}
+.twitterIcon{
+	
+}
+.mailIcon{
+	
+}
+.githubIcon{
+	
+}
+.youtubeIcon{
+	
+}

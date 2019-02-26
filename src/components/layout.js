@@ -3,13 +3,17 @@ import { StaticQuery, Link, graphql } from "gatsby";
 import "../styles/styles.scss";
 import anime from "animejs";
 import { Waypoint } from "react-waypoint";
+import Github from "../icons/github.svg";
+import Twitter from "../icons/twitter.svg";
+import Email from "../icons/envelope.svg";
+import Youtube from "../icons/youtube.svg";
 //import Particles from "react-particles-js";
 
 //import { rhythm } from "../utils/typography";
 
 export default class Layout extends React.Component {
   state = {
-    contacts: {}
+    contacts: [{icon:<Github/>,color:"red"},{icon:<Twitter/>,color:"red"},{icon:<Email/>,color:"red"},{icon:<Youtube/>,color:"red"},]
   };
   animateHeadIn = el => {
     anime({
@@ -88,8 +92,8 @@ export default class Layout extends React.Component {
               <div className={""}>
                 <div className=" ">{this.props.children}</div>
               </div>
-              <div>
-                <div>a</div>
+              <div className={"footerContainer"}>
+                <div className={"footerWrap"}>{this.state.contacts.map(key=>(<div>YOTE </div>))}</div>
               </div>
             </div>
           </div>
