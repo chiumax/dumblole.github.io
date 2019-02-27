@@ -64,10 +64,9 @@ export default ({
           <div className={"descText"}>
             <div>
               <div data-me data-to-animate>
-                Where I come from doesn't matter. It's the time we have now that matters. But if you
-                really want to know...My name is Max (dumblole) and I'm currently a sophmore{" "}
-                {"(15)"} in the Science, Math, and Computer Science program (SMCS) at Poolesville
-                High School. Anyways, welcome to my website! It's my pride and joy.
+                My name is Max (dumblole) and I'm currently a sophmore {"(15)"} in the Science,
+                Math, and Computer Science program (SMCS) at Poolesville High School. Anyways,
+                welcome to my website! It's my pride and joy.
               </div>
               <div data-me data-to-animate>
                 I really love programming, gaming, video editing, and my fair share of rap.
@@ -118,22 +117,17 @@ export default ({
 
           <div className={"descText"}>
             <div data-to-animate data-code>
-              My journey in programming had a pretty rough start. Although I was lucky enough to
-              land a computer science class early on in middle school, I didn't feel like the
-              teachers who taught said subject were very good at teaching. Or maybe I'm just stupid.
-              I've come around to appreciating the things around us a LOT more than I did when I
-              didn't know how to program.
+              I enjoy coding because of the problem solving. Equally frustrating as it is rewarding.
+              It's kinda like cooking, you can make your own recipe or follow a cookbook but you
+              won't ever make a delicious dish first try. I've come around to appreciating the
+              things around us a LOT more than I did when I didn't know how to program.
             </div>
             <Waypoint
               onEnter={() => {
                 animateLeft("data-code");
               }}
             />
-            <div data-to-animate data-code>
-              I enjoy coding because of the problem solving. Equally frustrating as it is rewarding.
-              It's kinda like cooking, you can make your own recipe or follow a cookbook but you
-              won't ever make a delicious dish first try.
-            </div>
+
             <div data-to-animate data-code>
               In the future I hope I can pursue a career in artificial learning. More specifically,
               deep learning. Or maybe, I could work for Elon Musk, spearhead the way into

@@ -13,7 +13,12 @@ import Youtube from "../icons/youtube.svg";
 
 export default class Layout extends React.Component {
   state = {
-    contacts: [{icon:<Github/>,color:"red"},{icon:<Twitter/>,color:"red"},{icon:<Email/>,color:"red"},{icon:<Youtube/>,color:"red"},]
+    contacts: [
+      { icon: <Github className={"footerIcon"} />, color: "red" },
+      { icon: <Twitter className={"footerIcon"} />, color: "red" },
+      { icon: <Email className={"footerIcon"} />, color: "red" },
+      { icon: <Youtube className={"footerIcon"} />, color: "red" }
+    ]
   };
   animateHeadIn = el => {
     anime({
@@ -93,7 +98,11 @@ export default class Layout extends React.Component {
                 <div className=" ">{this.props.children}</div>
               </div>
               <div className={"footerContainer"}>
-                <div className={"footerWrap"}>{this.state.contacts.map(key=>(<div>YOTE </div>))}</div>
+                <div className={"footerWrap"}>
+                  {this.state.contacts.map(key => (
+                    <div className={"footerIconWrap"}>{key.icon} </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
