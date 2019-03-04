@@ -14,10 +14,19 @@ import Youtube from "../icons/youtube.svg";
 export default class Layout extends React.Component {
   state = {
     contacts: [
-      { icon: <Github className={"footerIcon"} />, color: "red" },
-      { icon: <Twitter className={"footerIcon"} />, color: "red" },
-      { icon: <Email className={"footerIcon"} />, color: "red" },
-      { icon: <Youtube className={"footerIcon"} />, color: "red" }
+      { icon: <Github className={"footerIcon"} />, url: "https://github.com/dumblole" },
+      { icon: <Twitter className={"footerIcon"} />, url: "https://twitter.com/dumblole" },
+      { icon: <Email className={"footerIcon"} />, url: "mailto:dumblole@gmail.com" },
+      {
+        icon: <Youtube className={"footerIcon"} />,
+        url: "https://www.youtube.com/channel/UCpAL0BHmJ2aRj-37PQn8prQ"
+      }
+    ],
+    contactsColored: [
+      { icon: <Github className={"footerIcon githubIcon"} /> },
+      { icon: <Twitter className={"footerIcon twitterIcon"} /> },
+      { icon: <Email className={"footerIcon mailIcon"} /> },
+      { icon: <Youtube className={"footerIcon youtubeIcon"} /> }
     ]
   };
   animateHeadIn = el => {
@@ -40,6 +49,9 @@ export default class Layout extends React.Component {
       delay: anime.stagger(300)
     });
   };
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     let classNameVar = "";
 
@@ -79,7 +91,7 @@ export default class Layout extends React.Component {
                     Projects
                   </Link>
                   <Link className="link" to={`/blog/`}>
-                    Blogs
+                    Blog
                   </Link>
                   <Link className="link" to={`/contact/`}>
                     Contact
@@ -98,9 +110,14 @@ export default class Layout extends React.Component {
                 <div className=" ">{this.props.children}</div>
               </div>
               <div className={"footerContainer"}>
+                <div className={"aboutHeader"}>find me</div>
                 <div className={"footerWrap"}>
-                  {this.state.contacts.map(key => (
-                    <div className={"footerIconWrap"}>{key.icon} </div>
+                  {this.state.contacts.map((key, index) => (
+                    <div>
+                      <a className={"footerIconWrap"} target="_blank" href={key.url}>
+                        {key.icon} {this.state.contactsColored[index].icon}{" "}
+                      </a>
+                    </div>
                   ))}
                 </div>
               </div>

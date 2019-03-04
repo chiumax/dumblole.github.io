@@ -1,5 +1,5 @@
 .aboutContainer {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-family: "Montserrat", sans-serif;
   color: black;
   div[data-to-animate] {
@@ -324,9 +324,10 @@
   display: flex;
   justify-content: center;
   button {
+    background: $white-text;
     padding: 0.35em 1.2em;
     border: 0.1em solid #000000;
-    margin: auto;
+    margin: 0 2rem 0 2rem;
     border-radius: 0.12em;
     text-decoration: none;
     font-weight: 300;

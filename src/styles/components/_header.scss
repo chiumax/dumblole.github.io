@@ -1,35 +1,14 @@
+$red: #f37272;
+$brown: #584e4a;
+$whitey: #f0f0f0;
+
+$duration: 0.2s;
+$distance: 8px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 .bodyWrap {
   display: flex;
   flex-direction: column;
   position: relative;
-}
-.headerLinkWrap {
-  position: absolute;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  div {
-    margin: 3rem 4rem;
-
-    .link {
-      text-decoration: none;
-      font-size: $font-size-header;
-      margin: 0 2rem;
-      color: $white-text;
-    }
-    .linke {
-      text-decoration: none;
-      font-size: $font-size-header;
-      color: $white-text;
-    }
-  }
 }
 .headerLink {
   position: fixed;
@@ -55,137 +34,45 @@
     color: $white-text;
     margin: 0 8rem;
   }
+  .link,
+  .linke {
+    position: relative;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $red;
+    }
+    &:before {
+      opacity: 0;
+      transform: translateY(-$distance);
+      transition: transform 0s $easeOutBack, opacity 0s;
+    }
+    &:after {
+      opacity: 0;
+      transform: translateY($distance/2);
+      transition: transform $duration $easeOutBack, opacity $duration;
+    }
+    &:hover,
+    &:focus {
+      &:before,
+      &:after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      &:before {
+        transition: transform $duration $easeOutBack, opacity $duration;
+      }
+      &:after {
+        transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+      }
+    }
+  }
 }
 .headerBlack {
   background: rgba(0, 0, 0, 0.9) !important;
 }
-// === Settings =====
-
-// === Menu <ul> =====
-// .Menu-list {
-//   font-size: $font-size;
-//   line-height: 1.2;
-//   text-transform: uppercase;
-//   text-align: center;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   transform: rotateX(-10deg) rotateY(20deg); // overwritten by JS
-// }
-
-// === Menu item =====
-.Menu-list-item {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  cursor: pointer;
-  color: transparent;
-
-  margin: 0 8rem;
-  text-decoration: none;
-  font-size: 7rem;
-  // === Split Line =====
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 80%;
-    left: -30%;
-    right: -10%;
-    height: $split-thickness;
-    border-radius: $split-thickness;
-    margin-top: -($split-thickness / 1.52);
-    background: $split-line;
-    transform: scale(0) translateX(-80px) rotate(-45deg);
-    transition: transform 0.7s cubic-bezier(0.16, 1.08, 0.38, 0.98);
-    z-index: 1;
-  }
-}
-
-// === Top/bottom mask =====
-.Mask {
-  display: block;
-  background: green;
-  position: absolute;
-  overflow: hidden;
-  color: $split-color;
-  height: 180%;
-  width: 100%;
-  transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
-  transform: rotate(-45deg);
-  span {
-    display: block;
-  }
-}
-.Laks {
-  position: absolute;
-  top: 0;
-  transform: translateY(-30px) translateX(-110px) rotate(-45deg);
-  transition: all 0.5s cubic-bezier(0.16, 1.08, 0.38, 0.98);
-  span {
-    transform: rotate(45deg) translateX(110px) translateY(30px);
-  }
-}
-// === Bottom mask specific =====
-.Mask + .Mask {
-  bottom: -129%;
-  transform: translateX(50px) translateY(-50px) rotate(-45deg);
-  transition: all 0.5s cubic-bezier(0.16, 1.08, 0.38, 0.98);
-  span {
-    transform: rotate(45deg) translateY(-$split-position) translateY(50px) translateX(-50px);
-  }
-}
-
-// === Where the fun stuff happens =====
-.Menu-list-item:hover,
-.Menu-list-item:active,
-.ActiveMenu {
-  .Mask {
-    color: #fff;
-  }
-  .Laks {
-    position: absolute;
-    top: 0;
-    transform: translateY(-30px) translateX(-130px) rotate(-45deg);
-  }
-  .Mask + .Mask {
-    transform: translateX(45px) translateY(-40px) rotate(-45deg);
-  }
-  &::before {
-    transform: scale(1) translateX(-30px) rotate(-45deg);
-  }
-}
-
-// .header {
-//   background: black;
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// .header__title {
-//   color: white;
-//   text-decoration: none;
-//   h1 {
-//     margin: 0;
-//   }
-// }
-
-// .header__content {
-//   font-size: $m-size;
-//   line-height: 1.6;
-//   height: 9.7rem;
-//   padding: 0;
-//   margin: 0;
-// }
-
-// .header__sticky {
-//   position: sticky;
-//   top: 0;
-//   z-index: 9999;
-// }
-
-// .color {
-//   width: 100%;
-// }

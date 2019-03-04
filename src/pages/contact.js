@@ -3,10 +3,23 @@ import Layout from "../components/layout";
 
 export default () => (
   <Layout>
-    <h1>About </h1>
-    <p>
-      We're the only site running on your computer dedicated to showing the best photos and videos
-      of pandas eating lots of food.
-    </p>
+    <div className={"contactContainer"}>
+      <div className={"contactHeader"}>Say hello.</div>
+      <form
+        className={"contactForm"}
+        action="https://formspree.io/dumblole@gmail.com"
+        method="POST"
+      >
+        Name
+        <input type="text" name="name" required />
+        Email address
+        <input type="email" name="email" required />
+        Subject
+        <input type="text" name="subject" required />
+        Message
+        <textarea type="textarea" name="body" rows={5} />
+        <input type="submit" value="Send" />
+      </form>
+    </div>
   </Layout>
 );

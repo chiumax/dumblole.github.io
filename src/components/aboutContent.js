@@ -129,9 +129,8 @@ export default ({
             />
 
             <div data-to-animate data-code>
-              In the future I hope I can pursue a career in artificial learning. More specifically,
-              deep learning. Or maybe, I could work for Elon Musk, spearhead the way into
-              interplanetary travel.
+              In the future I hope I can pursue a career in machine learning. Or maybe, I could work
+              for Elon Musk, spearhead the way into interplanetary travel.
             </div>
           </div>
         </div>
@@ -153,10 +152,9 @@ export default ({
             </div>
             <div>
               <div data-to-animate data-game>
-                <span className={"boldStyle"}>Minecraft.</span> It's probably my second most played
-                game. I remember in my younger days I used to play singleplayer a lot (I didn't have
-                a lot of friends :C). Hours and hours on end, exploring and building. Nowadays, I
-                usually only play Minecraft with a couple of my bros.
+                <span className={"boldStyle"}>Minecraft.</span> I used to play singleplayer a lot (I
+                didn't have a lot of friends :C). Hours and hours on end, exploring and building.
+                Nowadays, I usually only play Minecraft with a couple of my bros.
               </div>
               <Waypoint
                 onEnter={() => {
@@ -165,17 +163,17 @@ export default ({
               />
               <div data-to-animate data-game>
                 <span className={"boldStyle"}>Counter-Strike Global Offensive.</span> My rank in
-                this game is silver... Yeah I know I suck but its a really fun game. It's also
-                really fun to edit clips and montages.
+                this game is silver... Yeah I know I suck but its a fun game. It's also really fun
+                to edit clips and montages.
               </div>
               <div data-to-animate data-game>
-                <span className={"boldStyle"}>Battlefield I.</span> It's a game that I can lose
-                myself in. I really enjoy this game because of the feeling of large scale battles
-                that are super immersive. Planetside 2 was such a game.
+                <span className={"boldStyle"}>Battlefield I.</span> I really enjoy this game because
+                of the feeling of large scale battles that are super immersive. Planetside 2 was
+                such a game.
               </div>
               <div data-to-animate data-game>
                 To me, it's not the game that makes games fun; it's the teamwork, it's the banter
-                with your friends. That's what makes games fun.
+                with your friends.
               </div>
             </div>
           </div>
@@ -209,14 +207,8 @@ export default ({
             <div data-to-animate data-edit>
               I used Premiere Pro for some of my first edits. It's good software and it's also very
               easy to use and learn. I'm very comfortable with Premiere Pro but I still have to
-              learn how to color correct.
+              learn how to properly color correct.
             </div>
-            <div data-to-animate data-edit>
-              It took a really long time to settle into After Effects because of the many tools and
-              effects that are available. It's kinda cool to see that you can use Javascript in
-              After Effects.
-            </div>
-
             <div data-to-animate data-edit>
               Check out some of the edits I made over at my Youtube channel.
             </div>
@@ -269,7 +261,6 @@ export default ({
             Edit
           </button>
         </div>
-        <div>(click one)</div>
         <Flipper
           spring={"veryGentle"}
           className={"skillAboutWrap"}
