@@ -1,5 +1,5 @@
 .footerContainer {
-  background: darken(grey, 25%);
+  background: darken(grey, 35%);
   padding: 5rem;
   justify-content: center;
   align-items: center;
@@ -45,7 +45,7 @@
 .footerIcon {
   position: absolute;
   transition: opacity 0.3s;
-  fill: darken(grey, 25%);
+  fill: darken(grey, 35%);
   width: 3rem;
   height: 3rem;
 }
@@ -58,7 +58,7 @@
 }
 .mailIcon {
   opacity: 0;
-  fill: darken(grey, 1%);
+  fill: darken(grey, 15%);
 }
 .githubIcon {
   opacity: 0;
