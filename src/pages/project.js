@@ -25,7 +25,7 @@ export default class ProjectList extends React.Component {
         <div className={"content-container"}>
           {/* <h4>{this.props.data.allMarkdownRemark.totalCount} Posts</h4>
           <Link to={`/project/tags`}> All tags -></Link> */}
-          <div className="projectCardWrap">
+          <div className="">
             {this.props.data.allMarkdownRemark.edges.map(({ node }) => (
               <Card node={node} type="project" key={node.id} />
             ))}
