@@ -1,25 +1,80 @@
 import React from "react";
+import firebase from "firebase";
 import Layout from "../components/layout";
 
-export default () => (
-  <Layout>
-    <div className={"contactContainer"}>
-      <div className={"contactHeader"}>Say hello.</div>
-      <form
-        className={"contactForm"}
-        action="https://formspree.io/dumblole@gmail.com"
-        method="POST"
-      >
-        Name
-        <input type="text" name="name" required />
-        Email address
-        <input type="email" name="email" required />
-        Subject
-        <input type="text" name="subject" required />
-        Message
-        <textarea type="textarea" name="body" rows={5} />
-        <input type="submit" value="Send" />
-      </form>
-    </div>
-  </Layout>
-);
+export default class Contact extends React.Component {
+  state = {
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  };
+  submitContactForm = data => {
+    console.log("yeet");
+  };
+
+  handleContactFormChange = e => {
+    e.persist();
+    this.setState(prevState => ({ [e.target.name]: e.target.value }));
+  };
+
+  render() {
+    return (
+      <Layout>
+        <div className={"contactContainer"}>
+          <div className={"contactHeader"}>Say hello.</div>
+          <form
+            className={"contactForm"}
+            onSubmit={e => {
+              this.submitContactForm(e);
+            }}
+          >
+            Name
+            <input
+              onChange={e => {
+                this.handleContactFormChange(e);
+              }}
+              value={this.state.name}
+              type="text"
+              name="name"
+              required
+            />
+            Email address
+            <input
+              onChange={e => {
+                this.handleContactFormChange(e);
+              }}
+              value={this.state.email}
+              type="email"
+              name="email"
+              required
+            />
+            Subject
+            <input
+              onChange={e => {
+                this.handleContactFormChange(e);
+              }}
+              value={this.state.subject}
+              type="text"
+              name="subject"
+              required
+            />
+            Message
+            <textarea
+              onChange={e => {
+                this.handleContactFormChange(e);
+              }}
+              value={this.state.message}
+              type="textarea"
+              name="message"
+              rows={5}
+            />
+            <input type="submit" value="Send" />
+          </form>
+        </div>
+      </Layout>
+    );
+  }
+}
+// action="https://formspree.io/dumblole@gmail.com"
+//             method="POST"
