@@ -50,8 +50,8 @@ export const query = graphql`
             title
             tags
             type
-            startdate(formatString: "MMMM DD, YYYY")
-            enddate(formatString: "MMMM DD, YYYY")
+            startdate(formatString: "DD MMMM, YYYY")
+            enddate(formatString: "DD MMMM, YYYY")
             image {
               childImageSharp {
                 fluid(maxWidth: 1920) {

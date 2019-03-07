@@ -1,12 +1,16 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
+import Img from "gatsby-image";
 import moment from "moment";
 export default ({ data }) => {
   const post = data.markdownRemark;
   return (
     <Layout>
-      <div className={"blog"}>
+    <Img
+    fluid={post.frontmatter.image.childImageSharp.fluid}
+    className={"blogCoverImage"}/>
+      <div className={"blog content-container"}>
           <Link to={`/project/`}> All Projects</Link>
         <h1>{post.frontmatter.title}</h1>
         <table>
@@ -17,8 +21,8 @@ export default ({ data }) => {
               <th>Spent Time</th>
             </tr>
             <tr>
-              <td>{moment(post.frontmatter.startdate, "YYYY-MM-DD").format("MMM D, YYYY")}</td>
-              <td>{moment(post.frontmatter.enddate, "YYYY-MM-DD").format("MMM D, YYYY")}</td>
+              <td>{moment(post.frontmatter.startdate, "YYYY-MM-DD").format("D MMM, YYYY")}</td>
+              <td>{moment(post.frontmatter.enddate, "YYYY-MM-DD").format("D MMM, YYYY")}</td>
               <td>
                 {moment(post.frontmatter.enddate, "YYYY-MM-DD").diff(
                   moment(post.frontmatter.startdate, "YYYY-MM-DD"),
@@ -45,6 +49,13 @@ export const query = graphql`
         path
         startdate
         enddate
+        image {
+              childImageSharp {
+                fluid(maxWidth: 1920) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
       }
     }
   }

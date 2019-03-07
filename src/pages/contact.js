@@ -9,8 +9,9 @@ export default class Contact extends React.Component {
     subject: "",
     message: ""
   };
-  submitContactForm = data => {
-    console.log("yeet");
+  submitContactForm = e => {
+    e.preventDefault();
+    console.log(`name:${this.state.name} email:${this.state.email} subject:${this.state.subject} message:${this.state.message}`);
   };
 
   handleContactFormChange = e => {
@@ -21,7 +22,7 @@ export default class Contact extends React.Component {
   render() {
     return (
       <Layout>
-        <div className={"contactContainer"}>
+        <div className={"contactContainer"} key="contact">
           <div className={"contactHeader"}>Say hello.</div>
           <form
             className={"contactForm"}

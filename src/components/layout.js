@@ -113,7 +113,7 @@ export default class Layout extends React.Component {
                 <div className={"aboutHeader"}>find me</div>
                 <div className={"footerWrap"}>
                   {this.state.contacts.map((key, index) => (
-                    <div>
+                    <div key={key.url}>
                       <a className={"footerIconWrap"} target="_blank" href={key.url}>
                         {key.icon} {this.state.contactsColored[index].icon}{" "}
                       </a>
