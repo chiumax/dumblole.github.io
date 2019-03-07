@@ -1,4 +1,5 @@
 import React from "react";
+import "../components/firebase";
 import firebase from "firebase";
 import Layout from "../components/layout";
 
@@ -11,7 +12,24 @@ export default class Contact extends React.Component {
   };
   submitContactForm = e => {
     e.preventDefault();
-    console.log(`name:${this.state.name} email:${this.state.email} subject:${this.state.subject} message:${this.state.message}`);
+    let sendMail = firebase.functions().httpsCallable("sendMail");
+    sendMail({
+      name: this.state.name,
+      email: this.state.email,
+      subject: this.state.subject,
+      message: this.state.message
+    })
+      .then(result => {
+        console.log("sentdex");
+      })
+      .catch(error => {
+        console.log("nodex");
+      });
+    console.log(
+      `name:${this.state.name} email:${this.state.email} subject:${this.state.subject} message:${
+        this.state.message
+      }`
+    );
   };
 
   handleContactFormChange = e => {
