@@ -21,6 +21,14 @@ export default class Contact extends React.Component {
     })
       .then(result => {
         console.log("sentdex");
+        if (result === true) {
+          this.setState(prevState => ({
+            name: "",
+            email: "",
+            subject: "",
+            message: ""
+          }));
+        }
       })
       .catch(error => {
         console.log("nodex");
