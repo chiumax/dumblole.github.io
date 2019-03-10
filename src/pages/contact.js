@@ -8,7 +8,8 @@ export default class Contact extends React.Component {
     name: "",
     email: "",
     subject: "",
-    message: ""
+    message: "",
+    status: ""
   };
   submitContactForm = e => {
     e.preventDefault();
@@ -20,17 +21,25 @@ export default class Contact extends React.Component {
       message: this.state.message
     })
       .then(result => {
-        console.log("sentdex");
-        if (result === true) {
+        console.log(JSON.stringify(result));
+        if (result.data.response === true) {
           this.setState(prevState => ({
             name: "",
             email: "",
             subject: "",
-            message: ""
+            message: "",
+            status: "contactSuccess"
+          }));
+        } else {
+          this.setState(prevState => ({
+            status: "contactFailure"
           }));
         }
       })
       .catch(error => {
+        this.setState(prevState => ({
+          status: "contactFailure"
+        }));
         console.log("nodex");
       });
     console.log(
@@ -44,12 +53,30 @@ export default class Contact extends React.Component {
     e.persist();
     this.setState(prevState => ({ [e.target.name]: e.target.value }));
   };
-
+  renderAlert = () => {
+    if (this.state.status === "contactSuccess") {
+      return <div className={this.state.status}>Success! Thanks for contacting me.</div>;
+    } else if (this.state.status === "contactFailure") {
+      return (
+        <div className={this.state.status}>
+          Oops! Something went wrong... Please try again and see if it works. If not, feel free to
+          directly contact me at{" "}
+          <a target="_blank" href={"mailto:dumblole@gmail.com"}>
+            dumblole@gmail.com
+          </a>
+          .
+        </div>
+      );
+    } else {
+      return;
+    }
+  };
   render() {
     return (
       <Layout>
         <div className={"contactContainer"} key="contact">
           <div className={"contactHeader"}>Say hello.</div>
+          {this.renderAlert()}
           <form
             className={"contactForm"}
             onSubmit={e => {
@@ -92,9 +119,10 @@ export default class Contact extends React.Component {
                 this.handleContactFormChange(e);
               }}
               value={this.state.message}
-              type="textarea"
+              type="text"
               name="message"
               rows={5}
+              required
             />
             <input type="submit" value="Send" />
           </form>
