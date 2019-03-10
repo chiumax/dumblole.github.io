@@ -47,3 +47,10 @@ html {
   bottom: 0;
   min-height: 100vh;
 }
+.inline-link {
+  text-decoration: none;
+  color: lighten(grey, 25%);
+  &:hover {
+    color: black;
+  }
+}

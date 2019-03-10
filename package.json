@@ -30,6 +30,7 @@
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-flip-toolkit": "^6.5.6",
+    "react-google-recaptcha": "^1.0.5",
     "react-parallax": "^2.1.0",
     "react-player": "^1.9.3",
     "react-waypoint": "^9.0.0",

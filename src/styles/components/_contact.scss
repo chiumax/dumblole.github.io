@@ -1,4 +1,5 @@
 .contactContainer {
+  position: relative;
   padding-top: 15rem;
   display: flex;
   flex-direction: column;
@@ -9,10 +10,13 @@
   min-height: 100vh;
 }
 .contactHeader {
+  position: relative;
+  z-index: 2;
   font-size: 6rem;
   width: 100%;
   text-align: center;
   max-width: 50vw;
+  background: $white-text;
 }
 .contactForm {
   display: flex;
@@ -36,7 +40,7 @@
     min-height: 3rem;
     cursor: pointer;
   }
-  input[type="submit"]:hover {
+  input[type="submit"]:not([disabled]):hover {
     color: #ffffff;
     background-color: #000000;
   }
@@ -55,6 +59,40 @@
   input:focus {
     border: 1px solid grey;
   }
+  input:disabled {
+    color: grey;
+    border: 1px solid grey;
+    cursor: default;
+  }
+}
+
+.contactSuccess {
+  position: relative;
+  transform: translateY(-30px);
+  border-radius: 5px;
+  background: lighten(green, 10%);
+  width: 100%;
+  text-align: center;
+  max-width: 50vw;
+  color: white;
+}
+.contactFailure {
+  position: relative;
+  border-radius: 5px;
+  background: red;
+  transform: translateY(-30px);
+  width: 100%;
+  text-align: center;
+  max-width: 50vw;
+  color: white;
+  opacity: 0;
+  a:hover {
+    color: white !important;
+  }
+}
+.contactCaptcha {
+  margin: auto;
+  margin-bottom: 2rem;
 }
 // .contactWrap {
 //   display: flex;
