@@ -18,6 +18,11 @@ export default class Contact extends React.Component {
   captchaRef = React.createRef();
   submitContactForm = e => {
     e.preventDefault();
+    this.setState(prevState => ({
+      submitValid: true
+    }),() => {
+    this.animateLoadIn("data-contactLoad");
+    this.animateLoadOut("data-contactSubmit");
     this.animateAlertOut("data-alert");
     let sendMail = firebase.functions().httpsCallable("sendMail");
 
@@ -28,6 +33,8 @@ export default class Contact extends React.Component {
       message: this.state.message
     })
       .then(result => {
+        this.animateLoadIn("data-contactSubmit");
+        this.animateLoadOut("data-contactLoad");
         if (result.data.response === true) {
           this.setState(
             prevState => ({
@@ -36,8 +43,8 @@ export default class Contact extends React.Component {
               subject: "",
               message: "",
               status: "contactSuccess",
-              submitValid: true,
-              captcha: false
+              captcha: false,
+              submitValid:true
             }),
             () => {
               this.captchaRef.reset();
@@ -47,26 +54,27 @@ export default class Contact extends React.Component {
         } else if (result.data.response === false) {
           this.setState(
             prevState => ({
-              status: "contactFailure"
+              status: "contactFailure",
+              submitValid:false
             }),
             () => this.animateAlertIn("data-alert")
           );
         }
       })
       .catch(error => {
+        this.animateLoadIn("data-contactSubmit");
+        this.animateLoadOut("data-contactLoad");
         this.setState(
           prevState => ({
-            status: "contactFailure"
+            status: "contactFailure",
+            submitValid:false
           }),
           () => this.animateAlertIn("data-alert")
         );
-        console.log("nodex");
-      });
-    console.log(
-      `name:${this.state.name} email:${this.state.email} subject:${this.state.subject} message:${
-        this.state.message
-      }`
-    );
+        console.log(error);
+      });})
+    
+    
   };
 
   handleContactFormChange = e => {
@@ -95,8 +103,8 @@ export default class Contact extends React.Component {
     } else {
       return (
         <div className={this.state.status} data-alert>
-          Oops! Something went wrong... Please try again and see if it works. If not, feel free to
-          directly contact me at{" "}
+          Oops! Something went wrong... Please try again and see if it works. You can also
+          contact me at{" "}
           <a className={"inline-link"} target="_blank" href={"mailto:dumblole@gmail.com"}>
             dumblole@gmail.com
           </a>
@@ -105,6 +113,24 @@ export default class Contact extends React.Component {
       );
     }
   };
+  animateLoadIn = el => {
+    anime({
+      targets:`[${el}]`,
+      translateY: [-40,0],
+      opacity:[0,1],
+      duration:500,
+      easing:"easeInOutSine"
+    })
+  }
+  animateLoadOut = el => {
+    anime({
+      targets:`[${el}]`,
+      translateY:[0,40],
+      opacity:[1,0],
+      duration: 500,
+      easing: "easeInOutSine"
+    })
+  }
   animateAlertIn = el => {
     anime({
       targets: `[${el}]`,
@@ -116,14 +142,14 @@ export default class Contact extends React.Component {
   animateAlertOut = el => {
     anime({
       targets: `[${el}]`,
-      translateY: -30,
+      translateY: 30,
       duration: 500,
       easing: "easeInOutSine",
       complete: () => {
         anime({
           targets: `[${el}]`,
           opacity: 1,
-          duration: 0
+          duration: 500
         });
       }
     });
@@ -200,7 +226,9 @@ export default class Contact extends React.Component {
               }}
               sitekey="6Ld8tJYUAAAAAOKxJFRJDNOdI_tbzVhPNOEBq8PC"
             />
-            <input type="submit" value="Send" disabled={this.state.submitValid} />
+            <div className={"contactSubmitSpin"}>
+            <input type="submit" value="Send" disabled={this.state.submitValid} data-contactSubmit />
+            <div className={"spinner"} data-contactLoad/></div>
           </form>
         </div>
       </Layout>

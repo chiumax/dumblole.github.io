@@ -1,5 +1,5 @@
 .footerContainer {
-  background: darken(grey, 35%);
+  background: #333;
   padding: 5rem;
   justify-content: center;
   align-items: center;
@@ -45,7 +45,7 @@
 .footerIcon {
   position: absolute;
   transition: opacity 0.3s;
-  fill: darken(grey, 35%);
+  fill: #333;
   width: 3rem;
   height: 3rem;
 }
