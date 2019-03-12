@@ -18,63 +18,65 @@ export default class Contact extends React.Component {
   captchaRef = React.createRef();
   submitContactForm = e => {
     e.preventDefault();
-    this.setState(prevState => ({
-      submitValid: true
-    }),() => {
-    this.animateLoadIn("data-contactLoad");
-    this.animateLoadOut("data-contactSubmit");
-    this.animateAlertOut("data-alert");
-    let sendMail = firebase.functions().httpsCallable("sendMail");
+    this.setState(
+      prevState => ({
+        submitValid: true
+      }),
+      () => {
+        this.animateLoadIn("data-contactLoad");
+        this.animateLoadOut("data-contactSubmit");
+        this.animateAlertOut("data-alert");
+        let sendMail = firebase.functions().httpsCallable("sendMail");
 
-    sendMail({
-      name: this.state.name,
-      email: this.state.email,
-      subject: this.state.subject,
-      message: this.state.message
-    })
-      .then(result => {
-        this.animateLoadIn("data-contactSubmit");
-        this.animateLoadOut("data-contactLoad");
-        if (result.data.response === true) {
-          this.setState(
-            prevState => ({
-              name: "",
-              email: "",
-              subject: "",
-              message: "",
-              status: "contactSuccess",
-              captcha: false,
-              submitValid:true
-            }),
-            () => {
-              this.captchaRef.reset();
-              this.animateAlertIn("data-alert");
+        sendMail({
+          name: this.state.name,
+          email: this.state.email,
+          subject: this.state.subject,
+          message: this.state.message
+        })
+          .then(result => {
+            this.animateLoadIn("data-contactSubmit");
+            this.animateLoadOut("data-contactLoad");
+            if (result.data.response === true) {
+              this.setState(
+                prevState => ({
+                  name: "",
+                  email: "",
+                  subject: "",
+                  message: "",
+                  status: "contactSuccess",
+                  captcha: false,
+                  submitValid: true
+                }),
+                () => {
+                  this.captchaRef.reset();
+                  this.animateAlertIn("data-alert");
+                }
+              );
+            } else if (result.data.response === false) {
+              this.setState(
+                prevState => ({
+                  status: "contactFailure",
+                  submitValid: false
+                }),
+                () => this.animateAlertIn("data-alert")
+              );
             }
-          );
-        } else if (result.data.response === false) {
-          this.setState(
-            prevState => ({
-              status: "contactFailure",
-              submitValid:false
-            }),
-            () => this.animateAlertIn("data-alert")
-          );
-        }
-      })
-      .catch(error => {
-        this.animateLoadIn("data-contactSubmit");
-        this.animateLoadOut("data-contactLoad");
-        this.setState(
-          prevState => ({
-            status: "contactFailure",
-            submitValid:false
-          }),
-          () => this.animateAlertIn("data-alert")
-        );
-        console.log(error);
-      });})
-    
-    
+          })
+          .catch(error => {
+            this.animateLoadIn("data-contactSubmit");
+            this.animateLoadOut("data-contactLoad");
+            this.setState(
+              prevState => ({
+                status: "contactFailure",
+                submitValid: false
+              }),
+              () => this.animateAlertIn("data-alert")
+            );
+            console.log(error);
+          });
+      }
+    );
   };
 
   handleContactFormChange = e => {
@@ -103,8 +105,8 @@ export default class Contact extends React.Component {
     } else {
       return (
         <div className={this.state.status} data-alert>
-          Oops! Something went wrong... Please try again and see if it works. You can also
-          contact me at{" "}
+          Oops! Something went wrong... Please try again and see if it works. You can also contact
+          me at{" "}
           <a className={"inline-link"} target="_blank" href={"mailto:dumblole@gmail.com"}>
             dumblole@gmail.com
           </a>
@@ -115,22 +117,22 @@ export default class Contact extends React.Component {
   };
   animateLoadIn = el => {
     anime({
-      targets:`[${el}]`,
-      translateY: [-40,0],
-      opacity:[0,1],
-      duration:500,
-      easing:"easeInOutSine"
-    })
-  }
-  animateLoadOut = el => {
-    anime({
-      targets:`[${el}]`,
-      translateY:[0,40],
-      opacity:[1,0],
+      targets: `[${el}]`,
+      translateY: [-60, 0],
+      opacity: [0, 1],
       duration: 500,
       easing: "easeInOutSine"
-    })
-  }
+    });
+  };
+  animateLoadOut = el => {
+    anime({
+      targets: `[${el}]`,
+      translateY: [0, 60],
+      opacity: [1, 0],
+      duration: 500,
+      easing: "easeInOutSine"
+    });
+  };
   animateAlertIn = el => {
     anime({
       targets: `[${el}]`,
@@ -142,7 +144,7 @@ export default class Contact extends React.Component {
   animateAlertOut = el => {
     anime({
       targets: `[${el}]`,
-      translateY: 30,
+      translateY: -30,
       duration: 500,
       easing: "easeInOutSine",
       complete: () => {
@@ -227,8 +229,16 @@ export default class Contact extends React.Component {
               sitekey="6Ld8tJYUAAAAAOKxJFRJDNOdI_tbzVhPNOEBq8PC"
             />
             <div className={"contactSubmitSpin"}>
-            <input type="submit" value="Send" disabled={this.state.submitValid} data-contactSubmit />
-            <div className={"spinner"} data-contactLoad/></div>
+              <input
+                type="submit"
+                value="Send"
+                disabled={this.state.submitValid}
+                data-contactSubmit
+              />
+              <div className={"spinnerWrap"} data-contactLoad>
+                <div className={"spinner"} />
+              </div>
+            </div>
           </form>
         </div>
       </Layout>
