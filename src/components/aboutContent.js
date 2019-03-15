@@ -232,12 +232,11 @@ export default ({
         </Background>
       </Parallax>
       <div className={"skillAboutContainer"}>
-        <div className={"skillAboutButton"} data-to-animate data-icon>
+        <div className={"skillAboutButton"}  data-icon>
           <button
             onClick={() => {
               shuffle("");
             }}
-            data-to-animate
             data-icon
           >
             All
@@ -246,7 +245,6 @@ export default ({
             onClick={() => {
               shuffle("code");
             }}
-            data-to-animate
             data-icon
           >
             Code
@@ -255,7 +253,6 @@ export default ({
             onClick={() => {
               shuffle("edit");
             }}
-            data-to-animate
             data-icon
           >
             Edit
@@ -275,6 +272,7 @@ export default ({
             if (clickedElement === key.name) {
               {
                 return (
+                  <div key ={`${key.name}-containerFull`}>
                   <div key={key.name} className={"skillFullScreen"} onClick={() => animateOut()}>
                     <Flipped flipId={`${key.name}-icon`} spring={"noWobble"}>
                       <div className={"skillSVG"}>{key.icon}</div>
@@ -305,6 +303,26 @@ export default ({
                       <div className={"skillBack"} style={{ backgroundColor: key.color }} />
                     </Flipped>
                   </div>
+                  <div
+                    key={key.name}
+                    className={"skillIcon"}
+                    onClick={() => clickExpand(key.name)}
+                    data-icon
+                  >
+                    <div>
+                      <div className={"skillTempBackGone"} />
+                    </div>
+                    <div>
+                      <div className={"skillBackGone"} style={{ backgroundColor: key.color }} />
+                    </div>
+                    <div>
+                      <div className={"skillHere"}>{key.icon}</div>
+                    </div>
+                    <div>
+                      <div className={"skillHere"}>{key.name}</div>
+                    </div>
+                  </div>
+                  </div>
                 );
               }
             }
@@ -333,7 +351,6 @@ export default ({
                     key={key.name}
                     className={"skillIcon"}
                     onClick={() => clickExpand(key.name)}
-                    data-to-animate
                     data-icon
                   >
                     <Flipped flipId={`${key.name}-tempBack`} spring={"noWobble"} stagger>
