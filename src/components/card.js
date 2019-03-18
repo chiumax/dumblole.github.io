@@ -1,8 +1,10 @@
 import React from "react";
+import { Link, navigate } from "gatsby";
 import Img from "gatsby-image";
-import { Link } from "gatsby";
 import ProjectList from "../pages/project";
+import anime from "animejs";
 let readingTime = require("reading-time");
+
 
 const _ = require("lodash");
 
@@ -16,19 +18,36 @@ export default class Card extends React.Component {
   imgStyle = {
     backgroundColor: "blue"
   };
+  projectOnClick = (el,location) => {
+    anime({
+      targets: `[${el}]`,
+      translateY: [0, -20],
+      background: "rgba(0,0,0,0.90)",
+      duration: 1000,
+      easing: "easeInOutSine",
+      delay: anime.stagger(300),
+      complete: () => {
+        this.pushProject(location);
+      }
+    });
+  };
+  pushProject = (location) => {
+    console.log(location);
+    navigate(location);
+  }
   //   console.log(data);
   displayCard = () => {
     switch (this.props.type) {
       case "project":
         return (
-          <Link to={this.props.node.fields.slug} className={"projectCard"}>
+          <div onClick={()=>{this.projectOnClick(this.props.node.fields.slug)}} className={"projectCard"}>
             <Img
               fluid={this.props.node.frontmatter.image.childImageSharp.fluid}
               className={"projectCardImage"}
             />
             {/* <div className={"projectColorFilter"} /> */}
             <div className={"projectTitle"}>{this.props.node.frontmatter.title}</div>
-          </Link>
+          </div>
         );
       case "blog":
         return (
