@@ -10,10 +10,7 @@ const _ = require("lodash");
 
 export default class Card extends React.Component {
   state = {
-    selected: null,
-    fullScreen: false,
-    focused: null,
-    image: null
+    
   };
   imgStyle = {
     backgroundColor: "blue"
@@ -22,8 +19,12 @@ export default class Card extends React.Component {
     anime({
       targets: `[${el}]`,
       translateY: [0, -20],
+      height: "5px",
+      width: "100vw",
+      position:"fixed",
+      top:"0",
       background: "rgba(0,0,0,0.90)",
-      duration: 1000,
+      duration: 10000,
       easing: "easeInOutSine",
       delay: anime.stagger(300),
       complete: () => {
@@ -40,7 +41,7 @@ export default class Card extends React.Component {
     switch (this.props.type) {
       case "project":
         return (
-          <div onClick={()=>{this.projectOnClick(this.props.node.fields.slug)}} className={"projectCard"}>
+          <div onClick={()=>{this.projectOnClick("data-yeet",this.props.node.fields.slug)}} className={"projectCard"} data-yeet>
             <Img
               fluid={this.props.node.frontmatter.image.childImageSharp.fluid}
               className={"projectCardImage"}
