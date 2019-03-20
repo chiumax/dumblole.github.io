@@ -16,13 +16,20 @@ export default class Card extends React.Component {
     backgroundColor: "blue"
   };
   projectOnClick = (el,location) => {
+    const fadeOut = document.querySelectorAll(`div[data-project-card]:not([${el}])`);
+    const sharedTrans = document.querySelectorAll(el);
     anime({
+      targets:fadeOut,
+      opacity: [1,0],
+      translateY:[0,-20],
+      duration:[1000],
+      easing: "easeInOutSine",
+      complete: () => {
+        anime({
       targets: `[${el}]`,
       translateY: [0, -20],
       height: "5px",
       width: "100vw",
-      position:"fixed",
-      top:"0",
       background: "rgba(0,0,0,0.90)",
       duration: 10000,
       easing: "easeInOutSine",
@@ -31,6 +38,9 @@ export default class Card extends React.Component {
         this.pushProject(location);
       }
     });
+      }
+    })
+    
   };
   pushProject = (location) => {
     console.log(location);
@@ -41,7 +51,7 @@ export default class Card extends React.Component {
     switch (this.props.type) {
       case "project":
         return (
-          <div onClick={()=>{this.projectOnClick("data-yeet",this.props.node.fields.slug)}} className={"projectCard"} data-yeet>
+          <div onClick={()=>{this.projectOnClick(`data-${this.props.node.frontmatter.title}`,this.props.node.fields.slug)}} className={"projectCard"} {...{[`data-${this.props.node.frontmatter.title}`]:this.props.node.frontmatter.title}} data-project-card>
             <Img
               fluid={this.props.node.frontmatter.image.childImageSharp.fluid}
               className={"projectCardImage"}
