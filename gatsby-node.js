@@ -1,6 +1,6 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
-var _ = require("lodash");
+const _ = require("lodash");
 const slash = require("slash");
 
 exports.onCreateNode = ({ node, getNode, actions }) => {

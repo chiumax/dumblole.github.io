@@ -3,8 +3,7 @@ import { Link, navigate } from "gatsby";
 import Img from "gatsby-image";
 import ProjectList from "../pages/project";
 import anime from "animejs";
-let readingTime = require("reading-time");
-
+const readingTime = require("reading-time");
 
 const _ = require("lodash");
 
@@ -18,24 +17,36 @@ export default class Card extends React.Component {
   projectOnClick = (el,location) => {
     const fadeOut = document.querySelectorAll(`div[data-project-card]:not([${el}])`);
     const sharedTrans = document.querySelectorAll(el);
+    const sharedElement = document.getElementById(el);
+    const sharedtran = sharedElement.getBoundingClientRect();
+    const centerOff = (window.innerHeight/2-sharedtran.top)-sharedElement.offSetHeight/2;
     anime({
       targets:fadeOut,
       opacity: [1,0],
       translateY:[0,-20],
-      duration:[1000],
+      duration:[500],
       easing: "easeInOutSine",
       complete: () => {
         anime({
       targets: `[${el}]`,
-      translateY: [0, -20],
-      height: "5px",
-      width: "100vw",
+      translateY: [0, centerOff],
       background: "rgba(0,0,0,0.90)",
-      duration: 10000,
+      duration: 1000,
       easing: "easeInOutSine",
       delay: anime.stagger(300),
       complete: () => {
-        this.pushProject(location);
+        const topOff = sharedtran.top;
+        anime({
+          targets:`[${el}]`,
+          translateY:topOff*-1,
+          height:"45rem",
+          width:"100vw",
+          duration:1000,
+          easing:"easeInOutSine",
+          complete:()=>{
+            this.pushProject(location);
+          }
+        })
       }
     });
       }
@@ -48,28 +59,31 @@ export default class Card extends React.Component {
   }
   //   console.log(data);
   displayCard = () => {
+          let data = this.props.node
+      let title = !!data.frontmatter.title ?  _.replace(data.frontmatter.title, new RegExp(" ","g"), "-").toLowerCase() : data.title;
+
     switch (this.props.type) {
       case "project":
         return (
-          <div onClick={()=>{this.projectOnClick(`data-${this.props.node.frontmatter.title}`,this.props.node.fields.slug)}} className={"projectCard"} {...{[`data-${this.props.node.frontmatter.title}`]:this.props.node.frontmatter.title}} data-project-card>
+          <div onClick={()=>{this.projectOnClick(`data-${title}`,data.fields.slug)}} className={"projectCard"} id={`data-${title}`} {...{[`data-${title}`]:title}} data-project-card>
             <Img
-              fluid={this.props.node.frontmatter.image.childImageSharp.fluid}
+              fluid={data.frontmatter.image.childImageSharp.fluid}
               className={"projectCardImage"}
             />
             {/* <div className={"projectColorFilter"} /> */}
-            <div className={"projectTitle"}>{this.props.node.frontmatter.title}</div>
+            <div className={"projectTitle"}>{data.frontmatter.title}</div>
           </div>
         );
       case "blog":
         return (
           <div className="blogCard">
-            {console.log(this.props.node)}
-            <div to={this.props.node.link} className="blogTitleWrap">
-              <div>{this.props.node.title}</div>
-              <div>{this.props.node.pubDate}</div>
-              <div>{readingTime(this.props.node.description).text}</div>
+            {console.log(data)}
+            <div to={data.link} className="blogTitleWrap">
+              <div>{data.title}</div>
+              <div>{data.pubDate}</div>
+              <div>{readingTime(data.description).text}</div>
               <div>
-                <a href={this.props.node.link} target="_blank">
+                <a href={data.link} target="_blank">
                   Click to read
                 </a>
               </div>

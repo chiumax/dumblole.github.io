@@ -22,7 +22,7 @@ export default class ProjectList extends React.Component {
   render() {
     return (
       <Layout>
-        <div className={"content-container"}>
+        <div className={"content-container-nomargin"}>
           {/* <h4>{this.props.data.allMarkdownRemark.totalCount} Posts</h4>
           <Link to={`/project/tags`}> All tags -></Link> */}
           <div className="">
