@@ -5,15 +5,6 @@ import Layout from "../components/layout";
 import { Link, graphql } from "gatsby";
 
 export default class ProjectList extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     classNameVar: "tile tile-project",
-  //     data: props.data,
-  //     selected: null
-  //   };
-  // }
-  //   console.log(data);
   state = {
     classNameVar: "tile tile-project",
     selected: null
@@ -21,7 +12,8 @@ export default class ProjectList extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <div>
+        {console.log(this)}
         <div className={"content-container-nomargin"}>
           {/* <h4>{this.props.data.allMarkdownRemark.totalCount} Posts</h4>
           <Link to={`/project/tags`}> All tags -></Link> */}
@@ -31,7 +23,7 @@ export default class ProjectList extends React.Component {
             ))}
           </div>
         </div>
-      </Layout>
+      </div>
     );
   }
 }

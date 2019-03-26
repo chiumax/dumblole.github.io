@@ -55,7 +55,7 @@ export default class Layout extends React.Component {
   render() {
     let classNameVar = "";
 
-    if (this.props.location === undefined) {
+    if (this.props.location.pathname != "/") {
       classNameVar = "headerBlack";
     }
     return (
@@ -71,6 +71,7 @@ export default class Layout extends React.Component {
         `}
         render={data => (
           <div className="scrollWrap">
+            {console.log(this.props.location)}
             {/* <Particles className="aboutParticle" /> */}
             <div className="bodyWrap">
               {/* <div className="headerLinkWrap">

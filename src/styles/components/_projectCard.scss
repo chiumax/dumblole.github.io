@@ -8,21 +8,20 @@
   height: 40rem;
   width: 110rem;
   position: relative;
-  &:before{
-  content: "";
-  transition: opacity 0.5s ease-out;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  box-shadow:0px 0px 32px $secondary-color;
-  opacity:0;
+  &:before {
+    content: "";
+    transition: opacity 0.5s ease-out;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    box-shadow: 0px 0px 32px $secondary-color;
+    opacity: 0;
   }
-  &:hover{
-  &:before{
-  opacity: 1;
-  box-shadow: 0px 0px 80px $secondary-color;
-  }
-  
+  &:hover {
+    &:before {
+      opacity: 1;
+      box-shadow: 0px 0px 80px $secondary-color;
+    }
   }
   margin: 7rem auto;
   // &:first-child {
@@ -38,6 +37,10 @@
   //   }
   // }
 }
+.projectImage {
+  height: 100%;
+  width: 100%;
+}
 .projectCardImage {
   position: absolute;
   height: 100%;
@@ -46,7 +49,7 @@
   left: 0;
   filter: blur(4px);
   //-webkit-filter: blur(4px);
-
+  cursor: pointer;
   transition: 0.5s all ease;
 
   &:before {
@@ -62,8 +65,8 @@
   }
 
   &:hover {
-    filter: blur(0px) ;
-    //-webkit-filter: blur(0px); 
+    filter: blur(0px);
+    //-webkit-filter: blur(0px);
 
     &:before {
       background: transparent;
@@ -71,15 +74,17 @@
   }
   &:hover + .projectTitle {
     filter: blur(4px);
+    transform: scale(0.8) translateY(-3rem);
     //-webkit-filter: blur(4px);
   }
 }
 .projectTitle {
+  cursor: pointer;
   z-index: 2;
   position: absolute;
   color: $white-text;
   font-size: 6rem;
-  transform: translateY(-3rem) rotateX(360deg) rotate(0deg);
+  transform: scale(1) translateY(-3rem);
   //-webkit-transform: translateY(-3rem) rotateX(360deg) rotate(0deg);
 
   filter: blur(0px);
@@ -87,7 +92,7 @@
   background: $secondary-color;
   transition: all 0.5s ease;
   &:hover {
-    transform: translateY(-3rem) rotateX(0deg) rotate(-30deg);
+    transform: scale(1.2) translateY(-3rem);
     //-webkit-transform: translateY(-3rem) rotateX(0deg) rotate(-30deg);
   }
 }

@@ -172,7 +172,7 @@ export default class Contact extends React.Component {
   };
   render() {
     return (
-      <Layout>
+      <div>
         <div className={"contactContainer"} key="contact">
           <div className={"contactHeader"}>Say hello.</div>
           {this.renderAlert()}
@@ -241,7 +241,7 @@ export default class Contact extends React.Component {
             </div>
           </form>
         </div>
-      </Layout>
+      </div>
     );
   }
 }

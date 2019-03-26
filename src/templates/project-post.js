@@ -3,15 +3,18 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import Img from "gatsby-image";
 import moment from "moment";
+import Overdrive from "react-overdrive";
+
 export default ({ data }) => {
   const post = data.markdownRemark;
   return (
-    <Layout>
-    <Img
-    fluid={post.frontmatter.image.childImageSharp.fluid}
-    className={"blogCoverImage"}/>
+    <div>
+      <Overdrive id={post.frontmatter.title}>
+        <Img fluid={post.frontmatter.image.childImageSharp.fluid} className={"blogCoverImage"} />
+      </Overdrive>
+
       <div className={"blog content-container"}>
-          <Link to={`/project/`}> All Projects</Link>
+        <Link to={`/project/`}> All Projects</Link>
         <h1>{post.frontmatter.title}</h1>
         <table>
           <tbody>
@@ -36,7 +39,7 @@ export default ({ data }) => {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <p>SLOT</p>
       </div>
-    </Layout>
+    </div>
   );
 };
 
@@ -50,12 +53,12 @@ export const query = graphql`
         startdate
         enddate
         image {
-              childImageSharp {
-                fluid(maxWidth: 1920) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
             }
+          }
+        }
       }
     }
   }

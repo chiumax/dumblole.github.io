@@ -8,6 +8,7 @@ module.exports = {
 
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -47,7 +48,7 @@ module.exports = {
         path: `${__dirname}/src/pages/project`
       }
     },
-    
+
     `gatsby-plugin-catch-links`
     // {
     //   resolve: `gatsby-plugin-typography`,

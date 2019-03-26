@@ -303,7 +303,7 @@ export default class About extends React.Component {
     });
   };
   render() {
-    return <Layout location={this.props}>{this.mapPic()}</Layout>;
+    return <div>{this.mapPic()}</div>;
   }
 }
 

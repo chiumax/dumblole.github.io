@@ -3,75 +3,91 @@ import { Link, navigate } from "gatsby";
 import Img from "gatsby-image";
 import ProjectList from "../pages/project";
 import anime from "animejs";
+import Overdrive from "react-overdrive";
 const readingTime = require("reading-time");
 
 const _ = require("lodash");
 
 export default class Card extends React.Component {
-  state = {
-    
-  };
+  state = {};
   imgStyle = {
     backgroundColor: "blue"
   };
-  projectOnClick = (el,location) => {
+  projectOnClick = (el, location) => {
     const fadeOut = document.querySelectorAll(`div[data-project-card]:not([${el}])`);
     const sharedTrans = document.querySelectorAll(el);
     const sharedElement = document.getElementById(el);
     const sharedtran = sharedElement.getBoundingClientRect();
-    const centerOff = (window.innerHeight/2-sharedtran.top)-sharedElement.offSetHeight/2;
+    const centerOff = window.innerHeight / 2 - sharedtran.top;
     anime({
-      targets:fadeOut,
-      opacity: [1,0],
-      translateY:[0,-20],
-      duration:[500],
+      targets: fadeOut,
+      opacity: [1, 0],
+      translateY: [0, -20],
+      duration: [250],
       easing: "easeInOutSine",
-      complete: () => {
-        anime({
-      targets: `[${el}]`,
-      translateY: [0, centerOff],
-      background: "rgba(0,0,0,0.90)",
-      duration: 1000,
-      easing: "easeInOutSine",
-      delay: anime.stagger(300),
       complete: () => {
         const topOff = sharedtran.top;
         anime({
-          targets:`[${el}]`,
-          translateY:topOff*-1,
-          height:"45rem",
-          width:"100vw",
-          duration:1000,
-          easing:"easeInOutSine",
-          complete:()=>{
-            this.pushProject(location);
+          targets: `[${el}]`,
+          translateY: topOff * -1,
+          height: "45rem",
+          width: "100vw",
+          duration: 1000,
+          easing: "easeInOutSine",
+          complete: () => {
+            anime({
+              targets: window.document.scrollingElement,
+              scrollTop: 0,
+              duration: 1,
+              complete: () => {
+                this.pushProject(location);
+              }
+            });
+            anime({
+              targets: `[${el}]`,
+              translateY: sharedElement.offsetTop * -1,
+              duration: 1
+            });
           }
-        })
+        });
       }
     });
-      }
-    })
-    
   };
-  pushProject = (location) => {
+  pushProject = location => {
     console.log(location);
     navigate(location);
-  }
+  };
   //   console.log(data);
   displayCard = () => {
-          let data = this.props.node
-      let title = !!data.frontmatter.title ?  _.replace(data.frontmatter.title, new RegExp(" ","g"), "-").toLowerCase() : data.title;
+    let data = this.props.node;
+    let title = data.frontmatter.title
+      ? _.replace(data.frontmatter.title, new RegExp(" ", "g"), "-").toLowerCase()
+      : data.title;
 
     switch (this.props.type) {
       case "project":
         return (
-          <div onClick={()=>{this.projectOnClick(`data-${title}`,data.fields.slug)}} className={"projectCard"} id={`data-${title}`} {...{[`data-${title}`]:title}} data-project-card>
-            <Img
-              fluid={data.frontmatter.image.childImageSharp.fluid}
-              className={"projectCardImage"}
-            />
+          <div
+            onClick={() => {
+              this.projectOnClick(`data-${title}`, data.fields.slug);
+            }}
+            className={"projectCard"}
+            id={`data-${title}`}
+            {...{ [`data-${title}`]: title }}
+            data-project-card
+          >
+            <Overdrive id={data.frontmatter.title} className={"projectCardImage"}>
+              <Img
+                fluid={data.frontmatter.image.childImageSharp.fluid}
+                className={"projectImage"}
+              />
+            </Overdrive>
+
             {/* <div className={"projectColorFilter"} /> */}
-            <div className={"projectTitle"}>{data.frontmatter.title}</div>
+
+            <div className={"projectTitle"} data-project-card>
+              {data.frontmatter.title}
+            </div>
           </div>
         );
       case "blog":
