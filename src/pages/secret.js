@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 export default ({ data }) => {
   console.log(data);
   return (
-    <Layout>
+    <div>
       <div>
         <h1>My Site's Files</h1>
         <p>Did you look in source?</p>
@@ -30,7 +30,7 @@ export default ({ data }) => {
           </tbody>
         </table>
       </div>
-    </Layout>
+    </div>
   );
 };
 

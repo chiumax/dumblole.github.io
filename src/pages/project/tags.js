@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../../components/layout";
+
 import kebabCase from "lodash/kebabCase";
 import Link from "gatsby-link";
 
@@ -8,7 +8,7 @@ export default class Tags extends React.Component {
   render() {
     const tags = this.props.data.allMarkdownRemark.group;
     return (
-      <Layout>
+      <div>
         <div>
           <Link to={`/project/`}>Back </Link>
           <ul className="tags__list">
@@ -24,7 +24,7 @@ export default class Tags extends React.Component {
             ))}
           </ul>
         </div>
-      </Layout>
+      </div>
     );
   }
 }

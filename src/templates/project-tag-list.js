@@ -39,7 +39,7 @@ export default class TagList extends React.Component {
   };
   render() {
     return (
-      <Layout>
+      <div>
         <div>
           <h1>Projects</h1>
           <h4>{this.props.data.allMarkdownRemark.totalCount} Posts</h4>
@@ -55,7 +55,7 @@ export default class TagList extends React.Component {
             ))}
           </div>
         </div>
-      </Layout>
+      </div>
     );
   }
 }

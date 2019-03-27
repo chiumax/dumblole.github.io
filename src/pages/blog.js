@@ -1,6 +1,5 @@
 import React from "react";
 //import { rhythm } from "../utils/typography";
-import Layout from "../components/layout";
 import Card from "../components/card";
 import { Link, graphql } from "gatsby";
 import axios from "axios";
@@ -59,7 +58,7 @@ export default class BlogList extends React.Component {
   };
   render() {
     return (
-      <Layout>
+      <div>
         <div className="content-container">
           {/* <h4>{this.props.data.allMarkdownRemark.totalCount} Posts</h4> */}
           {/* <Link to={`/blog/tags`}> All tags -></Link> */}
@@ -71,7 +70,7 @@ export default class BlogList extends React.Component {
           </div> */}
           <div>Read More</div>
         </div>
-      </Layout>
+      </div>
     );
   }
 }
