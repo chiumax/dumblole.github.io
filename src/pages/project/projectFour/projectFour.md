@@ -31,3 +31,7 @@ I just love
 I also just love *(Italicized text em)*
 
 There's also ***Really Important Text*** (bold and italicized wrap strong around em)
+
+This is just an example paragraph of me talking about me stuff and there are things that should betalkedn
+about since there are so many problems in the world right now. I will continue talking about things that I want to talk
+about since this is my page and not your page so go kys because I'm going to get grace this year she's so hot it'd be a dream come true to nut in her omg.
