@@ -1,6 +1,7 @@
 import React from "react";
-import { StaticQuery, Link, graphql } from "gatsby";
 import "../styles/styles.scss";
+import { StaticQuery, Link, graphql } from "gatsby";
+
 import anime from "animejs";
 import { Waypoint } from "react-waypoint";
 import Github from "../icons/github.svg";
@@ -108,10 +109,10 @@ export default class Layout extends React.Component {
                 }}
               />
               <div className={""}>
-                <div className=" ">{this.props.children}</div>
+                <div>{this.props.children}</div>
               </div>
               <div className={"footerContainer"}>
-                <div className={"aboutHeader"}>find me</div>
+                <div className={"footerHeader"}>find me</div>
                 <div className={"footerWrap"}>
                   {this.state.contacts.map((key, index) => (
                     <div key={key.url}>

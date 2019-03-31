@@ -5,10 +5,14 @@ module.exports = {
   plugins: [
     `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-sass`,
-
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/layout`)
+      }
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
