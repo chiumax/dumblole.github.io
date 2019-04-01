@@ -11,9 +11,6 @@ const _ = require("lodash");
 
 export default class Card extends React.Component {
   state = {};
-  imgStyle = {
-    backgroundColor: "blue"
-  };
   projectOnClick = (el, location) => {
     const fadeOut = document.querySelectorAll(`div[data-project-card]:not([${el}])`);
     const sharedTrans = document.querySelectorAll(el);
@@ -69,6 +66,8 @@ export default class Card extends React.Component {
     switch (this.props.type) {
       case "project":
         return (
+           <ImagePalette image={image}>
+              {({ backgroundColor, color, alternativeColor }) => (
           <div
             onClick={() => {
               this.projectOnClick(`data-${title}`, data.fields.slug);
@@ -78,27 +77,29 @@ export default class Card extends React.Component {
             {...{ [`data-${title}`]: title }}
             data-project-card
           >
-            <ImagePalette image={image}>
-              {({ backgroundColor, color, alternativeColor }) => (
                 <Overdrive
                   style={{ backgroundColor }}
                   id={data.frontmatter.title}
                   className={"projectCardImage"}
                 >
+
                   <Img
                     fluid={data.frontmatter.image.childImageSharp.fluid}
                     className={"projectImage"}
                   />
                 </Overdrive>
-              )}
-            </ImagePalette>
 
-            {/* <div className={"projectColorFilter"} /> */}
-
-            <div className={"projectTitle"} data-project-card>
+              <div className={"projectColorFilter"} style={{backgroundColor}}/>
+              
+            <div className={"projectTitle"} style={{backgroundColor}} data-project-card>
               {data.frontmatter.title}
             </div>
+            {/* <div className={"projectColorFilter"} /> */}
+
+            
           </div>
+          )}
+            </ImagePalette>
         );
       case "blog":
         return (

@@ -16,12 +16,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: slug
     });
     console.log("TCL: exports.onCreateNode -> node", node);
-    if (!!node.frontmatter.tags) {
-      const tagSlugs = node.frontmatter.tags.map(tag => {
-        return `/${node.frontmatter.type}/tags/${_.kebabCase(tag)}/`;
-      });
-      createNodeField({ node, name: "tagSlugs", value: tagSlugs });
-    }
+    //////// tags
+    // if (!!node.frontmatter.tags) {
+    //   const tagSlugs = node.frontmatter.tags.map(tag => {
+    //     return `/${node.frontmatter.type}/tags/${_.kebabCase(tag)}/`;
+    //   });
+    //   createNodeField({ node, name: "tagSlugs", value: tagSlugs });
+    // }
+    ////////
     // if (node.frontmatter.type === "blog") {
     //   createNodeField({
     //     node,
@@ -76,22 +78,22 @@ exports.createPages = ({ graphql, actions }) => {
             slug: node.fields.slug
           }
         });
-
-        let tags = [];
-        if (!!node.frontmatter.tags) {
-          tags = tags.concat(node.frontmatter.tags);
-        }
-        console.log("tag", tags);
-        tags = _.uniq(tags);
-        tags.forEach(tag => {
-          const tagPath = `/${node.frontmatter.type}/tags/${_.kebabCase(tag)}/`;
-          console.log(tag, _.kebabCase(tag));
-          createPage({
-            path: tagPath,
-            component: tagTemplate,
-            context: { tag: tag, type: node.frontmatter.type }
-          });
-        });
+        ////// tags
+        // let tags = [];
+        // if (!!node.frontmatter.tags) {
+        //   tags = tags.concat(node.frontmatter.tags);
+        // }
+        // console.log("tag", tags);
+        // tags = _.uniq(tags);
+        // tags.forEach(tag => {
+        //   const tagPath = `/${node.frontmatter.type}/tags/${_.kebabCase(tag)}/`;
+        //   console.log(tag, _.kebabCase(tag));
+        //   createPage({
+        //     path: tagPath,
+        //     component: tagTemplate,
+        //     context: { tag: tag, type: node.frontmatter.type }
+        //   });
+        // });
       });
       resolve();
     });
