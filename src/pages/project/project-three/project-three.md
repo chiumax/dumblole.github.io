@@ -1,7 +1,7 @@
 ---
 title: "Project Three"
 tagline: "Project Project Project Project Project Project Project Project Project Project Project Project Project Project Project Project "
-image: "./d.jpg"
+image: "./img.jpg"
 startdate: "2017-08-09"
 enddate: "2017-09-10"
 path: "project/projectThree"

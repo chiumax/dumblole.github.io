@@ -32,6 +32,7 @@
     "react-dom": "^16.8.5",
     "react-flip-toolkit": "^6.5.7",
     "react-google-recaptcha": "^1.0.5",
+    "react-image-palette": "^0.2.4",
     "react-overdrive": "0.0.10",
     "react-parallax": "^2.2.0",
     "react-player": "^1.9.3",

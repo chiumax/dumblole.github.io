@@ -4,6 +4,7 @@ import Img from "gatsby-image";
 import ProjectList from "../pages/project";
 import anime from "animejs";
 import Overdrive from "react-overdrive";
+import ImagePalette from "react-image-palette";
 const readingTime = require("reading-time");
 
 const _ = require("lodash");
@@ -60,6 +61,7 @@ export default class Card extends React.Component {
   //   console.log(data);
   displayCard = () => {
     let data = this.props.node;
+    let image = require(`../pages/project/${_.kebabCase(data.frontmatter.title)}/img.jpg`);
     let title = data.frontmatter.title
       ? _.replace(data.frontmatter.title, new RegExp(" ", "g"), "-").toLowerCase()
       : data.title;
@@ -76,12 +78,20 @@ export default class Card extends React.Component {
             {...{ [`data-${title}`]: title }}
             data-project-card
           >
-            <Overdrive id={data.frontmatter.title} className={"projectCardImage"}>
-              <Img
-                fluid={data.frontmatter.image.childImageSharp.fluid}
-                className={"projectImage"}
-              />
-            </Overdrive>
+            <ImagePalette image={image}>
+              {({ backgroundColor, color, alternativeColor }) => (
+                <Overdrive
+                  style={{ backgroundColor }}
+                  id={data.frontmatter.title}
+                  className={"projectCardImage"}
+                >
+                  <Img
+                    fluid={data.frontmatter.image.childImageSharp.fluid}
+                    className={"projectImage"}
+                  />
+                </Overdrive>
+              )}
+            </ImagePalette>
 
             {/* <div className={"projectColorFilter"} /> */}
 
