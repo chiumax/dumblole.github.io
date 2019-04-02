@@ -92,8 +92,8 @@ export default class Layout extends React.Component {
                   <Link className="link" to={`/project/`}>
                     Projects
                   </Link>
-                  <Link className="link" to={`/blog/`}>
-                    Blog
+                  <Link className="link" to={`/cv/`}>
+                    CV
                   </Link>
                   <Link className="link" to={`/contact/`}>
                     Contact

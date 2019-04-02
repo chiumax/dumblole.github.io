@@ -5,6 +5,7 @@ import ProjectList from "../pages/project";
 import anime from "animejs";
 import Overdrive from "react-overdrive";
 import ImagePalette from "react-image-palette";
+import { Waypoint } from "react-waypoint";
 const readingTime = require("reading-time");
 
 const _ = require("lodash");
@@ -66,40 +67,40 @@ export default class Card extends React.Component {
     switch (this.props.type) {
       case "project":
         return (
-           <ImagePalette image={image}>
-              {({ backgroundColor, color, alternativeColor }) => (
-          <div
-            onClick={() => {
-              this.projectOnClick(`data-${title}`, data.fields.slug);
-            }}
-            className={"projectCard"}
-            id={`data-${title}`}
-            {...{ [`data-${title}`]: title }}
-            data-project-card
-          >
-                <Overdrive
-                  style={{ backgroundColor }}
-                  id={data.frontmatter.title}
-                  className={"projectCardImage"}
+          <ImagePalette image={image}>
+            {({ backgroundColor, color, alternativeColor }) => {
+              return (
+                <div
+                  onClick={() => {
+                    this.projectOnClick(`data-${title}`, data.fields.slug);
+                  }}
+                  className={`projectCard `}
+                  style={{ color: alternativeColor }}
+                  id={`data-${title}`}
+                  {...{ [`data-${title}`]: title }}
+                  data-project-card
                 >
+                  <div className={"projectColorFilter"} style={{ backgroundColor }} />
 
-                  <Img
-                    fluid={data.frontmatter.image.childImageSharp.fluid}
-                    className={"projectImage"}
-                  />
-                </Overdrive>
+                  <div className={"projectTitle"} style={{ backgroundColor }} data-project-card>
+                    {data.frontmatter.title}
+                  </div>
+                  <Overdrive
+                    style={{ backgroundColor }}
+                    id={data.frontmatter.title}
+                    className={"projectCardImage"}
+                  >
+                    <Img
+                      fluid={data.frontmatter.image.childImageSharp.fluid}
+                      className={"projectImage"}
+                    />
+                  </Overdrive>
 
-              <div className={"projectColorFilter"} style={{backgroundColor}}/>
-              
-            <div className={"projectTitle"} style={{backgroundColor}} data-project-card>
-              {data.frontmatter.title}
-            </div>
-            {/* <div className={"projectColorFilter"} /> */}
-
-            
-          </div>
-          )}
-            </ImagePalette>
+                  {/* <div className={"projectColorFilter"} /> */}
+                </div>
+              );
+            }}
+          </ImagePalette>
         );
       case "blog":
         return (
