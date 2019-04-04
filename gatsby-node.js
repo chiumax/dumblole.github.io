@@ -69,15 +69,18 @@ exports.createPages = ({ graphql, actions }) => {
     `).then(result => {
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         //console.log(node.fields.slug, node.frontmatter.path);
-        createPage({
-          path: node.fields.slug,
-          component: path.resolve(`./src/templates/${node.frontmatter.type}-post.js`),
-          context: {
-            // Data passed to context is available
-            // in page queries as GraphQL variables.
-            slug: node.fields.slug
-          }
-        });
+        if (node.frontmatter.type === "project") {
+          createPage({
+            path: node.fields.slug,
+            component: path.resolve(`./src/templates/${node.frontmatter.type}-post.js`),
+            context: {
+              // Data passed to context is available
+              // in page queries as GraphQL variables.
+              slug: node.fields.slug
+            }
+          });
+        }
+
         ////// tags
         // let tags = [];
         // if (!!node.frontmatter.tags) {

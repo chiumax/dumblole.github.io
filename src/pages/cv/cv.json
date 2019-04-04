@@ -1,0 +1,33 @@
+{
+  "data": [
+    { "name": "Skills", "items": [{ "name": "coding", "contents": "0" }] },
+    {
+      "name": "Hackathons",
+      "items": [
+        {
+          "name": "HackTJ"
+        }
+      ]
+    },
+    {
+      "name": "Education",
+      "items": [
+        {
+          "school": "Poolesville High School",
+          "focus": "Science, Math, Computer Science Magnet Program",
+          "location": "Poolesville, MD",
+          "start": 2017,
+          "end": false
+        }
+      ]
+    },
+    {
+      "name": "Open Source",
+      "items": []
+    },
+    {
+      "name": "Awards / Hon. Mentions",
+      "items": []
+    }
+  ]
+}

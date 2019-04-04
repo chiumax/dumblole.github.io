@@ -26,4 +26,9 @@
   p {
     font-size: 1.75rem;
   }
+  .columntest {
+    display: flex;
+    flex-direction: row;
+    color: red;
+  }
 }

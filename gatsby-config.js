@@ -52,6 +52,13 @@ module.exports = {
         path: `${__dirname}/src/pages/project`
       }
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "cv",
+        path: `${__dirname}/src/pages/cv`
+      }
+    },
 
     `gatsby-plugin-catch-links`
     // {

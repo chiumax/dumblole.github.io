@@ -9,13 +9,13 @@ import Overdrive from "react-overdrive";
 export default ({ data }) => {
   const post = data.markdownRemark;
   return (
-    <div >
+    <div>
       <Overdrive id={post.frontmatter.title}>
         <Img fluid={post.frontmatter.image.childImageSharp.fluid} className={"blogCoverImage"} />
       </Overdrive>
 
       <div className={"blog content-container"}>
-        {/*<Link to={`/project/`}> All Projects</Link>*/} 
+        {/*<Link to={`/project/`}> All Projects</Link>*/}
         <h1>{post.frontmatter.title}</h1>
         <table>
           <tbody>
