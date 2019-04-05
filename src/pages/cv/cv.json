@@ -1,6 +1,6 @@
 {
   "data": [
-    { "name": "Skills", "items": [{ "name": "coding", "contents": "0" }] },
+    { "name": "Skills", "items": [{ "name": "coding", "contents": "00000000000" }] },
     {
       "name": "Hackathons",
       "items": [
@@ -13,11 +13,9 @@
       "name": "Education",
       "items": [
         {
-          "school": "Poolesville High School",
-          "focus": "Science, Math, Computer Science Magnet Program",
-          "location": "Poolesville, MD",
-          "start": 2017,
-          "end": false
+          "title": ["Poolesville High School", "Science, Math, Computer Science Magnet Program"],
+          "date": ["2017 - ", "Poolesville, MD"],
+          "details": []
         }
       ]
     },
