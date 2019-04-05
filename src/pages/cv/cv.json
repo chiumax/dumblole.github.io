@@ -1,11 +1,19 @@
 {
   "data": [
-    { "name": "Skills", "items": [{ "name": "coding", "contents": "00000000000" }] },
+    { "name": "Skills", "items": [ {
+        "title":["Coding"],
+        "date":[""],
+        "details":["Very skilled at this stu"]
+      }] },
     {
       "name": "Hackathons",
       "items": [
         {
-          "name": "HackTJ"
+           
+        "title":[""],
+        "date":[""],
+        "details":[""]
+      
         }
       ]
     },
@@ -15,17 +23,38 @@
         {
           "title": ["Poolesville High School", "Science, Math, Computer Science Magnet Program"],
           "date": ["2017 - ", "Poolesville, MD"],
-          "details": []
+          "details": [""]
         }
       ]
     },
     {
       "name": "Open Source",
-      "items": []
+      "items": [
+       {
+        "title":["Gatsby JS"],
+        "date":["2018"],
+        "details":["blah blah blah"]
+      }]
     },
     {
       "name": "Awards / Hon. Mentions",
-      "items": []
+      "items": [
+       {
+        "title":[""],
+        "date":[""],
+        "details":[""]
+      }]
+    },
+    {
+      "name":"",
+      "items":[
+        {
+        "title":[""],
+        "date":[""],
+        "details":[""]
+      }
+
+        ]
     }
   ]
 }
