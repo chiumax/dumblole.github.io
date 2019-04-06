@@ -1,22 +1,39 @@
-.cvWrap{
-font-family: "Assistant";
-	font-size: 3rem;
-	color:black;
-
+.cvWrap {
+  font-family: "Assistant";
+  font-size: 3rem;
+  color: black;
 }
 
-.cvSection{}
+.cvSection {
+  display: flex;
+  justify-content: space-between;
+}
 
-.cvName{}
+.cvName {
+}
 
-.cvItemsContainer{}
+.cvItemsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
-.cvItems{}
+.cvItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
-.cvTitle{}
+.cvTitle {
+}
 
-.cvDate{}
+.cvDate {
+}
 
-.cvDetails{}
+.cvDetails {
+}
 
-.cvColumns{}
+.cvColumns {
+  display: flex;
+  justify-content: space-around;
+}
