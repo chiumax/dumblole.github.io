@@ -1,19 +1,85 @@
 {
   "data": [
-    { "name": "Skills", "items": [ {
-        "title":["Coding"],
-        "date":[""],
-        "details":["Very skilled at this stu"]
-      }] },
     {
-      "name": "Hackathons",
+      "name": "Skills",
       "items": [
         {
-           
-        "title":[""],
-        "date":[""],
-        "details":[""]
-      
+          "title": ["Coding"],
+          "date": [""],
+          "details": ["Very skilled at this stu"]
+        },
+        {
+          "title": ["Coding"],
+          "date": [""],
+          "details": ["Very skilled at this stu"]
+        },
+        {
+          "title": ["Coding"],
+          "date": [""],
+          "details": ["Very skilled at this stu"]
+        },
+        {
+          "title": ["Coding"],
+          "date": [""],
+          "details": ["Very skilled at this stu"]
+        },
+        {
+          "title": ["Coding"],
+          "date": [""],
+          "details": ["Very skilled at this stu"]
+        },
+        {
+          "title": ["Coding"],
+          "date": [""],
+          "details": ["Very skilled at this stu"]
+        },
+        {
+          "title": ["Coding"],
+          "date": [""],
+          "details": ["Very skilled at this stu"]
+        },
+        {
+          "title": ["Coding"],
+          "date": [""],
+          "details": ["Very skilled at this stu"]
+        },
+        {
+          "title": ["Coding"],
+          "date": [""],
+          "details": ["Very skilled at this stu"]
+        }
+      ]
+    },
+    {
+      "name": "Hackathons / CTFs",
+      "items": [
+        {
+          "title": ["Charles E. Smith Community Hackathon"],
+          "date": [" Jan 2019"],
+          "details": [
+            "10 hour hackathon, the theme of the event was to create something that could help teens with independent travel. We decided to come up with the name \"CRAM Travel.\" We made the same mistake like last time where we used a React frontend and a Python Flask backend. We attempted to create a very simple trip planning web app with little distractions and a very intuitive process for the user. I've started to see a common theme where we'd get the frontend working and the backend working but have issues with the middle-ground. During judging we were met with some interesting feedback. One piece that interested me the most was that trip planning websites with the most clutter have the propensity to generate more revenue."
+          ]
+        },
+        {
+          "title": ["BlairHacks_2"],
+          "date": ["Dec 2018"],
+          "details": [
+            "12 hour hackathon, made \"Stock Prophet\", a stock viewer made in React with a Python Flask backend. We had set up user logins with MongoDB and had plans for more user interaction like trading. We made the mistake of combining React with Flask which was difficult to work with."
+          ]
+        },
+        {
+          "title": ["CodeDay DC"],
+          "date": ["Nov 2018"],
+          "details": [
+            "24 hour hackathon, attempted to create a \"Tweetmap\" where various statistics regarding a certain topic on Twitter could be visualized and plotted on a map. Was able to finish frontend barely and a big limiting factor was Twitter API limitations. Won \"Best App\" award during this event."
+          ]
+        },
+        {
+          "title": ["HackTJ"],
+          "date": ["Mar 2018"],
+          "details": [
+            "24 hour hackathon, I attempted to create a Dialogflow chat bot and tried to integrate it with facebook messenger. It was my first hackathon and it didn't go too well."
+          ]
         }
       ]
     },
@@ -21,40 +87,41 @@
       "name": "Education",
       "items": [
         {
-          "title": ["Poolesville High School", "Science, Math, Computer Science Magnet Program"],
-          "date": ["2017 - ", "Poolesville, MD"],
-          "details": [""]
+          "title": ["Poolesville High School"],
+          "date": ["2017 - present", "Poolesville, MD"],
+          "details": ["Science, Math, Computer Science Magnet Program"]
         }
       ]
     },
     {
       "name": "Open Source",
       "items": [
-       {
-        "title":["Gatsby JS"],
-        "date":["2018"],
-        "details":["blah blah blah"]
-      }]
+        {
+          "title": ["Gatsby JS"],
+          "date": ["2018"],
+          "details": ["blah blah blah"]
+        }
+      ]
     },
     {
       "name": "Awards / Hon. Mentions",
       "items": [
-       {
-        "title":[""],
-        "date":[""],
-        "details":[""]
-      }]
+        {
+          "title": [""],
+          "date": [""],
+          "details": [""]
+        }
+      ]
     },
     {
-      "name":"",
-      "items":[
+      "name": "",
+      "items": [
         {
-        "title":[""],
-        "date":[""],
-        "details":[""]
-      }
-
-        ]
+          "title": [""],
+          "date": [""],
+          "details": [""]
+        }
+      ]
     }
   ]
 }
