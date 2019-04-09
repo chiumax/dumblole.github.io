@@ -1,15 +1,39 @@
 ---
-title: "Project Four"
+title: "FRC 2019 Digital Animation"
 tagline: "Project Project Project Project Project Project Project Project Project Project Project Project Project Project Project Project "
 image: "./img.jpg"
-startdate: "2017-08-11"
-enddate: "2017-09-10"
-path: "project/projectFour"
+startdate: "2019-01-05"
+enddate: "2019-01-24"
+path: "project/frc-2019-digital-animation"
+role: "Story and Animation"
 type: "project"
 tags:
   - "Handwriting"
   - "Learning to Write"
 ---
+
+# Background
+
+This year, 2019, FIRST Robotics Team 4099 (Poolesville High School) participated for the first time in the FIRST Robotics Competition 2019 Digital Animation Award sponsored by /\/\/\/\/\/ LINK HERE Automation Direct. The title of our submission was
+
+# Result
+
+The judging for the competition was by /\/\/\ LINK HERE Theory Studios. FRC Team 4099's animation was selected as a "Judges Favorite" along with 11 other teams out of 101 team submissions. Everybody who had an animation that was selected as a "Judges Favorite" received some personalized feedback. As a first time animator, I felt lucky to get some feedback from employed animators/artists.
+
+Their feedback was:
+This caused a lot of internal debates over story, which is a good thing! Having your audience watch over and over and ask questions is good. Very enjoyable style and movement, great use of camera rack. Overall would recommend studying more motion design, could be a great future there!
+
+# Story
+
+the story goes like this...
+
+# Process
+
+My friend /\/\/\/\ LINK HERE Dineth Meegoda and I worked together to make this 30 second animation
+
+# Closing
+
+While discussing the idea with the team, they were skeptical of  
 
 ![the best image in the world](../../../images/image/group.jpg "My best friends")
 
