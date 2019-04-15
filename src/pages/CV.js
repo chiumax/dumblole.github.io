@@ -3,11 +3,9 @@ import React from "react";
 import Layout from "../components/layout";
 const json = require("./cv/cv.json");
 
-export default ({ data }) => {
+export default () => {
   return (
     <div className={"cvWrap content-container"}>
-      {console.log(json)}
-
       {json.data.map(item => {
         return (
           <div key={item.name} className={"cvSectionWrap"}>
@@ -15,7 +13,7 @@ export default ({ data }) => {
               <div className={"cvColumn"}>
                 <div className={"cvName"}>{item.name}</div>
               </div>
-              <div className={"cvColumn"}>
+              <div className={"cvColumnRight"}>
                 <div className={"cvItemsContainer"}>
                   {item.items.map(entry => {
                     return (
@@ -33,8 +31,40 @@ export default ({ data }) => {
                           </div>
                         </div>
                         <div className={"cvDetails"}>
-                          {entry.details.map(text => {
-                            return <div>{text}</div>;
+                          {entry.details.map((element, index) => {
+                            let details = entry.details;
+                            let nextelement = "";
+                            let prevelement = "";
+                            if (index + 1 < details.length) {
+                              nextelement = details[index + 1];
+                            }
+                            if (index > 0) {
+                              prevelement = details[index - 1];
+                            }
+                            if (
+                              nextelement.indexOf("http://") === 0 ||
+                              nextelement.indexOf("https://") === 0
+                            ) {
+                              return (
+                                <span>
+                                  &nbsp;<a href={nextelement}>{element}</a>&nbsp;
+                                </span>
+                              );
+                            } else if (
+                              !(
+                                element.indexOf("http://") === 0 || element.indexOf("https://") == 0
+                              )
+                            ) {
+                              if (
+                                !(
+                                  prevelement.indexOf("http://") === 0 ||
+                                  prevelement.indexOf("https://") === 0
+                                )
+                              ) {
+                                return [<div className={"cvDivide"} />, <span>{element}</span>];
+                              }
+                              return <span>{element}</span>;
+                            }
                           })}
                         </div>
                       </div>
@@ -42,24 +72,10 @@ export default ({ data }) => {
                   })}
                 </div>
               </div>
-              {/* <div className={"cvColumn"} /> */}
             </div>
           </div>
         );
       })}
-      {console.log(data.allMarkdownRemark.edges[0])}
     </div>
   );
 };
-
-export const query = graphql`
-  query {
-    allMarkdownRemark(filter: { frontmatter: { title: { eq: "cv" } } }) {
-      edges {
-        node {
-          html
-        }
-      }
-    }
-  }
-`;

@@ -17,7 +17,7 @@ export default class Layout extends React.Component {
     contacts: [
       { icon: <Github className={"footerIcon"} />, url: "https://github.com/dumblole" },
       { icon: <Twitter className={"footerIcon"} />, url: "https://twitter.com/dumblole" },
-      { icon: <Email className={"footerIcon"} />, url: "mailto:dumblole@gmail.com" },
+      { icon: <Email className={"footerIcon"} />, url: "mailto:	business@dumblole.com" },
       {
         icon: <Youtube className={"footerIcon"} />,
         url: "https://www.youtube.com/channel/UCpAL0BHmJ2aRj-37PQn8prQ"

@@ -85,7 +85,7 @@ export default class Card extends React.Component {
                   <div className={"projectTitle"} style={{ backgroundColor }} data-project-card>
                     {data.frontmatter.title}
                   </div>
-                  <Overdrive
+                  <div
                     style={{ backgroundColor }}
                     id={data.frontmatter.title}
                     className={"projectCardImage"}
@@ -94,7 +94,7 @@ export default class Card extends React.Component {
                       fluid={data.frontmatter.image.childImageSharp.fluid}
                       className={"projectImage"}
                     />
-                  </Overdrive>
+                  </div>
 
                   {/* <div className={"projectColorFilter"} /> */}
                 </div>

@@ -1,20 +1,4 @@
 @font-face {
-  font-family: "Blogger";
-  src: url("../fonts/BloggerSans.eot"),
-    /* IE6-IE8 */ url("../fonts/BloggerSans.woff") format("woff"),
-    /* Pretty Modern Browsers */ url("../fonts/BloggerSans.ttf") format("truetype"); /* Safari, Android, iOS */
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/montserrat.eot"), /* IE6-IE8 */ url("../fonts/montserrat.woff") format("woff"),
-    /* Pretty Modern Browsers */ url("../fonts/montserrat.ttf") format("truetype"); /* Safari, Android, iOS */
-}
-@font-face {
-  font-family: "Assistant";
-  src: url("../fonts/assistant.eot"), /* IE6-IE8 */ url("../fonts/assistant.woff") format("woff"),
-    /* Pretty Modern Browsers */ url("../fonts/assistant.ttf") format("truetype"); /* Safari, Android, iOS */
-}
-@font-face {
   font-family: "Raleway";
   src: url("../fonts/raleway.eot"), /* IE6-IE8 */ url("../fonts/raleway.woff") format("woff"),
     /* Pretty Modern Browsers */ url("../fonts/raleway.ttf") format("truetype"); /* Safari, Android, iOS */
@@ -33,7 +17,7 @@
 }
 body {
   background-color: $white-text;
-  font-family: "BrandonGrotesque", "Blogger", sans-serif;
+  font-family: "BrandonGrotesque", "Raleway", sans-serif;
   overflow-y: auto;
   overflow-x: hidden;
   color: $white-text;

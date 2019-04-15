@@ -1,52 +1,45 @@
 {
   "data": [
     {
+      "name": "Work Experience",
+      "items": [
+        {
+          "title": ["None"],
+          "date": [""],
+          "details": ["Not employed yet :sadface:."]
+        }
+      ]
+    },
+    {
+      "name": "Education",
+      "items": [
+        {
+          "title": ["Poolesville High School"],
+          "date": ["2017 - present", "Poolesville, MD"],
+          "details": ["Science, Math, Computer Science Magnet Program"]
+        }
+      ]
+    },
+    {
       "name": "Skills",
       "items": [
         {
           "title": ["Coding"],
           "date": [""],
-          "details": ["Very skilled at this stu"]
+          "details": [
+            "Proficient at Python, ReactJS, Javascript",
+            "Experience with Java, CSS, HTML, Arduino"
+          ]
         },
         {
-          "title": ["Coding"],
+          "title": ["Editing"],
           "date": [""],
-          "details": ["Very skilled at this stu"]
+          "details": ["Premiere Pro, After Effects"]
         },
         {
-          "title": ["Coding"],
+          "title": ["Other"],
           "date": [""],
-          "details": ["Very skilled at this stu"]
-        },
-        {
-          "title": ["Coding"],
-          "date": [""],
-          "details": ["Very skilled at this stu"]
-        },
-        {
-          "title": ["Coding"],
-          "date": [""],
-          "details": ["Very skilled at this stu"]
-        },
-        {
-          "title": ["Coding"],
-          "date": [""],
-          "details": ["Very skilled at this stu"]
-        },
-        {
-          "title": ["Coding"],
-          "date": [""],
-          "details": ["Very skilled at this stu"]
-        },
-        {
-          "title": ["Coding"],
-          "date": [""],
-          "details": ["Very skilled at this stu"]
-        },
-        {
-          "title": ["Coding"],
-          "date": [""],
-          "details": ["Very skilled at this stu"]
+          "details": ["Can play a bit of guitar, Master Procrastinator"]
         }
       ]
     },
@@ -83,16 +76,7 @@
         }
       ]
     },
-    {
-      "name": "Education",
-      "items": [
-        {
-          "title": ["Poolesville High School"],
-          "date": ["2017 - present", "Poolesville, MD"],
-          "details": ["Science, Math, Computer Science Magnet Program"]
-        }
-      ]
-    },
+
     {
       "name": "Open Source",
       "items": [
@@ -107,7 +91,7 @@
       "name": "Awards / Hon. Mentions",
       "items": [
         {
-          "title": [""],
+          "title": ["WIP"],
           "date": [""],
           "details": [""]
         }

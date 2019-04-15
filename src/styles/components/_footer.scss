@@ -58,7 +58,7 @@
 }
 .mailIcon {
   opacity: 0;
-  fill: darken(grey, 15%);
+  fill: darken(grey, 5%);
 }
 .githubIcon {
   opacity: 0;
@@ -81,4 +81,5 @@
   font-family: "BrandonGrotesque", sans-serif;
   font-size: 3rem;
   position: relative;
+  letter-spacing: 10px;
 }

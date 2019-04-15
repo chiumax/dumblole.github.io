@@ -34,13 +34,12 @@ export default class About extends React.Component {
       {
         icon: <Python className={"icon"} />,
         content: `Python, my first real programming language (Had been playing around with Scratch and
-    Alice in school), I was "taught" this language in 8th grade. Although I can't argue
-    that this class didn't fuel my interest in programming, I had a pretty difficult time
-    with this language starting out. Because the curriculum wasn't designed well, it was
-    difficult to learn many concepts and develop a way of thinking that is required to be
-    a good programmer. A lot of the journey is discovering on your own. Now that I have
-    learned other languages and other programming things, I hope to return to python again
-    soon to work in Artificial Intelligence.`,
+          Alice in school), I was "taught" this language in 8th grade. Although I can't argue
+          that this class didn't fuel my interest in programming, I had a pretty difficult time
+          with this language starting out. Learning to program for the first time was hard and required the persistence to learn many concepts and develop a way of thinking that is required to be
+          a good programmer. A lot of the journey is discovering on your own. Now that I have
+          learned other languages and other programming things, I hope to return to python again
+          soon to work in Artificial Intelligence.`,
         color: "#0179CD",
         border: "black",
         name: "Python",
@@ -64,7 +63,7 @@ export default class About extends React.Component {
         content: `Learning Javscript was difficult for me because I really didn't know where to start.
     ReactJS was something that I kept hearing over and over when learning Javascript.
     Although I haven't worked with Angular or Vue yet, I've enjoyed my time working with
-    React. A big part of learning react was also learning HTML, CSS, webpack, babel, and
+    React. A big part of learning React was also learning HTML, CSS, webpack, babel, and
     working with multiple files.`,
         color: "#77D9E2",
         border: "black",
@@ -85,11 +84,7 @@ export default class About extends React.Component {
       },
       {
         icon: <Java className={"icon"} />,
-        content: `I'm learning Java this year (10th grade) in school. My teacher there is a fucking
-    legend. I really wish I had him as a teacher earlier. Though I don't find Java as
-    riveting. I haven't really found a use case where I would need to know Java, but I
-    guess it's something different. My first OOP. I have found that the whole brackets and
-    defining variables deal to be pretty similar to Javascript.`,
+        content: `I'm learning Java this year (10th grade) in school. I don't really enjoy Java compared to other languages. My teacher there is pretty cool though.`,
         color: "#BD5258",
         border: "black",
         name: "Java",
@@ -102,9 +97,7 @@ export default class About extends React.Component {
     whooo). Along with Javascript came about a bunch of other terms: Angular, React, Vue,
     object destructuring, computed property names. Self-learning this was a PAIN in the
     ass. I started to learn javascript because I wanted to build myself a website (this
-    website!). From what I've heard, people either really like JS or hate it. I happen to
-    really like it. It's a really flexible language and that may be a good thing or a bad
-    thing.`,
+    website!). I also utilize javascript in After Effects scripts.`,
         color: " 	#F3DB48",
         border: "black",
         name: "Javascript",
@@ -131,7 +124,8 @@ export default class About extends React.Component {
       },
       {
         icon: <Premiere className={"icon"} />,
-        content: "yeet",
+        content:
+          "Premiere Pro was the first piece of professional video editing software that I got my hands on. I know how to cut and piece videos together, but I still have a lot to learn about color correction.",
         color: "#22142E",
         border: "black",
         name: "Premiere Pro",
@@ -140,7 +134,8 @@ export default class About extends React.Component {
       },
       {
         icon: <AfterE className={"icon"} />,
-        content: "yeet",
+        content:
+          "I am relatively new to After Effects and am beginning to figure out workflow in AE. Also relatively new to scripting and hope that it can be a very powerful tool.",
         color: "#150136",
         border: "black",
         name: "After Effects",
@@ -208,9 +203,9 @@ export default class About extends React.Component {
         targets: `[${el}]`,
         scale: [0, 1],
         opacity: [0, 1],
-        duration: 1000,
-        easing: "easeInOutCubic",
-        delay: anime.stagger(300)
+        duration: 200,
+        easing: "spring(1, 40, 10, 10)",
+        delay: anime.stagger(175)
       });
     }
   };

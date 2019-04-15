@@ -14,7 +14,9 @@
     background-color: lighten(grey, 40%);
   }
 }
-
+.cvDivide {
+  margin-top: 0.5rem;
+}
 .cvSection {
   display: flex;
   justify-content: space-between;
@@ -26,6 +28,10 @@
 }
 .cvColumn {
   width: 37%;
+  margin-right: auto;
+}
+.cvColumnRight {
+  width: 50%;
   margin-right: auto;
 }
 .cvItemsContainer {
@@ -53,7 +59,7 @@
 
 .cvDate {
   text-align: right;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 }
 
 .cvDetails {
@@ -63,4 +69,5 @@
 .cvColumns {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }

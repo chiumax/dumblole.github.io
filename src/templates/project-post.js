@@ -10,9 +10,9 @@ export default ({ data }) => {
   const post = data.markdownRemark;
   return (
     <div>
-      <Overdrive id={post.frontmatter.title}>
+      <div id={post.frontmatter.title}>
         <Img fluid={post.frontmatter.image.childImageSharp.fluid} className={"blogCoverImage"} />
-      </Overdrive>
+      </div>
 
       <div className={"blog content-container"}>
         {/*<Link to={`/project/`}> All Projects</Link>*/}

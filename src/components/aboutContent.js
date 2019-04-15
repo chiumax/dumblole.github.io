@@ -78,8 +78,7 @@ export default ({
               />
               <div data-me data-to-animate>
                 Whenever I work on something relatively big, it can usually be found under my
-                Projects page. Want to know what I think about various topics? Either contact me or
-                go snoop around in my Blogs page.
+                Projects page.
               </div>
               <div data-me data-to-animate>
                 See you around.
@@ -111,7 +110,7 @@ export default ({
           C O D E
         </div>
         <div className={"editAboutWrap"}>
-          <div data-to-animate data-code>
+          <div data-to-animate data-code className={"reactPlayerWrap"}>
             <ReactPlayer url={"https://youtu.be/r-l2UxxzhmU"} loop className={"reactPlayer code"} />
           </div>
 
@@ -143,7 +142,7 @@ export default ({
           G A M E
         </div>
         <div className={"gameAboutWrap"}>
-          <div data-to-animate data-game>
+          <div data-to-animate data-game className={"reactPlayerWrap"}>
             <ReactPlayer url={"https://youtu.be/7LdMPg-EthY"} loop className={"reactPlayer"} />
           </div>
           <div className={"descText"}>
@@ -186,7 +185,7 @@ export default ({
           E D I T
         </div>
         <div className={"editAboutWrap"}>
-          <div data-to-animate data-edit>
+          <div data-to-animate data-edit className={"reactPlayerWrap"}>
             <ReactPlayer url={"https://youtu.be/mM6UmVbCdDI"} loop className={"reactPlayer"} />
           </div>
 
@@ -232,11 +231,12 @@ export default ({
         </Background>
       </Parallax>
       <div className={"skillAboutContainer"}>
-        <div className={"skillAboutButton"}  data-icon>
+        <div className={"skillAboutButton"}>
           <button
             onClick={() => {
               shuffle("");
             }}
+            data-to-animate
             data-icon
           >
             All
@@ -245,6 +245,7 @@ export default ({
             onClick={() => {
               shuffle("code");
             }}
+            data-to-animate
             data-icon
           >
             Code
@@ -253,6 +254,7 @@ export default ({
             onClick={() => {
               shuffle("edit");
             }}
+            data-to-animate
             data-icon
           >
             Edit
@@ -272,56 +274,58 @@ export default ({
             if (clickedElement === key.name) {
               {
                 return (
-                  <div key ={`${key.name}-containerFull`}>
-                  <div key={key.name} className={"skillFullScreen"} onClick={() => animateOut()}>
-                    <Flipped flipId={`${key.name}-icon`} spring={"noWobble"}>
-                      <div className={"skillSVG"}>{key.icon}</div>
-                    </Flipped>
-                    <Flipped
-                      flipId={`${key.name}-header`}
-                      spring={"noWobble"}
-                      onComplete={() => animateIn()}
+                  <div key={`${key.name}-containerFull`}>
+                    <div key={key.name} className={"skillFullScreen"} onClick={() => animateOut()}>
+                      <Flipped flipId={`${key.name}-icon`} spring={"noWobble"}>
+                        <div className={"skillSVG"}>{key.icon}</div>
+                      </Flipped>
+                      <Flipped
+                        flipId={`${key.name}-header`}
+                        spring={"noWobble"}
+                        onComplete={() => animateIn()}
+                      >
+                        <div className={"skillHeader"}>{key.name}</div>
+                      </Flipped>
+                      <div className={"starAboutWrap"} data-fade-in>
+                        {Array.from(Array(5).keys()).map(i => {
+                          if (i < key.star) {
+                            return <div key={`${key.name}-${i}`}>{SVGcontent.Star}</div>;
+                          }
+                          return <div key={`${key.name}-${i}`}>{SVGcontent.NoStar}</div>;
+                        })}
+                      </div>
+                      <div data-fade-in className={"skillContent"}>
+                        {key.content}
+                      </div>
+                      <div className={"skillClose"} data-fade-in>
+                        {SVGcontent.Times}
+                      </div>
+                      <Flipped flipId={`${key.name}-tempBack`} spring={"noWobble"}>
+                        <div className={"skillTempBack"} />
+                      </Flipped>
+                      <Flipped flipId={`${key.name}-back`} spring={"noWobble"}>
+                        <div className={"skillBack"} style={{ backgroundColor: key.color }} />
+                      </Flipped>
+                    </div>
+                    <div
+                      key={key.name}
+                      className={"skillIcon skillGone"}
+                      onClick={() => clickExpand(key.name)}
+                      data-icon
                     >
-                      <div className={"skillHeader"}>{key.name}</div>
-                    </Flipped>
-                    <div className={"starAboutWrap"} data-fade-in>
-                      {Array.from(Array(5).keys()).map(i => {
-                        if (i < key.star) {
-                          return <div key={`${key.name}-${i}`}>{SVGcontent.Star}</div>;
-                        }
-                        return <div key={`${key.name}-${i}`}>{SVGcontent.NoStar}</div>;
-                      })}
+                      <div>
+                        <div className={"skillTempBackGone"} />
+                      </div>
+                      <div>
+                        <div className={"skillBackGone"} style={{ backgroundColor: key.color }} />
+                      </div>
+                      <div>
+                        <div className={"skillHere"}>{key.icon}</div>
+                      </div>
+                      <div>
+                        <div className={"skillHere"}>{key.name}</div>
+                      </div>
                     </div>
-                    <div data-fade-in>{key.content}</div>
-                    <div className={"skillClose"} data-fade-in>
-                      {SVGcontent.Times}
-                    </div>
-                    <Flipped flipId={`${key.name}-tempBack`} spring={"noWobble"}>
-                      <div className={"skillTempBack"} />
-                    </Flipped>
-                    <Flipped flipId={`${key.name}-back`} spring={"noWobble"}>
-                      <div className={"skillBack"} style={{ backgroundColor: key.color }} />
-                    </Flipped>
-                  </div>
-                  <div
-                    key={key.name}
-                    className={"skillIcon"}
-                    onClick={() => clickExpand(key.name)}
-                    data-icon
-                  >
-                    <div>
-                      <div className={"skillTempBackGone"} />
-                    </div>
-                    <div>
-                      <div className={"skillBackGone"} style={{ backgroundColor: key.color }} />
-                    </div>
-                    <div>
-                      <div className={"skillHere"}>{key.icon}</div>
-                    </div>
-                    <div>
-                      <div className={"skillHere"}>{key.name}</div>
-                    </div>
-                  </div>
                   </div>
                 );
               }

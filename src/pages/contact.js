@@ -107,8 +107,8 @@ export default class Contact extends React.Component {
         <div className={this.state.status} data-alert>
           Oops! Something went wrong... Please try again and see if it works. You can also contact
           me at{" "}
-          <a className={"inline-link"} target="_blank" href={"mailto:dumblole@gmail.com"}>
-            dumblole@gmail.com
+          <a className={"inline-link"} target="_blank" href={"mailto:	business@dumblole.com"}>
+            business@dumblole.com
           </a>
           .
         </div>
