@@ -50,21 +50,33 @@
           "title": ["Charles E. Smith Community Hackathon"],
           "date": [" Jan 2019"],
           "details": [
-            "10 hour hackathon, the theme of the event was to create something that could help teens with independent travel. We decided to come up with the name \"CRAM Travel.\" We made the same mistake like last time where we used a React frontend and a Python Flask backend. We attempted to create a very simple trip planning web app with little distractions and a very intuitive process for the user. I've started to see a common theme where we'd get the frontend working and the backend working but have issues with the middle-ground. During judging we were met with some interesting feedback. One piece that interested me the most was that trip planning websites with the most clutter have the propensity to generate more revenue."
+            "10 hour hackathon, the theme of the event was to create something that could help teens with independent travel. We decided to come up with the name",
+            "\"CRAM Travel.\"",
+            "https://github.com/dumblole/charles-smith-community-hackathon-2019",
+            "We made the same mistake like last time where we used a React frontend and a Python Flask backend. We attempted to create a very simple trip planning web app with little distractions and a very intuitive process for the user. I've started to see a common theme where we'd get the frontend working and the backend working but have issues with the middle-ground. During judging we were met with some interesting feedback. One piece that interested me the most was that trip planning websites with the most clutter have the propensity to generate more revenue."
           ]
         },
         {
           "title": ["BlairHacks_2"],
           "date": ["Dec 2018"],
           "details": [
-            "12 hour hackathon, made \"Stock Prophet\", a stock viewer made in React with a Python Flask backend. We had set up user logins with MongoDB and had plans for more user interaction like trading. We made the mistake of combining React with Flask which was difficult to work with."
+            "12 hour hackathon, made",
+            "\"Stock Prophet\"",
+            "https://devpost.com/software/the-stock-prophet",
+            ", a stock viewer made in React with a Python Flask backend. We had set up user logins with MongoDB and had plans for more user interaction like trading. We made the mistake of combining React with Flask which was difficult to work with."
           ]
         },
         {
           "title": ["CodeDay DC"],
           "date": ["Nov 2018"],
           "details": [
-            "24 hour hackathon, attempted to create a \"Tweetmap\" where various statistics regarding a certain topic on Twitter could be visualized and plotted on a map. Was able to finish frontend barely and a big limiting factor was Twitter API limitations. Won \"Best App\" award during this event."
+            "24 hour hackathon, attempted to create a",
+            "\"Tweetmap\"",
+            "https://github.com/jazon-liu/TweetMap",
+            "where various statistics regarding a certain topic on Twitter could be visualized and plotted on a map. Was able to finish frontend barely and a big limiting factor was Twitter API limitations. Won ",
+            "\"Best App\"",
+            "https://twitter.com/dumblole/status/1063741396580995072",
+            "award during this event."
           ]
         },
         {
@@ -81,9 +93,19 @@
       "name": "Open Source",
       "items": [
         {
-          "title": ["Gatsby JS"],
+          "title": ["GatsbyJS"],
           "date": ["2018"],
           "details": ["blah blah blah"]
+        },
+        {
+          "title": ["airbnb"],
+          "date": ["Sep 2018"],
+          "details": [
+            "Was playing around with air",
+            "Commit",
+            "0e019f5",
+            "https://github.com/airbnb/react-dates/commit/0e019f55757a2a6fe5bb8466c64a85bde04a8a61"
+          ]
         }
       ]
     },

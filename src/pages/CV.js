@@ -47,7 +47,11 @@ export default () => {
                             ) {
                               return (
                                 <span>
-                                  &nbsp;<a href={nextelement}>{element}</a>&nbsp;
+                                  &nbsp;
+                                  <a href={nextelement} target="_blank">
+                                    {element}
+                                  </a>
+                                  &nbsp;
                                 </span>
                               );
                             } else if (

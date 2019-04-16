@@ -226,7 +226,7 @@ export default class Contact extends React.Component {
               onChange={e => {
                 this.callCaptcha(e);
               }}
-              sitekey="6Ld8tJYUAAAAAOKxJFRJDNOdI_tbzVhPNOEBq8PC"
+              sitekey="6LdGZ54UAAAAAOzEZUjbmgYxRvBLZE37Nz2O_1PT"
             />
             <div className={"contactSubmitSpin"}>
               <input

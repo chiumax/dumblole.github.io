@@ -13,6 +13,13 @@
     height: 1px;
     background-color: lighten(grey, 40%);
   }
+  a {
+    color: grey;
+    text-decoration: underline;
+    &:hover {
+      color: black;
+    }
+  }
 }
 .cvDivide {
   margin-top: 0.5rem;
