@@ -39,7 +39,7 @@
         {
           "title": ["Other"],
           "date": [""],
-          "details": ["Can play a bit of guitar, Master Procrastinator"]
+          "details": ["Can play a bit of guitar, master procrastinator"]
         }
       ]
     },
@@ -101,10 +101,9 @@
           "title": ["airbnb"],
           "date": ["Sep 2018"],
           "details": [
-            "Was playing around with air",
-            "Commit",
+            "Was playing around with airbnb's","react-dates","https://github.com/airbnb/react-dates",", a datepicker library for the web. I wanted to override the styles of the calendar and the docs disappointed me with outdated information. So I decided to rewrite the \"Overriding styles\" section with updated css variables and more specific examples and make a pull request that would later be merged as commit",
             "0e019f5",
-            "https://github.com/airbnb/react-dates/commit/0e019f55757a2a6fe5bb8466c64a85bde04a8a61"
+            "https://github.com/airbnb/react-dates/commit/0e019f55757a2a6fe5bb8466c64a85bde04a8a61","."
           ]
         }
       ]
