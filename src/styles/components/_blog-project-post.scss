@@ -5,6 +5,13 @@
 .blog {
   font-family: "raleway";
   color: black;
+  a {
+    color: rgb(150, 150, 150);
+    text-decoration: underline;
+    &:hover {
+      color: black;
+    }
+  }
   h1 {
     font-size: 3rem;
   }

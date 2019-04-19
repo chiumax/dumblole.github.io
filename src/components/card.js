@@ -3,7 +3,7 @@ import { Link, navigate } from "gatsby";
 import Img from "gatsby-image";
 import ProjectList from "../pages/project";
 import anime from "animejs";
-import Overdrive from "react-overdrive";
+//import Overdrive from "react-overdrive";
 import ImagePalette from "react-image-palette";
 import { Waypoint } from "react-waypoint";
 const readingTime = require("reading-time");

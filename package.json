@@ -10,9 +10,8 @@
   },
   "dependencies": {
     "animejs": "^3.0.1",
-    "axios": "^0.18.0",
     "firebase": "^5.9.1",
-    "gatsby": "^2.2.9",
+    "gatsby": "^2.3.25",
     "gatsby-image": "^2.0.34",
     "gatsby-plugin-catch-links": "^2.0.13",
     "gatsby-plugin-layout": "^1.0.14",
@@ -33,7 +32,6 @@
     "react-flip-toolkit": "^6.5.7",
     "react-google-recaptcha": "^1.0.5",
     "react-image-palette": "^0.2.4",
-    "react-overdrive": "0.0.10",
     "react-parallax": "^2.2.0",
     "react-player": "^1.9.3",
     "react-waypoint": "^9.0.1",

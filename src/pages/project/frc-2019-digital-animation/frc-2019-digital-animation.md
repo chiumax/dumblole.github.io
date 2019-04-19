@@ -29,13 +29,17 @@ the story goes like this...
 
 # Process
 
-My friend /\/\/\/\ LINK HERE Dineth Meegoda and I worked together to make this 30 second animation
+My friend [Dineth Meegoda](https://www.youtube.com/channel/UC5CWv0Ooupy-6EyoSJiA2Yw) and I worked together to make this 30 second animation
 
 # Closing
 
 While discussing the idea with the team, they were skeptical of  
 
 ![the best image in the world](../../../images/image/group.jpg "My best friends")
+
+```javascript:title=src/components/container.js
+something here as well
+```
 
 # h1 Heading Level 1
 
