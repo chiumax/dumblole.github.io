@@ -1,6 +1,6 @@
 ---
 title: "FRC 2019 Digital Animation"
-tagline: "Project Project Project Project Project Project Project Project Project Project Project Project Project Project Project Project "
+tagline: ""
 image: "./img.jpg"
 startdate: "2019-01-05"
 enddate: "2019-01-24"
@@ -39,7 +39,7 @@ Dineth and I brainstormed ideas for the first couple days and discussed them wit
 
 Dineth was responsible for the **art** of the animation ([Adobe Illustrator](https://www.adobe.com/products/illustrator.html)) and started drawing possible props for the animation. Much inspiration of the style was from [Kurzgesagt](https://www.youtube.com/user/Kurzgesagt), a youtube channel that explores science with beautiful animations.
 
-Left is Dineth's art and the right is Kurzgesagt's.
+Left side is Kurzgesagt's art and the right is Dineth's.
 
 ![comparison image](./compare.jpg "Kurzgesagt on the left, Dineth on the right")
 

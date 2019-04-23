@@ -4,10 +4,10 @@ import { StaticQuery, Link, graphql } from "gatsby";
 
 import anime from "animejs";
 import { Waypoint } from "react-waypoint";
-import Github from "../icons/github.svg";
+import Github from "../icons/git.svg";
 import Twitter from "../icons/twitter.svg";
 import Email from "../icons/envelope.svg";
-import Youtube from "../icons/youtube.svg";
+import Youtube from "../icons/yt.svg";
 //import Particles from "react-particles-js";
 
 //import { rhythm } from "../utils/typography";
@@ -26,7 +26,7 @@ export default class Layout extends React.Component {
     contactsColored: [
       { icon: <Github className={"footerIcon githubIcon"} /> },
       { icon: <Twitter className={"footerIcon twitterIcon"} /> },
-      { icon: <Email className={"footerIcon mailIcon"} /> },
+      { icon: <Email className={"footerIcon emailIcon"} /> },
       { icon: <Youtube className={"footerIcon youtubeIcon"} /> }
     ]
   };
