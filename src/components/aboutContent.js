@@ -78,7 +78,13 @@ export default ({
               />
               <div data-me data-to-animate>
                 Whenever I work on something relatively big, it can usually be found under my
-                Projects page.
+                Projects page. If you find what I do cool, some{" "}
+                <span>
+                  <a href="https://ko-fi.com/dumblole" target="_blank">
+                    support
+                  </a>
+                </span>{" "}
+                would be appreciated and it would go a long way.
               </div>
               <div data-me data-to-animate>
                 See you around.
@@ -111,7 +117,13 @@ export default ({
         </div>
         <div className={"editAboutWrap"}>
           <div data-to-animate data-code className={"reactPlayerWrap"}>
-            <ReactPlayer url={"https://youtu.be/r-l2UxxzhmU"} loop className={"reactPlayer code"} />
+            <ReactPlayer
+              url={"https://youtu.be/r-l2UxxzhmU"}
+              loop
+              playing={true}
+              className={"reactPlayer code"}
+              youtubeConfig={{ playerVars: { color: "white", rel: 0 } }}
+            />
           </div>
 
           <div className={"descText"}>
@@ -143,7 +155,13 @@ export default ({
         </div>
         <div className={"gameAboutWrap"}>
           <div data-to-animate data-game className={"reactPlayerWrap"}>
-            <ReactPlayer url={"https://youtu.be/7LdMPg-EthY"} loop className={"reactPlayer"} />
+            <ReactPlayer
+              url={"https://youtu.be/7LdMPg-EthY"}
+              loop
+              playing={true}
+              className={"reactPlayer code"}
+              youtubeConfig={{ playerVars: { color: "white", rel: 0 } }}
+            />
           </div>
           <div className={"descText"}>
             <div data-to-animate data-game>
@@ -186,7 +204,13 @@ export default ({
         </div>
         <div className={"editAboutWrap"}>
           <div data-to-animate data-edit className={"reactPlayerWrap"}>
-            <ReactPlayer url={"https://youtu.be/mM6UmVbCdDI"} loop className={"reactPlayer"} />
+            <ReactPlayer
+              url={"https://youtu.be/mM6UmVbCdDI"}
+              loop
+              playing={true}
+              className={"reactPlayer code"}
+              youtubeConfig={{ playerVars: { color: "white", rel: 0 } }}
+            />
           </div>
 
           <div className={"descText"}>

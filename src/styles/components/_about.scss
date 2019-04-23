@@ -21,6 +21,13 @@
   & > div[class$="Container"] {
     padding: 8rem 0 8rem 0;
   }
+  a {
+    color: rgb(150, 150, 150);
+    text-decoration: underline;
+    &:hover {
+      color: black;
+    }
+  }
 }
 
 //SHARED

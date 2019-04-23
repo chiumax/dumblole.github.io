@@ -7,6 +7,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+
     {
       resolve: `gatsby-plugin-layout`,
       options: {
@@ -18,12 +19,23 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: "gatsby-remark-embed-video",
+            options: {
+              width: "1920",
+              ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
+              // Optional: Overrides optional.ratio
+              related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
+              noIframeBorder: true //Optional: Disable insertion of <style> border: 0
+            }
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 1920
+              maxWidth: 1920,
+              qualtiy: 100
             }
           },
           `gatsby-remark-copy-linked-files`
@@ -50,13 +62,6 @@ module.exports = {
       options: {
         name: "projects",
         path: `${__dirname}/src/pages/project`
-      }
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "cv",
-        path: `${__dirname}/src/pages/cv`
       }
     },
 

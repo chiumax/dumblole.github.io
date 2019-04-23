@@ -16,6 +16,7 @@ export default class Contact extends React.Component {
     captcha: false
   };
   captchaRef = React.createRef();
+
   submitContactForm = e => {
     e.preventDefault();
     this.setState(
@@ -174,7 +175,7 @@ export default class Contact extends React.Component {
     return (
       <div>
         <div className={"contactContainer"} key="contact">
-          <div className={"contactHeader"}>Say hello.</div>
+          <div className={"contactHeader"}>Let's talk.</div>
           {this.renderAlert()}
 
           <form
@@ -240,6 +241,15 @@ export default class Contact extends React.Component {
               </div>
             </div>
           </form>
+          <a href="https://ko-fi.com/dumblole" target="_blank">
+            <img
+              height="36"
+              className={"kofidonate"}
+              src="https://az743702.vo.msecnd.net/cdn/kofi5.png?v=2"
+              border="0"
+              alt="Buy Me a Coffee at ko-fi.com"
+            />
+          </a>
         </div>
       </div>
     );

@@ -6,7 +6,6 @@ import anime from "animejs";
 //import Overdrive from "react-overdrive";
 import ImagePalette from "react-image-palette";
 import { Waypoint } from "react-waypoint";
-const readingTime = require("reading-time");
 
 const _ = require("lodash");
 
@@ -102,24 +101,7 @@ export default class Card extends React.Component {
             }}
           </ImagePalette>
         );
-      case "blog":
-        return (
-          <div className="blogCard">
-            {console.log(data)}
-            <div to={data.link} className="blogTitleWrap">
-              <div>{data.title}</div>
-              <div>{data.pubDate}</div>
-              <div>{readingTime(data.description).text}</div>
-              <div>
-                <a href={data.link} target="_blank">
-                  Click to read
-                </a>
-              </div>
-            </div>
 
-            {/* <div className="onHoverBlog">READ ME!</div> */}
-          </div>
-        );
       default:
         return <div>Something unexpected happened</div>;
     }
