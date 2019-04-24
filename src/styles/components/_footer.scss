@@ -46,20 +46,21 @@
 .footerIcon {
   position: absolute;
   transition: opacity 0.3s;
-  fill: yellow;
+  fill: rgb(30, 30, 34);
   width: 3rem;
   height: 3rem;
 }
 .twitterIcon {
   opacity: 0;
   fill: #38a1f3;
+  stroke: #38a1f3;
   &:hover {
     opacity: 1;
   }
 }
 .mailIcon {
   opacity: 0;
-  fill: darken(grey, 5%);
+  fill: darken(grey, 5%) !important;
 }
 .githubIcon {
   opacity: 0;

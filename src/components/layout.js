@@ -7,7 +7,7 @@ import { Waypoint } from "react-waypoint";
 import Github from "../icons/git.svg";
 import Twitter from "../icons/twitter.svg";
 import Email from "../icons/envelope.svg";
-import Youtube from "../icons/yt.svg";
+import Youtube from "../icons/youtube.svg";
 //import Particles from "react-particles-js";
 
 //import { rhythm } from "../utils/typography";
