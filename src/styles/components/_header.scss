@@ -42,6 +42,9 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     color: $white-text;
   }
   .linke {
+  @media (max-width: 1030px) {
+  margin:0 0 0 8rem;
+  }
     text-decoration: none;
     font-size: $font-size-header;
     color: $white-text;

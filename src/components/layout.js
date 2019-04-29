@@ -119,6 +119,12 @@ export default class Layout extends React.Component {
                       disableAutoFocus
                       onStateChange={state => this.handleStateChange(state)}
                     >
+                    <Link 
+                    className="link"
+                    to={`/`}
+                    onClick={()=>{
+                      this.closeBurger();
+                    }}>Home</Link>
                       <Link
                         className="link"
                         to={`/project/`}
