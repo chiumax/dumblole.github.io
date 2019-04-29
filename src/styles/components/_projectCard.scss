@@ -8,6 +8,9 @@
   height: 40rem;
   width: 110rem;
   position: relative;
+  @media (max-width: 1150px) {
+    width: 90%;
+  }
   &:before {
     content: "";
     transition: 0.5s all ease;
@@ -31,7 +34,7 @@
       box-shadow: 0 0 40px 40px;
     }
   }
-  margin: 7rem auto;
+  margin: 12.5rem auto;
   // &:first-child {
   //   filter: blur(4px);
   //   -webkit-filter: blur(4px);
@@ -105,7 +108,13 @@
   font-size: 6rem;
   transform: scale(1) translateY(-3rem);
   //-webkit-transform: translateY(-3rem) rotateX(360deg) rotate(0deg);
-
+  @media (max-width: 1150px) {
+    font-size: 5rem;
+    &:hover {
+      transform: scale(1.1) translateY(-3rem);
+      //-webkit-transform: translateY(-3rem) rotateX(0deg) rotate(-30deg);
+    }
+  }
   filter: blur(0px);
   -webkit-filter: blur(0px);
   background: $secondary-color;

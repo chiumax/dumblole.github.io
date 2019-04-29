@@ -51,6 +51,7 @@ export default class Card extends React.Component {
       }
     });
   };
+
   pushProject = location => {
     console.log(location);
     navigate(location);
@@ -66,40 +67,42 @@ export default class Card extends React.Component {
     switch (this.props.type) {
       case "project":
         return (
-          <ImagePalette image={image}>
-            {({ backgroundColor, color, alternativeColor }) => {
-              return (
-                <div
-                  onClick={() => {
-                    this.projectOnClick(`data-${title}`, data.fields.slug);
-                  }}
-                  className={`projectCard `}
-                  style={{ color: alternativeColor }}
-                  id={`data-${title}`}
-                  {...{ [`data-${title}`]: title }}
-                  data-project-card
-                >
-                  <div className={"projectColorFilter"} style={{ backgroundColor }} />
-
-                  <div className={"projectTitle"} style={{ backgroundColor }} data-project-card>
-                    {data.frontmatter.title}
-                  </div>
+          <div className="wrapCard">
+            <ImagePalette image={image} className={"cardDivide"}>
+              {({ backgroundColor, color, alternativeColor }) => {
+                return (
                   <div
-                    style={{ backgroundColor }}
-                    id={data.frontmatter.title}
-                    className={"projectCardImage"}
+                    onClick={() => {
+                      this.projectOnClick(`data-${title}`, data.fields.slug);
+                    }}
+                    className={`projectCard `}
+                    style={{ color: alternativeColor }}
+                    id={`data-${title}`}
+                    {...{ [`data-${title}`]: title }}
+                    data-project-card
                   >
-                    <Img
-                      fluid={data.frontmatter.image.childImageSharp.fluid}
-                      className={"projectImage"}
-                    />
-                  </div>
+                    <div className={"projectColorFilter"} style={{ backgroundColor }} />
 
-                  {/* <div className={"projectColorFilter"} /> */}
-                </div>
-              );
-            }}
-          </ImagePalette>
+                    <div className={"projectTitle"} style={{ backgroundColor }} data-project-card>
+                      {data.frontmatter.title}
+                    </div>
+                    <div
+                      style={{ backgroundColor }}
+                      id={data.frontmatter.title}
+                      className={"projectCardImage"}
+                    >
+                      <Img
+                        fluid={data.frontmatter.image.childImageSharp.fluid}
+                        className={"projectImage"}
+                      />
+                    </div>
+
+                    {/* <div className={"projectColorFilter"} /> */}
+                  </div>
+                );
+              }}
+            </ImagePalette>
+          </div>
         );
 
       default:

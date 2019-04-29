@@ -10,6 +10,19 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   flex-direction: column;
   position: relative;
 }
+
+.hamburgerMenu {
+  @media (max-width: 1030px) {
+    display: initial !important;
+  }
+  display: none !important;
+}
+.nohamburgerMenu {
+  @media (max-width: 1030px) {
+    display: none !important;
+  }
+  display: initial !important;
+}
 .headerLink {
   position: fixed;
   z-index: 90;
@@ -75,4 +88,75 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .headerBlack {
   background: rgba(0, 0, 0, 0.9) !important;
+}
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: relative;
+  width: 36px;
+  height: 30px;
+  margin-right: 8rem;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: white;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  margin-top: 3rem;
+  margin-right: 3rem;
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed !important;
+  height: 110vh !important;
+  top: 0 !important;
+  bottom: 0 !important;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem auto !important;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
 }

@@ -56,3 +56,5 @@ Although there was a set deadline and I knew what it was, I was pretty bad at ma
 All in all, was a great learning experience not only for me, but my friend Dineth as well. 10/10 would struggle again.
 
 \- Max
+
+![comparison image](./img1.jpg "Kurzgesagt on the left, Dineth on the right")

@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../components/card";
 //import { rhythm } from "../utils/typography";
 import Layout from "../components/layout";
+import anime from "animejs";
 import { Link, graphql } from "gatsby";
 
 export default class ProjectList extends React.Component {
@@ -10,6 +11,15 @@ export default class ProjectList extends React.Component {
     selected: null
   };
 
+  componentDidMount() {
+    anime({
+      targets: `.wrapCard`,
+      opacity: [0, 1],
+      duration: [500],
+      easing: "easeInOutSine",
+      delay: anime.stagger(200)
+    });
+  }
   render() {
     return (
       <div>
@@ -17,7 +27,7 @@ export default class ProjectList extends React.Component {
         <div className={"content-container-nomargin"}>
           {/* <h4>{this.props.data.allMarkdownRemark.totalCount} Posts</h4>
           <Link to={`/project/tags`}> All tags -></Link> */}
-          <div className="">
+          <div>
             {this.props.data.allMarkdownRemark.edges.map(({ node }) => (
               <Card node={node} type="project" key={node.id} />
             ))}

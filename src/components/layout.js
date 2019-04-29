@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/styles.scss";
 import { StaticQuery, Link, graphql } from "gatsby";
+import { slide as Menu } from "react-burger-menu";
 
 import anime from "animejs";
 import { Waypoint } from "react-waypoint";
@@ -28,7 +29,8 @@ export default class Layout extends React.Component {
       { icon: <Twitter className={"footerIcon twitterIcon"} /> },
       { icon: <Email className={"footerIcon emailIcon"} /> },
       { icon: <Youtube className={"footerIcon youtubeIcon"} /> }
-    ]
+    ],
+    openBurger: false
   };
   animateHeadIn = el => {
     anime({
@@ -53,6 +55,14 @@ export default class Layout extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0);
   }
+  closeBurger = () => {
+    this.setState({
+      openBurger: false
+    });
+  };
+  handleStateChange = state => {
+    this.setState({ openBurger: state.isOpen });
+  };
   render() {
     let classNameVar = "";
 
@@ -70,62 +80,102 @@ export default class Layout extends React.Component {
             }
           }
         `}
-        render={data => (
-          <div className="scrollWrap">
-            {console.log(this.props.location)}
-            {/* <Particles className="aboutParticle" /> */}
-            <div className="bodyWrap">
-              {/* <div className="headerLinkWrap">
+        render={data => {
+          return (
+            <div className="scrollWrap" id={"scrollWrap"}>
+              {console.log(this.props.location)}
+
+              {/* <Particles className="aboutParticle" /> */}
+              <div className="bodyWrap">
+                {/* <div className="headerLinkWrap">
                  {this.renderLinks()}
                 
               </div> */}
-              <div className={`headerLink ${classNameVar}`} data-head>
-                <div>
-                  {" "}
-                  <Link className="linke" to={`/`}>
-                    DUMBLOLE
-                  </Link>
-                </div>
+                <div className={`headerLink ${classNameVar}`} data-head>
+                  <div>
+                    {" "}
+                    <Link className="linke" to={`/`}>
+                      DUMBLOLE
+                    </Link>
+                  </div>
 
-                <div>
-                  {" "}
-                  <Link className="link" to={`/project/`}>
-                    Projects
-                  </Link>
-                  <Link className="link" to={`/cv/`}>
-                    CV
-                  </Link>
-                  <Link className="link" to={`/contact/`}>
-                    Contact
-                  </Link>
+                  <div className={"nohamburgerMenu"}>
+                    {" "}
+                    <Link className="link" to={`/project/`}>
+                      Projects
+                    </Link>
+                    <Link className="link" to={`/cv/`}>
+                      CV
+                    </Link>
+                    <Link className="link" to={`/contact/`}>
+                      Contact
+                    </Link>
+                  </div>
+                  <div className={"hamburgerMenu"}>
+                    <Menu
+                      right
+                      width={"100vw"}
+                      isOpen={this.state.openBurger}
+                      disableAutoFocus
+                      onStateChange={state => this.handleStateChange(state)}
+                    >
+                      <Link
+                        className="link"
+                        to={`/project/`}
+                        onClick={() => {
+                          this.closeBurger();
+                        }}
+                      >
+                        Projects
+                      </Link>
+                      <Link
+                        className="link"
+                        to={`/cv/`}
+                        onClick={() => {
+                          this.closeBurger();
+                        }}
+                      >
+                        CV
+                      </Link>
+                      <Link
+                        className="link"
+                        to={`/contact/`}
+                        onClick={() => {
+                          this.closeBurger();
+                        }}
+                      >
+                        Contact
+                      </Link>
+                    </Menu>
+                  </div>
                 </div>
-              </div>
-              <Waypoint
-                onLeave={() => {
-                  this.animateHeadIn("data-head");
-                }}
-                onEnter={() => {
-                  this.animateHeadOut("data-head");
-                }}
-              />
-              <div className={""}>
-                <div>{this.props.children}</div>
-              </div>
-              <div className={"footerContainer"}>
-                <div className={"footerHeader"}>find me</div>
-                <div className={"footerWrap"}>
-                  {this.state.contacts.map((key, index) => (
-                    <div key={key.url}>
-                      <a className={"footerIconWrap"} target="_blank" href={key.url}>
-                        {key.icon} {this.state.contactsColored[index].icon}{" "}
-                      </a>
-                    </div>
-                  ))}
+                <Waypoint
+                  onLeave={() => {
+                    this.animateHeadIn("data-head");
+                  }}
+                  onEnter={() => {
+                    this.animateHeadOut("data-head");
+                  }}
+                />
+                <div className={""}>
+                  <div>{this.props.children}</div>
+                </div>
+                <div className={"footerContainer"}>
+                  <div className={"footerHeader"}>find me</div>
+                  <div className={"footerWrap"}>
+                    {this.state.contacts.map((key, index) => (
+                      <div key={key.url}>
+                        <a className={"footerIconWrap"} target="_blank" href={key.url}>
+                          {key.icon} {this.state.contactsColored[index].icon}{" "}
+                        </a>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        )}
+          );
+        }}
       />
     );
   }
