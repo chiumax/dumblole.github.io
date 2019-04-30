@@ -70,8 +70,11 @@
   align-items: center;
 }
 .meAboutImage {
+  @media (max-width: 1030px) {
+  
+  }
   position: relative;
-  width: 50%;
+  width: 30rem;
 }
 //
 .temp {

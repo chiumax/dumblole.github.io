@@ -48,6 +48,9 @@
     max-width: 100%;
     min-width: 100%;
   }
+  @media (max-width: 640px) {
+  p{font-size: 1.8rem !important;}
+  }
   a {
     color: rgb(150, 150, 150);
     text-decoration: underline;
@@ -78,6 +81,7 @@
     font-size: 0.5rem;
   }
   p {
+  
     font-size: 2rem;
     font-weight: 400;
   }
@@ -87,6 +91,7 @@
     position: relative;
     display: inline-block;
     font-style: italic;
+
     p {
       width: inital;
     }
