@@ -60,6 +60,13 @@ export default class Layout extends React.Component {
       openBurger: false
     });
   };
+  toggleBurger = () => {
+    this.setState(state => {
+      return {
+        openBurger: !state.openBurger
+      };
+    });
+  };
   handleStateChange = state => {
     this.setState({ openBurger: state.isOpen });
   };
@@ -112,19 +119,39 @@ export default class Layout extends React.Component {
                     </Link>
                   </div>
                   <div className={"hamburgerMenu"}>
+                    <button
+                      className={
+                        this.state.openBurger
+                          ? `hamburger hamburger--spin-r headerBurger is-active`
+                          : `hamburger hamburger--spin-r headerBurger`
+                      }
+                      type="button"
+                      onClick={() => {
+                        this.toggleBurger();
+                      }}
+                    >
+                      <span className="hamburger-box">
+                        <span className="hamburger-inner" />
+                      </span>
+                    </button>
                     <Menu
                       right
+                      customBurgerIcon={false}
+                      customCrossIcon={false}
                       width={"100vw"}
                       isOpen={this.state.openBurger}
                       disableAutoFocus
                       onStateChange={state => this.handleStateChange(state)}
                     >
-                    <Link 
-                    className="link"
-                    to={`/`}
-                    onClick={()=>{
-                      this.closeBurger();
-                    }}>Home</Link>
+                      <Link
+                        className="link"
+                        to={`/`}
+                        onClick={() => {
+                          this.closeBurger();
+                        }}
+                      >
+                        Home
+                      </Link>
                       <Link
                         className="link"
                         to={`/project/`}

@@ -48,9 +48,8 @@ export default class About extends React.Component {
       },
       {
         icon: <Sass className={"icon"} />,
-        content: `SCSS, basically CSS but with a lot helpful features added, also allows you to use
-    vanilla CSS. CSS is something that isn't hard to understand, but in my opinion, it is
-    hard to master. Everything you see on my website is the result of SCSS/CSS styling.
+        content: `Upgraded CSS. I still have yet to fully utilize the power of Sass. CSS is something that isn't hard to understand, but in my opinion, it is
+    hard to master. Everything you see on my website is the result of Sass/CSS styling.
     Evidently, I still have ways to go.`,
         color: "#B86791",
         border: "black",
@@ -60,11 +59,9 @@ export default class About extends React.Component {
       },
       {
         icon: <ReactIcon className={"icon"} />,
-        content: `Learning Javscript was difficult for me because I really didn't know where to start.
-    ReactJS was something that I kept hearing over and over when learning Javascript.
+        content: `ReactJS was something that I kept hearing over and over when learning Javascript.
     Although I haven't worked with Angular or Vue yet, I've enjoyed my time working with
-    React. A big part of learning React was also learning HTML, CSS, webpack, babel, and
-    working with multiple files.`,
+    React. A big part of learning React was also learning HTML, CSS, webpack, babel, along with a whole slew of stuff.`,
         color: "#77D9E2",
         border: "black",
         name: "React",
@@ -94,10 +91,9 @@ export default class About extends React.Component {
       {
         icon: <Javascript className={"icon"} />,
         content: `I started to self learn this language in the summer at the end of 9th grade (high school
-    whooo). Along with Javascript came about a bunch of other terms: Angular, React, Vue,
+    whooo) because I wanted to build myself a website (this one!). Along with Javascript came about a bunch of other terms: Angular, React, Vue,
     object destructuring, computed property names. Self-learning this was a PAIN in the
-    ass. I started to learn javascript because I wanted to build myself a website (this
-    website!). I also utilize javascript in After Effects scripts.`,
+    ass. I also utilize javascript in After Effects scripts.`,
         color: " 	#F3DB48",
         border: "black",
         name: "Javascript",

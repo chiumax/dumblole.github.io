@@ -42,9 +42,9 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     color: $white-text;
   }
   .linke {
-  @media (max-width: 1030px) {
-  margin:0 0 0 8rem;
-  }
+    @media (max-width: 1030px) {
+      margin: 0 0 0 8rem;
+    }
     text-decoration: none;
     font-size: $font-size-header;
     color: $white-text;
@@ -92,22 +92,30 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 .headerBlack {
   background: rgba(0, 0, 0, 0.9) !important;
 }
+.headerBurger {
+  position: relative;
+  z-index: 11111111111111111111 !important;
+  //background: rgba(0, 0, 0, 0.9) !important;
+  margin-right: 8rem !important;
+}
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: relative;
   width: 36px;
   height: 30px;
-  margin-right: 8rem;
+  margin-right: 8rem !important;
+  z-index: 1111111111111111111 !important;
+  background: black;
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #373a47;
+  background: white;
 }
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: white;
+  background: darken(white, 20%);
 }
 
 /* Position and sizing of clickable cross button */
@@ -150,6 +158,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-item-list {
   color: #b8b7ad;
   padding: 0.8em;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Individual item */
