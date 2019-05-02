@@ -121,7 +121,11 @@ export default ({
               url={"https://youtu.be/r-l2UxxzhmU"}
               loop
               playing={true}
-              className={"reactPlayer code"}
+              muted
+              volume={0}
+              control={false}
+
+              className={"reactPlayer"}
               youtubeConfig={{ playerVars: { color: "white", rel: 0 } }}
             />
           </div>
@@ -158,6 +162,9 @@ export default ({
             <ReactPlayer
               url={"https://youtu.be/7LdMPg-EthY"}
               loop
+              muted
+              volume={0}
+              control={false}
               playing={true}
               className={"reactPlayer code"}
               youtubeConfig={{ playerVars: { color: "white", rel: 0 } }}
@@ -204,9 +211,13 @@ export default ({
         </div>
         <div className={"editAboutWrap"}>
           <div data-to-animate data-edit className={"reactPlayerWrap"}>
+            <div className={"reactPlayerCover"}/>
             <ReactPlayer
               url={"https://youtu.be/mM6UmVbCdDI"}
               loop
+              muted
+              volume={0}
+              control={false}
               playing={true}
               className={"reactPlayer code"}
               youtubeConfig={{ playerVars: { color: "white", rel: 0 } }}
