@@ -84,7 +84,7 @@ export default class Contact extends React.Component {
     e.persist();
 
     this.setState(
-      prevState => ({ [e.target.name]: e.target.value }),
+      prevState => {if(prevState.captcha ==false){this.captchaRef.execute()} return({[e.target.name]: e.target.value })},
       () => {
         let submitValid =
           this.state.captcha &&
@@ -223,11 +223,13 @@ export default class Contact extends React.Component {
             />
             <ReCAPTCHA
               ref={e => (this.captchaRef = e)}
+              size={"invisible"}
+              badge={"bottomright"}
               className={"contactCaptcha"}
               onChange={e => {
                 this.callCaptcha(e);
               }}
-              sitekey="6LdGZ54UAAAAAOzEZUjbmgYxRvBLZE37Nz2O_1PT"
+              sitekey="6LeNcKEUAAAAAI7e70ywr8xuQ0WMvj0p0O3W9Bel"
             />
             <div className={"contactSubmitSpin"}>
               <input

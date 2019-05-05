@@ -117,6 +117,7 @@ export default ({
         </div>
         <div className={"editAboutWrap"}>
           <div data-to-animate data-code className={"reactPlayerWrap"}>
+          <div className={"reactPlayerCover"}/>
             <ReactPlayer
               url={"https://youtu.be/r-l2UxxzhmU"}
               loop
@@ -124,7 +125,6 @@ export default ({
               muted
               volume={0}
               control={false}
-
               className={"reactPlayer"}
               youtubeConfig={{ playerVars: { color: "white", rel: 0 } }}
             />
@@ -159,6 +159,7 @@ export default ({
         </div>
         <div className={"gameAboutWrap"}>
           <div data-to-animate data-game className={"reactPlayerWrap"}>
+          <div className={"reactPlayerCover"}/>
             <ReactPlayer
               url={"https://youtu.be/7LdMPg-EthY"}
               loop
@@ -219,6 +220,7 @@ export default ({
               volume={0}
               control={false}
               playing={true}
+              
               className={"reactPlayer code"}
               youtubeConfig={{ playerVars: { color: "white", rel: 0 } }}
             />
@@ -244,7 +246,12 @@ export default ({
               learn how to properly color correct.
             </div>
             <div data-to-animate data-edit>
-              Check out some of the edits I made over at my Youtube channel.
+              Check out some of the edits I made over at my {" "}
+                <span>
+                  <a href="https://www.youtube.com/channel/UCpAL0BHmJ2aRj-37PQn8prQ" target="_blank">
+                    Youtube
+                  </a>
+                </span>{" "} channel.
             </div>
           </div>
         </div>

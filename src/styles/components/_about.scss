@@ -241,16 +241,16 @@
 .editAboutWrap {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
+ justify-content: space-evenly;
   align-items:center;
   height: 100%;
   width:100%;
   & > div {
-    margin:0  auto;
+    margin:0  2rem;
     height:100%;
     //min-width: 100%;
 
-    flex-basis: 100%;
+    flex: 1 0 0;
   }
 }
 .editAboutContainer {
@@ -263,6 +263,7 @@
   margin: auto;
   position: relative;
   top:0;
+  
   left:0;
 }
 .reactPlayerCover{
@@ -288,13 +289,17 @@
 
 .gameAboutWrap {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  //flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items:center;
   height: 100%;
+  width:100%;
   & > div {
-    margin: auto;
-    padding: 0 6rem;
-    width: 50%;
+    margin:0  2rem;
+    height:100%;
+    //min-width: 100%;
+
+    flex: 1 0 0;
   }
 }
 .icon {

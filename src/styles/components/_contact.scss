@@ -93,6 +93,7 @@
 }
 .contactCaptcha {
   margin: auto;
+  max-width: 50vw;
   margin-bottom: 2rem;
 }
 .spinnerWrap {
@@ -148,31 +149,3 @@
   height: 36px;
   margin-bottom: 2rem;
 }
-// .contactWrap {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   color: white;
-// }
-// .contactDivWrap {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-// }
-// .contactReveal {
-//   margin-left: 1rem;
-//   width: 5px;
-//   height: 10px;
-//   background-color: white;
-// }
-// .contact {
-//   position: absolute;
-//   left: 10px;
-//   bottom: 10px;
-//   z-index: 9999;
-// }
-// .ContactImg {
-//   height: 200px;
-//   width: 200px;
-//   background: white;
-// }
