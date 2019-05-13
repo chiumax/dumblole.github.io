@@ -6,4 +6,4 @@ todo
 - [ ] Add a footer
 - [ ] work with SASS
 - [ ] Cover photos
-- [ ] Special thanks page
+- [ ] Special thanks page (emily xie, lekoarts)
