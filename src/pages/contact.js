@@ -84,7 +84,12 @@ export default class Contact extends React.Component {
     e.persist();
 
     this.setState(
-      prevState => {if(prevState.captcha ==false){this.captchaRef.execute()} return({[e.target.name]: e.target.value })},
+      prevState => {
+        if (prevState.captcha == false) {
+          this.captchaRef.execute();
+        }
+        return { [e.target.name]: e.target.value };
+      },
       () => {
         let submitValid =
           this.state.captcha &&
