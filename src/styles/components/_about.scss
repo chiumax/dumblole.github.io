@@ -55,11 +55,15 @@
   flex-direction: row;
   justify-content: center;
   height: 100%;
-
+  @media (max-width: 905px) {
+    flex-direction: column;
+    .descText {
+    }
+  }
   & > div {
     margin: auto;
     padding: 5rem 6rem;
-    width: 50%;
+    width: 100%;
   }
 }
 .meAboutLeft {
@@ -70,9 +74,6 @@
   align-items: center;
 }
 .meAboutImage {
-  @media (max-width: 1030px) {
-  
-  }
   position: relative;
   width: 30rem;
 }
@@ -98,6 +99,21 @@
   object-fit: cover;
   width: 100vw;
   height: 100vh;
+  z-index: -2;
+  position: fixed;
+}
+.parallaxImageWrap {
+  position: fixed;
+  width: 100vw;
+  height: 100rem;
+  z-index: -1;
+  background-color: darken(white, 90%);
+  opacity: 0.5;
+}
+.parallaxHeroImage {
+  object-fit: cover;
+  width: 100vw;
+  height: 100rem;
   z-index: -2;
   position: fixed;
 }
@@ -239,15 +255,44 @@
   color: white;
 }
 .editAboutWrap {
+  @media (max-width: 1433px) {
+    flex-direction: column;
+    .descText {
+      margin-top: 2rem;
+      max-width: 73%;
+    }
+  }
   display: flex;
   flex-direction: row-reverse;
- justify-content: space-evenly;
-  align-items:center;
+  justify-content: space-evenly;
+  align-items: center;
   height: 100%;
-  width:100%;
+  width: 100%;
   & > div {
-    margin:0  2rem;
-    height:100%;
+    margin: 0 2rem;
+    height: 100%;
+    //min-width: 100%;
+
+    flex: 1 0 0;
+  }
+}
+.gameAboutWrap {
+  display: flex;
+  //flex-direction: row-reverse;
+  @media (max-width: 1433px) {
+    flex-direction: column;
+    .descText {
+      margin-top: 2rem;
+      max-width: 73%;
+    }
+  }
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  & > div {
+    margin: 0 2rem;
+    height: 100%;
     //min-width: 100%;
 
     flex: 1 0 0;
@@ -262,21 +307,21 @@
 .reactPlayer {
   margin: auto;
   position: relative;
-  top:0;
-  
-  left:0;
+  top: 0;
+
+  left: 0;
 }
-.reactPlayerCover{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  
+.reactPlayerCover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
   z-index: 99;
 }
-.reactPlayerWrap{
-  position:relative;
+.reactPlayerWrap {
+  position: relative;
   height: 100%;
 }
 .gameAboutContainer {
@@ -287,22 +332,25 @@
   font-style: italic;
 }
 
-.gameAboutWrap {
-  display: flex;
-  //flex-direction: row-reverse;
-  justify-content: space-evenly;
-  align-items:center;
-  height: 100%;
-  width:100%;
-  & > div {
-    margin:0  2rem;
-    height:100%;
-    //min-width: 100%;
-
-    flex: 1 0 0;
-  }
-}
 .icon {
+  @media (max-width: 974px) {
+    height: 8rem;
+    width: 8rem;
+  }
+  @media (max-width: 650px) {
+    height: 6rem;
+    width: 6rem;
+  }
+  @media (max-width: 487px) {
+    height: 6rem;
+    width: 6rem;
+    margin: 1rem 6vw;
+  }
+  @media (max-width: 368px) {
+    height: 4rem;
+    width: 4rem;
+    margin: 1rem 6vw;
+  }
   height: 12rem;
   width: 12rem;
   margin: 1rem 8vw;

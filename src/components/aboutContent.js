@@ -107,8 +107,8 @@ export default ({
           />
         </div>
         <Background>
-          <div className={"imageWrap"} />
-          <Img fluid={pic.group} className={"heroImage"} />
+          <div className={"parallaxImageWrap"} />
+          <Img fluid={pic.group} className={"parallaxHeroImage"} />
         </Background>
       </Parallax>
       <div className={"codeAboutContainer"}>
@@ -117,7 +117,7 @@ export default ({
         </div>
         <div className={"editAboutWrap"}>
           <div data-to-animate data-code className={"reactPlayerWrap"}>
-          <div className={"reactPlayerCover"}/>
+            <div className={"reactPlayerCover"} />
             <ReactPlayer
               url={"https://youtu.be/r-l2UxxzhmU"}
               loop
@@ -159,7 +159,7 @@ export default ({
         </div>
         <div className={"gameAboutWrap"}>
           <div data-to-animate data-game className={"reactPlayerWrap"}>
-          <div className={"reactPlayerCover"}/>
+            <div className={"reactPlayerCover"} />
             <ReactPlayer
               url={"https://youtu.be/7LdMPg-EthY"}
               loop
@@ -212,7 +212,7 @@ export default ({
         </div>
         <div className={"editAboutWrap"}>
           <div data-to-animate data-edit className={"reactPlayerWrap"}>
-            <div className={"reactPlayerCover"}/>
+            <div className={"reactPlayerCover"} />
             <ReactPlayer
               url={"https://youtu.be/mM6UmVbCdDI"}
               loop
@@ -220,7 +220,6 @@ export default ({
               volume={0}
               control={false}
               playing={true}
-              
               className={"reactPlayer code"}
               youtubeConfig={{ playerVars: { color: "white", rel: 0 } }}
             />
@@ -246,12 +245,13 @@ export default ({
               learn how to properly color correct.
             </div>
             <div data-to-animate data-edit>
-              Check out some of the edits I made over at my {" "}
-                <span>
-                  <a href="https://www.youtube.com/channel/UCpAL0BHmJ2aRj-37PQn8prQ" target="_blank">
-                    Youtube
-                  </a>
-                </span>{" "} channel.
+              Check out some of the edits I made over at my{" "}
+              <span>
+                <a href="https://www.youtube.com/channel/UCpAL0BHmJ2aRj-37PQn8prQ" target="_blank">
+                  Youtube
+                </a>
+              </span>{" "}
+              channel.
             </div>
           </div>
         </div>
@@ -268,8 +268,8 @@ export default ({
           />
         </div>
         <Background>
-          <div className={"imageWrap"} />
-          <Img fluid={pic.groupriver} className={"heroImage"} />
+          <div className={"parallaxImageWrap"} />
+          <Img fluid={pic.groupriver} className={"parallaxHeroImage"} />
         </Background>
       </Parallax>
       <div className={"skillAboutContainer"}>
