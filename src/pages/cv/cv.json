@@ -135,6 +135,19 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Awards",
+      "items": [
+        {
+          "title": ["Rho Psi Science and Technology Scholarship"],
+          "date": ["May 2019"],
+          "details": [
+            "2nd place",
+            "Using machine learning to detect invasive ductal carcinoma (IDC) breast cancer from histopathology images"
+          ]
+        }
+      ]
     }
   ]
 }

@@ -339,11 +339,13 @@ export default ({
                       <div data-fade-in className={"skillContent"}>
                         {key.content}
                       </div>
-                      <div className={"skillClose"} data-fade-in>
-                        {SVGcontent.Times}
-                      </div>
+
                       <Flipped flipId={`${key.name}-tempBack`} spring={"noWobble"}>
-                        <div className={"skillTempBack"} />
+                        <div className={"skillTempBack"}>
+                          <div className={"skillClose"} data-fade-in>
+                            {SVGcontent.Times}
+                          </div>
+                        </div>
                       </Flipped>
                       <Flipped flipId={`${key.name}-back`} spring={"noWobble"}>
                         <div className={"skillBack"} style={{ backgroundColor: key.color }} />
