@@ -19,11 +19,17 @@
   color: black;
   width: 100%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
   margin-top: 3rem;
   text-align: center;
   & > span {
+    @media (max-width: 700px) {
+      display: none;
+    }
     font-size: 5rem;
     color: grey;
     opacity: 0.5;
@@ -53,16 +59,16 @@
   }
   @media (max-width: 640px) {
     a {
-      font-size: 1.8rem !important;
+      font-size: 1.6rem !important;
     }
     p {
-      font-size: 1.8rem !important;
+      font-size: 1.6rem !important;
     }
     h1 {
-      font-size: 3.7rem !important;
+      font-size: 3.5rem !important;
     }
     h2 {
-      font-size: 2.2rem !important;
+      font-size: 2rem !important;
     }
   }
   a {

@@ -1,5 +1,8 @@
 .aboutContainer {
   font-size: 1.6rem;
+  @media (max-width: 500px) {
+    font-size: 1.3rem;
+  }
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.5px;
   color: black;
@@ -127,6 +130,21 @@
   div {
     margin: 1rem 0;
   }
+  @media (max-width: 1380px) {
+    font-size: 2.7rem;
+  }
+  @media (max-width: 900px) {
+    font-size: 2.3rem;
+  }
+  @media (max-width: 600px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 400px) {
+    font-size: 1.8rem;
+  }
+}
+.heroTitle {
+  font-family: "BrandonGrotesque", sans-serif;
 }
 
 .skillIcon {
@@ -148,6 +166,14 @@
 }
 .skillContent {
   max-width: 55% !important;
+  @media (max-width: 974px) {
+    font-size: 1.7rem !important;
+    max-width: 60% !important;
+  }
+  @media (max-width: 400px) {
+    font-size: 1.5rem !important;
+    max-width: 73% !important;
+  }
 }
 .skillGone {
   opacity: 0;
@@ -178,6 +204,9 @@
   text-align: center;
   & > div:not([class$="skillBack"]) {
     font-size: 2rem;
+    @media (max-height: 740px) {
+      padding: 0rem;
+    }
     padding: 2rem;
     max-width: $container;
     max-height: 90%;
@@ -229,6 +258,12 @@
   text-align: center;
   font-size: 10rem !important;
   z-index: 2;
+  @media (max-width: 974px) {
+    font-size: 7rem !important;
+  }
+  @media (max-width: 484px) {
+    font-size: 10vw !important;
+  }
 }
 .skillBack {
   position: absolute;
@@ -348,8 +383,8 @@
     margin: 1rem 6vw;
   }
   @media (max-width: 368px) {
-    height: 4rem;
-    width: 4rem;
+    height: 5rem;
+    width: 5rem;
     margin: 1rem 6vw;
   }
   height: 12rem;
@@ -362,6 +397,10 @@
   width: 5rem;
   height: 5rem;
   fill: #ffd700;
+  @media (max-width: 500px) {
+    width: 4rem;
+    height: 4rem;
+  }
 }
 .iconSmall {
   width: 4rem;

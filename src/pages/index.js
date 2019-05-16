@@ -80,7 +80,7 @@ export default class About extends React.Component {
       },
       {
         icon: <Javascript className={"icon"} />,
-        content: `I started to self learn this language in the summer at the end of 9th grade (high school whooo) because I wanted to build myself a website (this one!) Along with Javascript came about a bunch of other terms: Angular, React, Vue, object destructuring, computed property names. Self-learning this was a PAIN in the ass. I also utilize javascript in After Effects scripts.`,
+        content: `I started to self learn this language at the end of 9th grade (high school whooo) because I wanted to build myself a website (this one!) I also utilize javascript in After Effects scripts.`,
         color: " 	#F3DB48",
         border: "black",
         name: "Javascript",
@@ -108,7 +108,7 @@ export default class About extends React.Component {
       {
         icon: <Premiere className={"icon"} />,
         content:
-          "Premiere Pro was the first piece of professional video editing software that I got my hands on. I know how to cut and piece videos together, but I still have a lot to learn about color correction.",
+          "Premiere Pro was the first piece of professional video editing software that I got my hands on. I still have to learn about color correction.",
         color: "#22142E",
         border: "black",
         name: "Premiere Pro",

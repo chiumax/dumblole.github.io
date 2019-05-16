@@ -29,12 +29,10 @@ export default ({
 
       <div className={"temp"}>
         <div className={"imageWrap"} />
-        <img src={cover} className={"heroImage"} />
+        {/* <img src={cover} className={"heroImage"} /> */}
+        <Img fluid={pic.land} className={"heroImage"} />
 
         <div className={"heroText"}>
-          <div data-title data-to-animate>
-            D U M B L O L E
-          </div>
           <Waypoint
             onEnter={() => {
               animateBottom("data-title");
