@@ -24,12 +24,6 @@ export default class Layout extends React.Component {
         url: "https://www.youtube.com/channel/UCpAL0BHmJ2aRj-37PQn8prQ"
       }
     ],
-    contactsColored: [
-      { icon: <Github className={"footerIcon githubIcon"} /> },
-      { icon: <Twitter className={"footerIcon twitterIcon"} /> },
-      { icon: <Email className={"footerIcon emailIcon"} /> },
-      { icon: <Youtube className={"footerIcon youtubeIcon"} /> }
-    ],
     openBurger: false
   };
   animateHeadIn = el => {
@@ -193,16 +187,32 @@ export default class Layout extends React.Component {
                 <div className={""}>
                   <div>{this.props.children}</div>
                 </div>
-                <div className={"footerContainer"}>
-                  <div className={"footerHeader"}>find me</div>
-                  <div className={"footerWrap"}>
-                    {this.state.contacts.map((key, index) => (
-                      <div key={key.url}>
-                        <a className={"footerIconWrap"} target="_blank" href={key.url}>
-                          {key.icon} {this.state.contactsColored[index].icon}{" "}
-                        </a>
-                      </div>
-                    ))}
+                <div className={"footBigWrap"}>
+                  <div className={"footerContainer"}>
+                    <div className={"footerHeader"}>Copyright & Design © Max Chiu 2019</div>
+                    <div className={"footerWrap"}>
+                      {this.state.contacts.map((key, index) => (
+                        <div key={key.url}>
+                          <a className={"footerIconWrap"} target="_blank" href={key.url}>
+                            {key.icon}
+                          </a>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className={"footerNav"}>
+                    <Link className="footerLink" to={`/`}>
+                      Home
+                    </Link>
+                    <Link className="footerLink" to={`/project/`}>
+                      Projects
+                    </Link>
+                    <Link className="footerLink" to={`/cv/`}>
+                      CV
+                    </Link>
+                    <Link className="footerLink" to={`/contact/`}>
+                      Contact
+                    </Link>
                   </div>
                 </div>
               </div>

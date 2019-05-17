@@ -1,81 +1,30 @@
 .footerContainer {
-  background: rgb(30, 30, 34);
-  //background: #333;
+  background: rgb(244, 245, 249);
   padding: 5rem;
   justify-content: center;
   align-items: center;
-  // display: flex;
+  display: flex;
+  color: black;
+  flex-basis: 100%;
   // flex-direction: column;
 }
 .footerWrap {
-  margin: auto;
-  margin-top: 2rem;
   position: relative;
-  max-width: 40rem;
+  width: 50%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-end;
 }
 .footerIconWrap {
-  text-decoration: none;
-  position: relative;
-  display: flex;
-  border-radius: 100%;
-  height: 5rem;
-  width: 5rem;
-  justify-content: center;
-  align-items: center;
-  background: white;
-  cursor: pointer;
-
-  &:hover {
-    .mailIcon {
-      opacity: 1;
-    }
-    .twitterIcon {
-      opacity: 1;
-    }
-    .githubIcon {
-      opacity: 1;
-    }
-    .youtubeIcon {
-      opacity: 1;
-    }
-  }
+  margin: 1rem;
 }
 .footerIcon {
-  position: absolute;
   transition: opacity 0.3s;
   fill: rgb(30, 30, 34);
   width: 3rem;
   height: 3rem;
 }
-.twitterIcon {
-  opacity: 0;
-  fill: #38a1f3;
-  stroke: #38a1f3;
-  &:hover {
-    opacity: 1;
-  }
-}
-.mailIcon {
-  opacity: 0;
-  fill: darken(grey, 5%) !important;
-}
-.githubIcon {
-  opacity: 0;
-  fill: black !important;
-  &:hover {
-    opacity: 1;
-  }
-}
-.youtubeIcon {
-  opacity: 0;
-  fill: red !important;
-  &:hover {
-    opacity: 1;
-  }
-}
+
 .footerHeader {
   display: flex;
   align-items: center;
@@ -84,4 +33,20 @@
   font-size: 3rem;
   position: relative;
   letter-spacing: 10px;
+}
+
+.footerNav {
+  display: flex;
+  justify-content: space-evenly;
+  background: white;
+  color: black;
+  padding: 2rem 0 2rem 0;
+}
+
+.footerLink {
+  text-decoration: none;
+}
+.footerBigWrap {
+  display: flex;
+  flex-direction: column;
 }
