@@ -9,6 +9,7 @@ import Github from "../icons/git.svg";
 import Twitter from "../icons/twitter.svg";
 import Email from "../icons/envelope.svg";
 import Youtube from "../icons/youtube.svg";
+import Chevron from "../icons/chevron-up.svg";
 //import Particles from "react-particles-js";
 
 //import { rhythm } from "../utils/typography";
@@ -46,6 +47,31 @@ export default class Layout extends React.Component {
       delay: anime.stagger(300)
     });
   };
+  animateChevronIn = el => {
+    anime({
+      targets: `.chevronWrap`,
+      right: "5rem",
+      duration: 1000,
+      easing: "easeOutSine"
+    });
+  };
+  animateChevronOut = el => {
+    anime({
+      targets: `.chevronWrap`,
+      right: "-5rem",
+      duration: 500,
+      easing: "easeInSine"
+    });
+  };
+  scrollToTop = () => {
+    anime({
+      targets: "html,body",
+      scrollTop: 0,
+      duration: 1000,
+      easing: "easeInOutQuart"
+    });
+  };
+
   componentDidMount() {
     window.scrollTo(0, 0);
   }
@@ -85,7 +111,14 @@ export default class Layout extends React.Component {
           return (
             <div className="scrollWrap" id={"scrollWrap"}>
               {console.log(this.props.location)}
-
+              <div
+                className={"chevronWrap"}
+                onClick={() => {
+                  this.scrollToTop();
+                }}
+              >
+                <Chevron className={"chevronUp"} />
+              </div>
               {/* <Particles className="aboutParticle" /> */}
               <div className="bodyWrap">
                 {/* <div className="headerLinkWrap">
@@ -179,9 +212,11 @@ export default class Layout extends React.Component {
                 <Waypoint
                   onLeave={() => {
                     this.animateHeadIn("data-head");
+                    this.animateChevronIn(".chevronWrap");
                   }}
                   onEnter={() => {
                     this.animateHeadOut("data-head");
+                    this.animateChevronOut(".chevronWrap");
                   }}
                 />
                 <div className={""}>

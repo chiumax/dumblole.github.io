@@ -1,11 +1,10 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../components/layout";
 
 export default ({ data }) => {
   console.log(data);
   return (
-    <div>
+    <div className={"content-container secretWrap"}>
       <div>
         <h1>My Site's Files</h1>
         <p>Did you look in source?</p>

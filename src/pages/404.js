@@ -1,10 +1,18 @@
 import React from "react";
-import Layout from "../components/layout";
+import { Link } from "gatsby";
 
 export default () => (
-  <div>
-    <h1>404</h1>
-    <h1>Who's There?</h1>
-    <p>Looks like you stumbled upon my secret page! Let's guide you back.</p>
+  <div className={"content-container lostContainer"}>
+    <div className={"lostTitle"}>404</div>
+    <div>Who's There?</div>
+    <div className={"lostTitle"}>🗺️</div>
+    <div>Looks like you're lost, adventurer!</div>
+    <div>
+      Let's guide you back. Just click{" "}
+      <Link className="lostLink" to={`/`}>
+        here
+      </Link>
+      .
+    </div>
   </div>
 );

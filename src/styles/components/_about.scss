@@ -1,7 +1,7 @@
 .aboutContainer {
   font-size: 1.6rem;
   @media (max-width: 500px) {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.5px;
@@ -20,11 +20,18 @@
     padding: 7rem 0 0rem 0;
     max-width: 85vw;
     margin: 0 auto;
+    @media (max-width: 500px) {
+      max-width: 95vw;
+    }
   }
   & > div[class$="Container"] {
     padding: 8rem 0 8rem 0;
+    @media (max-width: 500px) {
+      padding: 4rem 0 4rem 0;
+    }
   }
-  a {
+  a,
+  .descLink {
     color: rgb(150, 150, 150);
     text-decoration: underline;
     &:hover {
@@ -33,11 +40,23 @@
   }
 }
 
+.chevronDown {
+  width: 5rem;
+  height: 5rem;
+
+  fill: white;
+  position: absolute;
+  bottom: 3rem;
+  cursor: pointer;
+}
 //SHARED
 .descText {
   text-align: left;
   div {
     margin: 2rem 0;
+  }
+  @media (max-width: 500px) {
+    margin: 0 !important;
   }
 }
 .aboutHeader {
@@ -60,12 +79,13 @@
   height: 100%;
   @media (max-width: 905px) {
     flex-direction: column;
-    .descText {
-    }
   }
   & > div {
     margin: auto;
     padding: 5rem 6rem;
+    @media (max-width: 500px) {
+      padding: 5rem 1rem;
+    }
     width: 100%;
   }
 }
@@ -83,6 +103,10 @@
 //
 .temp {
   display: flex;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -298,6 +322,11 @@
       max-width: 73%;
     }
   }
+  @media (max-width: 500px) {
+    .descText {
+      max-width: 90%;
+    }
+  }
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-evenly;
@@ -320,6 +349,11 @@
     .descText {
       margin-top: 2rem;
       max-width: 73%;
+    }
+  }
+  @media (max-width: 500px) {
+    .descText {
+      max-width: 90%;
     }
   }
   justify-content: space-evenly;

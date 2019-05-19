@@ -1,16 +1,20 @@
 .footerContainer {
   background: rgb(244, 245, 249);
   padding: 5rem;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   display: flex;
   color: black;
   flex-basis: 100%;
+  @media (max-width: 800px) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
   // flex-direction: column;
 }
 .footerWrap {
   position: relative;
-  width: 50%;
+
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -32,7 +36,19 @@
   font-family: "BrandonGrotesque", sans-serif;
   font-size: 3rem;
   position: relative;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
+
+  @media (max-width: 1706px) {
+    font-size: 2.5rem;
+  }
+  @media (max-width: 800px) {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+  @media (max-width: 581px) {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
 }
 
 .footerNav {
@@ -45,8 +61,35 @@
 
 .footerLink {
   text-decoration: none;
+  color: black;
+  font-size: 3rem;
+  @media (max-width: 581px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 400px) {
+    font-size: 1.5rem;
+  }
 }
 .footerBigWrap {
   display: flex;
   flex-direction: column;
+}
+
+.chevronWrap {
+  position: fixed;
+  bottom: 5rem;
+  right: -5rem;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 50%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.chevronUp {
+  width: 5rem;
+  height: 5rem;
+  fill: white;
+  padding: 0.5rem;
 }

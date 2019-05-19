@@ -154,6 +154,7 @@ export default class About extends React.Component {
         animateTop={this.animateTop}
         animateCenter={this.animateCenter}
         animateBottom={this.animateBottom}
+        pageDown={this.scrollToSection}
       />
     );
   };
@@ -163,7 +164,14 @@ export default class About extends React.Component {
       temp: element === "" ? prev.clickedElement : ""
     }));
   };
-
+  scrollToSection = () => {
+    anime({
+      targets: "html,body",
+      scrollTop: window.innerHeight,
+      duration: 1000,
+      easing: "easeInOutQuart"
+    });
+  };
   shuffleList = select => {
     this.setState(prev => ({
       codeContent: prev.codeContent.sort((a, b) => {

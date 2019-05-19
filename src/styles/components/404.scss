@@ -1,0 +1,18 @@
+.lostContainer {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  .lostTitle {
+    font-size: 8rem;
+  }
+  .lostLink {
+    color: rgb(150, 150, 150);
+    text-decoration: underline;
+    &:hover {
+      color: black;
+    }
+  }
+}

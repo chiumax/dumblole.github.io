@@ -5,6 +5,8 @@ import cover from "../images/image/land.jpg";
 import ReactPlayer from "react-player";
 import { Parallax, Background } from "react-parallax";
 import { Waypoint } from "react-waypoint";
+import { Link } from "gatsby";
+import ChevronDown from "../icons/chevron-down.svg";
 
 export default ({
   pic,
@@ -21,7 +23,8 @@ export default ({
   animateRight,
   animateTop,
   animateCenter,
-  animateBottom
+  animateBottom,
+  pageDown
 }) => {
   return (
     <div className={"aboutContainer"}>
@@ -43,6 +46,12 @@ export default ({
             way.
           </div>
         </div>
+        <ChevronDown
+          className={"chevronDown"}
+          onClick={() => {
+            pageDown();
+          }}
+        />
       </div>
 
       {/* INTRO PANEL */}
@@ -53,6 +62,11 @@ export default ({
         <div className={"aboutHeader"} data-me data-to-animate>
           ME
         </div>
+        <Waypoint
+          onEnter={() => {
+            animateRight("data-me");
+          }}
+        />
         <div className={"meAboutWrap"}>
           <div className={"meAboutLeft"}>
             <div className={"meAboutImage"} data-me data-to-animate>
@@ -69,14 +83,13 @@ export default ({
               <div data-me data-to-animate>
                 I really love programming, gaming, video editing, and my fair share of rap.
               </div>
-              <Waypoint
-                onEnter={() => {
-                  animateRight("data-me");
-                }}
-              />
+
               <div data-me data-to-animate>
-                Whenever I work on something relatively big, it can usually be found under my
-                Projects page. If you find what I do cool, some{" "}
+                Whenever I work on something relatively big, it can usually be found under my{" "}
+                <Link className="descLink" to={`/project`}>
+                  Projects
+                </Link>{" "}
+                page. If you find what I do cool, some{" "}
                 <span>
                   <a href="https://ko-fi.com/dumblole" target="_blank">
                     support
@@ -113,6 +126,11 @@ export default ({
         <div className={"aboutHeader"} data-to-animate data-code>
           C O D E
         </div>
+        <Waypoint
+          onEnter={() => {
+            animateLeft("data-code");
+          }}
+        />
         <div className={"editAboutWrap"}>
           <div data-to-animate data-code className={"reactPlayerWrap"}>
             <div className={"reactPlayerCover"} />
@@ -135,11 +153,6 @@ export default ({
               won't ever make a delicious dish first try. I've come around to appreciating the
               things around us a LOT more than I did when I didn't know how to program.
             </div>
-            <Waypoint
-              onEnter={() => {
-                animateLeft("data-code");
-              }}
-            />
 
             <div data-to-animate data-code>
               In the future I hope I can pursue a career in machine learning. Or maybe, I could work
@@ -155,6 +168,11 @@ export default ({
         <div className={"aboutHeader"} data-to-animate data-game>
           G A M E
         </div>
+        <Waypoint
+          onEnter={() => {
+            animateRight("data-game");
+          }}
+        />
         <div className={"gameAboutWrap"}>
           <div data-to-animate data-game className={"reactPlayerWrap"}>
             <div className={"reactPlayerCover"} />
@@ -179,11 +197,7 @@ export default ({
                 didn't have a lot of friends :C). Hours and hours on end, exploring and building.
                 Nowadays, I usually only play Minecraft with a couple of my bros.
               </div>
-              <Waypoint
-                onEnter={() => {
-                  animateRight("data-game");
-                }}
-              />
+
               <div data-to-animate data-game>
                 <span className={"boldStyle"}>Counter-Strike Global Offensive.</span> My rank in
                 this game is silver... Yeah I know I suck but its a fun game. It's also really fun
@@ -208,6 +222,11 @@ export default ({
         <div className={"aboutHeader"} data-to-animate data-edit>
           E D I T
         </div>
+        <Waypoint
+          onEnter={() => {
+            animateLeft("data-edit");
+          }}
+        />
         <div className={"editAboutWrap"}>
           <div data-to-animate data-edit className={"reactPlayerWrap"}>
             <div className={"reactPlayerCover"} />
@@ -232,11 +251,7 @@ export default ({
               From Windows Movie Maker to Adobe Premiere Pro and Adobe After Effects, editing has
               been really fun.
             </div>
-            <Waypoint
-              onEnter={() => {
-                animateLeft("data-edit");
-              }}
-            />
+
             <div data-to-animate data-edit>
               I used Premiere Pro for some of my first edits. It's good software and it's also very
               easy to use and learn. I'm very comfortable with Premiere Pro but I still have to
