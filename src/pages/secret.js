@@ -6,8 +6,8 @@ export default ({ data }) => {
   return (
     <div className={"content-container secretWrap"}>
       <div>
-        <h1>My Site's Files</h1>
-        <p>Did you look in source?</p>
+        <div className={"secretTitle"}>My Site's Files</div>
+        <div className={"secretText"}>Did you look in source?</div>
         <table>
           <thead>
             <tr>

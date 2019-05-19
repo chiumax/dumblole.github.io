@@ -1,11 +1,8 @@
 import React from "react";
-import { Link, navigate } from "gatsby";
+import { navigate } from "gatsby";
 import Img from "gatsby-image";
-import ProjectList from "../pages/project";
 import anime from "animejs";
-//import Overdrive from "react-overdrive";
 import ImagePalette from "react-image-palette";
-import { Waypoint } from "react-waypoint";
 
 const _ = require("lodash");
 
@@ -13,10 +10,9 @@ export default class Card extends React.Component {
   state = {};
   projectOnClick = (el, location) => {
     const fadeOut = document.querySelectorAll(`div[data-project-card]:not([${el}])`);
-    const sharedTrans = document.querySelectorAll(el);
     const sharedElement = document.getElementById(el);
     const sharedtran = sharedElement.getBoundingClientRect();
-    const centerOff = window.innerHeight / 2 - sharedtran.top;
+
     anime({
       targets: fadeOut,
       opacity: [1, 0],

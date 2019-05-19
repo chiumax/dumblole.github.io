@@ -66,6 +66,7 @@ module.exports = {
     },
 
     `gatsby-plugin-catch-links`
+
     // {
     //   resolve: `gatsby-plugin-typography`,
     //   options: {

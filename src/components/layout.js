@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/styles.scss";
 import { StaticQuery, Link, graphql } from "gatsby";
 import { slide as Menu } from "react-burger-menu";
+// import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import anime from "animejs";
 import { Waypoint } from "react-waypoint";
@@ -93,7 +94,7 @@ export default class Layout extends React.Component {
   render() {
     let classNameVar = "";
 
-    if (this.props.location.pathname != "/") {
+    if (this.props.location.pathname !== "/") {
       classNameVar = "headerBlack";
     }
     return (
@@ -222,13 +223,13 @@ export default class Layout extends React.Component {
                 <div className={""}>
                   <div>{this.props.children}</div>
                 </div>
-                <div className={"footBigWrap"}>
+                <div className={"footerBigWrap"}>
                   <div className={"footerContainer"}>
                     <div className={"footerHeader"}>Copyright & Design © Max Chiu 2019</div>
                     <div className={"footerWrap"}>
                       {this.state.contacts.map((key, index) => (
                         <div key={key.url}>
-                          <a className={"footerIconWrap"} target="_blank" href={key.url}>
+                          <a className={"footerIconWrap"} rel="noopener noreferrer" target="_blank" href={key.url}>
                             {key.icon}
                           </a>
                         </div>

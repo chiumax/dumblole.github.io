@@ -1,6 +1,4 @@
 import React from "react";
-
-import Layout from "../components/layout";
 const json = require("./cv/cv.json");
 
 export default () => {
@@ -48,7 +46,7 @@ export default () => {
                               return (
                                 <span>
                                   &nbsp;
-                                  <a href={nextelement} target="_blank">
+                                  <a href={nextelement} target="_blank" rel="noopener noreferrer">
                                     {element}
                                   </a>
                                   &nbsp;
@@ -56,7 +54,8 @@ export default () => {
                               );
                             } else if (
                               !(
-                                element.indexOf("http://") === 0 || element.indexOf("https://") == 0
+                                element.indexOf("http://") === 0 ||
+                                element.indexOf("https://") === 0
                               )
                             ) {
                               if (

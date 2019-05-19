@@ -1,9 +1,7 @@
 import React from "react";
 import Card from "../components/card";
-//import { rhythm } from "../utils/typography";
-import Layout from "../components/layout";
 import anime from "animejs";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 export default class ProjectList extends React.Component {
   state = {

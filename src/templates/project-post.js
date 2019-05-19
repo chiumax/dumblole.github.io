@@ -1,12 +1,9 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
-import Layout from "../components/layout";
+import { graphql } from "gatsby";
 import anime from "animejs";
 
 import Img from "gatsby-image";
 import moment from "moment";
-//import Overdrive from "react-overdrive";
-import reactplayer from "react-player";
 
 export default class ProjectList extends React.Component {
   componentDidMount() {

@@ -1,5 +1,5 @@
 .footerContainer {
-  background: rgb(244, 245, 249);
+  background: darken($back-white, 5%);
   padding: 5rem;
   justify-content: space-between;
   align-items: center;
@@ -54,14 +54,14 @@
 .footerNav {
   display: flex;
   justify-content: space-evenly;
-  background: white;
-  color: black;
+  background: rgba(0, 0, 0, 0.9);
+
   padding: 2rem 0 2rem 0;
 }
 
 .footerLink {
   text-decoration: none;
-  color: black;
+  color: $back-white;
   font-size: 3rem;
   @media (max-width: 581px) {
     font-size: 2rem;
@@ -73,6 +73,7 @@
 .footerBigWrap {
   display: flex;
   flex-direction: column;
+  z-index: 2;
 }
 
 .chevronWrap {

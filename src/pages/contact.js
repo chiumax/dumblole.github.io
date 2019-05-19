@@ -2,7 +2,6 @@ import React from "react";
 import "../components/firebase";
 import firebase from "firebase";
 import anime from "animejs";
-import Layout from "../components/layout";
 import ReCAPTCHA from "react-google-recaptcha";
 
 export default class Contact extends React.Component {
@@ -85,7 +84,7 @@ export default class Contact extends React.Component {
 
     this.setState(
       prevState => {
-        if (prevState.captcha == false) {
+        if (prevState.captcha === false) {
           this.captchaRef.execute();
         }
         return { [e.target.name]: e.target.value };
@@ -113,7 +112,12 @@ export default class Contact extends React.Component {
         <div className={this.state.status} data-alert>
           Oops! Something went wrong... Please try again and see if it works. You can also contact
           me at{" "}
-          <a className={"inline-link"} target="_blank" href={"mailto:	business@dumblole.com"}>
+          <a
+            className={"inline-link"}
+            target="_blank"
+            rel="noopener noreferrer"
+            href={"mailto:	business@dumblole.com"}
+          >
             business@dumblole.com
           </a>
           .
@@ -248,7 +252,7 @@ export default class Contact extends React.Component {
               </div>
             </div>
           </form>
-          <a href="https://ko-fi.com/dumblole" target="_blank">
+          <a href="https://ko-fi.com/dumblole" target="_blank" rel="noopener noreferrer">
             <img
               height="36"
               className={"kofidonate"}

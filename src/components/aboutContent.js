@@ -1,7 +1,7 @@
 import React from "react";
 import { Flipper, Flipped } from "react-flip-toolkit";
 import Img from "gatsby-image";
-import cover from "../images/image/land.jpg";
+
 import ReactPlayer from "react-player";
 import { Parallax, Background } from "react-parallax";
 import { Waypoint } from "react-waypoint";
@@ -32,7 +32,7 @@ export default ({
 
       <div className={"temp"}>
         <div className={"imageWrap"} />
-        {/* <img src={cover} className={"heroImage"} /> */}
+
         <Img fluid={pic.land} className={"heroImage"} />
 
         <div className={"heroText"}>
@@ -91,7 +91,7 @@ export default ({
                 </Link>{" "}
                 page. If you find what I do cool, some{" "}
                 <span>
-                  <a href="https://ko-fi.com/dumblole" target="_blank">
+                  <a href="https://ko-fi.com/dumblole" target="_blank" rel="noopener noreferrer">
                     support
                   </a>
                 </span>{" "}
@@ -103,7 +103,6 @@ export default ({
             </div>
           </div>
         </div>
-        {/* <Img fluid={pic.b} className={"testImage"} /> */}
       </div>
 
       <Parallax strength={500}>
@@ -260,7 +259,11 @@ export default ({
             <div data-to-animate data-edit>
               Check out some of the edits I made over at my{" "}
               <span>
-                <a href="https://www.youtube.com/channel/UCpAL0BHmJ2aRj-37PQn8prQ" target="_blank">
+                <a
+                  href="https://www.youtube.com/channel/UCpAL0BHmJ2aRj-37PQn8prQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Youtube
                 </a>
               </span>{" "}

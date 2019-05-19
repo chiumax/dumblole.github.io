@@ -26,6 +26,7 @@
   }
   & > div[class$="Container"] {
     padding: 8rem 0 8rem 0;
+    background-color: $back-white;
     @media (max-width: 500px) {
       padding: 4rem 0 4rem 0;
     }
@@ -69,7 +70,6 @@
 }
 // ME
 .meAboutContainer {
-  background-color: #f4f5f9;
   color: black;
 }
 .meAboutWrap {
@@ -291,7 +291,7 @@
 }
 .skillBack {
   position: absolute;
-  background-color: #f4f5f9;
+  background-color: $back-white;
   top: 0;
   left: 0;
   width: 100%;
@@ -306,7 +306,6 @@
   justify-content: center;
 }
 .skillAboutContainer {
-  background-color: #f4f5f9;
   justify-content: center;
   min-height: 135vh;
 }
@@ -368,12 +367,7 @@
     flex: 1 0 0;
   }
 }
-.editAboutContainer {
-  background-color: #f4f5f9;
-}
-.codeAboutContainer {
-  background-color: #f4f5f9;
-}
+
 .reactPlayer {
   margin: auto;
   position: relative;
@@ -394,9 +388,7 @@
   position: relative;
   height: 100%;
 }
-.gameAboutContainer {
-  background-color: #f4f5f9;
-}
+
 .boldStyle {
   font-weight: bold;
   font-style: italic;
