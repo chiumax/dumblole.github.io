@@ -373,6 +373,7 @@
   position: relative;
   top: 0;
   overflow-x: hidden;
+  overflow-y: hidden;
   left: 0;
 }
 .reactPlayerCover {
@@ -382,11 +383,13 @@
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
   z-index: 99;
 }
 .reactPlayerWrap {
   position: relative;
   overflow-x: hidden;
+
   max-width: 100vw;
   height: 100%;
 }
