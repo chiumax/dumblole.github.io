@@ -6,8 +6,8 @@ Source for my website.
 
 Special thanks to:
 - [Emily Xie](https://github.com/emilyxxie) for CV design.
-- [LekoArts] (https://github.com/LekoArts) for clearing up some things.
-- [Gatsby Discord] (https://www.gatsbyjs.org/contributing/community/) also for clearing up some things.
+- [LekoArts](https://github.com/LekoArts) for clearing up some things.
+- [Gatsby Discord](https://www.gatsbyjs.org/contributing/community/) also for clearing up some things.
 
 ## Background :flags:
 
