@@ -53,7 +53,7 @@
             "10 hour hackathon, the theme of the event was to create something that could help teens with independent travel. We decided to come up with the name",
             "\"CRAM Travel.\"",
             "https://github.com/dumblole/charles-smith-community-hackathon-2019",
-            "We made the same mistake like last time where we used a React frontend and a Python Flask backend. We attempted to create a very simple trip planning web app with little distractions and a very intuitive process for the user. I've started to see a common theme where we'd get the frontend working and the backend working but have issues with the middle-ground. During judging we were met with some interesting feedback. One piece that interested me the most was that trip planning websites with the most clutter have the propensity to generate more revenue."
+            "We attempted to create a very simple trip planning web app with little distractions and a very intuitive process for the user.  During judging we were met with some interesting feedback. One piece that interested me the most was that trip planning websites with the most clutter have the propensity to generate more revenue."
           ]
         },
         {
