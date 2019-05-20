@@ -65,7 +65,19 @@ module.exports = {
       }
     },
 
-    `gatsby-plugin-catch-links`
+    `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `dumblole`,
+        short_name: `dumblole`,
+        start_url: `/`,
+        background_color: `white`,
+        theme_color: `black`,
+        display: `standalone`,
+        icon: `src/icons/favicon.png`
+      }
+    }
 
     // {
     //   resolve: `gatsby-plugin-typography`,
