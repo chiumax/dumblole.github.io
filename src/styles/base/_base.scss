@@ -19,6 +19,7 @@ body {
   font-family: "BrandonGrotesque", "Raleway", sans-serif;
   overflow-y: auto;
   overflow-x: hidden;
+  max-width: 100vw;
   color: $white-text;
 }
 html {
