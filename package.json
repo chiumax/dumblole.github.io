@@ -26,7 +26,9 @@
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-remark": "^2.3.8",
     "gatsby-transformer-sharp": "^2.1.17",
+    "installing": "^1.0.0",
     "lodash": "^4.17.11",
+    "module": "^1.2.5",
     "node-sass": "^4.12.0",
     "react": "^16.8.5",
     "react-burger-menu": "^2.6.10",
@@ -37,7 +39,11 @@
     "react-parallax": "^2.2.0",
     "react-player": "^1.9.3",
     "react-waypoint": "^9.0.1",
-    "slash": "^2.0.0"
+    "sharp": "^0.22.1",
+    "slash": "^2.0.0",
+    "the": "^1.0.2",
+    "went": "0.0.1",
+    "wrong": "^0.1.8"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1"

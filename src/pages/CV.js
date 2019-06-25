@@ -4,6 +4,8 @@ const json = require("./cv/cv.json");
 export default () => {
   return (
     <div className={"cvWrap content-container"}>
+      {/* comment */}
+
       {json.data.map(item => {
         return (
           <div key={item.name} className={"cvSectionWrap"}>

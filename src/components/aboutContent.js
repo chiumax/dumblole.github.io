@@ -76,7 +76,7 @@ export default ({
           <div className={"descText"}>
             <div>
               <div data-me data-to-animate>
-                My name is Max (dumblole) and I'm currently a sophmore {"(15)"} in the Science,
+                My name is Max (dumblole) and I'm currently a sophmore {"(16)"} in the Science,
                 Math, and Computer Science program (SMCS) at Poolesville High School. Anyways,
                 welcome to my website! It's my pride and joy.
               </div>

@@ -91,6 +91,13 @@ export default class Layout extends React.Component {
   handleStateChange = state => {
     this.setState({ openBurger: state.isOpen });
   };
+  isIE = () => {
+    let ua = navigator.userAgent;
+    /* MSIE used to detect old browsers and Trident used to newer ones*/
+    var is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
+
+    return is_ie;
+  };
   render() {
     let classNameVar = "";
 
@@ -110,149 +117,164 @@ export default class Layout extends React.Component {
         `}
         render={data => {
           return (
-            <div className="scrollWrap" id={"scrollWrap"}>
-              {console.log(this.props.location)}
-              <div
-                className={"chevronWrap"}
-                onClick={() => {
-                  this.scrollToTop();
-                }}
-              >
-                <Chevron className={"chevronUp"} />
-              </div>
-              {/* <Particles className="aboutParticle" /> */}
-              <div className="bodyWrap">
-                {/* <div className="headerLinkWrap">
+            <>
+              {!this.isIE() ? (
+                <div className="scrollWrap" id={"scrollWrap"}>
+                  {console.log(this.props.location)}
+                  {console.log(this.isIE())}
+                  <div
+                    className={"chevronWrap"}
+                    onClick={() => {
+                      this.scrollToTop();
+                    }}
+                  >
+                    <Chevron className={"chevronUp"} />
+                  </div>
+                  {/* <Particles className="aboutParticle" /> */}
+                  <div className="bodyWrap">
+                    {/* <div className="headerLinkWrap">
                  {this.renderLinks()}
                 
               </div> */}
-                <div className={`headerLink ${classNameVar}`} data-head>
-                  <div>
-                    {" "}
-                    <Link className="linke" to={`/`}>
-                      DUMBLOLE
-                    </Link>
-                  </div>
+                    <div className={`headerLink ${classNameVar}`} data-head>
+                      <div>
+                        {" "}
+                        <Link className="linke" to={`/`}>
+                          DUMBLOLE
+                        </Link>
+                      </div>
 
-                  <div className={"nohamburgerMenu"}>
-                    {" "}
-                    <Link className="link" to={`/project/`}>
-                      Projects
-                    </Link>
-                    <Link className="link" to={`/cv/`}>
-                      CV
-                    </Link>
-                    <Link className="link" to={`/contact/`}>
-                      Contact
-                    </Link>
-                  </div>
-                  <div className={"hamburgerMenu"}>
-                    <button
-                      className={
-                        this.state.openBurger
-                          ? `hamburger hamburger--spin-r headerBurger is-active`
-                          : `hamburger hamburger--spin-r headerBurger`
-                      }
-                      type="button"
-                      onClick={() => {
-                        this.toggleBurger();
+                      <div className={"nohamburgerMenu"}>
+                        {" "}
+                        <Link className="link" to={`/project/`}>
+                          Projects
+                        </Link>
+                        <Link className="link" to={`/cv/`}>
+                          CV
+                        </Link>
+                        <Link className="link" to={`/contact/`}>
+                          Contact
+                        </Link>
+                      </div>
+                      <div className={"hamburgerMenu"}>
+                        <button
+                          className={
+                            this.state.openBurger
+                              ? `hamburger hamburger--spin-r headerBurger is-active`
+                              : `hamburger hamburger--spin-r headerBurger`
+                          }
+                          type="button"
+                          onClick={() => {
+                            this.toggleBurger();
+                          }}
+                        >
+                          <span className="hamburger-box">
+                            <span className="hamburger-inner" />
+                          </span>
+                        </button>
+                        <Menu
+                          right
+                          customBurgerIcon={false}
+                          customCrossIcon={false}
+                          width={"100vw"}
+                          isOpen={this.state.openBurger}
+                          disableAutoFocus
+                          onStateChange={state => this.handleStateChange(state)}
+                        >
+                          <Link
+                            className="link"
+                            to={`/`}
+                            onClick={() => {
+                              this.closeBurger();
+                            }}
+                          >
+                            Home
+                          </Link>
+                          <Link
+                            className="link"
+                            to={`/project/`}
+                            onClick={() => {
+                              this.closeBurger();
+                            }}
+                          >
+                            Projects
+                          </Link>
+                          <Link
+                            className="link"
+                            to={`/cv/`}
+                            onClick={() => {
+                              this.closeBurger();
+                            }}
+                          >
+                            CV
+                          </Link>
+                          <Link
+                            className="link"
+                            to={`/contact/`}
+                            onClick={() => {
+                              this.closeBurger();
+                            }}
+                          >
+                            Contact
+                          </Link>
+                        </Menu>
+                      </div>
+                    </div>
+                    <Waypoint
+                      onLeave={() => {
+                        this.animateHeadIn("data-head");
+                        this.animateChevronIn(".chevronWrap");
                       }}
-                    >
-                      <span className="hamburger-box">
-                        <span className="hamburger-inner" />
-                      </span>
-                    </button>
-                    <Menu
-                      right
-                      customBurgerIcon={false}
-                      customCrossIcon={false}
-                      width={"100vw"}
-                      isOpen={this.state.openBurger}
-                      disableAutoFocus
-                      onStateChange={state => this.handleStateChange(state)}
-                    >
-                      <Link
-                        className="link"
-                        to={`/`}
-                        onClick={() => {
-                          this.closeBurger();
-                        }}
-                      >
-                        Home
-                      </Link>
-                      <Link
-                        className="link"
-                        to={`/project/`}
-                        onClick={() => {
-                          this.closeBurger();
-                        }}
-                      >
-                        Projects
-                      </Link>
-                      <Link
-                        className="link"
-                        to={`/cv/`}
-                        onClick={() => {
-                          this.closeBurger();
-                        }}
-                      >
-                        CV
-                      </Link>
-                      <Link
-                        className="link"
-                        to={`/contact/`}
-                        onClick={() => {
-                          this.closeBurger();
-                        }}
-                      >
-                        Contact
-                      </Link>
-                    </Menu>
-                  </div>
-                </div>
-                <Waypoint
-                  onLeave={() => {
-                    this.animateHeadIn("data-head");
-                    this.animateChevronIn(".chevronWrap");
-                  }}
-                  onEnter={() => {
-                    this.animateHeadOut("data-head");
-                    this.animateChevronOut(".chevronWrap");
-                  }}
-                />
-                <div className={""}>
-                  <div>{this.props.children}</div>
-                </div>
-                <div className={"footerBigWrap"}>
-                  <div className={"footerContainer"}>
-                    <div className={"footerHeader"}>Copyright & Design © Max Chiu 2019</div>
-                    <div className={"footerWrap"}>
-                      {this.state.contacts.map((key, index) => (
-                        <div key={key.url}>
-                          <a className={"footerIconWrap"} rel="noopener noreferrer" target="_blank" href={key.url}>
-                            {key.icon}
-                          </a>
+                      onEnter={() => {
+                        this.animateHeadOut("data-head");
+                        this.animateChevronOut(".chevronWrap");
+                      }}
+                    />
+                    <div className={""}>
+                      <div>{this.props.children}</div>
+                    </div>
+                    <div className={"footerBigWrap"}>
+                      <div className={"footerContainer"}>
+                        <div className={"footerHeader"}>Copyright & Design © Max Chiu 2019</div>
+                        <div className={"footerWrap"}>
+                          {this.state.contacts.map((key, index) => (
+                            <div key={key.url}>
+                              <a
+                                className={"footerIconWrap"}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                href={key.url}
+                              >
+                                {key.icon}
+                              </a>
+                            </div>
+                          ))}
                         </div>
-                      ))}
+                      </div>
+                      <div className={"footerNav"}>
+                        <Link className="footerLink" to={`/`}>
+                          Home
+                        </Link>
+                        <Link className="footerLink" to={`/project/`}>
+                          Projects
+                        </Link>
+                        <Link className="footerLink" to={`/cv/`}>
+                          CV
+                        </Link>
+                        <Link className="footerLink" to={`/contact/`}>
+                          Contact
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                  <div className={"footerNav"}>
-                    <Link className="footerLink" to={`/`}>
-                      Home
-                    </Link>
-                    <Link className="footerLink" to={`/project/`}>
-                      Projects
-                    </Link>
-                    <Link className="footerLink" to={`/cv/`}>
-                      CV
-                    </Link>
-                    <Link className="footerLink" to={`/contact/`}>
-                      Contact
-                    </Link>
-                  </div>
                 </div>
-              </div>
-            </div>
+              ) : (
+                <div style={{ color: "black", fontFamily: "sans-serif", fontSize: "20px" }}>
+                  This website does not support Internet Explorer, please switch to popular browsers
+                  such as Google Chrome, Firefox, and Microsoft Edge
+                </div>
+              )}
+            </>
           );
         }}
       />
