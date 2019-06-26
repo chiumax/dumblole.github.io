@@ -10,7 +10,11 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   flex-direction: column;
   position: relative;
 }
-
+.noIE {
+  font-family: "sans-serif";
+  color: black;
+  font-size: 20px;
+}
 .hamburgerMenu {
   @media (max-width: 1030px) {
     display: initial !important;

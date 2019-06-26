@@ -17,6 +17,7 @@ import Chevron from "../icons/chevron-up.svg";
 
 export default class Layout extends React.Component {
   state = {
+    isIE: false,
     contacts: [
       { icon: <Github className={"footerIcon"} />, url: "https://github.com/dumblole" },
       { icon: <Twitter className={"footerIcon"} />, url: "https://twitter.com/dumblole" },
@@ -75,6 +76,8 @@ export default class Layout extends React.Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
+
+    this.setState({ isIE: !!document.documentMode });
   }
   closeBurger = () => {
     this.setState({
@@ -91,19 +94,17 @@ export default class Layout extends React.Component {
   handleStateChange = state => {
     this.setState({ openBurger: state.isOpen });
   };
-  isIE = () => {
-    let ua = navigator.userAgent;
-    /* MSIE used to detect old browsers and Trident used to newer ones*/
-    var is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
 
-    return is_ie;
-  };
   render() {
     let classNameVar = "";
 
     if (this.props.location.pathname !== "/") {
       classNameVar = "headerBlack";
     }
+    let ieIS = false;
+    try {
+      ieIS = !!document.documentMode;
+    } catch (e) {}
     return (
       <StaticQuery
         query={graphql`
@@ -117,11 +118,12 @@ export default class Layout extends React.Component {
         `}
         render={data => {
           return (
-            <>
-              {!this.isIE() ? (
+            <div>
+              {!this.state.isIE && !ieIS ? (
                 <div className="scrollWrap" id={"scrollWrap"}>
                   {console.log(this.props.location)}
-                  {console.log(this.isIE())}
+                  {console.log(this.state.isIE)}
+                  <div className={"noIE"} />
                   <div
                     className={"chevronWrap"}
                     onClick={() => {
@@ -269,12 +271,14 @@ export default class Layout extends React.Component {
                   </div>
                 </div>
               ) : (
-                <div style={{ color: "black", fontFamily: "sans-serif", fontSize: "20px" }}>
-                  This website does not support Internet Explorer, please switch to popular browsers
-                  such as Google Chrome, Firefox, and Microsoft Edge
+                <div>
+                  <div className={"noIE"}>
+                    This website does not support Internet Explorer, please switch to popular
+                    browsers such as Google Chrome, Firefox, and Microsoft Edge
+                  </div>
                 </div>
               )}
-            </>
+            </div>
           );
         }}
       />
