@@ -10,6 +10,55 @@
         }
       ]
     },
+    {
+      "name": "Volunteer",
+      "items": [
+        {
+          "title": ["Robocamps"],
+          "date": ["Summer 2019"],
+          "details": [
+            "One-to-One Mentoring",
+            "Mentored a camper through the 2019 VEX IQ challenge who ended up winning 1st place."
+          ]
+        },
+        {
+          "title": ["Salvation Army"],
+          "date": ["August 2018"],
+          "details": [
+            "Food Delivery",
+            "Packed and delivered food in the Baltimore area for the homeless."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Education",
+      "items": [
+        {
+          "title": [""],
+          "date": [""],
+          "details": [
+            "I've started to keep track of classes I take onto",
+            "Notes",
+            "https://dumblole.github.io/notes/",
+            "."
+          ]
+        },
+        {
+          "title": ["Montgomery College"],
+          "date": ["2019 - present", "Germantown Campus, MD"],
+          "details": [
+            "Associate's Degree",
+            "Computer Science and Technologies Early College Program"
+          ]
+        },
+        {
+          "title": ["Poolesville High School"],
+          "date": ["2017 - present", "Poolesville, MD"],
+          "details": ["Science, Math, Computer Science Magnet Program"]
+        }
+      ]
+    },
 
     {
       "name": "Skills",
@@ -35,77 +84,28 @@
         }
       ]
     },
-    {
-      "name": "Education",
-      "items": [
-        {
-          "title": ["Poolesville High School"],
-          "date": ["2017 - present", "Poolesville, MD"],
-          "details": ["Science, Math, Computer Science Magnet Program"]
-        }
-      ]
-    },
+
     {
       "name": "Internships",
       "items": [
         {
           "title": ["Georgetown University Biomedical"],
-          "date": ["2017"],
-          "details": ["Participated in numerous lab experiments regarding DNA and proteins."]
+          "date": ["Summer 2017"],
+          "details": [
+            "Participated in numerous lab experiments regarding DNA and proteins (DNA Amplification, Gel Electrophoresis). All expenses paid."
+          ]
         }
       ]
     },
 
     {
-      "name": "Open Source",
-      "items": [
-        {
-          "title": [""],
-          "date": [""],
-          "details": [
-            "Some of my open source contributions. See my",
-            "Github",
-            "https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Adumblole+archived%3Afalse+is%3Aclosed+",
-            "for more information."
-          ]
-        },
-        {
-          "title": ["GatsbyJS"],
-          "date": [""],
-          "details": [
-            "Gatsby.js",
-            "https://www.gatsbyjs.org/",
-            "is a React-based, GraphQL powered, static site generator. I moved the \"Component CSS\" stub to its own",
-            "page",
-            "https://www.gatsbyjs.org/docs/component-css/",
-            "and expanded it with descriptions and examples. Had a cool and lengthy style guide for language. Commit",
-            "f46a326",
-            "https://github.com/gatsbyjs/gatsby/commit/f46a32667b3bcdaec8d4af7a1f7c5564bfc70f00",
-            ".",
-            "I also helped write a check to disable products that are out of stock in the Gatsby store in commit",
-            "2c2984d",
-            "https://github.com/gatsbyjs/store.gatsbyjs.org/commit/2c2984d4132a3efc5318758f7c64b9c33f58b084",
-            "."
-          ]
-        },
-        {
-          "title": ["airbnb"],
-          "date": [""],
-          "details": [
-            "airbnb",
-            "react-dates",
-            "https://github.com/airbnb/react-dates",
-            ", a datepicker library for the web. I rewrote the \"Overriding styles\" section with updated info (was outdated) and more specific examples as commit",
-            "0e019f5",
-            "https://github.com/airbnb/react-dates/commit/0e019f55757a2a6fe5bb8466c64a85bde04a8a61",
-            "."
-          ]
-        }
-      ]
-    },
-    {
       "name": "Awards",
       "items": [
+        {
+          "title": ["AP Scholar"],
+          "date": ["2019"],
+          "details": ["Awarded by College Board for performance on AP Exams"]
+        },
         {
           "title": ["Rho Psi Science and Technology Scholarship"],
           "date": ["May 2019"],
@@ -130,6 +130,55 @@
           "details": [
             "Best App",
             "Created an app where various statistics regarding a certain topic on Twitter could be visualized and plotted on a map."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Open Source",
+      "items": [
+        {
+          "title": [""],
+          "date": [""],
+          "details": [
+            "Some of my open source contributions. See my",
+            "Github",
+            "https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Adumblole+archived%3Afalse+is%3Aclosed+",
+            "for more information."
+          ]
+        },
+        {
+          "title": ["GatsbyJS"],
+          "date": [""],
+          "details": [
+            "Gatsby.js",
+            "https://www.gatsbyjs.org/",
+            "is a React-based, GraphQL powered, static site generator.",
+            "I moved the \"Component CSS\" stub to its own",
+            "page",
+            "https://www.gatsbyjs.org/docs/component-css/",
+            "and expanded it with descriptions and examples. Commit",
+            "f46a326",
+            "https://github.com/gatsbyjs/gatsby/commit/f46a32667b3bcdaec8d4af7a1f7c5564bfc70f00",
+            ".",
+            "Helped write a check to disable products that are out of stock in the Gatsby store in commit",
+            "2c2984d",
+            "https://github.com/gatsbyjs/store.gatsbyjs.org/commit/2c2984d4132a3efc5318758f7c64b9c33f58b084",
+            "."
+          ]
+        },
+        {
+          "title": ["airbnb"],
+          "date": [""],
+          "details": [
+            "airbnb",
+            "react-dates",
+            "https://github.com/airbnb/react-dates",
+            ", a datepicker library for the web.",
+            "Rewrote the \"Overriding styles\" section with updated info (was outdated) and more specific examples as commit",
+            "0e019f5",
+            "https://github.com/airbnb/react-dates/commit/0e019f55757a2a6fe5bb8466c64a85bde04a8a61",
+            "."
           ]
         }
       ]
