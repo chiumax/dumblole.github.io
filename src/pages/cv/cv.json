@@ -59,6 +59,16 @@
         }
       ]
     },
+    {
+      "name": "Extracurriculars",
+      "items": [
+        {
+          "title": [""],
+          "date": [""],
+          "details": [""]
+        }
+      ]
+    },
 
     {
       "name": "Skills",
