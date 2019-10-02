@@ -26,7 +26,7 @@
           "date": ["August 2018"],
           "details": [
             "Food Delivery",
-            "Packed and delivered food in the Baltimore area for the homeless."
+            "Packed and delivered food in the Baltimore area for the homeless and less fortunate."
           ]
         }
       ]
@@ -63,9 +63,35 @@
       "name": "Extracurriculars",
       "items": [
         {
-          "title": [""],
-          "date": [""],
-          "details": [""]
+          "title": ["Vice President of Computer Club"],
+          "date": ["Fall 2019 - present"],
+          "details": [
+            "Elected as Vice President of Computer Club. Responsibilities include teaching and organizing club events."
+          ]
+        },
+        {
+          "title": ["NHS Member"],
+          "date": ["2019"],
+          "details": ["NHS member of the Poolesville High School chapter"]
+        },
+        {
+          "title": ["FRC Team 4099"],
+          "date": ["2017 - present"],
+          "details": [
+            "Member of Poolesville High School’s FIRST Robotics team. Mechanical subteam 1st year, then business, then programming."
+          ]
+        },
+        {
+          "title": ["PHS Computer Science Team"],
+          "date": ["2017 - present"],
+          "details": [
+            "Member of Poolesville High School’s Computer Science team. Participated in many CTFs"
+          ]
+        },
+        {
+          "title": ["PHS Track Team"],
+          "date": ["2017 - 2019"],
+          "details": ["Member of Poolesville High School’s outdoor track team"]
         }
       ]
     },
@@ -140,6 +166,22 @@
           "details": [
             "Best App",
             "Created an app where various statistics regarding a certain topic on Twitter could be visualized and plotted on a map."
+          ]
+        },
+        {
+          "title": ["Kicks Karate Friendship Tournament"],
+          "date": ["2017"],
+          "details": [
+            "2nd place",
+            "Kicks Karate hosted a friendship tournament. 2nd place in sparring."
+          ]
+        },
+        {
+          "title": ["Science Olympiad"],
+          "date": ["2017"],
+          "details": [
+            "4th place",
+            "4th place in two events at Science Olympiad during Middle School"
           ]
         }
       ]
