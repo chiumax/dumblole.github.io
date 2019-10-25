@@ -4,9 +4,9 @@
       "name": "Work Experience",
       "items": [
         {
-          "title": ["None"],
-          "date": [""],
-          "details": ["Not employed yet 😭."]
+          "title": ["CodeNinjas"],
+          "date": ["Oct. 2019 - present"],
+          "details": ["Teach Elementary and Middle school kids Javascript (At various levels)."]
         }
       ]
     },
@@ -63,10 +63,10 @@
       "name": "Extracurriculars",
       "items": [
         {
-          "title": ["Vice President of Computer Club"],
+          "title": ["MC Vice President of Computer Club"],
           "date": ["Fall 2019 - present"],
           "details": [
-            "Elected as Vice President of Computer Club. Responsibilities include teaching and organizing club events."
+            "Elected as Vice President of Computer Club at Montgomery College Germantown Campus. Responsibilities include teaching and organizing club events."
           ]
         },
         {
@@ -173,16 +173,13 @@
           "date": ["2017"],
           "details": [
             "2nd place",
-            "Kicks Karate hosted a friendship tournament. 2nd place in sparring."
+            "Kicks Karate hosted a friendship tournament. Participated in sparring."
           ]
         },
         {
           "title": ["Science Olympiad"],
           "date": ["2017"],
-          "details": [
-            "4th place",
-            "4th place in two events at Science Olympiad during Middle School"
-          ]
+          "details": ["4th place", "Two events at Science Olympiad during Middle School"]
         }
       ]
     },
