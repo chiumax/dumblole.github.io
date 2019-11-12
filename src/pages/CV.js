@@ -48,7 +48,11 @@ export default () => {
                               return (
                                 <span>
                                   &nbsp;
-                                  <a href={nextelement} target="_blank" rel="noopener noreferrer">
+                                  <a
+                                    href={nextelement}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
                                     {element}
                                   </a>
                                   &nbsp;
@@ -66,7 +70,10 @@ export default () => {
                                   prevelement.indexOf("https://") === 0
                                 )
                               ) {
-                                return [<div className={"cvDivide"} />, <span>{element}</span>];
+                                return [
+                                  <div className={"cvDivide"} />,
+                                  <span>{element}</span>
+                                ];
                               }
                               return <span>{element}</span>;
                             }

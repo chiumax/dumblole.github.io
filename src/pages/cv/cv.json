@@ -6,13 +6,23 @@
         {
           "title": ["CodeNinjas"],
           "date": ["Oct. 2019 - present"],
-          "details": ["Teach Elementary and Middle school kids Javascript (At various levels)."]
+          "details": [
+            "Teach Elementary and Middle School children programming (Scratch, Javascript).",
+            "Currently building a Python game development curriculum."
+          ]
         }
       ]
     },
     {
       "name": "Volunteer",
       "items": [
+        {
+          "title": ["STEM Ambassador"],
+          "date": ["Fall 2019 - present"],
+          "details": [
+            "STEM Ambassador at Montgomery College. Volunteer at local STEM events and cultivate interest in the field."
+          ]
+        },
         {
           "title": ["Robocamps"],
           "date": ["Summer 2019"],
@@ -63,10 +73,10 @@
       "name": "Extracurriculars",
       "items": [
         {
-          "title": ["MC Vice President of Computer Club"],
+          "title": ["Vice President of Computer Science Club"],
           "date": ["Fall 2019 - present"],
           "details": [
-            "Elected as Vice President of Computer Club at Montgomery College Germantown Campus. Responsibilities include teaching and organizing club events."
+            "Elected as Vice President of Computer Science Club at Montgomery College Germantown Campus. Organizes club events."
           ]
         },
         {
@@ -138,6 +148,14 @@
       "name": "Awards",
       "items": [
         {
+          "title": ["CodeDayDC"],
+          "date": ["Nov 2019"],
+          "details": [
+            "Best In Show (Best overall)",
+            "Created an addictive mobile frisbee target game with Unity3D"
+          ]
+        },
+        {
           "title": ["AP Scholar"],
           "date": ["2019"],
           "details": ["Awarded by College Board for performance on AP Exams"]
@@ -179,7 +197,10 @@
         {
           "title": ["Science Olympiad"],
           "date": ["2017"],
-          "details": ["4th place", "Two events at Science Olympiad during Middle School"]
+          "details": [
+            "4th place",
+            "Two events at Science Olympiad during Middle School"
+          ]
         }
       ]
     },
