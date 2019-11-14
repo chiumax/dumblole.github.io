@@ -19,9 +19,18 @@ export default class Layout extends React.Component {
   state = {
     isIE: false,
     contacts: [
-      { icon: <Github className={"footerIcon"} />, url: "https://github.com/dumblole" },
-      { icon: <Twitter className={"footerIcon"} />, url: "https://twitter.com/dumblole" },
-      { icon: <Email className={"footerIcon"} />, url: "mailto:	business@dumblole.com" },
+      {
+        icon: <Github className={"footerIcon"} />,
+        url: "https://github.com/dumblole"
+      },
+      {
+        icon: <Twitter className={"footerIcon"} />,
+        url: "https://twitter.com/dumblole"
+      },
+      {
+        icon: <Email className={"footerIcon"} />,
+        url: "mailto:	business@dumblole.com"
+      },
       {
         icon: <Youtube className={"footerIcon"} />,
         url: "https://www.youtube.com/channel/UCpAL0BHmJ2aRj-37PQn8prQ"
@@ -151,7 +160,7 @@ export default class Layout extends React.Component {
                         <Link className="link" to={`/project/`}>
                           Projects
                         </Link>
-                        <Link className="link" to={`/cv/`}>
+                        <Link className="link" to={`/resume/`}>
                           CV
                         </Link>
                         <Link className="link" to={`/contact/`}>
@@ -203,7 +212,7 @@ export default class Layout extends React.Component {
                           </Link>
                           <Link
                             className="link"
-                            to={`/cv/`}
+                            to={`/resume/`}
                             onClick={() => {
                               this.closeBurger();
                             }}
@@ -237,7 +246,9 @@ export default class Layout extends React.Component {
                     </div>
                     <div className={"footerBigWrap"}>
                       <div className={"footerContainer"}>
-                        <div className={"footerHeader"}>Copyright & Design © Max Chiu 2019</div>
+                        <div className={"footerHeader"}>
+                          Copyright & Design © Max Chiu 2019
+                        </div>
                         <div className={"footerWrap"}>
                           {this.state.contacts.map((key, index) => (
                             <div key={key.url}>
@@ -260,7 +271,7 @@ export default class Layout extends React.Component {
                         <Link className="footerLink" to={`/project/`}>
                           Projects
                         </Link>
-                        <Link className="footerLink" to={`/cv/`}>
+                        <Link className="footerLink" to={`/resume/`}>
                           CV
                         </Link>
                         <Link className="footerLink" to={`/contact/`}>
@@ -273,8 +284,9 @@ export default class Layout extends React.Component {
               ) : (
                 <div>
                   <div className={"noIE"}>
-                    This website does not support Internet Explorer, please switch to popular
-                    browsers such as Google Chrome, Firefox, and Microsoft Edge
+                    This website does not support Internet Explorer, please
+                    switch to popular browsers such as Google Chrome, Firefox,
+                    and Microsoft Edge
                   </div>
                 </div>
               )}
