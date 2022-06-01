@@ -39,7 +39,7 @@
     "react-parallax": "^2.2.3",
     "react-player": "^1.13.0",
     "react-waypoint": "^9.0.2",
-    "sharp": "^0.22.1",
+    "sharp": "^0.30.5",
     "slash": "^2.0.0"
   },
   "devDependencies": {
